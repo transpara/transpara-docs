@@ -19,7 +19,7 @@
   "apiFiles": [
     "example.yml"
   ],
-  "homepage": "/introduction",
+  "homepage": "/what-is-visual-kpi",
   "changelog": false,
   "navbar": [
     {
@@ -39,21 +39,20 @@
         {
           "categoryName": "Getting Started",
           "pages": [
-            "getting-started/introduction",
-            "getting-started/local-development"
-          ]
-        },
-        {
-          "categoryName": "Basics",
-          "pages": [
-            "basics/global-settings",
-            "basics/markdown-basics",
+            "getting-started/what-is-visual-kpi",
+            "getting-started/the-visual-kpi-approach",
+            "getting-started/how-visual-kpi-works",
+            "getting-started/how-to-use-the-documentation",
             {
-              "groupName": "Page Templates",
+              "groupName": "Core Concepts",
+              "page": "getting-started/core-concepts/core-concepts",
               "subpages": [
-                "basics/page-templates/api-introduction",
-                "basics/page-templates/environments",
-                "basics/page-templates/authentication"
+                "getting-started/core-concepts/kpi",
+                "getting-started/core-concepts/hierarchy",
+                "getting-started/core-concepts/design",
+                "getting-started/core-concepts/data-sources",
+                "getting-started/core-concepts/interfaces",
+                "getting-started/core-concepts/access-level"
               ]
             }
           ]
