@@ -14,7 +14,8 @@
     "darkModeMainColor": "#F0F0FF",
     "navbarColor": "#000621",
     "navbarDarkModeColor": "#000621",
-    "pagination": false
+    "pagination": false,
+    "navbarMode": "tabbed"
   },
   "apiFiles": [
     "example.yml"
