@@ -1,0 +1,63 @@
+---
+title: System Upgrade
+slug: /setup-and-administration/installation/system-upgrade
+description: 'Describes how to perform the software upgrade.'
+tags: ['documentation']
+---
+
+To enhance your Visual KPI experience, follow these steps to upgrade your Visual KPI sites using the Visual KPI Server Manager. You have the option to upgrade sites individually or all at once.
+
+## Upgrading Visual KPI Sites
+
+To upgrade Visual KPI sites you first need to upgrade your Visual KPI Server Manager to the latest version. Than, you need to upgrade all Visual KPI Designer instances on users' local machines and finally you will be ready to upgrade your sites.
+
+### Step 1: Visual KPI Server Manager
+
+Ensure you have the most up-to-date version of the Visual KPI Server Manager. If you already have it installed, the download will automatically update to the latest version.
+
+- **[Download Visual KPI Server Manager](https://www.transpara.com/software-downloads/)**
+
+<Callout type="tip">
+For detailed instructions on downloading and installing the Visual KPI Server Manager, refer to the guide on [Installing Visual KPI Server and Server Manager](/docs/setup-and-administration/installation/install-visual-kpi).
+</Callout>
+
+### Step 2: Visual KPI Designer
+
+During the server upgrade process, it's crucial to upgrade the Visual KPI Designer instances on users' local machines. If Visual KPI Designer is used on other machines, run the installation on the target machine.
+
+### Step 3: Upgrading Visual KPI sites
+
+After ensuring that all upgrades have been installed correctly, you are now ready to upgrade your sites. Follow these steps to do so:
+
+1. Launch the Visual KPI Server Manager.
+
+  <Callout type="tip">
+  If you have many sites lists, sort by version to see which sites need to be upgraded.
+  </Callout>
+
+2. Select one site to upgrade, or select the top-level that includes more than one site.
+    - **One site**: Right-click the site and select Upgrade Instance.
+    - **All at once**: Select the top-level of all sites to include, and select Upgrade All Site Instances.
+3. Go through the install wizard, accept the  terms of the license agreement and click **Next**.
+4. Based on whether you are upgrading one site or many, the following step will differ:
+    - **One site**: You'll have the option to upgrade the license key and change the setup information, such as the site admin contacts.
+    - **All at once**: The wizard offers you the option to select which sites to upgrade. You can sort by version.
+
+  <Callout type="info">
+  By default, sites that require major upgrades won't be selected. You must manually select them if you want to upgrade. Upgrades can't be undone, so ensure that you want to upgrade the sites you select. Sites that are up-to-date will be marked as "version is current".
+  </Callout>
+
+5. Once you've selected the sites you want to upgrade, click **Next**.
+6. Before starting the upgrade, review the setup information and check the list of sites to be upgraded. Click **Next** to begin the process.
+
+  <Callout type="note">
+  During the upgrade process, you can cancel at any time. Sites that haven't started upgrading won't be upgraded.
+  </Callout>
+
+7. Once all upgrades are finished, you can **Finish** the wizard.
+
+## Video Guide
+
+Check the following video to see a visual guide on how to upgrade your system, as presented in this page.
+
+<Video src="https://www.youtube.com/embed/DU8Vxl_SDLc" width="100%" />

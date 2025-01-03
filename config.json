@@ -56,6 +56,23 @@
               ]
             }
           ]
+        },
+        {
+          "categoryName": "Setup and Administration",
+          "pages": [
+            "setup-and-administration/overview",
+            {
+              "groupName": "Installation",
+              "page": "setup-and-administration/installation/instalation",
+              "subpages": [
+                "setup-and-administration/installation/prepare-your-system",
+                "setup-and-administration/installation/install-a-vm-with-hyper-v",
+                "setup-and-administration/installation/install-visual-kpi-server-manager",
+                "setup-and-administration/installation/visual-kpi-website-and-virtual-directory-structure",
+                "setup-and-administration/installation/system-upgrade"
+              ]
+            }
+          ]
         }
       ]
     },

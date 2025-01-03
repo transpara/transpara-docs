@@ -1,0 +1,88 @@
+---
+title: Visual KPI Website and Virtual Directory Structure
+slug: /setup-and-administration/installation/visual-kpi-website-and-virtual-directory-structure
+description: 'Describes how to perform the software update.'
+tags: ['documentation']
+---
+
+This page will help you understand the folder/directory structure of a Visual KPI installation.
+
+By default, Visual KPI is installed under the main Transpara website, but you can install it into any existing website.
+
+## Virtual directories
+
+A new Visual KPI Server installation will add three virtual directories:
+
+- **VisualKPI**: The main website virtual directory.
+- **WebService**: The virtual directory for Visual KPI Designer.
+- **Interfaces**: The primary virtual directory where all Interfaces subdirectories will be created.
+
+The Transpara website and its related virtual directories are mapped to specific folders within the Visual KPI installation directory. By default, the installation directory for Visual KPI Servers is:
+
+```
+C:\Program Files\Transpara\Visual KPI
+```
+
+Within this directory, you will find a sub-folder for each instance of Visual KPI that's installed on your machine.
+
+### Components relationships
+
+The table below illustrates the relationship between the Visual KPI components, the corresponding IIS components, and the application folders (using the default names).
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        <span><b>Visual KPI Component</b></span>
+      </th>
+      <th>
+        <span><b>ISS Component</b></span>
+      </th>
+      <th>
+        <span><b>Application Folder</b></span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span>Main website</span></td>
+      <td><span>Transpara website</span></td>
+      <td><span>…\Visual KPI\Root</span></td>
+    </tr>
+    <tr>
+      <td><span>Visual KPI website</span></td>
+      <td><span>VisualKPI virtual directory</span></td>
+      <td><span>…\Visual KPI</span></td>
+    </tr>
+    <tr>
+      <td><span>Visual KPI Designer</span></td>
+      <td><span>WebService virtual directory</span></td>
+      <td><span>…\Visual KPI\WebService</span></td>
+    </tr>
+    <tr>
+      <td><span>PI interface</span></td>
+      <td><span>PIServer virtual directory</span></td>
+      <td><span>…\Visual KPI\Interfaces</span><br></br><span>\PIServer</span></td>
+    </tr>
+    <tr>
+      <td><span>ODBC interface</span></td>
+      <td><span>ODBC virtual directory</span></td>
+      <td><span>…\Visual KPI\Interfaces\ODBC</span></td>
+    </tr>
+    <tr>
+      <td><span>SQL Interface</span></td>
+      <td><span>SQLServer virtual directory</span></td>
+      <td><span>…\Visual KPI\Interfaces\SQLServer</span></td>
+    </tr>
+    <tr>
+      <td><span>SmartSignal Interface</span></td>
+      <td><span>SmartSignal virtual directory</span></td>
+      <td><span>…\Visual KPI\Interfaces\SmartSignal</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<Callout type="note" >
+With the exception of the **WebService** virtual directory, the names shown here can be changed during the installation of the Visual KPI Server.
+</Callout>
+

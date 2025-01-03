@@ -1,0 +1,186 @@
+---
+title: Prepare Your System
+slug: /setup-and-administration/installation/prepare-your-system
+description: 'Describes the actions the administrator needs to take to prepare their server or cloud befre installing the Visual KPI software.'
+tags: ['documentation']
+---
+
+This guide describes the necessary steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing the required software.
+
+The following table presents the main requirements you need to use Visual KPI Server Manager:
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Prerequisite</strong></th>
+      <th><strong>Details</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OS Version</strong></td>
+      <td>Windows Server 2008 R2 or newer</td>
+    </tr>
+    <tr>
+      <td><strong>User Rights</strong></td>
+      <td>Local Admin</td>
+    </tr>
+    <tr>
+      <td><strong>.NET Framework</strong></td>
+      <td>.Net 4.5.2 or newer<br></br><a href="#step-1-net-framework"><b>Refer to Step 1: .NET Framework</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>Windows Server Roles</strong></td>
+      <td>IIS 7, 7.5 or 8 Enabled<br></br>ASP.NET 4.0 Allowed (in ISAPI and CGI Restrictions)<br></br><a href="#step-2-iis-manager"><b>Refer to Step 2: IIS Manager</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>Windows Server Features</strong></td>
+      <td><a href="#step-3-windows-server-manager"><b>Refer to Step 3: Windows Server Manager</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>Microsoft SQL Server</strong></td>
+      <td>SQL 2005 or newer installed, or LAN access to one of them</td>
+    </tr>
+    <tr>
+      <td><strong>SQL Server Tools</strong></td>
+      <td><a href="#step-4-sql-server-management-studio"><b>Refer to Step 4: SQL Server Management Studio</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>SQL Server Network Configuration</strong></td>
+      <td>Protocols enabled: Named Pipes; TCP/IP</td>
+    </tr>
+    <tr>
+      <td><strong>Database Rights</strong></td>
+      <td>Rights to create a database<br></br>
+      Rights to create a user</td>
+    </tr>
+  </tbody>
+</table>
+
+<Callout type="info" title="Windows Server">
+If you don't have a Windows Server and still want to experiment with Visual KPI Server Manager, you can [install a Virtual Machine using Hyper-V](/docs/setup-and-administration/installation/hyper-v).
+</Callout>
+
+## Step 1: .NET Framework
+
+Your system needs to have .NET 4.5.2 or newer installed. To check your current version you can do the following:
+
+1. Access your Control Panel.
+2. Go to **Programs > Programs and Features**.
+3. Validate your current version.
+
+<Callout type="note">
+If you are using Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
+</Callout>
+
+If your system doesn't have .NET 4.5.2 or newer, you can download the .NET Framework directly from Windows:
+
+- **[Microsoft .NET Framework 4.5.2 Standalone Installer](https://www.microsoft.com/en-us/download/details.aspx?id=42642)**
+
+## Step 2: IIS Manager
+
+Next, you need to allow ISAPI and CGI extensions to run on the web server. To access the IIS Manager and enable ASP.NET to run, follow these steps:
+
+1. Open the **Internet Information Services (IIS) Manager**.
+2. Select your system on the sidebar.
+3. Open the **ISAPI and CGI Restrictions** option.
+4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
+
+Below, you will find a visual guide to these steps:
+
+<Image 
+  src="media/setup-and-administration/installation/prepare-your-system/iis-gif.gif" 
+  alt="iss setup"
+/>
+
+## Step 3: Windows Server Manager
+
+Now, you must install the correct roles in your OS's Server Manager. You can do this by following these steps:
+
+1. Open your **Server Manager**.
+2. Click on Manage on the top-right corner.
+3. Select the **Add Roles and Features** option.
+4. Advance to the **Server Selection** step of the configuration, selecting the default configuration for the previous steps.
+5. Select the correct server in **Server Selection**, and click **Next**.
+6. In the Server Roles you need to add the **Web Server (IIS)** role, and opening it, you need to select the following:
+    - Dynamic Content Compression
+    - Basic Authentication
+    - Windows Authentication
+    - .NET Extensibility 4.5 (or higher)
+    - ASP.NET 4.5 (or higher)
+    - ISS Management Console
+7. With these selected, you can **Install** and finish this wizard.
+
+Below, you will find a visual guide to these steps:
+
+<Image 
+  src="media/setup-and-administration/installation/prepare-your-system/server-manager-gif.gif" 
+  alt="server-manager setup"
+/>
+
+## Step 4: SQL Server Management Studio
+
+Visual KPI needs an SQL service to operate properly. Your SQL Server login needs sufficient permissions, such as security admin or higher. To check if you already have the correct permissions or to give your login the proper permissions, you can follow these steps:
+
+1. Download and install **[Microsoft SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16&redirectedfrom=MSDN)**.
+2. Open the software.
+3. **Connect** to the server.
+4. In the sidebar, open **Security > Login**.
+5. Find your own Login and double click it. A window will open.
+6. Select **Server Roles** and verify if you have one of the following roles (If you don't have any of these roles, add one):
+    - securityadmin
+    - serveradmin
+    - setupadmin
+    - sysadmin
+
+Below, you will find a visual guide to these steps:
+
+<Image 
+  src="media/setup-and-administration/installation/prepare-your-system/sql-manager-gif.gif" 
+  alt="sql-manager setup"
+/>
+
+### Step 5: Confirm SQL Installation and Permissions
+
+To install the Visual KPI Server and ensure that it operates as expected, you'll need an SQL Server with admin permissions or higher enabled.
+
+<Callout type="info">
+This configuration refers to the SQL Server database that Visual KPI uses for all configuration information, and it is essential for Visual KPI to function correctly. The information in this guide doesn't apply to using SQL Server as a data source at runtime as an interface, which is also possible.
+</Callout>
+
+Make sure you have access to SQL Server somewhere on the network or locally. You aren't required to install it locally, but Visual KPI does require that SQL Management Studio client tools be stored locally in order to make changes and manage permissions.
+
+Before you start the Visual KPI installation, check your privileges on the SQL Server. The logged-in user must have certain privileges on the SQL Server during the Visual KPI Server installation. The logged-in SQL Server user needs different permissions for the Visual KPI database to run different tasks. The tasks and required privileges are:
+
+- **Installing Visual KPI**: On the Windows Server machine, the installing user must be a local admin. For the SQL Server, you must have the right to create and delete databases, execute stored procedures, add tables/views, and drop tables/views.
+- **Upgrading and maintaining Visual KPI**: On the Windows Server machine, the user must be a local admin. For SQL Server, you must have the right to execute stored procedures, add tables/views, and drop tables/views.
+- **Running Visual KPI**: For the Visual KPI Server to communicate with the SQL Server database, the account needs to have read and write permissions on the Visual KPI database. This account can be one of the following types:
+   - Local SQL Server account: **SQLuser**.
+   - Local machine account: **NT AUTHORITY\NETWORK SERVICE**.
+   - Domain service account: **YOUR_DOMAIN\svc_vkpi**.
+
+By default, Visual KPI uses **NT AUTHORITY\NETWORK SERVICE** as the account for accessing SQL Server, running IIS application pools and executing Windows Services. This is a “least privileges” account and is the preferred choice for the runtime user account with the following characteristics based on single-machine or separate machine deployment:
+
+- **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as `NT AUTHORITY\NETWORK SERVICE`.
+- **Separate machine**: When the Visual KPI Server and SQL Server are installed on separate Windows Servers, IIS connects to SQL Server as `[YOUR_DOMAIN]\[your Visual KPI server name]$` (for example, `TRANSPARA\VKPI_1$` where Transpara is the domain name and VKPI_1 is the Windows Server name).
+
+#### Confirm SQL Server permissions
+
+To confirm SQL Server permissions you need to do the following:
+
+1. Open Microsoft SQL Server Management Studio client tools.
+2. Expand Security and then expand Logins and make sure your account has sufficient rights for installing Visual KPI Server.
+3. Click on your login and check Server Roles by clicking in the Login Properties panel that opens.
+4. Make sure security admin or higher is checked, or that your login meets the requirement as specified above.
+
+## Video Guide
+
+Check the following video to see a guide on how to prepare your system, as presented in this page.
+
+<Video src="https://www.youtube.com/embed/qjLk-N7fkqU" width="100%"/>
+
+## What's Next?
+
+After performing all steps above, your system is ready to have Visual KPI Server Manager installed. To learn how to install our system, refer to the [Install Visual KPI](/docs/setup-and-administration/installation/install-visual-kpi) page.
+
+

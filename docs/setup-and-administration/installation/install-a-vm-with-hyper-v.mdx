@@ -1,0 +1,58 @@
+---
+title: Install a VM with Hyper-V
+slug: /setup-and-administration/installation/hyper-v
+description: ''
+tags: ['Hyper-V', 'Virtual Machine', 'VM']
+---
+
+For users that don't have access to a Windows Server but still want to try out Visual KPI Server Manager, we suggest installing a Virtual Machine using [Hyper-V on Windows](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/). This page shows how to enable virtualization and install a new Windows Server VM using Hyper-V.
+
+Hyper-V is a tool that enables hardware virtualization. In simpler terms, it creates a virtual version of your computer's hardware, allowing you to run multiple operating systems on a single physical machine. With Hyper-V, you can create virtual hard drives, virtual switches, and other virtual devices, all of which can be used by your virtual machines.
+
+<Callout type="warning" title="Should you follow this guide?">
+This guide is intended for users looking to experiment with or test Visual KPI Server Manager without direct access to a Windows Server. If you have a Windows Server running, you can skip this page.
+</Callout>
+
+## Step 1: Enable virtualization on Windows
+
+<Callout type="info" title="BIOS Configuration">
+Many Windows 10 PCs and all PCs with Windows 11 preinstalled already have virtualization enabled. If that is your case, you can skip this step.
+
+In some cases, changes in the UEFI (or BIOS) are required to enable virtualization on Windows. Access this [Windows support](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) page for guidance.
+</Callout>
+
+To enable virtualization, you need to make sure that your system supports it and has the necessary drivers installed. Access the following links for each Windows version and follow the steps to enable Hyper-V:
+
+<CardList cols={2}>
+  <Card 
+    title="Windows 10"
+    link="https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v"
+  />
+  <Card 
+    title="Windows 11" 
+    link="https://techcommunity.microsoft.com/t5/educator-developer-blog/step-by-step-enabling-hyper-v-for-use-on-windows-11/ba-p/3745905"
+  />
+</CardList>
+
+## Step 2: Install a new Windows Server VM
+
+With Hyper-V enabled you are ready to install a new Windows Server Virtual Machine. Follow the steps below to  create your first VM:
+
+1. [Download a Evaluation ISO of Windows Server](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022).
+2. Open  the **Hyper-V Manager** from the start menu.
+3. Select **New** on the right sidebar, and choose the **Virtual Machine** option.
+4. Follow the installation wizard:
+    1. Give the new VM a name.
+    2. Select **Generation 2** in the Specify Generation tab.
+    3. Allocate memory to your VM. It's recommended to assign at least 2048 MB for a basic setup. More may be required depending on your server's role.
+    4. Connect the VM to a virtual switch to ensure it has network connectivity.
+    5. Choose to create a new virtual hard disk or use an existing one. Set the size according to your needs (for example, 127GB for a typical installation).
+    6. Select **Install an operating system from a bootable image file** and then browse to select the Windows Server ISO file you downloaded.
+    7. Review your settings. Click **Finish** to create the virtual machine.
+5. Connect to your new virtual machine by right-clicking on its entry in the middle pane of Hyper-V window and selecting **Connect**.
+
+When you first start your new VM, you will need to configure the initial  setup of your server. Follow the instalation wizard instructions as required by Windows.
+
+## Step 3: Prepare your system for Visual KPI Server Manager
+
+Once you finish the initial configurations, you'll have a new Windows environment to work on. Now you can go back to [Preparing your system for Visual KPI Server Manager](/docs/setup-and-administration/installation/prepare-your-system). 
