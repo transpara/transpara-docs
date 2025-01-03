@@ -7,7 +7,6 @@
 .filters_container .filter_label {
   color: #690;
   font-feature-settings: "clig" off, "liga" off;
-  font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -22,7 +21,6 @@
   background: #607c0d;
   color: #fff;
   font-feature-settings: "clig" off, "liga" off;
-  font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -85,7 +83,6 @@
   background: #607c0d;
   color: #fff;
   font-feature-settings: "clig" off, "liga" off;
-  font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -129,7 +126,6 @@ table thead th {
   background: #690 !important;
   color: #fff;
   font-feature-settings: "clig" off, "liga" off;
-  font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -144,7 +140,6 @@ table tr td {
   background-color: #ffffff;
   color: #8e8e8e;
   font-feature-settings: "clig" off, "liga" off;
-  font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
