@@ -1,0 +1,89 @@
+---
+title: Authoring
+slug: overview
+description: 'A group of pages will be placed here. Creation and configuration of objects such as Groups, KPIs, Charts and Tables'
+tags: ['documentation']
+---
+
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+Visual KPI Designer runs as an add-in to Microsoft Excel, and its tools are separated into sections that allow you to take several types of actions. You'll notice the object types in the Visual KPI Designer correlate to the tabs in the Visual KPI site navigation bar:
+
+- [Groups](/docs/visual-kpi-designer/authoring/groups)
+- [KPIs](/docs/visual-kpi-designer/authoring/kpis)
+- [Charts](/docs/visual-kpi-designer/authoring/charts)
+- [Tables](/docs/visual-kpi-designer/authoring/tables)
+- [Trends](/docs/visual-kpi-designer/authoring/trends)
+
+These are called objects in Visual KPI. You'll use these object types in the Visual KPI Designer to configure data for each object as they appear in your Visual KPI sites.
+
+As you click each object type in the Visual KPI Designer, the object toolbar that appears below it interacts with only the selected object. Use the object types and object toolbar to configure your Visual KPI sites.
+
+Each object type opens a new worksheet in the Visual KPI Designer. For example, if you are on a KPI worksheet and click Charts to add a new chart, a new worksheet called Charts will open. As you select the object types, the object toolbar changes depending on what tools you need to configure that object.
+
+In this section, you will learn how to configure each one of those objects so you can build your own Visual KPI site.
+
+## Info Column
+
+The Info column is a feature in Visual KPI that allows you to display additional information alongside your KPIs, Groups, Charts, Tables, and Trends. This section will guide you through how the Info column appears to end users, general configuration settings, and the unique options available for Group objects.
+
+### End User Experience
+
+When viewing data in Visual KPI, the Info column provides an extra space to display supplementary information. This could be anything from textual notes to dynamic data points like cost, usage counts, or other relevant metrics.
+
+<Image
+  src="media/designer/authoring/overview/info-column.png"
+  alt="Info Column"
+/>
+
+### General Configuration
+
+The configuration options for the Info column are similar across Charts, KPIs, Tables, and Trends. Groups have some extra configurations, which we will show later. To configure the Info column, follow these steps:
+
+1. Open the desired object in the Designer.
+2. Scroll sideways until you find the Info Fields in the **Extended** section. There, you will find the following columns:
+	- **Info**: Enter static text or a formula.
+	- **Info Interface**: Reference an external data source to display dynamic data.
+ 	- **Info Numeric Format**: Specify the numeric formatting code (.NET) to modify how numbers are displayed.
+	- **Info UOM**: If the Info value is numeric, you can specify the unit of measure.
+	- **Info Display Format**: Choose whether to display only the number, the number before the UOM, or the UOM before the number.
+	- **Info URL**: Provide a clickable link for more information.
+	- **Info Description**: If the Info field is a hyperlink, add tooltip text that appears when users hover over the Info column.
+
+<Image
+  src="media/designer/authoring/overview/info-column-config.png"
+  alt="Info Column"
+/>
+
+### Group Object Specific Options
+
+For Group objects, the Info column offers additional customization options.
+
+#### Renaming the Info Column for Groups
+
+While the default name of the Info column is **Info**, you can override this at the Group level:
+
+1. Open the Group Configuration.
+2. Change the desired **Info Column Display Name** by entering a new name.
+3. Click the Save icon (<PngFont name='save28' />) to apply the changes.
+
+#### Hiding the Info Column for Groups
+
+If you prefer not to display the Info column for a specific Group:
+
+1. In the Group Configuration, locate the **Show Info Column** option for the object from which you wish to hide the column.
+2. Set the value to **FALSE** to hide the Info column for that object.
+3. Click the Save icon (<PngFont name='save28' />) to apply the changes.
+
+### System-Wide Settings
+
+To change the default name of the Info column across all objects:
+
+1. Click on the Site Settings icon (<PngFont name='options28' />), go to **Features & Config**, and select **Website** settings.
+2. Modify the **Default Info Column Display Name** value to the desired name.
+3. Click the Save icon (<PngFont name='save28' />) to apply the changes.
+
+<Image
+  src="media/designer/authoring/overview/info-column-sitewide-setting.png"
+  alt="Info Column"
+/>
