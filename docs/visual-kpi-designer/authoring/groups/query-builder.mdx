@@ -21,7 +21,7 @@ If you have several Groups organized by region but want to create a new Group ba
 
 You've grouped your KPIs, Charts, and Tables according to the region and the energy plants within each region. You want another Group that returns KPIs from all plants in all regions producing solar power.
 
-1. Create a [custom attribute](/docs/visual-kpi-designer/settings/advanced#attributes) called **Unit Type** with the following default values: Biomass; Coal; Fuel Processing; Gas; Geothermal; Hydro; Nuclear; Solar; Waste Coal.
+1. Create a [custom attribute](/visual-kpi-designer/settings/advanced#attributes) called **Unit Type** with the following default values: Biomass; Coal; Fuel Processing; Gas; Geothermal; Hydro; Nuclear; Solar; Waste Coal.
 2. In the Groups worksheet, create a New Group called **Solar Performance**.
 3. Select the associated cell under the column **KPI Selection Query**.
 4. Using the query builder in the task pane, select the Attribute **Unit Type**, the Operator is equal to (=), and the Value **Solar**.
@@ -38,7 +38,7 @@ You've grouped your KPIs, Charts, and Tables according to the region and the ene
 
 You want to group all KPIs with an alert status of High High High. Obviously, alert status changes over time, so you can't select KPIs for this group. You must build a query that returns the attribute Status with a value that equals High High High. Visual KPI will display all KPIs that have the selected status at runtime.
 
-1. Create a [custom attribute](/docs/visual-kpi-designer/settings/advanced#attributes) called Status with the possible Values to include: High High High.
+1. Create a [custom attribute](/visual-kpi-designer/settings/advanced#attributes) called Status with the possible Values to include: High High High.
 2. In the worksheet, create a New Group, and give it a name and description.
 3. Select the associated cell under the column KPI Selection Query.
 4. Build a query using Status as the Attribute, equals (=) a Value of High High High.

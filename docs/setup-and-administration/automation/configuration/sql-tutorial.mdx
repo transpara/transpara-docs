@@ -15,8 +15,8 @@ The following steps will walk you through creating a working SQL remote context 
 
 What you will need before starting the tutorial:
 
-- An installed version of [Visual KPI Server Manager](/docs/setup-and-administration/installation/install-visual-kpi) on a machine with all the [prerequisites and required permissions](/docs/setup-and-administration/installation/prepare-your-system).
-- An installed version of [Visual KPI Designer](/docs/visual-kpi-designer/installation-and-setup/overview).
+- An installed version of [Visual KPI Server Manager](/setup-and-administration/installation/install-visual-kpi) on a machine with all the [prerequisites and required permissions](/setup-and-administration/installation/prepare-your-system).
+- An installed version of [Visual KPI Designer](/visual-kpi-designer/installation-and-setup/overview).
 - Access (admin) to a SQL Server. This is necessary to create two databases. One of them is installed by the Server Manager for Visual KPI, while the other will be created manually and populated via a SQL script.
 - The scripts required to follow this tutorial, found here: [**SQLRCSTutorialScripts.zip**](https://www.transpara.com/wp-content/uploads/SQLRCSTutorialScripts.zip).
 
@@ -28,7 +28,7 @@ To install the most recent versions of Visual KPI software components, go to [Tr
 
 In this step, you will install a new instance of Visual KPI, configure it, and use it for the SQL remote context server demo.
 
-To install a new instance, refer to the [Install Visual KPI](/docs/setup-and-administration/installation/install-visual-kpi#installing-a-visual-kpi-instance) guide.
+To install a new instance, refer to the [Install Visual KPI](/setup-and-administration/installation/install-visual-kpi#installing-a-visual-kpi-instance) guide.
 
 <Callout type="warning" title="Important">
 During installation, ensure that the Manufacturing Demo option is unchecked under Install prebuilt demos and sample data. This will prevent any unnecessary demo data from cluttering our Mining demo.
@@ -152,7 +152,7 @@ Give your ODBC interface the name **ODBC-Metrics**.<br></br>
 Update the Connect String to point to the **MiningData** database.
 </Callout>
 
-To learn how to install a new ODBC Interface, refer to the [Interfaces guide](/docs/setup-and-administration/interfaces/configuration) of this documentation.
+To learn how to install a new ODBC Interface, refer to the [Interfaces guide](/setup-and-administration/interfaces/configuration) of this documentation.
 
 <Callout type="support" title="Support">
 If your verification fails and the Connect String isn't correct, that means there is some database security problem. Step 2 talks about this, but if you are still stuck then please [contact our Support](https://www.transpara.com/contact-us/) and we will help you out.
@@ -163,7 +163,7 @@ If your verification fails and the Connect String isn't correct, that means ther
 Once you have installed and configured the ODBC interface, you should verify if the interface can connect to the database. Use Visual KPI Server Manager to confirm the connection.
 
 <Callout type="success">
-To learn how to verify that everything is set up correctly, refer to the [Interfaces guide](/docs/setup-and-administration/interfaces/configuration#verifying-an-interface-connection) of this documentation.
+To learn how to verify that everything is set up correctly, refer to the [Interfaces guide](/setup-and-administration/interfaces/configuration#verifying-an-interface-connection) of this documentation.
 </Callout>
 
 ### Write queries to access data
@@ -225,7 +225,7 @@ Now you will install a SQL Remote Context Server and understand the queries need
 
 ### Start the RCS Install 
 
-Install a new Remote Context Server (RCS). To learn how, refer to the [Installation guide](/docs/setup-and-administration/automation/rcs-configuration#installing-visual-kpi-rcs).
+Install a new Remote Context Server (RCS). To learn how, refer to the [Installation guide](/setup-and-administration/automation/rcs-configuration#installing-visual-kpi-rcs).
 
 <Callout type="info">
 When installing, select **SQL RC Service** option.
