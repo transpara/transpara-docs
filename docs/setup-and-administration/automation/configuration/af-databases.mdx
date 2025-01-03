@@ -1,0 +1,390 @@
+---
+id: rcs-with-af-databases
+title: RCS with AF databases
+slug: /setup-and-administration/automation/rcs-with-af-databases
+description: 'Describe RCS with AF databases.'
+tags: ['documentation']
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import Accordion from '@site/src/components/accordion/Accordion';
+import table from '@site/static/data/tables/setup-adm/automation/how-to-use/AFObjectTypesAndValues.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
+Visual KPI allows you to automatically set up Visual KPI sites using external applications or systems. By using a Visual KPI Remote Context Service (RCS), you can connect with applications such as OSIsoft PI System (AF). This page guides you on how to use the Visual KPI AF Remote Context Service to automate the creation of Visual KPI Profile Groups, Profiles, Dashboards, and Bookmarks.
+
+## Terminology
+
+While the term **dashboards** is often used to describe the final visualizations in Visual KPI, there are several other important terms you should be familiar with:
+
+1. **Profile Groups**:A place to hold one or more profiles. This helps organize profiles (which contain dashboards) in a way that makes sense to the end user. You can have profile groups such as Executive Profiles, Engineer Profiles, Region A Profiles, and so on.
+2. **Profiles**: Profiles contain bookmarks, watchlists and Dashboards. 
+3. **Dashboards**: A dashboard is a collection of widgets along with other properties such as default time spans.
+4. **Widget**: A widget is an object visualization contained in the dashboard. Examples include KPI Block, Trend, List of Groups, Table, Embedded Content. Each widget has a visualization or a Visual KPI object, along with its size and position on the dashboard.
+5. **Bookmarks**: Quick links that navigate to a particular page or visualization within Visual KPI.
+
+
+## Hierarchical vs Parent ID
+
+There are two options to define the relationships between Profile Groups and Profiles, Profiles and Dashboards, and Dashboards to Widgets. One option is based on hierarchical positioning or nesting, and the other requires an attribute defining the parent ID (Profile Group ID, Profile ID, Dashboard ID).
+
+Most customers choose to use a combination of specifying the parent ID and leveraging the inherent hierarchy. For example, placing all Widgets under the Dashboard Attribute but specifying the Profile ID in the dashboard properties.  Specifying the parent ID will override any implicit relationship defined based on its hierarchical position.  When in doubt specify!
+
+Most customers use a combination of specifying the parent ID and leveraging the inherent hierarchy. For example, they place all widgets under the dashboard attribute but specify the Profile ID in the dashboard properties. Specifying the parent ID will override any implicit relationship defined by its hierarchical position.
+
+### Hierarchical
+
+For the hierarchical approach, you can nest widgets under a dashboard, dashboards under a profile, and profiles under profile groups. The representation below shows the hierarchy clearly, with each level nested under the appropriate parent level:
+
+<Accordion title="Nesting Representation">
+```
+Profile Groups
+│
+├── Profile Group 1
+│   ├── Profile 1
+│   │   ├── Dashboard 1
+│   │   │   ├── Widget 1
+│   │   │   ├── Widget 2
+│   │   │   └── Widget 3
+│   │   ├── Dashboard 2
+│   │   │   ├── Widget 1
+│   │   │   └── Widget 2
+│   │   └── Dashboard 3
+│   │       ├── Widget 1
+│   │       ├── Widget 2
+│   │       └── Widget 3
+│   ├── Profile 2
+│   │   ├── Dashboard 1
+│   │   │   ├── Widget 1
+│   │   │   ├── Widget 2
+│   │   │   └── Widget 3
+│   │   └── Dashboard 2
+│   │       ├── Widget 1
+│   │       ├── Widget 2
+│   │       └── Widget 3
+│   └── Profile 3
+│       ├── Dashboard 1
+│       │   ├── Widget 1
+│       │   ├── Widget 2
+│       │   └── Widget 3
+│       ├── Dashboard 2
+│       │   ├── Widget 1
+│       │   ├── Widget 2
+│       │   └── Widget 3
+│       └── Dashboard 3
+│           ├── Widget 1
+│           ├── Widget 2
+│           └── Widget 3
+│
+└── Profile Group 2
+    ├── Profile 1
+    │   ├── Dashboard 1
+    │   │   ├── Widget 1
+    │   │   ├── Widget 2
+    │   │   └── Widget 3
+    │   └── Dashboard 2
+    │       ├── Widget 1
+    │       ├── Widget 2
+    │       └── Widget 3
+    ├── Profile 2
+    │   ├── Dashboard 1
+    │   │   ├── Widget 1
+    │   │   ├── Widget 2
+    │   │   └── Widget 3
+    │   └── Dashboard 2
+    │       ├── Widget 1
+    │       ├── Widget 2
+    │       └── Widget 3
+    └── Profile 3
+        ├── Dashboard 1
+        │   ├── Widget 1
+        │   ├── Widget 2
+        │   └── Widget 3
+        ├── Dashboard 2
+        │   ├── Widget 1
+        │   ├── Widget 2
+        │   └── Widget 3
+        └── Dashboard 3
+            ├── Widget 1
+            ├── Widget 2
+            └── Widget 3
+
+```
+</Accordion>
+
+This is also exemplified in the image below:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-1.png"
+  alt=""
+/>
+
+### Parent ID
+
+The second approach is to explicitly state the parent ID. To specify the Profile Group to which a profile belongs, you create an attribute called Profile Group ID with the value being the ID (GUID) of the Profile Group. This approach can also be used to define the Profile to which a Dashboard belongs using an attribute named Profile ID, as well as to specify the Dashboard to which a widget belongs using an attribute named Dashboard ID.
+
+The image below showcases this approach:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-2.png"
+  alt=""
+/>
+
+## Attribute mapping
+
+Each information in your AF database will be mapped, becoming Visual KPI keys. 
+
+- AF elements will become Visual KPI groups.
+- AF attributes will be read by the RCS and mapped as a Visual KPI attribute.
+
+By default, your AF attributes will be mapped to a Visual KPI value. However, if the AF attribute name maps to a keyword within the general properties section of the group section, those attributes will become properties of the Visual KPI group. If the AF attribute has child attributes and those attribute names map to keywords for a KPI, trend or table, they will become Visual KPI objects (KPIs, trends, charts, tables, and links). All other attributes will become Visual KPI values.
+
+Below you find all lists of keywords and Visual KPI mapping information for each attribute:
+
+<LinkCards numColumns={5} data={
+  [
+    {
+      name: 'KPI',
+      linkTo: '/docs/reference/setup-and-administration/af-databases/kpi-keywords'
+    },
+    {
+      name: 'Trend',
+      linkTo: '/docs/reference/setup-and-administration/af-databases/trend-keywords'
+    },
+    {
+      name: 'Table',
+      linkTo: '/docs/reference/setup-and-administration/af-databases/table-keywords'
+    },
+    {
+      name: 'Group',
+      linkTo: '/docs/reference/setup-and-administration/af-databases/group-keywords'
+    },
+    {
+      name: 'Value',
+      linkTo: '/docs/reference/setup-and-administration/af-databases/value-keywords'
+    },
+  ]
+}/>
+
+## Accessing AF Object IDs
+
+In addition to Profile Group ID, Profile ID, and Dashboard ID, most widgets will also reference an AF Object ID. Getting these IDs is a simple task, but it requires enabling the option in the PI System Explorer. To do this, right-click in the bottom right corner of the PI System Explorer to display a menu that allows you to enable (or disable) the display of the Unique AF Object IDs (GUIDs).
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-3.png"
+  alt=""
+/>
+
+Once enabled, you can both view and copy the ID. The following example shows how the value for Profile Group ID was obtained. By selecting the attribute called AF Profile Group, the ID `559b8359-9b39-4e26-8977-4abf260d59cf` is displayed. This ID can then be pasted into the Profile Group ID attribute.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-4.png"
+  alt=""
+/>
+
+:::info
+If you wish to reference an object not created via the AF RCS, you can replace **AF Object ID** with **Visual KPI Object ID** and use the ID value found in the Visual KPI Designer.
+:::
+
+## Object Type
+
+Using an attribute called **Object Type** is the preferred method of identifying AF Attributes' mapping to Visual KPI Objects. This is required when using the Visual KPI AF RCS to automate the creation of dashboards. All objects in the document will require an attribute called Object Type. The available values for it can be found in the link below:
+
+<LinkCards numColumns={1} data={
+  [
+    {
+      name: 'Object Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/object-types'
+    },
+  ]
+}/>
+
+:::note
+Transpara recommends to always nest Visual KPI Attributes under another Attribute called Visual KPI Properties.
+:::
+
+## Widget Type
+
+In addition to Object Type, there is another important attribute named **Widget Type**. When defining a widget, you will need both an Object Type set to `Widget Attribute` and a Widget Type attribute, which specifies the type of widget to create. Possible Widget Type values are presented in the link below:
+
+<LinkCards numColumns={1} data={
+  [
+    {
+      name: 'Widget Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets'
+    },
+  ]
+}/>
+
+## Configuration
+
+While you can create the required attributes anywhere in your AF Model to define Profile Groups, Profiles, Dashboards, and Widgets, you can also create a special AF Element specifically for this purpose. To create this configuration placeholder, create an AF Element with an attribute called Object Type and set its value to Configuration.
+
+Typically, the Visual KPI AF RCS maps AF Elements to Visual KPI Groups. However, if an AF Element has a child attribute Object Type with a value of Configuration, the AF Element is not mapped to a Visual KPI Group. Instead, the child attributes are iterated through to find objects such as Profile Groups, Profiles, Dashboards, Widgets, and Bookmarks.
+
+The example below uses this approach to isolate Visual KPI objects from the core AF Model. For instance, we have Group 01, Group 02, and Sub Group 01 elements in addition to a Configuration element. The Visual KPI AF RCS will create Visual KPI Groups for Group 01, Group 02, and Sub Group 01, but not for Configuration.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-5.png"
+  alt=""
+/>
+
+## Design First
+
+When building a dashboard programmatically by defining AF Attributes, it is best to first build one manually to better understand the size and position attributes. 
+
+For example, if you want a dashboard with a Group List, a Group Geo, and three Group Block widgets, it is a good practice to first create it in Visual KPI. 
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-6.png"
+  alt=""
+/>
+
+Then, use the **Customize Dashboard** display to inspect the widget properties. Here information such as Type (which will map directly to Widget Type) along with Row Start, Column Start, Height and Width can be seen:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-7.png"
+  alt=""
+/>
+
+## Example of Use
+
+Here you find an example of an AF database model to exemplify how the data will be automatically imported by the RCS.
+
+By default, the Remote Context Server will create two Visual KPI groups out of the two AF elements  (Plant 1 and Unit 1) found in the image representation below:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_model.png"
+  alt=""
+/>
+
+In Unit 1, the following AF attributes are found:
+
+- Power
+- Temperature
+- Pressure
+
+These will be mapped as Visual KPI attributes.
+
+If you add specific child attributes to these AF attributes, they will then become KPIs in Visual KPI. The next image illustrates this concept:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_attributes.png"
+  alt=""
+/>
+
+Adding attributes to Unit 1 with names that match keywords for group properties will decorate the Visual KPI group with more information.
+
+### Using Child Elements as AF Attributes
+
+The Visual KPI Remote Context Server can read Child Elements as AF attributes. You can place all of your Visual KPI keywords under Child Elements.
+
+As you build out your AF Model to include Visual KPI keywords you may find that your AF model becomes quite busy, or even cluttered, with attributes that only Visual KPI cares about. For instance, it's unlikely that users viewing your AF model will care about attributes such as "Sparkline Start Time".
+
+To keep your model as clean as possible, you can place all of these keyword attributes under the Child Elements attribute using the name "Visual KPI Properties." This can be seen exemplified in the image below:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_visual_kpi_properties.png"
+  alt=""
+/>
+
+The Child Elements attribute isn't required by default. It's simply a way to tidy up your model. You can specify some or all of your attributes as Child Elements of the Visual KPI Properties attribute. The RCS will first check for this Child Elements property and then read the attributes nested below it, then it will check for attributes outside Child Elements.
+
+#### Ignoring attributes
+
+The Child Elements attribute can also be used to mark an element or attribute that you want to be ignored by Visual KPI Remote Context Server. To do this, you need to set the Visual KPI Properties Child Element to **False**, **0** or **Omit**.
+
+In the following example image, we've added a Level attribute to Unit 1 and set the Visual KPI Properties attribute to **False**, which indicates RCS should ignore this attribute and not create it as a Visual KPI value.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_ignore.jpg"
+  alt=""
+/>
+
+:::note
+If the Visual KPI Properties attribute is set to be ignored on an AF element, then the whole group will be ignored along with all the AF properties and AF Child Elements within it.
+:::
+
+#### Require Visual KPI Properties Attributes
+
+Visual KPI Remote Context Server has a setting called **Require Visual KPI Properties Attributes**, which is set to False by default. If set to True, this attribute be will be required in order to process the AF elements and attributes.
+
+If this value is set to True and the Visual KPI Properties attribute isn't found on either an AF Element or an AF Attribute, then that AF Element or AF Attribute will be ignored. This functionality toggles the logic requiring the Visual KPI Properties attribute to act as an "Opt In" rather than the default "Opt Out."
+
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Opt_In_Property.png"
+  alt=""
+/>
+
+
+### Using Keywords and Grouping AF Attributes
+
+Visual KPI Remote Context Service has the ability to read groups of attributes. When you organize your AF model, you can group AF attributes using Visual KPI keywords. This approach will enhance the readability and flexibility of your model. You can group different attributes like pen information on trends, info properties, and custom attributes.
+
+As an example, let's examine the Info settings, which can be applied to any Visual KPI object. Within these settings, you will find the following properties:
+
+- Info
+- Info Numeric Format
+- Info Display Format
+- Info URL
+
+You can model them in two different approaches:
+
+- **Flat list** (exemplified by Power A).
+- **Child attributes** (exemplified by Power B).
+
+The image below shows both options:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Info_Child_Attributes.png"
+  alt=""
+/>
+
+:::note
+If you nest these properties, the "Info" portion of the nested keywords isn't needed. In this example, Info Display Format has become Display Format as a child attribute of Info.
+:::
+
+When modeling Visual KPI Trends, it can be useful to group AF attributes. Each Trend Pen has many properties. The image below shows the difference between flat and nested approaches.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Attribute_Flat_and_Nested_Approches.png"
+  alt=""
+/>
+
+#### Custom Visual KPI attributes
+
+You can create up to 20 custom attributes in Visual KPI to help you group your objects.
+
+Custom attributes such as Plant, Unit, Region, Country, Operation Type, Department, Product Line, etc. can be created to help keep your model clean and easy to read. These custom attributes can be placed under an 'Attributes' attribute. The image below demonstrates this:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Custom_Attributes.png"
+  alt=""
+/>
+
+:::tip
+To discover which attributes the Visual KPI Remote Context Service looks for to determine which Visual KPI object to create from an AF attribute, refer to the [Attribute mapping keyword tables](#attribute-mapping) pages.
+:::
+
+## Reference
+
+Attributes and values (both required and optional) can fully automate Dashboard creation from within OSIsoft's PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes. Find detailed reference about each with the links below:
+
+<LinkCards numColumns={3} data={
+  [
+    {
+      name: 'Object Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/object-types'
+    },
+    {
+      name: 'Widget Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets'
+    },
+    {
+      name: 'Bookmark Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks'
+    },
+  ]
+}/>

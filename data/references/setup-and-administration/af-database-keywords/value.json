@@ -1,0 +1,42 @@
+[
+  {
+    "AF Attribute Name": "Trend Start Time, Trend Start Date, Trend Start, TrendStartTime, TrendStartDate, TrendStart",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)"
+  },
+  {
+    "AF Attribute Name": "Trend End Time, Trend End Date, Trend End, TrendEndTime, TrendEndDate, TrendEnd",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)"
+  },
+  {
+    "AF Attribute Name": "Min Y Axis, MinYAxis, Minimum Y Axis, MinimumYAxis",
+    "Data Type": "Numeric",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Max Y Axis, MaxYAxis, Maximum Y Axis, MaximumYAxis",
+    "Data Type": "Numeric",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "URL",
+    "Data Type": "String",
+    "Valid Values": "Any URL (starts with www, http:// or https://)"
+  },
+  {
+    "AF Attribute Name": "URL Descriptor, URLDescriptor, URL Description, URLDescription, URL Name, URLName",
+    "Data Type": "String",
+    "Valid Values": "Any\n* URL and URL Descriptor can be semi-colon (;) delimited lists. it's best if you match these up (i.e. 3 urls and 3 descriptors)"
+  },
+  {
+    "AF Attribute Name": "Numeric Format, NumericFormat",
+    "Data Type": "String",
+    "Valid Values": "Valid .Net Numeric Formatting (##.###)\nhttp://msdn.microsoft.com/en-us/library/0c899ak8.aspx"
+  },
+  {
+    "AF Attribute Name": "Geo Label Format, GeoLabelFormat",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, Value, Name, Name: Value, Name:Value, Name Value, NameValue"
+  }
+]

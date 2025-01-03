@@ -1,0 +1,350 @@
+[
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "KPI Name"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Display Order"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Description"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Group Name"
+  },
+  {
+    "AF Attribute Name": "Max, Maximum",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "Max"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "Max Interface"
+  },
+  {
+    "AF Attribute Name": "High High High, HighHighHigh, HHH",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "High High High"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "High High High Interface"
+  },
+  {
+    "AF Attribute Name": "High High , HighHigh, HH",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "High High"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "High High Interface"
+  },
+  {
+    "AF Attribute Name": "High, H",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "High"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "High Interface"
+  },
+  {
+    "AF Attribute Name": "Target, Tgt",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "Target"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Target Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Actual"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Actual Interface"
+  },
+  {
+    "AF Attribute Name": "Low, L",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "Low"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Low Interface"
+  },
+  {
+    "AF Attribute Name": "Low Low, LowLow, LL",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "Low Low"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Low Low Interface"
+  },
+  {
+    "AF Attribute Name": "Low Low Low, LowLowLow, LLL",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": "Low Low Low"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Low Low Low Interface"
+  },
+  {
+    "AF Attribute Name": "Min, Minimum",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Designer Value": "Minimum Interface"
+  },
+  {
+    "AF Attribute Name": "Top Text, TopText",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Bottom Text, BottomText",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Alert Silence, AlertSilence",
+    "Data Type": "Integer",
+    "Valid Values": "0 (False), 1 (True)",
+    "Visual KPI Designer Value": "Alert Silence"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Integer",
+    "Valid Values": "0 (False), 1 (True)",
+    "Visual KPI Designer Value": "NA"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Integer",
+    "Valid Values": "0 (False), 1 (True)",
+    "Visual KPI Designer Value": "Unkown"
+  },
+  {
+    "AF Attribute Name": "In Service, InService",
+    "Data Type": "Integer",
+    "Valid Values": "0 (False), 1 (True)",
+    "Visual KPI Designer Value": "Not in Service"
+  },
+  {
+    "AF Attribute Name": "Status, KPI Status, KPIStatus",
+    "Data Type": "Integer",
+    "Valid Values": "3 (HHH), 2 (HH), 1 (H), 0 (Good), -1 (L), -2 (LL), -3 (LLL)",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Actual Trend Type, ActualTrendType",
+    "Data Type": "String / Enum",
+    "Valid Values": "Interpolated, Step, Symbol, Interpolated + Symbol, Interpolated+Symbol, InterpolatedSymbol, Interpolated Symbol, Step + Symbol, Step+Symbol, StepSymbol, Step Symbol",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Target Trend Type, TargetTrendType",
+    "Data Type": "String / Enum",
+    "Valid Values": "Interpolated, Step, Symbol, Interpolated + Symbol, Interpolated+Symbol, InterpolatedSymbol, Interpolated Symbol, Step + Symbol, Step+Symbol, StepSymbol, Step Symbol",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Limit Trend Type, LimitTrendType",
+    "Data Type": "String / Enum",
+    "Valid Values": "Interpolated, Step, Symbol, Interpolated + Symbol, Interpolated+Symbol, InterpolatedSymbol, Interpolated Symbol, Step + Symbol, Step+Symbol, StepSymbol, Step Symbol",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Trend Limits, TrendLimits",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, False, 0, No, True, 1, Yes",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Trend Target, TrendTarget",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, False, 0, No, True, 1, Yes",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Bar Chart Type, BarChartType",
+    "Data Type": "String / Enum",
+    "Valid Values": "Actual EU, ActualEU, Deviation EU, DeviationEU, Deviation %, Deviation%, Deviation Percent, DeviationPercent",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Group Map Position, GroupMapPosition",
+    "Data Type": "String / Enum",
+    "Valid Values": "0, Omit, None, 1, 2, 3, 4, 5",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "KPI Name Click Path, Name Click Path",
+    "Data Type": "String / Enum",
+    "Valid Values": "Trend, URL",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Notification Type, NotificationType",
+    "Data Type": "String / Enum",
+    "Valid Values": "None, Email, E-Mail",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Alt Contact 1, Alternate Contact 1, AltContact1, AlternateContact1",
+    "Data Type": "String / Reference",
+    "Valid Values": "Any defined Visual KPI Contact",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Alt Contact 2, Alternate Contact 2, AltContact2, AlternateContact2",
+    "Data Type": "String / Reference",
+    "Valid Values": "Any defined Visual KPI Contact",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Alert Template, AlertTemplate",
+    "Data Type": "String / Reference",
+    "Valid Values": "Any defined Visual KPI Alert Template",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Trend Start Time, Trend Start Date, Trend Start, TrendStartTime, TrendStartDate, TrendStart",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Trend End Time, Trend End Date, Trend End, TrendEndTime, TrendEndDate, TrendEnd",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Min Y Axis, MinYAxis, Minimum Y Axis, MinimumYAxis",
+    "Data Type": "Numeric",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Max Y Axis, MaxYAxis, Maximum Y Axis, MaximumYAxis",
+    "Data Type": "Numeric",
+    "Valid Values": "Any",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "URL",
+    "Data Type": "String",
+    "Valid Values": "Any URL (starts with www, http:// or https://",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "URL Descriptor, URLDescriptor, URL Description, URLDescription, URL Name, URLName",
+    "Data Type": "String",
+    "Valid Values": "Any\n* URL and URL Descriptor can be semi-colon (;) delimited lists. it's best if you match these up (i.e. 3 urls and 3 descriptors)",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Numeric Format, NumericFormat",
+    "Data Type": "String",
+    "Valid Values": "Valid .Net Numeric Formatting (##.###)\nhttp://msdn.microsoft.com/en-us/library/0c899ak8.aspx",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Geo Label Format, GeoLabelFormat",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, Actual, Name, Name: Actual, Name:Actual, Name Actual, NameActual",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Trend Scale, TrendScale",
+    "Data Type": "String / Enum",
+    "Valid Values": "Single, Single-Scale, SingleScale, Single Scale, Multi, Multi-Scale, MultiScale, Multi Scale",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Trend Y Axis, TrendYAxis",
+    "Data Type": "String / Enum",
+    "Valid Values": "KPI Min and Max, KPI Min Max, KPIMinMax, Auto-Scale, Auto-Scale, Auto, Multi Scale, Min and Max Y Axis, Min Max Y Axis, MinMaxYAxis",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "Display Format, DisplayFormat",
+    "Data Type": "String / Enum",
+    "Valid Values": "None, Number, Number+UOM, Number + UOM, NumberUOM, Number UOM, UOM+Number, UOM + Number, UOMNumber, UOM Number",
+    "Visual KPI Designer Value": ""
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String",
+    "Valid Values": "Asia, EMEA, North America, South America",
+    "Visual KPI Designer Value": "Region"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String",
+    "Valid Values": "Site 1, Site 2, Site 3, Site 4",
+    "Visual KPI Designer Value": "Site"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String",
+    "Valid Values": "Area 01, Area 02, Area 11, Area 21",
+    "Visual KPI Designer Value": "Area"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String",
+    "Valid Values": "Unit A, Unit B, Unit C",
+    "Visual KPI Designer Value": "Unit"
+  }
+]

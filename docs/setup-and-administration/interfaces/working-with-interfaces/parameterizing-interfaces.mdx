@@ -1,0 +1,66 @@
+---
+title: Parameterizing Interfaces
+slug: /setup-and-administration/interfaces/parameterizing-interfaces
+description: ''
+tags: ['documentation']
+---
+
+Visual KPI Interfaces allows you to parameterize most of the information you may need, giving you the power to create one interface to query for different data. 
+
+When creating a query, you can pass parameters into it using index placeholders like `{0}`, `{1}`, and `{8}`. It's important to ensure that all queries have the same number of input parameters (that's, `{0}` and `{1}`), and that the Historical Value query includes the `{TIMESTAMP}` parameter, while the Trend query includes both `{STARTDATE}` and `{ENDDATE}` parameters.
+
+## ODBC Interfaces
+
+ODBC interfaces may have parameters for any data that you want to query. For example, below you will find a SQL query for trend data without any parameters and another with them as a comparison:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    ```sql
+      SELECT sum(DownloadPIR) AS Value,
+      SomeTimeColumn AS Date
+      FROM YOURTABLE
+      WHERE Identifier = 'ENP001005' AND Beam = 'Beam2'
+      AND Date BETWEEN '2023—02—19T00:00:00Z' and '2024—02—19T00:00:00Z'
+      ORDER BY Date;
+    ```
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    ```sql
+      SELECT sum(DownloadPIR) AS Value,
+      SomeTimeColumn AS Date
+      FROM YOURTABLE
+      WHERE Identifier={0} AND Beam={1}
+      AND Date BETWEEN {STARTDATE} and {ENDDATE} 
+      ORDER BY Date;
+    ```
+  </TabItem>
+</Tabs>
+
+<Callout type="info">
+In Visual KPI Designer, you would use an _Actual Value_ separated by a pipe for `{0}` and `{1}` like: **ENP001005|Beam2**
+</Callout>
+
+## JSON Interfaces
+
+JSON interfaces can have parameters almost anywhere in the interface configurations. You can add parameters to:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Base Address: `http://demo.example.com/apitest/api/training?machine=server1`
+    - Request URI: `&start=2024—02—17T12:30:00&end=2024—02—19T12:30:00` or `&date=2024—02—17T12:30:00`
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Base Address: `http://demo.example.com/apitest/api/training?machine={0}`
+    - Request URI: `&start={STARTDATE}&end={ENDDATE}` or `&date={TIMESTAMP}`
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+  </TabItem>
+</Tabs>
+
+<Callout type="info">
+In Visual KPI Designer, you would use an _Actual Value_ separated by a pipe, like: **server1|data.|CPU|timestamp**
+</Callout>

@@ -1,0 +1,85 @@
+---
+id: rcs-configuration
+title: RCS Configuration
+slug: /setup-and-administration/automation/rcs-configuration
+description: 'Describe how to use the RCS.'
+tags: ['documentation']
+---
+
+import LinkCards from '@site/src/components/Cards/LinkCards';
+import IconCards from '@site/src/components/Cards/IconCards';
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+Visual KPI RCS can integrate with AF databases or any SQL data source. For each integration type, specific configurations need to be made. While AF configurations mostly happen on their side of the integration, SQL will require you to configure a few queries because Visual KPI will need to know what attributes to look for.
+
+## Installing Visual KPI RCS
+
+Visual KPI Server Manager has installation setups for a few different data sources, such as:
+
+<IconCards data={
+  [
+    {
+      name: 'AF',
+      logo: 'OSIsoft'
+    },
+    {
+      name: 'inmation',
+      logo: 'inmation'
+    },
+    {
+      name: 'SQL',
+      logo: 'ODBC'
+    },
+    {
+      name: 'VMware',
+      logo: 'VMware'
+    },
+    {
+      name: 'Xompass',
+      logo: 'Xompass'
+    },
+    {
+      name: 'Zabbix',
+      logo: 'Zabbix'
+    },
+    
+  ]
+}/>
+
+To install a new RCS in your Visual KPI instance, you need to follow the steps below:
+
+1. Right-click **Remote Context Service** in the left panel.
+2. Go to **Install New Visual KPI Remote Context Service**.
+3. Select the RCS you want to install, from the options listed above.
+4. Follow the installation wizard, entering the necessary information.
+
+Below, you will find a visual guide to these steps:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/rcs-install-gif.gif"
+  alt="rcs installation process"
+/>
+
+## Configuration
+
+Configuration for all available RCS, except for SQL, will be completed on the data source side. Please refer to the link below:
+
+<LinkCards data={
+  [
+    {
+      name: 'AF Databases',
+      linkTo: '/docs/setup-and-administration/automation/rcs-with-af-databases'
+    }
+  ]
+}/>
+
+When creating a SQL RCS, you must generate specific metric queries and add them in Visual KPI Server Manager, also configuring parameters in Visual KPI Designer. To learn how to configure SQL RCSs, refer to the link below:
+
+<LinkCards data={
+  [
+    {
+      name: 'SQL Databases',
+      linkTo: '/docs/setup-and-administration/automation/rcs-with-sql-databases'
+    },
+  ]
+}/>

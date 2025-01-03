@@ -1,0 +1,1573 @@
+[
+  {
+    "Visual KPI Attribute": "Bar Chart Name",
+    "Description": "Name of the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names with unique attributes at the beginning. E.g. 'Site 1 Chart'",
+    "Value": "Name of the parent attribute",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Display Order",
+    "Description": "Numeric value that overrides the default alphanumeric order of Bar Charts. Bar Charts with blanks will be sorted alphanumerically and displayed below Bar Charts with numbers.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Description",
+    "Description": "Description of the Bar Chart that will appear to your users. Use longer descriptions in conjunction with shorter names to accommodate small screen formats. Can either be the description of the attribute or a subattribute called Description.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Name",
+    "Description": "Name of Group that Bar Chart belongs to. Used when Bar Charts belong to only 1 group. Parent-Child relationships are defined by either this field or a combination of Chart Selection Query (on Group) and custom attributes (on Bar Chart)",
+    "Value": "",
+    "AF": "no",
+    "SQL": "no",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "X Axis Label",
+    "Description": "The label that will be displayed on the x-axis of the chart.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Y Axis Label",
+    "Description": "The label that will be displayed on the y-axis of the chart.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "ConnectString",
+    "Description": "Optional ConnectString or DSN defines the connection to the data source used in the query. Required if a query is used for chart data.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Query",
+    "Description": "SQL query to retrieve data for the chart. Can return Name and [Column]Color in hex format (e.g., 'select Cost, CostColor, Type as Name from Table'). Key parameter {TIMESTAMP} can also be used to allow for historical charts. Requires ConnectString.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Query Date Format",
+    "Description": "Formatting applied to {TIMESTAMP} and {TIMESTAMP.Date} parameters passed into the query. If this field is empty, windows settings will be used.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Query Time Format",
+    "Description": "Formatting applied to {TIMESTAMP} and {TIMESTAMP.Time} parameters passed into the query. If this field is empty, windows settings will be used.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Query Chart Type",
+    "Description": "Sets the type of query-based Bar Chart (Standard, Stacked, or Clustered). Stacked and Clustered require the query to return multiple columns in addition to the optional Name and Color columns. Only applies to Bar Charts with a Query and ConnectString.",
+    "Value": "Standard, Stacked, Clustered",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Chart Orientation",
+    "Description": "Set the Bar Chart to either display vertical or horizontal bars.",
+    "Value": "Vertical, Horizontal",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar Sort Order",
+    "Description": "Numeric sort order for bars in the Bar Chart. This will change the left to right or top to bottom order of the bars based on each bar's numeric value.",
+    "Value": "None, Ascending, Descending",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 1",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 1 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 1 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 1 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 1 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 2",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 2 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 2 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 2 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 2 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 3",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 3 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 3 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 3 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 3 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 4",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 4 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 4 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 4 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 4 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 5",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 5 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 5 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 5 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 5 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 6",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 6 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 6 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 6 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 6 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 7",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 7 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 7 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 7 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 7 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 8",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 8 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 8 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 8 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 8 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 9",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 9 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 9 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 9 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 9 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 10",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 10 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 10 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 10 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 10 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 11",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 11 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 11 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 11 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 11 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 12",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 12 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 12 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 12 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 12 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 13",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 13 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 13 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 13 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 13 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 14",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 14 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 14 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 14 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 14 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 15",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 15 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 15 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 15 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 15 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 16",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 16 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 16 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 16 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 16 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 17",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 17 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 17 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 17 Color",
+    "Description": "Display color of the Bar in the Bar Chart. Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e., 669000 or 96d529)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 17 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can with be the description on the Bar attribute or another attribute",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 18",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 18 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Bar 18 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 19",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 19 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 19 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 19 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 19 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can be the description on the Bar attribute or another attribute.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 20",
+    "Description": "Bar value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 20 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bar field. If this field is blank, then the Bar field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 20 Offset",
+    "Description": "Relative time offset used to get values from the Bar Interface. This allows the Bar Chart to show Bar Values at different times such as Profit Today and Profit Last Week. This value uses our standard offset format (e.g. -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 20 Color",
+    "Description": "Display color of the Bar in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar 20 Name",
+    "Description": "Name of the Bar in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names. Can be the description on the Bar attribute or another attribute.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target",
+    "Description": "Target value for the Bar Chart. Pair this with an interface to have a dynamic Target. If a Target is provided Conditional Coloring can be used.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target Interface",
+    "Description": "Interface used to retrieve the data based on the Target field contents. If this field is blank then the Target field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target Color",
+    "Description": "Display color of the Target Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target Name",
+    "Description": "Name of the Target Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target Show",
+    "Description": "Boolean (True/False). Sets the Show (visibility) of the Target line on the Bar Chart. A setting of False will suppress the display of the Target Line to the users but can still be used with Conditional Coloring.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Conditional Coloring",
+    "Description": "Boolean (True/False). A setting of True will color the bars in either the Above Target Color or the Below Target Color based on how the bar value compares to the Target. A setting of false will use the configured bar colors.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Above Target Color",
+    "Description": "Color used for the bar if the bar value is greater than or equal to (>=) the Target. Must have Conditional Coloring set to True.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Above Target Name",
+    "Description": "Name used in the legend for bars with a value greater than or equal to (>=) the Target. Must have Conditional Coloring set to True.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Below Target Color",
+    "Description": "Color used for the bar if the bar value is less than (<) the Target. Must have Conditional Coloring set to True.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Below Target Name",
+    "Description": "Name used in the legend for bars with a value greater than or equal to (>=) the Target. Must have Conditional Coloring set to True.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Baseline",
+    "Description": "Baseline value for the Bar Chart. Pair this with an interface to have a dynamic Baseline.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Baseline Interface",
+    "Description": "Interface used to retrieve the data based on the Baseline field contents. If this field is blank then the Baseline field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Baseline Color",
+    "Description": "Display color of the Baseline Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Baseline Name",
+    "Description": "Name of the Baseline Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 1",
+    "Description": "Line value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 1 Interface",
+    "Description": "Interface used to retrieve the data based on the Line field contents. If this field is blank then the Line field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 1 Color",
+    "Description": "Display color of the Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 1 Name",
+    "Description": "Name of the Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 2",
+    "Description": "Line value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 2 Interface",
+    "Description": "Interface used to retrieve the data based on the Line field contents. If this field is blank then the Line field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 2 Color",
+    "Description": "Display color of the Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 2 Name",
+    "Description": "Name of the Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 3",
+    "Description": "Line value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 3 Interface",
+    "Description": "Interface used to retrieve the data based on the Line field contents. If this field is blank then the Line field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 3 Color",
+    "Description": "Display color of the Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 3 Name",
+    "Description": "Name of the Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 4",
+    "Description": "Line value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 4 Interface",
+    "Description": "Interface used to retrieve the data based on the Line field contents. If this field is blank then the Line field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 4 Color",
+    "Description": "Display color of the Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 4 Name",
+    "Description": "Name of the Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 5",
+    "Description": "Line value for the Bar Chart. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 5 Interface",
+    "Description": "Interface used to retrieve the data based on the Line field contents. If this field is blank then the Line field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 5 Color",
+    "Description": "Display color of the Line in the Bar Chart.",
+    "Value": "Black, Blue, Brown, Gray, Green, Orange, Pink, Red, Yellow, Violet, Tan, Purple, Dark Blue, Dark Green, Dark Brown, Rose, Tangerine, Aqua, Light Green, Burgundy or any hex color (i.e. 669000 or 96d529)",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Line 5 Name",
+    "Description": "Name of the Line in the Bar Chart that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "CUSTOM ATTRIBUTES",
+    "Description": "User-defined attribute. These are used for the grouping of objects and can be used in Group selection queries to determine parent-child relationships. Select 'Attributes' under the Options menu (gear icon) to view/edit custom attributes.",
+    "Value": "Need to have AF Attribute name or inmation custom properties name the same as the VKPI Custom attribute. If I have a VKPI custom attribute called Plant Type, I can have a string AF Attribute (or inmation custom property called Plant Type with a value of Coal.",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Contact",
+    "Description": "Main contact for the Bar Chart chosen from the collection defined in the contact tab. Can be one or more people. This appears in Bar Chart details.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show",
+    "Description": "Boolean (True/False) or equivalent (Non-zero = True, 0 = False). Sets the Show (visibility) of the Bar Chart. A setting of False will suppress the display of the Bar Chart to the users. Pair this with an interface to have a dynamic value.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Interface",
+    "Description": "The interface used to retrieve the In Show value. If this field is blank, then the Show field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Chart Time",
+    "Description": "Overrides the default chart time for the Bar Chart. This value can be either an actual or relative date (e.g. 6/12/2015 or *-7Days). Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Chart Time Interface",
+    "Description": "The interface used to retrieve the Chart Time value. If this field is blank, then the Chart Time field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Start Time",
+    "Description": "Overrides the default Start Time for the Bar Chart (Note: The Start Time must be < the End Time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Start Time Interface",
+    "Description": "The interface used to retrieve the Start Time value. If this field is blank, then the Start Time field is treated as a constant value.",
+    "Value": "Inferred",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "End Time",
+    "Description": "Overrides the default End Time for the Bar Chart (Note: The End Time must be > the Start time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "End Time Interface",
+    "Description": "The interface used to retrieve the End Time value. If this field is blank, then the End Time field is treated as a constant value.",
+    "Value": "Inferred",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Scroll Interval",
+    "Description": "Numeric Length of time that timestamp-based charts and tables can be scrolled (pair with Scroll Interval UOM)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Scroll Interval UOM",
+    "Description": "Unit of time that timestamp-based charts and tables can be scrolled (pair with Scroll Interval)",
+    "Value": "Minutes, Hours, Days, Weeks",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Lookup Text Length",
+    "Description": "The numerical override for the maximum length of lookup text displayed on chart cursors.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Calcs In Chart Cursor",
+    "Description": "A boolean override that controls whether or not calculations (equations) are displayed in chart cursors.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude",
+    "Description": "The geo-location latitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Latitude field. If this field is blank, then the Latitude field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Longitude",
+    "Description": "The geo-location longitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Longitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Longitude field. If this field is blank, then the Longitude field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline Refresh Interval",
+    "Description": "The refresh interval (in seconds) for the sparkline. If set to default, the site-wide screen data update interval will be used. If set to 0 then the sparkline will not auto-refresh.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info",
+    "Description": "Additional relevant information (can be hyperlinked).",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Interface",
+    "Description": "Interface used to retrieve the data based on the Info field contents. If this field is blank, then the Info field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Info Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed. Click the link in the header for more information.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info UOM",
+    "Description": "Unit of measure for the Info value (applicable if value is numeric).",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Display Format",
+    "Description": "The display position of the UoM (e.g., $100, 42.5kg).",
+    "Value": "Number, Number + UOM, UOM + Number",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info URL",
+    "Description": "URL link for the Info field (creates a hyperlink in the Info field).",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Description",
+    "Description": "If the Info field is a hyperlinked value, then this will be the tooltip or mouseover text for the link. If only a URL is used, then this will be the text displayed in Info.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Links",
+    "Description": "List of associated Links or URLs (semicolon separated, limit 10) for the object.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Link Descriptions",
+    "Description": "List of associated Link or URL descriptions (semicolon separated, limit 10) for the object. These are used to both shorten and give better meaning to links (e.g., instead of www.xyz.com?x=5&type=2, the user could see SOPs or Shift Report).",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Calculation Type",
+    "Description": "Override for how non-numeric values in calculations are handled. This is useful when dealing with exception data (i.e., BadValue) returned from calculation-derived data sources.",
+    "Value": "Default, Standard, Force Numeric",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "no",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Access Group List",
+    "Description": "List of Active Directory or local groups (semicolon separated) defining access rights to the object. Only applies if Object Level Security is enabled and the site is secured.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bar Chart ID",
+    "Description": "Read-only system level identifier.",
+    "Value": "auto",
+    "AF": "auto",
+    "SQL": "auto",
+    "Inmation": "auto"
+  }  
+
+]
+  
+

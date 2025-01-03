@@ -1,0 +1,42 @@
+[
+  {
+    "Setting": "ConnectString",
+    "Description": "ConnectString, DSN or Interface that defines the connection to the data source used in the query."
+  },
+  {
+    "Setting": "Query",
+    "Description": "SQL query or parameters to retrieve data for the event ranges. This query will require 2 parameters {STARTDATE} and {ENDATE} and an optional third parameter called {TYPE}. The results of this query should return event ranges between the passed in Start and End dates (optionally filtered by the {TYPE} parameter). The results must either contain the columns [StartDate or Start Date] and [EndDate or End Date] or contain the start date and end date as the first 2 columns. All columns in the result will be displayed. Requires ConnectString."
+  },
+  {
+    "Setting": "Query Date Format",
+    "Description": "Formatting applied to {STARTDATE}, {STARTDATE.Date}, {ENDDATE} and {ENDDATE.Date} parameters passed into the query. If this field is empty windows settings will be used."
+  },
+  {
+    "Setting": "Query Time Format",
+    "Description": "Formatting applied to {STARTDATE}, {STARTDATE.Time}, {ENDDATE} and {ENDDATE.Time} parameters passed into the query. If this field is empty windows settings will be used."
+  },
+  {
+    "Setting": "Database Time Zone",
+    "Description": "The time zone setting for the database you are querying. Only set this field if the database time zone differs from the web server."
+  },
+  {
+    "Setting": "Result Start Date Column Index",
+    "Description": "Column index within the resulting table that contains the Start Date."
+  },
+  {
+    "Setting": "Result Start End Column Index",
+    "Description": "Column index within the resulting table that contains the End Date."
+  },
+  {
+    "Setting": "Use Type Filter",
+    "Description": "Controls whether or not the query and the UI will contain a pull-down for further filtering."
+  },
+  {
+    "Setting": "Type Filter Label",
+    "Description": "Controls the label for the optional filtering pull-down. Default name is Type."
+  },
+  {
+    "Setting": "Type Filter Values",
+    "Description": "Sets the predefined values for the filtering pull-down. This should be a semicolon delimited list such as Batch;Shift;Plant or an ordinal|value semicolon delimited list (such as 1|Batch;2|Shift;3|Plant). If you use a ordinal|value list, the ordinal will be passed as the parameter."
+  }
+]

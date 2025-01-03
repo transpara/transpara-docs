@@ -1,0 +1,118 @@
+[
+  {
+    "Field": "Alt Text",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Auto Start Desktop Refresh",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Cache Alert Notification Protocol",
+    "Type": "List Selection",
+    "Limit": "System Defined Protocols"
+  },
+  {
+    "Field": "Cache Alert Reminder Interval",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Cache Warning Interval",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Default Attribute Grouping",
+    "Type": "List Selection",
+    "Limit": "System Defined Plus. Attributes 1 – 20"
+  },
+  {
+    "Field": "Default KPI Map Type",
+   "Type": "List Selection",
+   "Limit": "System Defined KPI Map Types"
+  },
+  {
+    "Field": "Desktop Refresh Rate",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Enable Interactive Trend",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Enable Link Display",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Enable Trend Display",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+},
+
+  {
+    "Field": "File Name",
+    "Type": "Automatically Assigned",
+    "Limit": 200
+  },
+  {
+    "Field": "Mobile Refresh Rate",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Show Legend",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Show Sparklines",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Site Admin Email",
+    "Type": "Text",
+    "Limit": 1024
+  },
+  {
+    "Field": "Site Admin Name",
+    "Type": "Text",
+    "Limit": 75
+  },
+  {
+    "Field": "Site Admin Phone",
+    "Type": "Text",
+    "Limit": 25
+  },
+  {
+    "Field": "Suppress Empty Views and Scorecards",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Suppress True Roll Ups(TM)",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Suppress Unused Columns in List Pages",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Suppress Unused Fields in Detail Pages",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Use Native BlackBerry Resolution",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "Attribute": "Simplify KPI Blocks with Missing Data",
+    "Description": "Simplify (remove sparkline, bullet chart, actions, statistics and contact) KPI block widget if a valid Sparkline and Bullet Chart cannot be rendered."
+  },
+  {
+    "Attribute": "Show Sparkline on KPI Blocks",
+    "Description": "Display a sparkline (trend) on KPI Blocks (note: this setting can be overridden on each block)."
+  },
+  {
+    "Attribute": "Show Bullet Chart on KPI Blocks",
+    "Description": "Display a bullet chart on KPI Blocks (note: this setting can be overridden on each block)."
+  },
+  {
+    "Attribute": "Show Status History Chart on KPI Blocks",
+    "Description": "Display a status history chart on KPI Blocks (note: this setting can be overridden on each block)."
+  },
+  {
+    "Attribute": "Show Statistics on KPI Blocks",
+    "Description": "Display statistics on KPI Blocks (note: this setting can be overridden on each block)."
+  },
+  {
+    "Attribute": "Show Actions on KPI Blocks",
+    "Description": "Display actions on KPI Blocks (note: this setting can be overridden on each block)."
+  },
+  {
+    "Attribute": "Show Contact on KPI Blocks",
+    "Description": "Display KPI contact on KPI Blocks (note: this setting can be overridden on each block)."
+  }
+]

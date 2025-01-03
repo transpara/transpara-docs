@@ -1,0 +1,440 @@
+[
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Group Name"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Display Order"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Description"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Parent Name"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Group Selection Query"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "KPI Selection Query"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Chart Selection Query"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Table Selection Query"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Region"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Site"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Area"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Unit"
+  },
+  {
+    "AF Attribute Name": "Sparkline Start Time, Sparkline Start Date, Sparkline Start, SparklineStartTime, SparklineStartDate, SparklineStart",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)",
+    "Visual KPI Attribute Name": "Sparkline Start Time"
+  },
+  {
+    "AF Attribute Name": "Sparkline End Time, Sparkline End Date, Sparkline End, SparklineEndTime, SparklineEndDate, SparklineEnd",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)",
+    "Visual KPI Attribute Name": "Sparkline End Time"
+  },
+  {
+    "AF Attribute Name": "Zoom Level, ZoomLevel",
+    "Data Type": "Interger",
+    "Valid Values": "0 \u2013 21",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Sparkline Start Time Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Sparkline End Time Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Info Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Info Numeric Format"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Info UOM"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Info Display Format"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Info URL"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Info Description"
+  },
+  {
+    "AF Attribute Name": "KPI Actual Column Display Name, KPI Actual Column Name, KPIActualColumnDisplayName, KPIActualColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": "KPI Actual Column Display Name"
+  },
+  {
+    "AF Attribute Name": "KPI Target Column Display Name, KPI Target Column Name, KPITargetColumnDisplayName, KPITargetColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": "KPI Target Column Display Name"
+  },
+  {
+    "AF Attribute Name": "Value Data Column Display Name, Value Data Column Name, ValueDataColumnDisplayName, ValueDataColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Group Info Column Display Name, Group Info Column Name, GroupInfoColumnDisplayName, GroupInfoColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": "Group Info Column Display Name"
+  },
+  {
+    "AF Attribute Name": "KPI Info Column Display Name, KPI Info Column Name, KPIInfoColumnDisplayName, KPIInfoColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": "Chart Info Column Display Name"
+  },
+  {
+    "AF Attribute Name": "Value Info Column Display Name, Value Info Column Name, ValueInfoColumnDisplayName, ValueInfoColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Trend Info Column Display Name, Trend Info Column Name, TrendInfoColumnDisplayName, TrendInfoColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Table Info Column Display Name, Table Info Column Name, TableInfoColumnDisplayName, TableInfoColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": "Table Info Column Display Name"
+  },
+  {
+    "AF Attribute Name": "Link Info Column Display Name, Link Info Column Name, LinkInfoColumnDisplayName, LinkInfoColumnName",
+    "Data Type": "String",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Contact"
+  },
+  {
+    "AF Attribute Name": "Default Tab, DefaultTab",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Groups, Group, KPIs, KPI, Links, Link, Trends, Trend, Values, Value, Tables, Table, System",
+    "Visual KPI Attribute Name": "Default Tab"
+  },
+  {
+    "AF Attribute Name": "Default Group View, DefaultGroupView",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": "Default Group View"
+  },
+  {
+    "AF Attribute Name": "Default KPI View, DefaultKPIView",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Bar Chart, BarChart, Bar, Bars, KPI Map, KPIMap, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": "Default KPI View"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": "Default Chart View"
+  },
+  {
+    "AF Attribute Name": "Default Value View, DefaultValueView",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Default Trend View, DefaultTrendView",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Default Table View, DefaultTableView",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": "Default Table View/td>"
+  },
+  {
+    "AF Attribute Name": "Default Link View, DefaultLinkView",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, List, Geo, Map, Geo Map, GeoMap",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Default Group Expand, DefaultGroupExpand",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": "Default Group Expansion"
+  },
+  {
+    "AF Attribute Name": "Default KPI Expand, DefaultKPIExpand",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": "Default KPI Expansion"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": "Default Chart Expansion"
+  },
+  {
+    "AF Attribute Name": "Default Value Expand, DefaultValueExpand",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Default Trend Expand, DefaultTrendExpand",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Default Table Expand, DefaultTableExpand",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": "Default Table Expansion"
+  },
+  {
+    "AF Attribute Name": "Default Link Expand, DefaultLinkExpand",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, Collapsed, Collapse, Expanded, Expand",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": "Show"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": "Show Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": "Show Sparlklines"
+  },
+  {
+    "AF Attribute Name": "Show Group Info Column, Show Group Info, ShowGroupInfoColumn, ShowGroupInfo",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Show KPI Info Column, Show KPI Info, ShowKPIInfoColumn, ShowKPIInfo",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": "Show KPI Info Column"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": "Show Chart Info Column"
+  },
+  {
+    "AF Attribute Name": "Show Value Info Column, Show Value Info, ShowValueInfoColumn, ShowValueInfo",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Show Trend Info Column, Show Trend Info, ShowTrendInfoColumn, ShowTrendInfo",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Show Table Info Column, Show Table Info, ShowTableInfoColumn, ShowTableInfo",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": "Show Table Info Column"
+  },
+  {
+    "AF Attribute Name": "Show Link Info Column, Show Link Info, ShowLinkInfoColumn, ShowLinkInfo",
+    "Data Type": "Boolean / String / Enum",
+    "Valid Values": "False, 0, No, True, 1, Yes",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Attribute Grouping, AttributeGrouping, Group By, GroupBy",
+    "Data Type": "String / Reference",
+    "Valid Values": "Default, None, Status, Group\nOr any defined Visual KPI Custom Attribute (i.e. Plant, Region, etc)",
+    "Visual KPI Attribute Name": "Attribute Grouping"
+  },
+  {
+    "AF Attribute Name": "Map Text, Group Map Text, MapText, GroupMapText",
+    "Data Type": "Any",
+    "Valid Values": "Any",
+    "Visual KPI Attribute Name": ""
+  },
+  {
+    "AF Attribute Name": "Geo Label Format, GeoLabelFormat",
+    "Data Type": "String / Enum",
+    "Valid Values": "Default, System, Name, Name: Info, Name:Info, Name Info, NameInfo",
+    "Visual KPI Attribute Name": "Geo Label Format"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Latitude"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Latitude Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Longitude"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Longitude Interface"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Zoom Level"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Group Map KPI Cell Count"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Group Map Header Priority"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Group Map Expansion"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Links"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Link Description"
+  },
+  {
+    "AF Attribute Name": "",
+    "Data Type": "",
+    "Valid Values": "",
+    "Visual KPI Attribute Name": "Calculation Type"
+  }
+]

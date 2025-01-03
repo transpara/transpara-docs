@@ -1,0 +1,19 @@
+---
+id: kpi-keywords
+title: KPI Keywords
+slug: /reference/setup-and-administration/af-databases/kpi-keywords
+description: ''
+tags: ['documentation']
+---
+
+import table from '@site/data/references/setup-and-administration/af-database-keywords/kpi.json';
+import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
+
+The Visual KPI Remote Context Service will automatically create a KPI if it finds one of more of the following keywords, or sub-attributes:
+
+<Callout title="Notes">
+- If the parent attribute has a Unit of Measure (UOM), that UOM will be used as the KPI's UOM and by default the Display Format of Number + UOM will be set.
+- If the parent attribute has a description, that description will be used as the KPI's description.
+</Callout>
+
+<JsonToTable jsonData={table} />

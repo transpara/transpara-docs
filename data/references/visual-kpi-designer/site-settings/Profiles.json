@@ -1,0 +1,38 @@
+[
+    {
+        "Attributes": "Name",
+        "Descriptions": "The name of the Profile that will appear to your users. Longer names may be truncated on small devices, so consider short names."
+    },
+    {
+        "Attributes": "Display Order",
+        "Descriptions": "The numeric value that overrides the default alphanumeric order of Profile Groups. Profile Groups with blanks will be sorted alphanumerically and displayed below Profile Groups with numbers."
+    },
+    {
+        "Attributes": "Description",
+        "Descriptions": "The description of the Profile that will appear to your users. User longer descriptions in conjunction with shorter names to accommodate small screen formats."
+    },
+    {
+        "Attributes": "Profile Group",
+        "Descriptions": "The name of the Profile Group that this Profile belongs to."
+    },
+    {
+        "Attributes": "Locked",
+        "Descriptions": "Controls whether users can modify this Profile. A locked Profile is considered read-only and cannot be modified."
+    },
+    {
+        "Attributes": "Show",
+        "Descriptions": "Boolean value to set the Show (visibility) of the Profile. A setting of False will suppress the display of the Profile to users."
+    },
+    {
+        "Attributes": "Is Default",
+        "Descriptions": "Boolean value to get whether or not the Profile is the default Profile. You can have only 1 default Profile, which will be displayed to a user who has not selected a Profile."
+    },
+    {
+        "Attributes": "Access Group List",
+        "Descriptions": "List of Active Directory or local groups (semicolon separated) defining access rights to the object. Only applies if Object Level Security is enabled and the site is secured."
+    },
+    {
+        "Attributes": "Profile ID",
+        "Descriptions": "Read-only system level identifier."
+    }
+]

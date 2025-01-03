@@ -1,0 +1,72 @@
+[
+  {
+    "Field": "Compact URL",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Description",
+    "Type": "Text",
+    "Limit": 400
+  },
+  {
+    "Field": "Display In Links Page",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Display Order",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Info",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Info Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Info Description",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Link ID",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Link Name",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Reference Count",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Scorecard Name",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Show",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Show Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "View Name",
+    "Type": "Text",
+    "Limit": 200
+  }
+]

@@ -1,0 +1,2610 @@
+[
+  {
+    "Visual KPI Attribute": "XY Plot Name",
+    "Description": "The name of the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names with unique attributes at the beginning (e.g., 'Site 1 Chart').",
+    "Value": "Name of the parent attribute",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of XY Plots. XY Plots with blanks will be sorted alphanumerically and displayed below XY Plots with numbers.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Description",
+    "Description": "The description of the XY Plot that will appear to your users. Use longer descriptions, in conjunction with shorter names, to accommodate small screen formats.",
+    "Value": "Can either be the description of the attribute or a sub attribute called Description.",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Name",
+    "Description": "The name of the Group that the XY Plot belongs to (used when XY Plots belong to only one group). Parent-Child relationships are defined by either this field or a combination of Chart Selection Query (on Group) and custom attributes (on XY Plot)",
+    "Value": "",
+    "AF": "no",
+    "SQL": "no",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "X Axis Label",
+    "Description": "The label that will be displayed on the x axis of the chart.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Y Axis Label",
+    "Description": "The label that will be displayed on the y axis of the chart.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 1 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 2 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 3 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 4 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 5 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 6 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 7 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 8 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 9 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 10 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 11 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 12 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 13 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 14 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 15 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 16 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 17 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 18 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 19 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 20 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 21 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 22 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 23 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 24 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 25 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 26 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 27 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 28 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 29 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 X",
+    "Description": "The pen X value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 X Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen X field. If this field is blank, then the Pen X field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Y",
+    "Description": "The pen Y value for the XY Plot. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Y Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Pen Y field. If this field is blank, then the Pen Y field is treated as a constant value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Color",
+    "Description": "The display color of the Pen in the XY Plot.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Name",
+    "Description": "The name of the Pen in the XY Plot that will appear to your users. Longer names may be truncated on small devices, so consider short names.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Is Time Series",
+    "Description": "Determines how the XY data is correlated on the Plot.  If 'Is Time Series' is true, then X values are interpolated to match the X value; otherwise, X and Y pairs are determined based on order received from the interface.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Plot Contents",
+    "Description": "Determines if the pen's 'Y data', 'Y data and Fit Line', or just 'Fit Line' are plotted for the Pen.",
+    "Value": "Y Data, Fit Line, Y Data + Fit Line",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Pen 30 Y Data Line Type",
+    "Description": "The plot line type for the XY Plot Pen if Y data is plotted.",
+    "Value": "Symbol, Interpolated, Interpolated + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "CUSTOM ATTRIBUTES",
+    "Description": "User-defined attribute. These are used for the grouping of objects and can be used in Group selection queries to determine parent-child relationships. Select 'Attributes' under the Options menu (gear icon) to view/edit custom attributes.",
+    "Value": "Need to have AF Attribute name or inmation custom properties name the same as the VKPI Custom attribute. If I have a VKPI custom attribute called Plant Type, I can have a string AF Attribute (or inmation custom property called Plant Type with a value of Coal.",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Contact",
+    "Description": "The main contact for the XY Plot, as selected from the Contact tab collection (can be one or more people). The contact appears in XY Plot details.",
+    "Value": "Contact with valid values being the Contact Name as defined in the VKPI",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show",
+    "Description": "Boolean (True/False) or equivalent (Non-zero = True, 0 = False). Sets the Show (visibility) of the XY Plot. A setting of False will suppress the display of the XY Plot to the users. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Interface",
+    "Description": "The interface used to retrieve the In Show value. If this field is blank, then the Show field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Start Time",
+    "Description": "Overrides the default start time for the XY Plot. This value can be either an actual or relative date (e.g. 6/12/2015 or *-7Days). Start time must be < End time. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Start Time Interface",
+    "Description": "Interface used to retrieve the Start Time value. If this field is blank then the Start Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "End Time",
+    "Description": "Overrides the default end time for the XY Plot. This value can be either an actual or relative date (e.g. 6/12/2015 or *-7Days). End time must be > Start time. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "End Time Interface",
+    "Description": "Interface used to retrieve the End Time value. If this field is blank then the End Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Plot Y Axis",
+    "Description": "Plot y axis scale type for XY Plot.",
+    "Value": "Auto-Scale, Plot Min and Max Y Axis",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Min Y Axis",
+    "Description": "Override for minimum of plot scale on the y axis.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Max Y Axis",
+    "Description": "Override for maximum of plot scale on the y axis.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Lookup Text Length",
+    "Description": "The numerical override for the maximum length of lookup text displayed on chart cursors.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Calcs In Chart Cursor",
+    "Description": "A boolean override that controls whether or not calculations (equations) are displayed in chart cursors.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude",
+    "Description": "The geo location latitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Latitude field. If this field is blank, then the Latitude field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Longitude",
+    "Description": "The geo location longitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Longitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Longitude field. If this field is blank, then the Longitude field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline Refresh Interval",
+    "Description": "The refresh interval (in seconds) for the sparkline. If set to default the site wide screen data update interval will be used. If set to 0 then the sparkline will not auto refresh.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info",
+    "Description": "Additional relevant information (can be hyperlinked).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Interface",
+    "Description": "Interface used to retrieve the data based on the Info field contents. If this field is blank then the Info field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Info Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed. Click the link in the header for more information.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info UOM",
+    "Description": "Unit of measure for the Info value (applicable if value is numeric).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Display Format",
+    "Description": "The display position of the UoM (e.g., $100, 42.5kg).",
+    "Value": "Number, Number + UOM, UOM + Number",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info URL",
+    "Description": "URL link for the Info field (creates a hyperlink in the Info field).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Description",
+    "Description": "If the Info field is a hyperlinked value, then this will be the tooltip or mouseover text for the link. If only a URL is used, then this will be the text displayed in Info.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Links",
+    "Description": "List of associated Links or URLs (semicolon separated, limit 10) for the object.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Link Descriptions",
+    "Description": "List of associated Link or URL descriptions (semicolon separated, limit 10) for the object. These are used to both shorten and give better meaning to links (e.g., instead of www.xyz.com?x=5&type=2, the user could see SOPs or Shift Report)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Calculation Type",
+    "Description": "Override for how non-numeric values in calculations are handled. This is useful when dealing with exception data (i.e., BadValue) returned from calculation-derived data sources.",
+    "Value": "Default, Standard, Force Numeric",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Access Group List",
+    "Description": "List of Active Directory or local groups (semicolon separated) defining access rights to the object. Only applies if Object Level Security is enabled and the site is secured.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "XY Plot ID",
+    "Description": "Read-only system level identifier.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "auto",
+    "inmation": "auto"
+  }
+]

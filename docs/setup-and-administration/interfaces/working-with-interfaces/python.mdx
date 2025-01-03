@@ -1,0 +1,262 @@
+---
+title: Python Interface
+slug: /setup-and-administration/interfaces/python
+description: ''
+tags: ['documentation']
+---
+
+Python interfaces are a powerful tool for retrieving data for KPIs from any data source. These interfaces provide great flexibility, allowing you to use a script to fetch data from various sources. With a Python interface, you can easily customize your data retrieval process to fit the unique requirements of your project. Whether you need to extract data from a database, a web service, or any other type of data source, a Python interface can be used as a wildcard.
+
+## Configuration
+
+After installing a new Python interface following these [instructions](/setup-and-administration/interfaces/configuration), you are ready to configure your interface by adding your python script inside the **Python Settings** section.
+
+When creating a new Python interface, a boilerplate script is generated to provide instructions on configuring your own script. This guides you through every method you need to have so Visual KPI works properly. These methods are described below:
+
+- [`get_current_values`](#get_current_values): Returns one value and a timestamp for a metric, the most recent available.
+- [`get_historical_values`](#get_historical_values): Returns one value and a timestamp for a metric at a specified date or the closest to that date but not after.
+- [`get_trend_data`](#get_trend_data): Returns timeseries data for a metric within a time range ready for a trend (downsampled or aggregated).
+- [`get_historical_data`](#get_historical_data): Returns raw historical data (timeseries data).
+- `get_table`: Returns a JSON to be turned into a table.
+- `verify_connection`: Verifies that there is connectivity to python and also to the external resource you are accessing.
+
+<Callout type="note">
+At present, the python.net integration doesn't support f strings and typing.
+</Callout>
+
+### `get_current_values`
+
+The `get_current_values` method receives a dictionary as parameter and returns one value and a timestamp for the most recent metric available. Below you find examples of the parameter and the expected output:
+
+```python
+  parameter = {
+    "lookups": [ "firstLookup", "secondLookup" ]
+  }
+
+  result = {
+    "results": {
+      "firstLookup": {
+        "value": "1",
+        "date":  "2020-12-31"
+      },
+      "secondLookup": {
+        "value": "2",
+        "date": "2020-12-31"
+      }
+    }
+  }
+```
+
+### `get_historical_values`
+
+The `get_historical_values` method receives a dictionary as parameter and returns one value and a timestamp for a metric at a specified date or the closest to that date but not after. Below you find examples of the parameter and the expected output:
+
+```python
+  parameter = {
+  "lookups": [
+      {
+        "lookup": "firstLookup",
+        "targetDate": "2020-12-05"
+      },
+      {
+        "lookup": "secondLookup",
+        "targetDate": "2020-12-04"
+      }
+    ]
+  }
+
+  result = {
+    "results": {
+      "firstLookup": {
+        "value": "1",
+        "date":  "2020-12-05"
+      },
+      "secondLookup": {
+        "value": "2",
+        "date": "2020-12-03"
+      }
+    }
+  }
+```
+
+### `get_trend_data`
+
+The `get_trend_data` method receives a dictionary as parameter and returns timeseries data for a metric within a time range ready for a trend (downsampled or aggregated). Below you find examples of the parameter and the expected output:
+
+```python
+  parameter = {
+    "lookup": "secondLookup",
+    "startDate": "2020-12-04",
+    "endDate": "2020-12-07",
+    "screenWidth": 500
+  }
+
+  result = {
+    "results": [
+      {
+        "value": 1,
+        "date": "2020-12-04"
+      },
+      {
+        "value": 1,
+        "date": "2020-12-05"
+      },
+      {
+        "value": 1,
+        "date": "2020-12-06"
+      }
+    ]
+  }
+```
+
+### `get_historical_data`
+
+The `get_historical_data` method receives a dictionary as parameter and returns raw historical data (timeseries data). Below you find examples of the parameter and the expected output:
+
+```python
+  parameter = {
+    "lookup": "secondLookup",
+    "startDate": "2020-12-04",
+    "endDate": "2020-12-07"
+  }
+
+  result = {
+    "results": [
+      {
+        "value": 1,
+        "date": "2020-12-04"
+      },
+      {
+        "value": 1,
+        "date": "2020-12-05"
+      },
+      {
+        "value": 1,
+        "date": "2020-12-06"
+      }
+    ]
+  }
+```
+
+The boilerplate script is shown below:
+
+<Accordion title="Boilerplate script">
+```python
+        import json
+
+        # import requests
+
+
+        # this method should return one value and a timestamp for a metric, the most recent available
+        def get_current_values(lookups):
+            paramObject = json.loads(lookups)  # deserializes string input into object
+            results = {}  # creates results dictionary
+            for lookup in paramObject["lookups"]:  # loops the lookups list from the input
+                results[lookup] = {
+                    "value": 1,
+                    "date": "2020-12-22T16:34:20-06:00",
+                }  # appends result of one lookup to the dict
+            output = {"results": results}  # creates output object with the results dictionary
+            return json.dumps(output)  # returns serialized object to .NET
+
+
+        # this method should return one value and a timestamp for a metric at a specified date or the closest to that date but not after.
+        def get_historical_values(lookups):
+            paramObject = json.loads(lookups)  # deserializes string input into object
+            results = {}  # creates results dictionary
+            for lookupObject in paramObject[
+                "lookups"
+            ]:  # loops the lookups object from the input
+                lookup = lookupObject["lookup"]  # gets lookup name
+                targetDateString = lookupObject["targetDate"]  # gets lookup target date
+                results[lookup] = {
+                    "value": 1,
+                    "date": targetDateString,
+                }  # appends result of one lookup to the dict
+            output = {"results": results}  # creates output object with the results dictionary
+            return json.dumps(output)  # returns serialized object to .NET
+
+
+        # this method should return timeseries data for a metric within a time ragne ready for a trend (downsampled or aggregated)
+        def get_trend_data(lookup):
+            paramObject = json.loads(lookup)
+            lookupName = paramObject["lookup"]
+            startDate = paramObject["startDate"]
+            endDate = paramObject["endDate"]
+            screenWidth = paramObject["screenWidth"]
+            results = []
+            results.append({"value": "10", "date": "2020-12-07T16:34"})
+            results.append({"value": 1, "date": startDate})
+            results.append({"value": 2, "date": endDate})
+            output = {"results": results}
+            return json.dumps(output)
+
+
+        # this method should return raw historical data (timeseries data)
+        def get_historical_data(lookup):
+            paramObject = json.loads(lookup)
+            lookupName = paramObject["lookup"]
+            startDate = paramObject["startDate"]
+            endDate = paramObject["endDate"]
+            results = []
+            results.append({"value": 1, "date": startDate})
+            results.append({"value": 2, "date": endDate})
+            output = {"results": results}
+            return json.dumps(output)
+
+
+        def get_table(lookup):
+            return json.dumps(
+                {
+                    "hasData": True,
+                    "rowCount": 2,
+                    "hasError": False,
+                    "tables": [
+                        {
+                            "id": lookup,
+                            "hasData": True,
+                            "rowCount": 2,
+                            "columns": [
+                                {"name": "Title"},
+                                {"name": "Type"},
+                                {"name": "Organization"},
+                                {"name": "URL"},
+                            ],
+                            "rows": [
+                                {
+                                    "cells": [
+                                        {"value": ""},
+                                        {"value": "Report"},
+                                        {"value": "Transpara"},
+                                        {
+                                            "value": '\n <a href="">\n <i class="tf tf-link16" style="font-size: 16px; line-height: 12px; position:relative; top: -1px; padding-right: 4px;"></i>\n </a>\n '
+                                        },
+                                    ]
+                                },
+                                {
+                                    "cells": [
+                                        {"value": "Title"},
+                                        {"value": "test"},
+                                        {"value": "Transpara"},
+                                        {
+                                            "value": '\n <a href="">\n <i class="tf tf-link16" style="font-size: 16px; line-height: 12px; position:relative; top: -1px; padding-right: 4px;"></i>\n </a>\n '
+                                        },
+                                    ]
+                                },
+                            ],
+                        }
+                    ],
+                }
+            )
+
+
+        def verify_connection():
+            # this metod should verify that there is connectivity to python and also to the external resource we are accessing
+            # return requests.get('http://google.com').text
+            return "Connection Successful"
+    ```
+</Accordion>
+
+<Callout type="info">
+More examples can be found inside the python interface installation folder.
+</Callout>
