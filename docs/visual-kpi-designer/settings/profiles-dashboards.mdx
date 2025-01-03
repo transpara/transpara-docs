@@ -1,0 +1,97 @@
+---
+id: profiles-dashboards
+title: Profiles & Dashboards
+slug: profiles-dashboards
+description: ''
+tags: ['documentation']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+End users and Designer Admins can configure custom profiles, profile groups, and dashboards. The end user executes the configuration through the Visual KPI site, while the Designer Admin configures profiles and dashboards sitewide using Visual KPI Designer. However, only Designer Admins can either lock down default profiles and dashboards or allow site users to customize both.
+
+When working with Visual KPI Designer, the Designer Admin has three configuration layers to set profiles and dashboard settings:
+
+- **[Profiles](/docs/visual-kpi-designer/settings/profiles-dashboards#profiles)**: Collections of dashboards, Watchlists, and bookmark bars, which are associated with individuals, roles, sites, assets, etc.
+- **[Profile Groups](/docs/visual-kpi-designer/settings/profiles-dashboards#profile-groups)**: Containers for profiles that allow you to manage and control multiple profiles at once in a centralized way.
+- **[Dashboards](/docs/visual-kpi-designer/settings/profiles-dashboards#dashboards)**: Custom layouts of visualizations, KPIs, links, trends, tables, embedded content, and any other object supported by Visual KPI. Dashboards are always linked to one or more profiles.
+
+You can configure several attributes for each of these features, including the option to show or hide them on the Visual KPI site.
+
+## Profiles
+
+You will use Profiles to define the dashboards each user has access to. When you create a new profile, you need to assign it to a profile group. In addition, you can:
+
+- Change the default behavior of the **Locked** feature to **TRUE** so it can not be deleted/edited.
+- Define the new profile as the default.
+- Choose to hide the profile using the **Show** property.
+
+<Image
+  imgURL="media/designer/settings/profiles-dashboards/profiles-worksheet.png"
+  alt="Profiles Worksheet"
+/>
+
+After creating and saving the new profile, it immediately becomes available on the Visual KPI site. The following GIF illustrates the creation process and how an end user can instantly use the new profile in the application.
+
+<Image
+  imgURL="media/designer/settings/profiles-dashboards/profile-creation.gif"
+  alt="Profile creation process"
+/>
+
+<Callout type="tip" title="Toolbar buttons">
+Remember to use the toolbar buttons to speed up the creation process. However, if you prefer, you can type directly on the worksheet.
+</Callout>
+
+## Profile Groups
+
+When you create a Profile Group, it has the following default settings:
+
+- The profile is visible (**Show = TRUE**).
+- Privacy is disabled (**Private = FALSE**).
+- Editing restrictions are off (**Locked = FALSE**).
+
+You can adjust the privacy settings, making the group private and specifying designated users (domain/user) for access, making it hidden from all other users. In addition, you can lock a profile group by setting **Locked = TRUE**, preventing users from making customizations or edits.
+
+<Image
+  imgURL="media/designer/settings/profiles-dashboards/profilegroups-worksheet.png"
+  alt="Profile Groups Worksheet"
+/>
+
+<Callout type="note" title="Private Groups">
+This field is auto-populated when creating private profile groups in the web browser, so there is no need to modify these values in Visual KPI Designer.
+</Callout>
+
+## Dashboards
+
+You can set the following behaviors when creating a dashboard:
+
+- Lock the dashboard to prevent end users from customizing or deleting it.
+- Set specific time ranges, or relative time functions, for all KPIs on the dashboard. By default, no configuration is defined (blank field), meaning each object can have its independent time range. If you leave it blank, users can choose their device preferences.
+- Assign each dashboard to one or multiple profiles. To specify multiple profiles, enter them separated by semicolons in the **Profile** field.
+
+<Callout type="note" title="Default dashboard">
+If you want new users or devices accessing the site for the first time to be directed to a specific dashboard, set it as the default.
+
+You need to assign one dashboard for each profile. If you don't choose a default dashboard, new users will see an empty dashboard and have to choose one.
+</Callout>
+
+<Image
+  imgURL="media/designer/settings/profiles-dashboards/dashboards-worksheet.png"
+  alt="Dashboards Worksheet"
+/>
+
+### Copying Dashboards
+
+You have two methods for copying dashboards:
+
+- **Designer**: Copying and pasting rows within the worksheet. This approach allows you to adjust attribute adjustments while retaining the dashboard's contents.
+
+- **Browser**: In the dashboard selection pull-down, choose **New Dashboard**, and when creating the new dashboard, be sure to check the box labeled **Copy Existing Dashboard**. This approach creates a copy of the current dashboard, which you can edit in your device's browser.
+
+<Callout type="transpara" title="Automatically add dashboards">
+You can automatically add dashboards from SQL or other sources via the Visual KPI [Remote Context Service](/docs/setup-and-administration/automation/rcs). When you have hundreds of sites or assets, this is a good way to generate dashboards automatically following the same pattern rather than creating them manually.
+
+If you would like to automate dashboards, [contact us](https://www.transpara.com/contact-us/).
+</Callout>
+
+You must configure one profile for each site and profile group as default. If you list multiple profiles as default, the one that appears first in the list will always be considered the default.
