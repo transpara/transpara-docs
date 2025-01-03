@@ -21,7 +21,7 @@
     "example.yml"
   ],
   "homepage": "/what-is-visual-kpi",
-  "changelog": false,
+  "changelog": true,
   "navbar": [
     {
       "label": "Guides",
@@ -212,7 +212,7 @@
                     "end-user/features/visualizations/kpis",
                     "end-user/features/visualizations/charts",
                     "end-user/features/visualizations/trends",
-                    "end-user/features/visualizations/embedded-content"                    
+                    "end-user/features/visualizations/embedded-content"
                   ]
                 }
               ]
@@ -317,6 +317,13 @@
                 }
               ]
             }
+          ]
+        },
+        {
+          "categoryName": "Supporting Pages",
+          "pages": [
+            "supporting-pages/faqs",
+            "supporting-pages/glossary"
           ]
         }
       ]
