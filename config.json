@@ -184,6 +184,106 @@
               ]
             }
           ]
+        },
+        {
+          "categoryName": "Reference Guides",
+          "pages": [
+            {
+              "groupName": "Setup and Administration",
+              "page": "references/setup-and-administration/setup-and-administration-reference",
+              "subpages": [
+                {
+                  "groupName": "AF RCS Dashboard",
+                  "subpages": [
+                    "references/setup-and-administration/af-rcs-dashboard/object-types",
+                    "references/setup-and-administration/af-rcs-dashboard/widgets",
+                    "references/setup-and-administration/af-rcs-dashboard/bookmarks"
+                  ]
+                },
+                {
+                  "groupName": "AF Database Keywords",
+                  "subpages": [
+                    "references/setup-and-administration/af-database-keywords/kpi-keywords",
+                    "references/setup-and-administration/af-database-keywords/trend-keywords",
+                    "references/setup-and-administration/af-database-keywords/table-keywords",
+                    "references/setup-and-administration/af-database-keywords/group-keywords",
+                    "references/setup-and-administration/af-database-keywords/value-keywords"
+                  ]
+                },
+                {
+                  "groupName": "SQL Database Keywords",
+                  "subpages": [
+                    "references/setup-and-administration/sql-database-keywords/kpi-keywords",
+                    "references/setup-and-administration/sql-database-keywords/table-keywords",
+                    "references/setup-and-administration/sql-database-keywords/group-keywords",
+                    "references/setup-and-administration/sql-database-keywords/charts-keywords"
+                  ]
+                }
+              ]
+            },
+            {
+              "groupName": "Visual KPI Designer",
+              "page": "references/visual-kpi-designer/visual-kpi-designer-references",
+              "subpages": [
+                {
+                  "groupName": "Data Limits",
+                  "subpages": [
+                    "references/visual-kpi-designer/data-limits/data-limits-for-attributes",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-default-ranges",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-groups",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-interfaces",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-kpis",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-links",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-trend-ranges",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-trends",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-website-configuration"
+                  ]
+                },
+                {
+                  "groupName": "Attributes & Keywords",
+                  "subpages": [
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-bar-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-embedded-content",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-gantt-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-groups",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-kpis",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-managed-trends",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-pareto-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-pie-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-tables",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-xy-plots"
+                  ]
+                },
+                {
+                  "groupName": "Site Settings",
+                  "subpages": [
+                    "references/visual-kpi-designer/site-settings/site-settings-alerts",
+                    "references/visual-kpi-designer/site-settings/site-settings-chart-color",
+                    "references/visual-kpi-designer/site-settings/site-settings-chart-dates",
+                    "references/visual-kpi-designer/site-settings/site-settings-chart-ranges",
+                    "references/visual-kpi-designer/site-settings/site-settings-contacts",
+                    "references/visual-kpi-designer/site-settings/site-settings-dashboards",
+                    "references/visual-kpi-designer/site-settings/site-settings-default-ranges",
+                    "references/visual-kpi-designer/site-settings/site-settings-event-ranges",
+                    "references/visual-kpi-designer/site-settings/site-settings-features",
+                    "references/visual-kpi-designer/site-settings/site-settings-kpi-status",
+                    "references/visual-kpi-designer/site-settings/site-settings-profile-groups",
+                    "references/visual-kpi-designer/site-settings/site-settings-profiles",
+                    "references/visual-kpi-designer/site-settings/site-settings-visual-kpi-website"
+                  ]
+                },
+                {
+                  "groupName": "Advanced Site Settings",
+                  "subpages": [
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-attributes",
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-interfaces",
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-nav-bar-links",
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-site-rollups"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
