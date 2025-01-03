@@ -1,0 +1,50 @@
+[
+  {
+    "Attribute": "Name",
+    "Description": "The name of the Dashboard that will appear to your users. Longer names may be truncated on small devices, so consider short names."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Dashboards. Dashboards with blanks will be sorted alphanumerically and displayed below Dashboards with numbers."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Dashboard that will appear to your users. User longer descriptions in conjunction with shorter names to accommodate small screen formats."
+  },
+  {
+    "Attribute": "Profile(s)",
+    "Description": "The name of the Profile(s) that this Dashboard belongs to. You can add the same Dashboard to many profiles by using a semicolon (;) delimited list (Profile1; Profile2)."
+  },
+  {
+    "Attribute": "Locked",
+    "Description": "Controls whether users can modify this Dashboard. A locked Dashboard is considered read-only and cannot be modified."
+  },
+  {
+    "Attribute": "Show",
+    "Description": "Boolean value to set the Show (visibility) of the Dashboard. A setting of False will suppress the display of the Dashboard to users."
+  },
+  {
+    "Attribute": "Is Default",
+    "Description": "Boolean value to get whether or not the Dashboard is the default Dashboard. You can have only 1 default Dashboard per Profile, which will be the Dashboard displayed to a user who has not selected a Dashboard."
+  },
+  {
+    "Attribute": "Start Time",
+    "Description": "Start of the time range for the Dashboard. Widgets on the Dashboard will all initially use this range if entered (Note: The Start Time must be < the End Time, and the value can be an actual or relative date. e.g., 6/12/2019 or *-7Days). Can be paired with a Start Time Interface."
+  },
+  {
+    "Attribute": "Start Time Interface",
+    "Description": "The interface used to retrieve the Start Time value. If this field is blank, the Start Time field is treated as a constant value."
+  },
+  {
+    "Attribute": "End Time",
+    "Description": "End time range for the Dashboard. Widgets on the Dashboard will all initially use this range if entered. (Note: The End Time must be > the Start Time, and the value can be an actual or relative date. e.g., 6/12/2019 or *-7Days). Can be paired with an End Time Interface."
+  },
+  {
+    "Attribute": "End Time Interface",
+    "Description": "The interface used to retrieve the End Time value. If this field is blank, the End Time field is treated as a constant value."
+  },
+  {
+    "Attribute": "Dashboard ID",
+    "Description": "Read-only system level identifier."
+  }
+]

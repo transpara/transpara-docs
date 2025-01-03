@@ -1,0 +1,50 @@
+[
+  {
+    "Attribute": "Site Title",
+    "Description": "Website title displayed in the browser title bar."
+  },
+  {
+    "Attribute": "Default Attribute Grouping",
+    "Description": "Default setting for attribute grouping of KPIs, charts and tables."
+  },
+  {
+    "Attribute": "Site Administrator Contact",
+    "Description": "Visual KPI site administrator contact (will also be used for cache server error notifications)."
+  },
+  {
+    "Attribute": "Site Logo Link",
+    "Description": "Default link action when clicking site logos."
+  },
+  {
+    "Attribute": "Screen Data Update Interval",
+    "Description": "Controls screen data update interval (in seconds) for web pages. A setting of 0 will turn off page data refresh. (Note: This should not be faster than your cache cycle as the cache time determines how often data is refreshed on the server)."
+  },
+  {
+    "Attribute": "Default Color Theme",
+    "Description": "Controls the default color theme (light or dark) for the site. Users can override this setting on each client if allowed."
+  },
+  {
+    "Attribute": "Allow Users to Change Color Theme",
+    "Description": "Determines whether or not end users will be able to select between Dark and Light themes."
+  },
+  {
+    "Attribute": "Default Client Display Time",
+    "Description": "Controls the default display time (client time or server time) for all rendered timestamps. Users can override this setting on each client if allowed."
+  },
+  {
+    "Attribute": "Allow Users to Change Client Display Time",
+    "Description": "Determines whether or not end users will be able to select between client and server times for all rendered timestamps."
+  },
+  {
+    "Attribute": "Garbage Collection Interval",
+    "Description": "Controls the interval (in minutes) for a full page refresh. This helps clear memory leaks which are unfortunately common and not entirely unavoidable (yet) in web applications. (Note: User actions will reset the interval. A value of 0 turns off this refresh)."
+  },
+  {
+    "Attribute": "External Links Open In",
+    "Description": "Controls whether clicking on an external link opens in a new Tab/Window or the same Tab/Window as the website."
+  },
+  {
+    "Attribute": "Internal Links Open In",
+    "Description": "Controls whether clicking on an internal link opens in a new Tab/Window or the same Tab/Window as the website."
+  }
+]

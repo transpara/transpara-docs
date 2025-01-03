@@ -1,0 +1,994 @@
+[
+  {
+    "Visual KPI Attribute": "KPI Name",
+    "Description": "The name of the KPI that will appear to your users. Longer names may be truncated on small screen devices, so consider short names with unique attributes at the beginning (e.g., 'Site 1 Profit').",
+    "Value": "Name of the parent attribute",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Display Order",
+    "Description": "Numeric value that overrides the default alphanumeric order of KPIs. KPIs with blanks will be sorted alphanumerically and displayed below KPIs with numbers.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Description",
+    "Description": "The description of the KPI that will appear to your users. Use longer descriptions, in conjunction with shorter names, to accommodate small screen formats.",
+    "Value": "Can either be the description of the attribute or a sub attribute called Description.",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Name",
+    "Description": "The name of the Group that the KPI belongs to (used when KPIs belong to only one group). Parent-Child relationships are defined by either this field or a combination of KPI selection queries (on Group) and custom attributes (on KPI).",
+    "Value": "",
+    "AF": "no",
+    "SQL": "no",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Min",
+    "Description": "The lowest valid value for the KPI -- values below Min will result in an unknown status. Pair this with an interface to display a dynamic Min.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Min Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Min field. If this field is blank, then the Min field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Low Low Low",
+    "Description": "The limit value for the KPI -- limits values are used in KPI status calculations. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Low Low Low Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Limit field. If this field is blank, then the Limit field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Low Low",
+    "Description": "The limit value for the KPI -- limits values are used in KPI status calculations. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Low Low Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Limit field. If this field is blank, then the Limit field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Low",
+    "Description": "The limit value for the KPI -- limits values are used in KPI status calculations. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Low Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Limit field. If this field is blank, then the Limit field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Target",
+    "Description": "Target (desired) value of the KPI. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target Interface",
+    "Description": "Interface used to retrieve the data based on the Target field contents. If this field is blank then the Target field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Actual",
+    "Description": "Actual value of the KPI. Pair this with an interface to have a dynamic Actual.",
+    "Value": "",
+    "AF": "TODO",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Actual Interface",
+    "Description": "Interface to retrieve Actual value for the KPI. If this field is blank then the Actual field is treated as a constant value.",
+    "Value": "",
+    "AF": "TODO",
+    "SQL": "yes",
+    "inmation": "auto"
+  },
+  {
+    "Visual KPI Attribute": "High",
+    "Description": "The limit value for the KPI -- limits values are used in KPI status calculations. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "High Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Limit field. If this field is blank, then the Limit field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "High High",
+    "Description": "The limit value for the KPI -- limits values are used in KPI status calculations. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "High High Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Limit field. If this field is blank, then the Limit field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "High High High",
+    "Description": "The limit value for the KPI -- limits values are used in KPI status calculations. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "High High High Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Limit field. If this field is blank, then the Limit field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Max",
+    "Description": "The highest valid value of the KPI -- values above Max will result in an unknown status. Pair this with an interface to display a dynamic Max.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Max Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Max field. If this field is blank, then the Max field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Offset",
+    "Description": "The relative time offset used to retrieve values from interfaces for this KPI. This allows for KPIs to show values at different times, such as Profit Today, Profit Yesterday, and Profit Last Week. This value uses our standard offset format (e.g., -1day).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "CUSTOM ATTRIBUTES",
+    "Description": "User-defined attribute. These are used for the grouping of objects and can be used in Group selection queries to determine parent-child relationships. Select 'Attributes' under the Options menu (gear icon) to view/edit custom attributes.",
+    "Value": "Need to have AF Attribute name or inmation custom properties name the same as the VKPI Custom attribute.  If I have a VKPI custom attribute called Plant Type, I can have a string AF Attribute (or inmation custom property called Plant Type with a value of Coal.",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed. Click the link in the header for more information.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "UOM",
+    "Description": "The unit of measure (UoM) of the KPI.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Display Format",
+    "Description": "The display position of the UoM (e.g., $100, 42.5kg).",
+    "Value": "Number, Number + UOM, UOM + Number",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Contact",
+    "Description": "The main contact for the KPI, as selected from the Contact tab collection (can be one or more people). The contact appears in KPI details and is used in notifications.",
+    "Value": "Contact with valid values being the Contact Name as defined in the VKPI",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Alternate Contact 1",
+    "Description": "The alternate contact for the KPI, as selected from the Contact tab collection (can be one or more people). This contact appears in KPI details and is used in notifications.",
+    "Value": "Contact with valid values being the Contact Name as defined in the VKPI",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Alternate Contact 2",
+    "Description": "The alternate contact for the KPI, as selected from the Contact tab collection (can be one or more people). This contact appears in KPI details and is used in notifications.",
+    "Value": "Contact with valid values being the Contact Name as defined in the VKPI",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Notification Type",
+    "Description": "Determines if KPI status changes will trigger e-mails to be sent to contacts. If set to 'Email', then a contact must also be assigned.",
+    "Value": "None, Email",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Alert Silence",
+    "Description": "A boolean equivalent used to turn alarm silencing on or off for this KPI (overrides Alert Template setting). Pair this with an interface to display a dynamic value.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Alert Silence Interface",
+    "Description": "The interface used to retrieve the alarm silencing boolean value. If this field is blank, then Alert Silence is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Alert Silence Duration",
+    "Description": "The numerical override for the alert silence duration (overrides Alert Template setting). Only valid if the Alert Silence is true.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Time In State",
+    "Description": "The numerical override for the Time in State (overrides Alert Template setting) -- this is the delay, in minutes, before status is used to determine if notifications are sent. This helps to prevent nuisance notifications for rapidly-changing KPIs.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Alert Template",
+    "Description": "The template that controls alert behavior for this KPI.",
+    "Value": "Must be the name of an already defined Alert Template",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Status",
+    "Description": "Override of system-calculated KPI status. Allows user to specify static or dynamic value or even an equation involving multiple parameters to determine which of the standard or custom status to display. See KPI Status config for ordinal values.",
+    "Value": "Either a status name like (Low Low) or the ordinal value (-2)",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Status Interface",
+    "Description": "The interface used to retrieve Status. If this field is blank, then the Status field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "In Service",
+    "Description": "A boolean value used to set KPI's In Service state. Pair this with an interface to display a dynamic  value.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "In Service Interface",
+    "Description": "The interface used to retrieve the KPI's In Service value. If this field is blank, then the Actual field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Show",
+    "Description": "A boolean value used to specify the KPI's 'Show' setting (visibility) -- 'False' will suppress the display of the KPI to the users. Pair this with an interface to display a dynamic value.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Interface",
+    "Description": "The interface used to retrieve the In Show value. If this field is blank, then the Show field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Trend Start Time",
+    "Description": "Overrides the default Start Time for the KPI trend (Note: The Start Time must be < the End Time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Trend Start Time Interface",
+    "Description": "The interface used to retrieve the Trend Start Time value. If this field is blank, then the Trend Start Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Trend End Time",
+    "Description": "Overrides the default End Time for the KPI trend (Note: The End Time must be > the Start Time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Trend End Time Interface",
+    "Description": "The interface used to retrieve the Trend End Time value. If this field is blank, then the Trend End Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Actual Trend Type",
+    "Description": "The trend line type for the Actual pen on a KPI trend.",
+    "Value": "Interpolated, Step, Symbol, Interpolated + Symbol, Step + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Target Trend Type",
+    "Description": "The trend line type for the Target pen on a KPI trend.",
+    "Value": "Interpolated, Step, Symbol, Interpolated + Symbol, Step + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Limit Trend Type",
+    "Description": "The trend line type for the limit pens on a KPI trend.",
+    "Value": "Interpolated, Step, Symbol, Interpolated + Symbol, Step + Symbol",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Trend Scale",
+    "Description": "The trend scale type for the KPI.",
+    "Value": "Single Scale, Multi-scale",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Trend Y Axis",
+    "Description": "The trend y axis scale type for the KPI.",
+    "Value": "Auto-Scale, KPI Min and Max, Min and Max Y Axis",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Min Y Axis",
+    "Description": "Override for minimum of trend scale on the y axis.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Max Y Axis",
+    "Description": "Override for maximum of trend scale on the y axis.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Trend Limits",
+    "Description": "The default setting to show or hide the limit pens on a KPI trend. Users can still show pens by clicking in the legend.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Trend Target",
+    "Description": "The default setting to show or hide the Target pen on a KPI trend. Users can still show the Target pen by clicking in the legend.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Average Trendline",
+    "Description": "A boolean value used to set visibility of a line depicting the average of the Actual trend data within the trend timeframe.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Status Background",
+    "Description": "The default setting to show or hide the status bars in the background on a KPI trend.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Lookup Text Length",
+    "Description": "The numerical override for the maximum length of lookup text displayed on chart cursors.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Calcs In Chart Cursor",
+    "Description": "A boolean override that controls whether or not calculations (equations) are displayed in chart cursors.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bullet Chart Type",
+    "Description": "Controls the display type for Bullet Charts. Deviation types require a KPI Target.",
+    "Value": "Actual EU, Deviation EU, Deviation %",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude",
+    "Description": "The geo location latitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Latitude field. If this field is blank, then the Latitude field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Longitude",
+    "Description": "The geo location longitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Longitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Longitude field. If this field is blank, then the Longitude field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Geo Label Format",
+    "Description": "Overrides what is displayed for a KPI on a Geo Map.",
+    "Value": "Actual, Name, Name: Actual",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline Refresh Interval",
+    "Description": "The refresh interval (in seconds) for the sparkline. If set to default the site wide screen data update interval will be used. If set to 0 then the sparkline will not auto refresh.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Is SPC",
+    "Description": "Determines if KPI status and trend are SPC-based. If set to true, then status calculations are based on the worst case status from the violated SPC rules.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "WE 1: 1 > 3 sigma",
+    "Description": "Determines KPI Status when Western Electric Rule 1 (any single data point falls outside the 3s limit from the centerline) is triggered. Click on the header for more information.",
+    "Value": "Either a status name like (Low Low) or the ordinal value (-2) or \"Ignore\". Can also be an attribute named \"WE1\"",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "WE 2: 2/3 > 2 sigma",
+    "Description": "Determines KPI Status when Western Electric Rule 2 (two out of three consecutive points fall beyond the 2s limit on the same side of the centerline) is triggered. Click on the header for more information.",
+    "Value": "Either a status name like (Low Low) or the ordinal value (-2) or \"Ignore\". Can also be an attribute named \"WE2\"",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "WE 3: 4/5 > 1 sigma",
+    "Description": "Determines KPI Status when Western Electric Rule 3 (four out of five consecutive points fall beyond the 1s limit on the same side of the centerline) is triggered. Click on the header for more information.",
+    "Value": "Either a status name like (Low Low) or the ordinal value (-2) or \"Ignore\". Can also be an attribute named \"WE3\"",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "WE 4: 9 <> CL",
+    "Description": "Determines KPI Status when Western Electric Rule 4 (nine consecutive points fall on the same side of the centerline ) is triggered. Click on the header for more information.",
+    "Value": "Either a status name like (Low Low) or the ordinal value (-2) or \"Ignore\". Can also be an attribute named \"WE4\"",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Status Calc Sample Count",
+    "Description": "The number of points used to determine status for SPC KPIs. This value must be equal to, or greater than, the number of points required for each selected WE Rule.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Limit Calc Start Time",
+    "Description": "The Start Time that's used to calculate the limits and mean for the SPC KPI (Note:  Start Time must be <  End Time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Limit Calc Start Time Interface",
+    "Description": "The interface used to retrieve the Limit Calc Start Time value. If this field is blank, then the Limit Calc Start Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Limit Calc End Time",
+    "Description": "The End Time that's used to calculate the limits and mean for the SPC KPI (Note:  End Time must be > Start Time and the value can be actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Limit Calc End Time Interface",
+    "Description": "The interface used to retrieve the Limit Calc End Time value. If this field is blank, then the Limit Calc End Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "LCL",
+    "Description": "The Lower Control Limit value used to determine SPC rule violations for SPC KPIs. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "LCL Interface",
+    "Description": "The interface used to retrieve data based on the contents of the LCL field. If this field is blank, then the LCL field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Center Line",
+    "Description": "Override of Center Line value used to determine SPC rule violations for SPC KPIs. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Center Line Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Center Line field. If this field is blank, then the Center Line field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "UCL",
+    "Description": "The Upper Control Limit value used to determine SPC rule violations for SPC KPIs. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "UCL Interface",
+    "Description": "The interface used to retrieve data based on the contents of the UCL field. If this field is blank, then the UCL field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Info",
+    "Description": "Additional relevant information (can be hyperlinked).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Interface",
+    "Description": "Interface used to retrieve the data based on the Info field contents. If this field is blank then the Info field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Info Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed. Click the link in the header for more information.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info UOM",
+    "Description": "Unit of measure for the Info value (applicable if value is numeric).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Display Format",
+    "Description": "The display position of the UoM (e.g., $100, 42.5kg).",
+    "Value": "Number, Number + UOM, UOM + Number",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info URL",
+    "Description": "URL link for the Info field (creates a hyperlink in the Info field).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Description",
+    "Description": "If the Info field is a hyperlinked value, then this will be the tooltip or mouseover text for the link. If only a URL is used, then this will be the text displayed in Info.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Top Text",
+    "Description": "The value displayed on the top line of a KPI Block in a Group Map or a KPI Map -- if blank, then the default setting of KPI Name will be used. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Top Text Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Top Text field. If this field is blank, then the Top Text field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Bottom Text",
+    "Description": "The value displayed on the bottom line of a KPI Block in a Group Map or a KPI Map -- if blank, then the default setting of Actual will be used. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Bottom Text Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Bottom Text  field. If this field is blank, then the Bottom Text field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Additional Text",
+    "Description": "The additional value displayed on the bottom of a KPI Block in a KPI Map -- if blank, then the default setting of Description will be used. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Additional Text Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Addtional Text  field. If this field is blank, then the Addition Text field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "KPI Name Click Path",
+    "Description": "Controls what happens when a user clicks the name of a KPI. The user will either be shown the Trend of the KPI (default) or the user will be taken to the first Link defined on the KPI (if one exists).",
+    "Value": "Trend, URL",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Map Position",
+    "Description": "The numerical location (left to right, top to bottom) of the KPI in a Group Map. If this is blank, then the KPI will not be shown in the Group Map.",
+    "Value": "Numeric Value 1 - 20",
+    "AF": "",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Links",
+    "Description": "List of associated Links or URLs (semicolon separated, limit 10) for the object.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Link Descriptions",
+    "Description": "List of associated Link or URL descriptions (semicolon separated, limit 10) for the object. These are used to both shorten and give better meaning to links (e.g., instead of www.xyz.com?x=5&type=2, the user could see SOPs or Shift Report)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Calculation Type",
+    "Description": "Override for how non-numeric values in calculations are handled. This is useful when dealing with exception data (i.e., BadValue) returned from calculation-derived data sources.",
+    "Value": "Default, Standard, Force Numeric",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Access Group List",
+    "Description": "List of Active Directory or local groups (semicolon separated) defining access rights to the object. Only applies if Object Level Security is enabled and the site is secured.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "KPI ID",
+    "Description": "Read-only system level identifier.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "auto",
+    "inmation": "auto"
+  }
+]

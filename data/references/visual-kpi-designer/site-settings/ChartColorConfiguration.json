@@ -1,0 +1,42 @@
+[
+  {
+    "Attribute": "System Name",
+    "Description": "Read-only system name. Use Custom Name to modify."
+  },
+  {
+    "Attribute": "Default Name (Light Theme)",
+    "Description": "Read-only Color Name (for Light Theme). Use Custom Name (for Light Theme) to modify."
+  },
+  {
+    "Attribute": "Custom Name (Light Theme)",
+    "Description": "Override for the Default Name (for Light Theme). Should be short and descriptive."
+  },
+  {
+    "Attribute": "Default Color (Light Theme)",
+    "Description": "Read-only default Chart color (for Light Theme). Use Custom Color (for Light Theme) to override."
+  },
+  {
+    "Attribute": "Custom Color (Light Theme)",
+    "Description": "Override for chart Default Color (for Light Theme). Enter as a Hex value or select a color from the status grid in the right panel."
+  },
+  {
+    "Attribute": "Default Name (Dark Theme)",
+    "Description": "Read-only Color Name (for Dark Theme). Use Custom Name (for Dark Theme) to modify."
+  },
+  {
+    "Attribute": "Custom Name (Dark Theme)",
+    "Description": "Override for the Default Name (for Dark Theme). Should be short and descriptive."
+  },
+  {
+    "Attribute": "Default Color (Dark Theme)",
+    "Description": "Read-only default Chart color (for Dark Theme). Use Custom Color (for Dark Theme) to override."
+  },
+  {
+    "Attribute": "Custom Color (Dark Theme)",
+    "Description": "Override for chart Default Color (for Dark Theme). Enter as a Hex value or select a color from the status grid in the right panel."
+  },
+  {
+    "Attribute": "Color ID",
+    "Description": "Read-only system level identifier."
+  }
+]

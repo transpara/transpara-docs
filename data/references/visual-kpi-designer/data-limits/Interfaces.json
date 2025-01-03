@@ -1,0 +1,52 @@
+[
+  {
+    "Field": "Authentication Method",
+    "Type": "List Selection",
+    "Limit": "System Defined Authentication Methods"
+  },
+  {
+    "Field": "Domain",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Enable Updates",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Update Group",
+    "Type": "Text",
+    "Limit": 500
+  },
+  {
+    "Field": "Interface ID",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Name",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "Password",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Reference Count",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "URL",
+    "Type": "Text",
+    "Limit": 255
+  },
+  {
+    "Field": "User Name",
+    "Type": "Text",
+    "Limit": 200
+  }
+]

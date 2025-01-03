@@ -1,0 +1,26 @@
+[
+  {
+    "Attribute": "Enable Comment Codes",
+    "Description": "Controls whether or not comment codes are enabled when entering comments."
+  },
+  {
+    "Attribute": "Comment Code Label",
+    "Description": "Controls the name of the pull-down for comment codes."
+  },
+  {
+    "Attribute": "Custom Code Label",
+    "Description": "Controls the name of the pull-down for custom comment codes."
+  },
+  {
+    "Attribute": "Secondary Code Label",
+    "Description": "Controls the name of the pull-down for secondary custom comment codes."
+  },
+  {
+    "Attribute": "Enable Point Based Comments",
+    "Description": "Controls whether or not Point based (single point in time) comments are enabled (note: If both Point Based Comments and Range Based Comments are disabled then all comments are disabled)."
+  },
+  {
+    "Attribute": "Enable Range Based Comments",
+    "Description": "Controls whether or not Range based (start and end time) comments are enabled (note: If both Point Based Comments and Range Based Comments are disabled then all comments are disabled)."
+  }
+]

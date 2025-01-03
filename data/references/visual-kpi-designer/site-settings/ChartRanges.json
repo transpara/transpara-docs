@@ -1,0 +1,18 @@
+[
+  {
+    "Attribute": "Chart Range Name",
+    "Description": "The name of the Chart Range as it appears to users."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Chart Ranges. Chart Ranges with blanks will be sorted alphanumerically and displayed below Chart Ranges with numbers."
+  },
+  {
+    "Attribute": "Start Time",
+    "Description": "Start of the time range for the Chart Range. (Note: The Start Time must be < the End Time, and the value can be an actual or relative date. e.g. 6/12/2019 or *-7Days)."
+  },
+  {
+    "Attribute": "End Time",
+    "Description": "End time range for the Chart Range. (Note: The End Time must be > the Start Time, and the value can be an actual or relative date. e.g. 6/12/2019 or *-7Days)."
+  }
+]

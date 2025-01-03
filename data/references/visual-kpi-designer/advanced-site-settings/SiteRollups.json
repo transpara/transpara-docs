@@ -1,0 +1,110 @@
+[
+  {
+    "Attribute": "Site Rollup",
+    "Description": "The name of the Site Rollup as it appears to site users."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Site Rollups. Site Rollups with blank fields will be sorted alphanumerically and displayed below Site Rollups with numbers."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Site Rollup as it appears to site users in a tooltip. Use longer descriptions in conjunction with shorter names to accommodate screen space."
+  },
+  {
+    "Attribute": "WebService URL",
+    "Description": "URL for the WebService of the target Visual KPI instance. This will be used by the Designer to edit the instance. The URL must be fully qualified and end with 'kpiws.asmx'."
+  },
+  {
+    "Attribute": "Authentication",
+    "Description": "The IIS authentication method used (if any) to secure the target Visual KPI instance."
+  },
+  {
+    "Attribute": "Username",
+    "Description": "The account username required to access the target Visual KPI instance. This will only be used on sites with IIS authentication enabled."
+  },
+  {
+    "Attribute": "Password",
+    "Description": "The account password required to access the target Visual KPI instance. This will only be used on sites with IIS authentication enabled."
+  },
+  {
+    "Attribute": "Destination URL",
+    "Description": "The destination, or landing page, of the target Visual KPI instance. This is where the user will be directed when clicking on the Site Rollup Name. If left blank, the Home page will be used."
+  },
+  {
+    "Attribute": "Show",
+    "Description": "Boolean (True/False) or equivalent (Non-zero = True, 0 = False) used to set the visibility of the Site Rollup. A setting of FALSE will suppress the display of the Site Rollup to site users. Pair with an Interface for a dynamic value."
+  },
+  {
+    "Attribute": "Show Interface",
+    "Description": "The Interface used to retrieve the 'In Show' value. If left blank, the Show field is treated as a constant."
+  },
+  {
+    "Attribute": "Latitude",
+    "Description": "The geo location latitude value used for display on a Geo Map. Pair with an Interface to display a dynamic location."
+  },
+  {
+    "Attribute": "Latitude Interface",
+    "Description": "The Interface used to retrieve data based on the contents of the Latitude field. If left blank, the Latitude field is treated as a constant value."
+  },
+  {
+    "Attribute": "Longitude",
+    "Description": "The geo location longitude value used for display as a Geo Map. Pair with an Interface to display a dynamic location."
+  },
+  {
+    "Attribute": "Longitude Interface",
+    "Description": "The Interface used to retrieve data based on the contents of the Longitude field. If left blank, the Longitude field is treated as a constant value."
+  },
+  {
+    "Attribute": "Geo Label Format",
+    "Description": "Overrides what is displayed for the Site Rollup on a Geo Map."
+  },
+  {
+    "Attribute": "Info",
+    "Description": "Additional relevant information (can be hyperlinked)."
+  },
+  {
+    "Attribute": "Info Interface",
+    "Description": "The description of the Site Rollup as it appears to site users in a tooltip. Use longer descriptions in conjunction with shorter names to accommodate screen space."
+  },
+  {
+    "Attribute": "Info Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed."
+  },
+  {
+    "Attribute": "Info UOM",
+    "Description": "Unit of measure for the Info value (if the value is numeric)."
+  },
+  {
+    "Attribute": "Info Display Format",
+    "Description": "The display position of the UoM (e.g. $100, 42.5kg)."
+  },
+  {
+    "Attribute": "Info URL",
+    "Description": "URL link for the Info field (creates a hyperlink in the Info field)."
+  },
+  {
+    "Attribute": "Info Description",
+    "Description": "If the Info field is a hyperlinked value, this will be the tooltip or mouse-over text for the link. If only a URL is used, this will be the text displayed in Info."
+  },
+  {
+    "Attribute": "Links",
+    "Description": "List of associated Links or URLs (semicolon separated, limit 10, for the object)."
+  },
+  {
+    "Attribute": "Link Descriptions",
+    "Description": "List of associated Link or URL descriptions (semicolon separated, limit 10) for the object. These are used to shorten and give better meaning to links (e.g. instead of www.xyz.com?x=5$type=2, the user could see SOPs or Shift Report)."
+  },
+  {
+    "Attribute": "Calculation Type",
+    "Description": "Override for how non-numeric values in calculations are handled. This is useful when dealing with exceptional data (e.g. BadValue) returned from calculations-derived data sources."
+  },
+  {
+    "Attribute": "Access Group List",
+    "Description": "List of Active Directory or local groups (semicolon separated) defining access rights to the object. Only applies if Object Level Security is enabled and the site is secure."
+  },
+  {
+    "Attribute": "Site Rollup ID",
+    "Description": "Read-only system level identifier."
+  }
+]

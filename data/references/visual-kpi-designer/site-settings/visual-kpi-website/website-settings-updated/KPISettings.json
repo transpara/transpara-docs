@@ -1,0 +1,54 @@
+[
+  {
+    "Attribute": "Show KPI Override Indicator",
+    "Description": "Controls whether or not the KPI override indicator (*) is shown on KPIs with a status override."
+  },
+  {
+    "Attribute": "Recently Changed Time Limit",
+    "Description": "Controls how long (in minutes) the system considers a KPI status change to be 'recent'."
+  },
+  {
+    "Attribute": "Recently Changed 'Flash' Duration",
+    "Description": "Controls how long (in seconds) the KPI will 'flash' after a screen load for a recently changed KPI. Off = Never, Max = Until no longer 'recent', or any numeric value."
+  },
+  {
+    "Attribute": "KPI Status History Duration",
+    "Description": "Determines how long (in days) KPI status history should be stored (a setting of 'Forever' will keep all history, a setting of 'None Stored' will keep no history). Please note that a large number or Forever will cause the size of the Visual KPI database to grow."
+  },
+  {
+    "Attribute": "Show Limits on KPI Trends",
+    "Description": "Controls whether or not to initially display limits on KPI trends (can toggle on/off)."
+  },
+  {
+    "Attribute": "Show Target on KPI Trends",
+    "Description": "Controls whether or not to initially display target on KPI trends (can toggle on/off)."
+  },
+  {
+    "Attribute": "Show Status Background on KPI Trends",
+    "Description": "Controls whether or not to initially display status bars on the background of KPI trends (can toggle on/off. Requires KPI Status History Storage Duration > 0)."
+  },
+  {
+    "Attribute": "Use KPI Name as Top Text",
+    "Description": "Determines whether or not the KPI name is used by default as the KPI Map top text if no other top text has been entered."
+  },
+  {
+    "Attribute": "Use KPI Actual as Bottom Text",
+    "Description": "Determines whether or not the KPI actual value is used by default as the KPI Map bottom text if no other bottom text has been entered."
+  },
+  {
+    "Attribute": "Use KPI Description as Additional Text",
+    "Description": "Determines whether or not the KPI description is used by default as the KPI Map additional text if no other additional text has been entered."
+  },
+  {
+    "Attribute": "KPI Stale Age",
+    "Description": "The maximum age in minutes of a KPI’s Actual value. When Current Time is greater than (Last Actual value update time + KPI Stale Age), the KPI status is set to Stale. A value of 0 here will ignore Staleness by default. Can be overridden by individual KPIs."
+  },
+  {
+    "Attribute": "Backfill Days",
+    "Description": "The maximum number of days per status history backfill cycle that data will be populated by default. Can be overridden by individual KPIs."
+  },
+  {
+    "Attribute": "Treat Non Numeric Limits as Empty",
+    "Description": "When TRUE limit values which are non numeric (e.g. NaN, +/- Inf, Tag Not Found, Interface Disabled, etc) will be treated as undefined limits and ignored in status calculations."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Attribute": "Name",
+    "Description": "The name of the Contact that appears in Designer pull-down menus. This name will not be displayed to site users."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Contact, for use by Designer admins only and will not appear to site users."
+  },
+  {
+    "Attribute": "Contact Name",
+    "Description": "A semicolon (;) delimited list of Contact names (can be a person or group) that appears on the site. The list of names, emails, and telephone numbers should correspond with each other. Pair with an interface to display a dynamic value."
+  },
+  {
+    "Attribute": "Contact Name Interface",
+    "Description": "The interface used to retrieve the 'Contact Name', then the Contact Name field is treated as a constant value."
+  },
+  {
+    "Attribute": "Contact Email",
+    "Description": "A semicolon (;) delimited list of Contact email addresses that will appear on the site. The list of names, emails, and telephone numbers should correspond with each other. Pair this with an interface to display a dynamic value."
+  },
+  {
+    "Attribute": "Contact Email Interface",
+    "Description": "The interface used to retrieve the 'Contact Email' value. If this field is blank, the Contact Email field is treated as a constant value."
+  },
+  {
+    "Attribute": "Contact Phone",
+    "Description": "A semicolon (;) delimited list of Contact telephone numbers that will appear on the site. The list of names, emails, and telephone numbers should correspond with each other. Pair this with an interface to display a dynamic value."
+  },
+  {
+    "Attribute": "Contact Phone Interface",
+    "Description": "The interface used to retrieve the 'Contact Phone' value. If this field is blank, the Contact Phone field is treated as a constant value."
+  },
+  {
+    "Attribute": "Reference Count",
+    "Description": "The number of times the Contact is used (read-only)."
+  },
+  {
+    "Attribute": "Contact ID",
+    "Description": "Read-only system level identifier."
+  }
+]

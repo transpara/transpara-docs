@@ -1,0 +1,62 @@
+---
+id: integrations
+title: Integrations Questions
+slug: /faq/integrations
+description: ''
+tags: [FAQ]
+---
+
+import SearchWrapper from '@site/src/components/AccordionSearchWrapper/SearchWrapper';
+
+<SearchWrapper>
+<AccordionGroup>
+  <Accordion title="Does Visual KPI OPC Interface Support Real-time & Historian Values?">
+    Transpara's Visual KPI Enterprise ADI option includes OPC support, which can handle various OPC flavors, such as:
+
+    - OPC-DA
+    - OPC-UA
+    - OPC-AE
+    - OPC-HDA
+
+    <div class="theme-admonition theme-admonition-support alert alert--support admonition_src-theme-Admonition-styles-module"><span class="admonitionIcon_src-theme-Admonition-styles-module"><span class="svg_container"><svg class="hidesvg" version="1.1" xmlns="http://www.w3.org/1999/xlink"><defs><symbol id="wrench22" viewBox="0 0 1024 1024"><title>test</title><path class="path1" d=" M1002.944 817.888l-460.544-394.752c21.44-40.288 33.632-86.272 33.632-135.104 0-159.072-128.928-288-288-288-29.088 0-57.184 4.32-83.648 12.352l166.4 166.4c24.896 24.896 24.896 65.632 0 90.496l-101.504 101.504c-24.896 24.896-65.632 24.896-90.496 0l-166.4-166.4c-8.032 26.464-12.352 54.56-12.352 83.648 0 159.072 128.928 288 288 288 48.832 0 94.816-12.16 135.104-33.632l394.752 460.544c22.912 26.72 62.016 28.224 86.912 3.328l101.504-101.504c24.896-24.896 23.392-64-3.328-86.912z"></path></symbol></defs></svg><svg class="icon"><use href="#wrench22"></use></svg></span></span><div><div class="admonitionHeading_src-theme-Admonition-styles-module">support</div><div class="admonitionContent_src-theme-Admonition-styles-module"><p>Transpara offers complete support for all OPC-related requirements. To learn more about Visual KPI Enterprise ADI or OPC support contact our <a href="https://www.transpara.com/contact-us/">Support</a>.</p></div></div></div>
+  </Accordion>
+  <Accordion title="Can I send Alerts via Microsoft Office 365?">
+    You can send Visual KPI alerts via Microsoft Office 365, but you need to configure SMPT emails in IIS to have them delivered from the Visual KPI server to an Microsoft Office 365 email account.
+
+    <div class="theme-admonition theme-admonition-info alert alert--info admonition_src-theme-Admonition-styles-module"><span class="admonitionIcon_src-theme-Admonition-styles-module"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="5" r="1" transform="rotate(-180 9 5)" fill="#4860F5"></circle><path d="M9 13L9 9" stroke="#4860F5" stroke-width="2" stroke-linecap="round"></path><path fill="none" d="M1 12V6C1 3.23858 3.23858 1 6 1H12C14.7614 1 17 3.23858 17 6V12C17 14.7614 14.7614 17 12 17H6C3.23858 17 1 14.7614 1 12Z" stroke="#4860F5" stroke-width="2"></path></svg></span><div><div class="admonitionHeading_src-theme-Admonition-styles-module">info</div><div class="admonitionContent_src-theme-Admonition-styles-module"><p>You must have a Microsoft Office 365 account with email enabled.</p></div></div></div>
+  
+  </Accordion>
+  <Accordion title="Is there a limit to how many data sources you can integrate to?">
+    We've support for thousands of sources and even have one customer interfacing with over 100 sources against a single Transpara system. You can mix and match data from various sources, combine data from multiple sources using calculations, and even get various attributes dynamically from source (for example, get location data for a group or KPI for a moving object from one source while the data comes from other sources).
+  </Accordion>
+  <Accordion title="Are we required to ingest or copy data into Transpara?">
+    No. One of the most unique aspects of Transpara's approach is that you can leave data in your existing systems and put it to use on-the-fly, leveraging your existing investments and eliminating the most costly, time-consuming and painful part of any data project. If or when required, data can be stored in Transpara time-series analytics cache for the purpose of time-based calculations, analytics that span multiple data sources, or when you don't already have existing sources.
+  </Accordion>
+  <Accordion title="What are the most common data sources you integrate with?">
+    Transpara can interface with thousands (probably millions) of data sources and applications, including industrial systems that many other applications have less experience with, such as historians/time-series databases, SCADA, OPC, IoT/IIoT, control systems, MQTT and others. We like to put data sources into a few large categories as follows:
+    <ul>
+      <li>Proprietary historians (those that require the use of an SDK), such as AVEVA OSIsoft PI and AF, Aspentech (IP.21 and inmation), GE and many others.</li>
+      <li>Other time-series databases, including historians, open source (TimescaleDB, InfluxDB, etc), and cloud time-series databases (AWS Timestream, Azure ADX or TSI, Timescale Cloud, etc).</li>
+      <li>Relational databases (SQL Server, Oracle, MySQL, PostgreSQL, etc) and any applications built on relational databases (vertical industry applications, ERP, CRM, LIMS, etc).</li>
+      <li>Data lakes, data warehouses, OLAP and big data sources.</li>
+      <li>Web services, including both internal (any application with a REST API) or external (like weather, commodity pricing, traffic, etc). This includes JSON, XML, Python, etc.</li>
+      <li>IoT/IIoT and other sensor data. This includes OPC, Modbus, MQTT, SNMP and many other protocols.</li>
+      <li>Slow moving or manually entered data, including manual data entry features in Transpara along with Excel, CSV, web form applications and more.</li>
+      <li>IT, Cloud and Security data, including applications like VMware, Zabbix, Splunk and many others.</li>
+    </ul>
+    Even if we've never encountered a particular data source, there are usually no technical limitations stopping us from interfacing with it. Usually the only thing that gets in our way is politics.
+  </Accordion>
+  <Accordion title="Can I integrate my advanced data science tools with Transpara?">
+    Yes. Transpara believes you should leverage all of the tools and applications that provide value to you. We support integrations with data science tools like Jupyter Notebooks, R, Python and specialized or cloud-based analytics platforms (machine learning, AI, etc). If you are curious about integration with a specific tool or application, just reach out to our [Support](https://www.transpara.com/contact-us/) and we can discuss it.
+  </Accordion>
+  <Accordion title="Can you integrate with our business intelligence tools?">
+    Yes. Transpara easily integrates with applications like Power BI, Tableau and others, either as a source of data for Transpara or as a client tool for analysis and reporting.
+  </Accordion>
+  <Accordion title="We use Excel for many things. How does Transpara work with Excel?">
+    Transpara works with Excel in several ways: 
+    1. As a data source with our native Excel interface, 
+    2. With the native ability to export data to Excel/CSV for further analysis and charting, and 
+    3. Our native authoring client (Transpara Designer) is based on Excel so it's already familiar to new users. Excel is widely known as the most popular developer language and analytics tool on the planet, so we integrate deeply wherever possible.
+  </Accordion>
+</AccordionGroup>
+</SearchWrapper>

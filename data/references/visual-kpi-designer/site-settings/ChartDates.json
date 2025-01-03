@@ -1,0 +1,14 @@
+[
+  {
+    "Attribute": "Chart Date Name",
+    "Description": "The name of the Chart Date as it appears to users."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Chart Dates. Chart Dates with blanks will be sorted alphanumerically and displayed below Chart Dates with numbers."
+  },
+  {
+    "Attribute": "Chart Time",
+    "Description": "The chart date used by Charts. This value can be either an actual or relative date (e.g. 6/12/2019 or *-7Days)."
+  }
+]

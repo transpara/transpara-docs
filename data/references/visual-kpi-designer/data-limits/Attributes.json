@@ -1,0 +1,27 @@
+[
+  {
+    "Field": "Attribute",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Default Members",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Description",
+    "Type": "Text",
+    "Limit": 400
+  },
+  {
+    "Field": "Name",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Reference Count",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  }
+]

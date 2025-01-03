@@ -1,0 +1,72 @@
+---
+id: cost-roi
+title: Cost & ROI Questions
+slug: /faq/cost-roi
+description: ''
+tags: [FAQ]
+---
+
+import SearchWrapper from '@site/src/components/AccordionSearchWrapper/SearchWrapper';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+<SearchWrapper>
+  <AccordionGroup>
+    <Accordion title="Where Can I Find the Expiration Date of My Visual KPI License?">
+      You can find your Visual KPI license expiration date and additional information about your Visual KPI site on the Help screen of your site. Follow the steps below to find the detailed information:
+
+      1. In your Visual KPI site, click **Help** in the navigation menu.
+      2. At the bottom of the Site Status section you will find a link <SvgFont icon={251} /> **For detailed information about this Visual KPI site please click here**. Click it.
+
+      <Image
+        src="media/supporting-pages/faqs/expiration-date-gif.gif"
+        alt="navigating to site settings gif"
+      />
+
+      Under the section **Site Settings**, you will find your license key details and additional information about your site. This is exemplified in the image below:
+
+      <Image
+        src="media/supporting-pages/faqs/expiration-date-site-settings.png"
+        alt="site settings page"
+      />
+    </Accordion>
+    <Accordion title="Why do I get a license key error message in Visual KPI Server Manager?">
+      If you encounter a license key error message that says "Failed to save license key" while attempting to add your license key in Visual KPI Server Manager, it's likely due to the logged-in user lacking write permissions in SQL Server for the Visual KPI database.
+
+      To resolve this issue, consider the following steps:
+
+      1. **Check Permissions**: Ensure that you have the necessary permissions assigned to you. If not, request the appropriate access rights from your system administrator.
+
+      2. **Delegate the Task**: Alternatively, if you don't have the required permissions, ask someone with the necessary access rights to apply the Visual KPI license key within Visual KPI Server Manager.
+
+
+      <div class="theme-admonition theme-admonition-support alert alert--support admonition_src-theme-Admonition-styles-module"><span class="admonitionIcon_src-theme-Admonition-styles-module"><span class="svg_container"><svg class="hidesvg" version="1.1" xmlns="http://www.w3.org/1999/xlink"><defs><symbol id="wrench22" viewBox="0 0 1024 1024"><title>test</title><path class="path1" d=" M1002.944 817.888l-460.544-394.752c21.44-40.288 33.632-86.272 33.632-135.104 0-159.072-128.928-288-288-288-29.088 0-57.184 4.32-83.648 12.352l166.4 166.4c24.896 24.896 24.896 65.632 0 90.496l-101.504 101.504c-24.896 24.896-65.632 24.896-90.496 0l-166.4-166.4c-8.032 26.464-12.352 54.56-12.352 83.648 0 159.072 128.928 288 288 288 48.832 0 94.816-12.16 135.104-33.632l394.752 460.544c22.912 26.72 62.016 28.224 86.912 3.328l101.504-101.504c24.896-24.896 23.392-64-3.328-86.912z"></path></symbol></defs></svg><svg class="icon"><use href="#wrench22"></use></svg></span></span><div><div class="admonitionHeading_src-theme-Admonition-styles-module">support</div><div class="admonitionContent_src-theme-Admonition-styles-module"><p>Remember that proper permissions are crucial for successful license key management in Visual KPI. If you need further assistance, contact our <a href="https://www.transpara.com/contact-us/">Support</a>.</p></div></div></div>
+    
+      Learn more about the SQL Permissions needed in the [Prepare your System](/docs/setup-and-administration/installation/prepare-your-system#step-4-sql-server-management-studio) page.
+      
+    </Accordion>
+    <Accordion title=" How is the system priced? What is the rough cost I should expect?">
+      You can find all of the details about our pricing model and options at <a href="https://transpara.com/pricing">https://transpara.com/pricing</a>. We offer multiple tiers of features, including Pro, Enterprise, and Enterprise ADI, and within each tier it's priced by the number of users who will access the system (named or concurrent users). 
+
+      <div class="theme-admonition theme-admonition-support alert alert--support admonition_src-theme-Admonition-styles-module"><span class="admonitionIcon_src-theme-Admonition-styles-module"><span class="svg_container"><svg class="hidesvg" version="1.1" xmlns="http://www.w3.org/1999/xlink"><defs><symbol id="wrench22" viewBox="0 0 1024 1024"><title>test</title><path class="path1" d=" M1002.944 817.888l-460.544-394.752c21.44-40.288 33.632-86.272 33.632-135.104 0-159.072-128.928-288-288-288-29.088 0-57.184 4.32-83.648 12.352l166.4 166.4c24.896 24.896 24.896 65.632 0 90.496l-101.504 101.504c-24.896 24.896-65.632 24.896-90.496 0l-166.4-166.4c-8.032 26.464-12.352 54.56-12.352 83.648 0 159.072 128.928 288 288 288 48.832 0 94.816-12.16 135.104-33.632l394.752 460.544c22.912 26.72 62.016 28.224 86.912 3.328l101.504-101.504c24.896-24.896 23.392-64-3.328-86.912z"></path></symbol></defs></svg><svg class="icon"><use href="#wrench22"></use></svg></span></span><div><div class="admonitionHeading_src-theme-Admonition-styles-module">support</div><div class="admonitionContent_src-theme-Admonition-styles-module"><p>To get an estimate for your particular situation, please contact our [Support](https://www.transpara.com/contact-us/).</p></div></div></div>
+      
+    </Accordion>
+    <Accordion title="What licensing models do you support?">
+      Transpara offers a range of licensing models, with the default being annual subscription licenses with a 3-year term. Additional discounts apply to longer term commitments. We also offer various custom licenses including site, corporate and enterprise licenses or volume-based licenses.
+    </Accordion>
+    <Accordion title="What are your license terms?">
+      You can review our license and service terms & conditions <a href="https://www.transpara.com/license-and-service-terms/">here</a>.
+    </Accordion>
+    <Accordion title="Do you offer volume discounts or discounts for multi-year licenses?">
+      Yes. We have volume price breaks as the number of users increases, and we offer additional discounts for longer-term commitments.
+    </Accordion>
+    <Accordion title="Can I upgrade or change my license?">
+      Yes! We support expansion or changes to your license at any time, including changing plans or models, adding users, and other changes. Just reach out to us if you want to make changes.
+    </Accordion>
+    <Accordion title="What happens if I go over my license volume temporarily?">
+      Transpara's licenses contain a Fair Use Policy because we understand that critical events occur from time-to-time and you should never be trapped during a crisis. We don't place hard limitations in the software, so if you need to share information with someone who isn't a licensed user, or go beyond the number of licenses you own, we are ok with that. it's only when you repeatedly or consistently violate the terms of your license do we need to increase your license or upgrade your plan. Our goal is to always be a trusted partner and a tool you can count on in a crisis.
+    </Accordion>
+    <Accordion title="How do I estimate ROI? What are the core factors to look at and how long should it take?">
+      Overall, the ROI of any real-time operations and analytics platform will depend on how it's implemented, what use cases and data it surfaces, and the users that leverage it. While Transpara improves decision making, productivity, collaboration and the extracted value of existing investments, each of our customers achieves ROI in their own way. Because of this, we worked with our many customers to create a comprehensive ROI Guide which is available <a href="https://www.transpara.com/roi-justification-guide-ebook/">here</a>.
+    </Accordion>
+  </AccordionGroup>
+</SearchWrapper>

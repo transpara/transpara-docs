@@ -1,0 +1,154 @@
+---
+title: KPIs
+slug: kpis
+description: Presents advanced information about KPI visualization features of Visual KPIs software for an end user.
+tags: ['features', 'end-user', 'advanced', 'visualization', 'view', 'trends', 'embedded-content', 'chart', 'kpi']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+KPIs are used to keep track of any information that serves as a metric that indicates the performance of critical activities within a company. They're essential for decision-makers, providing insights into performance trends and guiding strategic adjustments.
+
+<Callout type="info" title="Actual and Target values">
+Actual is the current, real-time value of the KPI, and Target is where you want it to be.
+</Callout>
+
+When you click in the KPI tab, you see the following options on the top bar:
+
+1. **[Filter](/docs/end-user/basic-navigation/visualization/#filters)** (<SvgFont icon="184"/>): Filter by status or distance from the location where you are.
+2. **Grouping** (<SvgFont icon="114"/>): Allows you to group your KPIs by Standard or Custom Attributes such as Status, Group, or any other that makes sense for your organization. Your admin can configure Custom Attributes.
+3. **[Only Show Descendant/Child Groups](/docs/end-user/basic-navigation/visualization/#only-show-descendantchild-groups)** (<SvgFont icon="208"/>/<SvgFont icon="207"/>): Show all child items of the Group you are currently viewing or collapse the list to go to the top level of the current list.
+4. **Time Ranges** (<SvgFont icon="244"/>): Configure a Time Range for all your KPIs. It is especially useful when using Trend View to compare values.
+5. **Revert** (<SvgFont icon="222"/>): Return to the default KPI view.
+6. **Select KPIs** (<SvgFont icon="255"/>): Select multiple KPIs by clicking the boxes that appear to the left of the KPIs in the list.
+7. **[View as List](/docs/end-user/basic-navigation/visualization/#group-roll-upslist-view)** (<SvgFont icon="206"/>): This is the default view in the Group view. If you changed the view, click this icon to return to a list view.
+8. **View as Bullet Chart** (<SvgFont icon="171"/>): It is similar to the KPI List View and Status History view, but the KPI Bullet Chart view focuses on the current status of the KPI relative to targets and limits.
+9. **View as Trend List** (<SvgFont icon="192"/>): Present the KPIs as trends so you can quickly compare the KPIs values from your Group.
+10. **View as Status History Chart** (<SvgFont icon="37"/>): Projects vertical color bars to show Highs and Lows or other targets based on status color.
+11. **View as Status History Map** (<SvgFont icon="37" rotate/>): Similar to Status History Chart, but you can see a status history chart in the trend view. Click the Status Background icon to activate the background.
+12. **[View as KPI Map](/docs/end-user/basic-navigation/visualization/#view-as-kpi-map)** (<SvgFont icon="203"/>): KPI maps, if configured by your admin, show a heat map of all the KPIs in the level you are currently viewing.
+13. **[View as Group Map](/docs/end-user/basic-navigation/visualization/#view-as-group-map)** (<SvgFont icon="141"/>): Shows a bar across the top of each Group to indicate the status of the Group as determined by the Group Map settings.
+14. **[View as Group Map Table](/docs/end-user/basic-navigation/visualization/#view-as-group-map-table)** (<SvgFont icon="21"/>): Similar to the Group Map View, it shows the groups as titles in a table.
+15. **[View as Geo Table](/docs/end-user/basic-navigation/visualization/#view-as-geo-map)** (<SvgFont icon="189"/>): The Group Map view is similar to the KPI Map but gives each Group its status.  
+16. **View Status Summary** (<SvgFont icon="136"/>): This shows you a summary and history of your best and worst KPIs at the group level in Pareto chart form.
+17. **View Status History** (<SvgFont icon="138"/>): This shows you the relative performance of the selected KPIs grouped into the various status options.
+18. **View Notification History** (<SvgFont icon="137"/>): See how many times the system sent notifications for alert status KPIs.
+
+<Image src="media/end-user/features/visualizations/kpis/kpis-top-bar.png"/>
+
+## Grouping
+
+Click the **Grouping** icon (<SvgFont icon="114"/>) to group your KPIs. You can group your KPIs by Standard attributes, such as Status or Group, or any other that makes sense for your organization through Custom attributes. Your organization's admin configures the Custom Attributes.
+
+The example below presents the KPIs grouped by status, which allows KPIs with equal status to be displayed together. This option is valuable if you want to quickly check all the KPIs with similar characteristics, such as those with HighHighHigh status.
+
+<Image src="media/end-user/features/visualizations/kpis/group-by-status.gif"/>
+
+## Select KPIs
+
+Click the **Select KPIs** icon (<SvgFont icon="153"/>) to select multiple KPIs form the list. You can then select which visualization you  wish to see those selected KPIs in. You can also add or remove KPIs after selecting a visualization. However, at the moment the visualization does not update automatically when you add or remove KPIs in the selection, so you will need to click the desired visualization again to refresh it and reflect the new selection.
+
+<Image src="media/end-user/features/visualizations/kpis/multi-select-kpi-charts.gif"/>
+
+## View as a Bullet Chart
+
+The KPI **Bullet Chart** view (<SvgFont icon="171"/>) is similar to the KPI **List** view (<SvgFont icon="206"/>) and **Status History** view (<SvgFont icon="138"/>). However, the KPI Bullet Chart view focuses on the current status of the KPI relative to targets and limits. The KPI Bullet Chart view is optimized for mobile, so comparing peer KPIs at a glance is easy.
+
+When you select the Bullet Chart, new options are available if you use the **Grouping** (<SvgFont icon="114"/>) function. For the Bullet Chart view, you can group using the Standard and Custom Attributes, but you also can choose to group by Bullet Chart type:
+
+- Default
+- Actual EU (Engineering Units)
+- Deviation EU
+- Deviation %
+
+Each KPI in the Bullet Chart View requires specific configuration details to ensure accurate representation. At a minimum, each KPI must have at least one defined limit. However, to fully utilize the capabilities of the view, you should define both minimum and maximum values. These values represent the expected range of the KPI and help identify anomalies. For example, a KPI measuring available disk space should never be able to show a negative number or a number larger than the size of your disk.
+
+The example below presents how to read the bullet chart using the default view.
+
+<Image src="media/end-user/features/visualizations/kpis/bulletchart-detail.webp"/>
+
+In contrast, the example below shows Bullet Charts using the Deviation % view, which centers on the target and shows which KPIs are deviating from their target by a significant percentage. The bigger the black bar, the more the KPI deviates from the target.
+
+<Image src="media/end-user/features/visualizations/kpis/bullet-chart.png"/>
+
+The Bullet Chart visualization aligns KPI values between two extremes:
+
+- **Leftmost Edge**: Defined by the first significant low-side value (min, LLL, LL, L, Actual).
+- **Rightmost Edge**: Defined by the last significant high-side value (max, HHH, HH, H, Actual).
+
+The admin must define the values related to these limits through the Visual KPI Designer.
+
+## View as trend list
+
+The Trend view (<SvgFont icon="192"/>) shows a real-time trend of KPIs, which is excellent for visualizing historical and time-stamped data by just moving your mouse over the trends. Trends can be configured in Visual KPI Designer or created on the fly by users.
+
+You can visualize trends for individual KPIs or select up to 20 to view and compare as trends. With trends, you can compare multiple values or the same value at different times. As with all KPIs, the trend changes in real time as the data changes.
+
+Trends are highly configurable. You can go back as far as data exists, define and customize time ranges, and more. You can even define custom Ad Hoc trends from your device and add them to your Dashboard. Use filters, grouping, and time ranges to elaborate all kinds of trends. Learn more about [Trends](/docs/end-user/features/visualizations/trends) and their different visualization types.
+
+<Image src="media/end-user/features/visualizations/kpis/trend-list.png"/>
+
+## View as a status history chart
+
+The KPI Status History view (<SvgFont icon="37"/>), also known as Shaded Line Chart, shows you a summary and history of your best and worst KPIs at the group level. This view is similar to the KPI List view and the KPI Trend view, but the KPI Status History view shows status changes over time. Clicking on a KPI in this view opens the full KPI Status History Trend.
+
+<Image src="media/end-user/features/visualizations/kpis/status-history-chart.png"/>
+
+<Image src="media/end-user/features/visualizations/kpis/status-history-chart-background.png"/>
+
+## View status summary
+
+Visual KPI shows a summary and history of your best and worst KPIs at the group level. Status Summary (<SvgFont icon="136"/>), Status History (<SvgFont icon="138"/>), and Notification History (<SvgFont icon="137"/>) allow you to track over time the history of KPIs in alert and when alert notifications have been sent. You can see the status of the entire group as a Pareto chart and then get more details on individual KPIs. You can also adjust the time range to see a summary or history over a given reference and freely scroll backward and forward in time.
+
+For any group of KPIs, retrieve a list of KPIs that displays relative performance over the period defined. The Pareto chart shows which KPIs are the worst performing as a percentage of the total. Move your mouse over a KPI in the chart to see a value.
+
+<Image src="media/end-user/features/visualizations/kpis/status-view-summary.png"/>
+
+## View status history
+
+The KPI Status History view (<SvgFont icon="138"/>) shows you a summary and history of your best and worst KPIs at the group level. This view is similar to the KPI List view and the KPI Bullet Chart view, but the KPI Status History view shows status changes over time by projecting pre-configured background colors on your trends. Clicking on a **KPI** in this view opens the full KPI Status History Trend.
+
+For Status Summary (<SvgFont icon="136"/>) and Status History (<SvgFont icon="138"/>) views, you can switch between alert count and time-in-state.
+
+For the Status Summary, first select the Status Summary icon (<SvgFont icon="136"/>). Then, select the **Alert Count icon** (<SvgFont icon="151"/>) to see how many times the KPIs have been in an alert state over the defined period or have reached a particular status over time. If you select the **Time-in-State icon** (<SvgFont icon="287"/>), you'll see how much time a KPI spent in an alert state.
+
+For the Status History, click on the Status History icon (<SvgFont icon="138"/>), then select the **Alert Count icon** (<SvgFont icon="151"/>) to see how many times a KPI has reached a particular status over time. If you select the **Time-in-State icon** (<SvgFont icon="287"/>), you'll see how much time a KPI spent in each status.
+
+Click any KPI in the Pareto chart to see a trend over time and a list view below the trend.
+
+<Image src="media/end-user/features/visualizations/kpis/status-history.png"/>
+
+## View notification history
+
+For any group, see how many times notifications have been sent for the KPIs in alert status by clicking the Notification History icon (<SvgFont icon="137"/>). Note the log for status change below the Pareto chart, which also shows the performance of each KPI relative to the others in the group as a % of the total.
+
+<Image src="media/end-user/features/visualizations/kpis/notification.png"/>
+
+## KPI details view
+
+When accessing KPIs, you may want to know more about a particular one. Clicking the **View Details** icon (<SvgFont icon="267"/>), you may find any of the following KPI details:
+
+- Contacts
+- Links
+- KPI properties
+- KPI stats
+- Parameters
+- Manual data entry (if enabled)
+- Custom attributes
+- Membership
+
+<Image src="media/end-user/features/visualizations/kpis/kpi-details.gif"/>
+
+## KPI link view
+
+You'll find links all over Visual KPI. Links can be configured by Visual KPI administrators or users. The link view isn't limited to internal links. You can add external links to software or other tools you often use. Some of the most common places you'll find the Visual KPI links view are:
+
+1. **Visual KPI objects**: Links from an object, such as a KPI, chart, or group. These are added as an attribute via Visual KPI Designer, and they're tied to the object and available to all profiles.
+2. **Dashboard link widgets**: using the [Customize Dashboard widget](/docs/end-user/features/dashboards), you can tie a link to a Dashboard. However, only profiles with access to these Dashboards will see them.
+3. **Bookmark bar links**: Links on the [Bookmark bar](/docs/end-user/features/profiles) are tied to a profile.
+4. **Navigation bar links**: These links, configured by your admin, are sitewide, and everyone with access to the site will see them.
+5. **KPI detail pages**: Links for the KPI detail view must be configured by your admin.
+
+## What's next?
+
+Learn the best way to handle [Charts](/docs/end-user/features/visualizations/charts) on our page and get the best out of Visual KPI.
