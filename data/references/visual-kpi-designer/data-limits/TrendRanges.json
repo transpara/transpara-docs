@@ -1,0 +1,22 @@
+[
+  {
+    "Field": "Display Order",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Display Name",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "End Time",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "Start Time",
+    "Type": "Text",
+    "Limit": 50
+  }
+]

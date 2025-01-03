@@ -1,0 +1,112 @@
+[
+  {
+    "Field": "Compact URL",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Description",
+    "Type": "Text",
+    "Limit": 400
+  },
+  {
+    "Field": "Display In Trends Page",
+    "Type": "List Selection",
+    "Limit": "System Defined (True/False)"
+  },
+  {
+    "Field": "Display Order",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "End Time",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "Info",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Info Description",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Info Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Pen 1 – Pen 10",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Pen 1 Color – Pen 10 Color",
+    "Type": "List Selection",
+    "Limit": "System Defined Colors"
+  },
+  {
+    "Field": "Pen 1 Interface – Pen 10 Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Pen 1 Offset – Pen 10 Offset",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "Reference Count",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Scorecard Name",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Show",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Show Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Start Time",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "Trend ID",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Trend Name",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Trend Scale",
+    "Type": "List Selection",
+    "Limit": "System Defined Scale Types"
+  },
+  {
+    "Field": "Trend Type",
+    "Type": "List Selection",
+    "Limit": "System Defined Trend Types"
+  },
+  {
+    "Field": "View Name",
+    "Type": "Text",
+    "Limit": 200
+  }
+]
