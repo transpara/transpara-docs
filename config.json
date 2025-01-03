@@ -17,6 +17,9 @@
     "pagination": false,
     "navbarMode": "tabbed"
   },
+  "apiFiles": [
+    "example.yml"
+  ],
   "homepage": "/what-is-visual-kpi",
   "changelog": true,
   "navbar": [
