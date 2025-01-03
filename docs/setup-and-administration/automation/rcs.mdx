@@ -1,0 +1,46 @@
+---
+id: rcs
+title: Remote Context Server (RCS)
+slug: /setup-and-administration/automation/rcs
+description: 'Describes what the RCS is.'
+tags: ['documentation']
+---
+
+Visual KPI RCS allows you to configure Visual KPI dynamically or automatically, using information from another system or external application as the primary source of metadata. 
+
+## When should you use the RCS?
+
+You can use the RCS to read that information if you have already defined a hierarchy and KPIs in another application. This way, KPIs, groups and other objects will be created automatically without any extra work.
+
+## How does it work?
+
+RCS will automatically detect new KPIs or objects added to your master application. You can choose the frequency in which RCS reads those changes, and the new objects will appear in Visual KPI without any manual intervention. The same is true for any changes or deletions you make to objects. Visual KPI automates everything every time RCS runs.
+
+<Callout type="note" title="Originally designed around OSIsoft's AF">
+The RCS feature of Visual KPI was initially created for OSIsoft's AF (Asset Framework) application, and it remains the most widely used application of the RCS. However, Transpara now provides the same degree of integration with any SQL data source, and additional historians such as enterprise:inmation, and more are being added all the time.
+</Callout>
+
+### What type of information RCS can read?
+
+Visual KPI RCS can extract various types of data from different external applications, such as:
+
+- Almost all metadata and attributes that are used to manually create objects in the Visual KPI Designer, including group definitions and hierarchy;
+- KPIs, including actual, target, limits, and all attributes;
+- All chart and table definitions;
+- Alert information;
+- Dashboard definitions;
+- Security information.
+
+## Important to know
+
+Here are a few things to know about using the Visual KPI RCS to automate configuration:
+
+- The RCS is different from an Interface for reading data. A Visual KPI Interface only gives you access to raw or calculated data, but not all of the attributes or configuration information required to create, define/edit or delete objects.
+- You still need the Visual KPI Designer for site-wide settings (things that appear under the gear icon in the Visual KPI Designer).
+- You can skip the other parts of the Designer completely, or you can have part of your site automated with the RCS and other parts that are manually configured with the Designer.
+- The RCS can be configured in opt-in or opt-out mode. This tells the RCS to “read everything it sees, unless it's specifically decorated to be excluded” or "read nothing unless it's specifically decorated to be read."
+- Part of the RCS configuration, when reading a hierarchy of groups and objects, is to define an initial node in the hierarchy to start reading. This is great when you only want part of your application’s hierarchy to be included in Visual KPI and to ignore the rest.
+
+<Callout type="support" title="Support">
+The RCS for SQL data sources or JSON requires some custom queries to be written. If you are interested in using the RCS for these sources, contact our [Support](https://www.transpara.com/contact-us/).
+</Callout>

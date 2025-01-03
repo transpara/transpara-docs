@@ -71,6 +71,32 @@
                 "setup-and-administration/installation/visual-kpi-website-and-virtual-directory-structure",
                 "setup-and-administration/installation/system-upgrade"
               ]
+            },
+            {
+              "groupName": "Interfaces",
+              "page": "setup-and-administration/interfaces/interfaces",
+              "subpages": [
+                "setup-and-administration/interfaces/core-concepts",
+                "setup-and-administration/interfaces/configuring-interfaces",
+                "setup-and-administration/interfaces/available-interfaces",
+                "setup-and-administration/interfaces/data-sources",
+                {
+                  "groupName": "Working with Interfaces",
+                  "page": "setup-and-administration/interfaces/working-with-interfaces/working-with-interfaces",
+                  "subpages": [
+                    "setup-and-administration/interfaces/working-with-interfaces/odbc",
+                    "setup-and-administration/interfaces/working-with-interfaces/json",
+                    "setup-and-administration/interfaces/working-with-interfaces/python",
+                    "setup-and-administration/interfaces/working-with-interfaces/tstore",
+                    "setup-and-administration/interfaces/working-with-interfaces/parameterizing-interfaces"
+                  ]
+                }
+              ]
+            },
+            {
+              "groupName": "Automation",
+              "page": "setup-and-administration/automation/automation",
+              "subpages": []
             }
           ]
         }

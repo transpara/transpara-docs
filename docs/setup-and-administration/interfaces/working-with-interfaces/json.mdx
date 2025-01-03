@@ -1,0 +1,205 @@
+---
+title: JSON Interface
+slug: /setup-and-administration/interfaces/json
+description: ''
+tags: ['documentation']
+---
+
+A JSON Interface will be used when you need to connect to restFUL databases. This guide aims to explain how you can configure your new JSON interface when needed.
+
+The JSON interface is made up of a base address and a request URI that return a JSON or XML result.
+
+<Callout type="note" title="XML to JSON">
+If the result is XML, it will be automatically converted to JSON.
+</Callout>
+
+## Configuration
+
+After installing a new JSON interface following these [instructions](/setup-and-administration/interfaces/configuration), you are ready to configure your interface.
+
+<Callout type="training" title="Training">
+Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-json-interfaces-rest-2/)** to learn all about how Visual KPI interfaces reads from thousands of data sources and how to create your own interfaces.
+</Callout>
+
+All REST-based interfaces have some components in common that need to be set:
+
+- **Base address**:  The URL to the database API.
+- **Request URI**: Specifies the Base Address and Date Time Format to traverse the JSON object and retrieve values and timestamps.
+- **Result base path**: The path to the data you need inside the JSON.
+- **Value field**: The value field name in the JSON.
+- **Timestamp field**: The timestamp field in the JSON.
+
+<Callout type="info">
+The base address together with the request URI will form a URL that returns the JSON data.
+</Callout>
+
+## JSON Security Settings
+
+Most restFUL databases have some sort of security  implemented on them. These are usually handled by an authentication method. You will need to configure this into your Interface. To do so, do the following:
+
+1. Click on your newly created interface.
+2. Navigate to **JSON security settings** and configure the needed fields:
+    - **Authentication type**: Select the type of authentication needed for this API.
+    - **User credentials**: Click the **"..."** button and add the credentials needed to access the API.
+
+<Callout type="note" title="Public APIs">
+If the API doesn't require authentication, you can skip this process.
+</Callout>
+
+## JSON Base Settings
+
+In the interface settings, you can find the JSON Base Settings, which allows you to configure:
+
+- **Base Address**: Configure the API's base address.
+- **Date Time Format**: Set the DateTime format of the API.
+- **Result Data Format**: Inform the type of data the API returns (JSON or XML).
+
+Using the example below as base address, you can see how you can parameterize it:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Base Address: `http://demo.example.com/apitest/api/training?machine=server1`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Base Address: `http://demo.example.com/apitest/api/training?machine={0}`
+
+    Where, in Visual KPI Designer, you would add `server1` as the lookup.
+  </TabItem>
+</Tabs>
+
+## How to access JSON data
+
+To complete the result base path, value field and timestamp field, you need to understand how to access information in a JSON. Using the JSON below as example:
+
+```json
+  {
+    "message": "Transpara LLC Training",
+    "data": {
+      "ip_address": "192.168.1.100",
+      "CPU": 45.6,
+      "memory": 65.2,
+      "temperature": 38.5,
+      "timestamp": "2024-02-19T12:30:00Z"
+    }
+  }
+```
+
+To use `CPU` as the **Value field**, and `timestamp` as the **Timestamp field**, you need to use [dot notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation) to reach the required data:
+
+- **Value field**: `response.data.CPU`
+- **Timestamp field**: `response.data.timestamp`
+
+In Visual KPI Server Manager, you need to add the following for each configuration field:
+
+| Field               | Value              | Parameterized |
+|---------------------|--------------------|---------------|
+| **Result base path**| `data.`            | `{1}`         |
+| **Value field**     | `CPU`              | `{2}`         |
+| **Timestamp field** | `timestamp`        | `{3}`         |
+
+<Callout type="info" title="Parameterizing">
+These fields can be [parameterized](/setup-and-administration/interfaces/parameterizing).
+</Callout>
+
+## JSON Query Settings
+
+Under the JSON Query Settings section, you will need to configure the following fields:
+
+- **[Current Value](#current-value)**
+- **[Trend Data](#trend-data)**
+- **[Historical Value](#historical-value)**
+
+### Current Value
+
+The current value requires you to configure:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded">
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized" default>
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup.
+  </TabItem>
+</Tabs>
+
+### Trend Data
+
+Trend Data requires a start and end date to display the trend of a KPI. These can be added in the Request URI, as exemplified below:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+    - Request URI: `&start=2024-02-17T12:30:00&end=2024-06-15T12:30:00`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+    - Request URI: `&start={STARTDATE}&end={ENDDATE}`
+
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup, `2024-02-17T12:30:00` as **STARTDATE**, and `2024-06-15T12:30:00` as **ENDDATE**.
+  </TabItem>
+</Tabs>
+
+<Callout type="info" title="Parameterizing">
+The **start** and **end** values can be [parameterized](/setup-and-administration/interfaces/parameterizing) using `STARTDATE` and `ENDDATE`.
+</Callout>
+
+### Historical Value
+
+The historical value requires a specific date, as it needs to retrieve a value at or before a given date. For this, a timestamp parameter needs to be added in the request URI:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+    - Request URI: `&date=2024-06-15T12:30:00`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+    - Request URI: `&date={TIMESTAMP}`
+
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup, and `2024-06-15T12:30:00` as **TIMESTAMP**.
+  </TabItem>
+</Tabs>
+
+
+<Callout type="info" title="Parameterizing">
+The **date** value can be [parameterized](/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
+</Callout>
+
+### Historical Data
+
+The historical data requires a specific date, as it will gather all data until the set date. For this, a timestamp parameter needs to be added in the request URI:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+    - Request URI: `&date=2024-02-17T00:30:00`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+    - Request URI: `&date={TIMESTAMP}`
+
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup, and `2024-02-17T00:30:00` as **TIMESTAMP**.
+  </TabItem>
+</Tabs>
+
+<Callout type="info" title="Parameterizing">
+The **date** value can be [parameterized](/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
+</Callout>
