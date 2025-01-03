@@ -40,7 +40,7 @@ The links below show you how to create your own queries:
 - [Get Historical Data](#get-historical-data-query)
 
 <Callout type="info" title="Parameterizing your queries">
-Visual KPI gives you the power to parameterize most data allowing you to create one interface to query for different data. To learn more about it, refer to the [Parameterizing Interfaces](/setup-and-administration/interfaces/parameterizing) page.
+Visual KPI gives you the power to parameterize most data allowing you to create one interface to query for different data. To learn more about it, refer to the [Parameterizing Interfaces](/setup-and-administration/interfaces/parameterizing-interfaces) page.
 </Callout>
 
 ### Get Current Value Query
@@ -107,7 +107,7 @@ To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag na
   </TabItem>
 </Tabs>
 
-In the query above, `STARTDATE` and `ENDDATE` are [parameters](/setup-and-administration/interfaces/parameterizing) that will be replaced with actual timestamps when configuring in Visual KPI Designer to create a time range for the trend data.
+In the query above, `STARTDATE` and `ENDDATE` are [parameters](/setup-and-administration/interfaces/parameterizing-interfaces) that will be replaced with actual timestamps when configuring in Visual KPI Designer to create a time range for the trend data.
 
 Using `3` as **lookup**, `2024-06-01` as **STARTDATE**, and `2024-06-13` as **ENDDATE**, the query will return the following data:
 
@@ -147,7 +147,7 @@ The Get Historical Value Query is similar to the Get Current Value Query, howeve
   </TabItem>
 </Tabs>
 
-Where `TIMESTAMP` is a [parameter](/setup-and-administration/interfaces/parameterizing) that will be replaced with an actual timestamp when configuring in Visual KPI Designer to use this query.
+Where `TIMESTAMP` is a [parameter](/setup-and-administration/interfaces/parameterizing-interfaces) that will be replaced with an actual timestamp when configuring in Visual KPI Designer to use this query.
 
 Using `3|400` as **lookup**, and `2024-06-09` as **TIMESTAMP**, the query will return the following data:
 
