@@ -8,9 +8,6 @@ Welcome to the WriteDocs documentation guide. Follow the instructions below to l
 
 ### Requirements
 
-
-
-
 WriteDocs uses GitHub to integrate your docs with your code, and make source control effortless. Therefore, make sure you have the following requirements checked before getting started:
 
 - [x] GitHub account
