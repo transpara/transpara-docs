@@ -1,0 +1,59 @@
+---
+id: query-builder
+title: Query Builder
+slug: query-builder
+description: ''
+tags: ['documentation']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+The Visual KPI Designer Query Builder allows you to add data objects to Groups using queries. In this way, you can add data dynamically to Groups in addition to selecting fixed objects that will always display in Groups.
+
+The Visual KPI Designer Query Builder uses Attributes and Values to return data at runtime. To build a query, you select an Attribute and an associated Value.
+
+## Using Query Builder to Add Objects to Groups
+
+If you have several Groups organized by region but want to create a new Group based on a different attribute, Query Builder can help. This tool allows you to gather data that spans multiple regions by building a query that targets a specific value of your chosen attribute. This way, you can easily create and display a Group with data that meets your specific criteria, regardless of regional boundaries.
+
+### Example
+
+You've grouped your KPIs, Charts, and Tables according to the region and the energy plants within each region. You want another Group that returns KPIs from all plants in all regions producing solar power.
+
+1. Create a [custom attribute](/docs/visual-kpi-designer/settings/advanced#attributes) called **Unit Type** with the following default values: Biomass; Coal; Fuel Processing; Gas; Geothermal; Hydro; Nuclear; Solar; Waste Coal.
+2. In the Groups worksheet, create a New Group called **Solar Performance**.
+3. Select the associated cell under the column **KPI Selection Query**.
+4. Using the query builder in the task pane, select the Attribute **Unit Type**, the Operator is equal to (=), and the Value **Solar**.
+5. When adding Groups and KPIs, you'll want to associate this Unit Type **Solar** with any relevant KPIs.
+6. When the query runs, all KPIs related to solar power will display in the **Solar** group, regardless of geographic location.
+
+<Image
+  src="media/designer/authoring/groups/groups-query-example1.png"
+  alt="Groups Query Example 1"
+/>
+
+{/* Review. didn't work.
+### Example 2
+
+You want to group all KPIs with an alert status of High High High. Obviously, alert status changes over time, so you can't select KPIs for this group. You must build a query that returns the attribute Status with a value that equals High High High. Visual KPI will display all KPIs that have the selected status at runtime.
+
+1. Create a [custom attribute](/docs/visual-kpi-designer/settings/advanced#attributes) called Status with the possible Values to include: High High High.
+2. In the worksheet, create a New Group, and give it a name and description.
+3. Select the associated cell under the column KPI Selection Query.
+4. Build a query using Status as the Attribute, equals (=) a Value of High High High.
+
+:::note Attributes assigned to Groups
+
+You can also use Group Selection Query to add sub-groups using attributes and values assigned to Groups. Use Chart and Table Selection Query to add these objects to Groups based on a query.
+
+::: */}
+
+## Using Query Builder to Search and Open Objects
+
+You can also use the Query Builder to search for and open Groups, KPIs, Charts, and Tables.
+
+1. Select the object tab, such as **KPIs**.
+2. Click the **Open KPIs** folder icon (<PngFont name='open28' />) or New Group, New Chart, New Table.
+3. Click **Advanced** in the search dialogue panel that opens.
+4. Select an **Attribute** and **Value** to open only those KPIs (or other objects) in the worksheet.
