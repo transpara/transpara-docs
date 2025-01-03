@@ -1,0 +1,26 @@
+[
+  {
+    "Attribute": "Attribute Name",
+    "Description": "The name of the Attribute as it appears to site users. Attribute names can also be referenced in selection queries."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Attributes. Attributes with blank fields will be sorted alphanumerically and displayed below Attributes with numbers."
+  },
+  {
+    "Attribute": "Reference Count",
+    "Description": "The number of times this Attribute is used (read-only)."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Attribute, for use by Designer admins only and will not appear to site users."
+  },
+  {
+    "Attribute": "Default Values",
+    "Description": "A semicolon delimited list of default Attribute values used to populate Designer pull-down menus. Additional attribute values will be appended to the list as they are defined."
+  },
+  {
+    "Attribute": "Attribute ID",
+    "Description": "Read-only system level identifier."
+  }
+]

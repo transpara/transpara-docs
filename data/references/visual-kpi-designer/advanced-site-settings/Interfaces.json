@@ -1,0 +1,58 @@
+[
+  {
+    "Attribute": "Interface Name",
+    "Description": "The name of the Table that appears in Interface pull-down menus (visible in Designer worksheets)."
+  },
+  {
+    "Attribute": "Reference Count",
+    "Description": "The number of times this Interface is used (read-only)."
+  },
+  {
+    "Attribute": "URL",
+    "Description": "The server URL used to invoke the Interface methods (these URLs don't need to be accessed outside the server)."
+  },
+  {
+    "Attribute": "Authentication Method",
+    "Description": "Used to allow or deny Interface rights when writing data to the source (may not apply to all Interfaces)."
+  },
+  {
+    "Attribute": "Domain",
+    "Description": "The domain used for authentication."
+  },
+  {
+    "Attribute": "User Name",
+    "Description": "The account user name required for authentication."
+  },
+  {
+    "Attribute": "Password",
+    "Description": "The account password required for authentication."
+  },
+  {
+    "Attribute": "Allow Writes",
+    "Description": "Used to allow or deny the Interface permission to write data to the source. May not apply to all Interfaces."
+  },
+  {
+    "Attribute": "Write Group",
+    "Description": "The Active Directory or local group that a user must belong to in order to write data to the source."
+  },
+  {
+    "Attribute": "Down Sample Trend Data",
+    "Description": "Allows for intelligent Trend data downsampling to preserve the Trend's shape. Some data sources (e.g. relational DBs) may return thousands of values, effectively overwhelming the display."
+  },
+  {
+    "Attribute": "Error Display",
+    "Description": "Controls where the error is displayed."
+  },
+  {
+    "Attribute": "Batch Size",
+    "Description": "Controls how many values are retrieved in one call to the Interface. A smaller number may help with parallelism and can be adjusted for a slow-running Interface."
+  },
+  {
+    "Attribute": "Enabled",
+    "Description": "Controls whether or not data is retrieved via this Interface. If disabled, no data will be returned and an 'Interface Disabled' message will appear in all references."
+  },
+  {
+    "Attribute": "Interface ID",
+    "Description": "Read-only system level identifier."
+  }
+]
