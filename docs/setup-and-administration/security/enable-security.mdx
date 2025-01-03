@@ -1,0 +1,220 @@
+---
+title: Enable Security
+slug: enable-security
+description: ''
+tags: ['documentation']
+---
+
+To secure your Visual KPI websites, data, and the Visual KPI Designer, you first need to enable security. Visual KPI supports any security model that uses IIS, such as VPN, RSA, and other two-factor authentication methods.
+
+<Callout type="success" title="Save Time">
+Integrating the Visual KPI Server Manager with IIS saves you the time of setting up website authentication.
+</Callout>
+
+To enable security, follow the steps below to use IIS and the Visual KPI Server Manager:
+
+- [**Step 1: Decouple parent inheritance in IIS**](#step-1-decouple-parent-inheritance-in-iis)
+- [**Step 2: Enable security in IIS Manager**](#step-2-enable-security-in-iis-manager)
+- [**Step 3: Determine who gets access to websites**](#step-3-determine-who-gets-access-to-websites)
+- [**Step 4: Set up rights assignment**](#step-4-set-up-rights-assignment)
+
+## Step 1: Decouple parent inheritance in IIS
+
+To set security for each component of Virtual KPI separately, you need to decouple directory inheritance from the Visual KPI website parent directory so that the Interface and WebService (for the Visual KPI Designer) won't inherit the same security as the Visual KPI website.
+
+Use IIS Manager to decouple inheritance from the parent directory. You'll need to do this for each component. The components are:
+1. **Visual KPI Server instance** (website)
+2. **Interfaces** (data sources)
+3. **WebService** (Designer)
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/decouple-1.png"
+  alt="Components"
+/>
+
+At the parent level of each component:
+1. Right-click and select **Edit Permissions**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/decouple-2.png"
+  alt="Properties Panel"
+/>
+
+2. When the **Properties** panel opens, select the **Security** tab.
+3. Click **Advanced**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/decouple-3.png"
+/>
+
+4. In **Advanced Security Settings**, on the **Permissions** tab, click **Disable inheritance**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/decouple-4.png"
+  alt="Advanced Security Settings"
+/>
+
+<Callout type="warning" title="Different UI">
+The UI may be different for other versions of Microsoft Windows Server.
+</Callout>
+
+5. In the **Block Inheritance** panel, select **Convert inherited permission into explicit permissions on this object**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/decouple-5.png"
+  alt="Block Inheritance"
+/>
+
+6. Click **OK**.
+
+<Callout type="warning" title="Repeat for Each Component">
+After you finish, remeber to repeat this for each component.
+</Callout>
+
+## Step 2: Enable security in IIS Manager
+
+For every Visual KPI website, use IIS Manager to turn off anonymous access on the Visual KPI website and WebServices (hosts Visual KPI Designer).
+
+Before you set up security for Visual KPI Sites, Interfaces and the Visual KPI Designer, you must enable security in [Microsoft Internet Information Services (or IIS Manager for Windows)](https://docs.microsoft.com/en-us/iis/manage/configuring-security/configuring-ssl-in-iis-manager). You'll need to do this for each virtual directory to which you want to edit permissions.
+
+The most common security settings are for the Visual KPI website and Visual KPI Designer. Most users will only grant access to the Visual KPI Designer software to those who can access it, but you can also set up access through IIS. Most clients do not set security for Interfaces, but you can do it by following the steps outlined below.
+
+<Callout type="note" title="Previous Step">
+Before you start this process, you should complete [Step 1: Decouple parent inheritance in IIS](#step-1-decouple-parent-inheritance-in-iis).
+</Callout>
+
+### Setting Open or Secure access
+
+You can either allow open access to each server or set security, which requires users to authenticate with a username and password.
+
+#### For open access:
+
+1. In IIS Manager, click the virtual directory for which you want to set authentication.
+2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/iis-manager-1.png"
+  alt="IIS Manager"
+/>
+
+3. Enable **Anonymous Authentication**.
+4. Enable **Windows Authentication**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/iis-manager-2.png"
+  alt="Authentication"
+/>
+
+#### To set secure access:
+1. In IIS Manager, click the virtual directory for which you want to set authentication.
+2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/iis-manager-1.png"
+  alt="IIS Manager"
+/>
+
+3. Disable **Anonymous Authentication**.
+4. Enable **Windows Authentication**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/iis-manager-3.png"
+/>
+
+## Step 3: Determine who gets access to websites
+
+Once you set security in IIS, you must determine who gets access. For example, you can set authentication for the entire website. This sets up who can get access, not who gets to see what.
+
+Visual KPI Server Manager allows you to create local groups and users, making it easy to set up authentication in IIS.
+1. Open the **Windows Server Manager**.
+2. Click **Tools** and select **Computer Management**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-1.png"
+  alt="Computer Management"
+/>
+
+3. Under **Local Users and Groups**, you can have a separate folder for **Users** and **Groups**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-2.png"
+  alt="Local Users and Groups"
+/>
+
+4. Move users into groups, or create a new group.
+
+### Create a New Group
+
+1. Right-click in the **Groups** panel.
+2. Click **New Group**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-3.png"
+  alt="New Group"
+/>
+
+3. Name the Group.
+4. Click **Add** to add members to the Group.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-4.png"
+  alt="Add Members"
+/>
+
+5. Start typing a name and click **Check Name** to find and add users.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-5.png"
+  alt="Check Name"
+/>
+
+6. Click **Create** to create the Group after you added all the users.
+
+### Add Groups in IIS Manager
+
+1. In IIS Manager, right-click the top level for the website and select **Edit Permissions**.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-6.png"
+  alt="Edit Permissions"
+/>
+
+2. In the **Security** tab, click **Edit...** and then, in the **Permissions** panel, click **Add...** to add the new group.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-7.png"
+  alt="Add Permissions"
+/>
+
+3. In the **Permissions Entry** panel, click **Locations** and select the server where the group is located.
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-8.png"
+  alt="Locations"
+/>
+
+4. Type the name of the group and click **OK**.
+5. With the new group selected, set the permissions as allowed for the new group as presented below:
+    - Read & Execute
+    - List folder contents
+    - Read
+
+<Image 
+  src="media/setup-and-administration/security/enable-security/security-groups-9.png"
+  alt="Set the Permissions"
+/>
+
+6. Click **OK** to save.
+
+
+## Step 4: Set up rights assignment
+
+
+Once users get access to the website, what can they see? This is where you'll set up rights assignment or object-level inheritance for users or user groups in the Visual KPI Designer. This final step must be completed in Visual KPI Designer. To learn more about it, go to the [Object-level Security](/docs/visual-kpi-designer/additional-features#object-level-security) guide.
+
+### Access Denial Messages
+
+Users without access to Visual KPI sites or virtual directories will see the following messages:
+
+- **Visual KPI sites**: a simple 403 error page.
+- **Visual KPI Designer**: a modal dialog box telling the user they are forbidden to access the necessary Web services.

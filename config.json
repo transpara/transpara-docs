@@ -109,6 +109,14 @@
                   ]
                 }
               ]
+            },
+            {
+              "groupName": "Security",
+              "page": "setup-and-administration/security/security",
+              "subpages": [
+                "setup-and-administration/security/security-inheritance",
+                "setup-and-administration/security/enable-security"
+              ]
             }
           ]
         },

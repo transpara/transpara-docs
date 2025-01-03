@@ -1,0 +1,53 @@
+---
+title: Security Inheritance
+slug: security-inheritance
+description: ''
+tags: ['documentation']
+---
+
+Visual KPI conforms to our customers' security model and/or requirements without any work on their (or our) part. Using standard Microsoft Active Directory and/or local Server Groups and Users, Visual KPI simply “inherits” the requirements from the host environment at the customer site.
+
+## Visual KPI is Based on Your Security Model
+
+Here are some basic facts about almost every customer environment:
+
+- They each have their own security requirements.
+- None of them look the same, and some are incredibly sophisticated (even crazy sometimes).
+- They, and only they, really understand who should have access to what applications or data.
+- This information is usually kept in a directory, and most often, it is Active Directory.
+
+<Callout type="info" title="No Additional Functionalities">
+Visual KPI requires no additional user database or rights assignment functionality beyond those built into the Windows Server operating system. We simply “assign” one or more of your user groups to the virtual directories that govern each of our components.
+</Callout>
+
+
+## How Visual KPI Security Integrates with Your Security Model
+
+Visual KPI is an enterprise-class software application, and, of course, it needs to know who in your organization is allowed to create, modify, delete, and view the various KPIs, scorecards, and trends (among other things). This is critical because so is the data we deliver.
+
+By designing Visual KPI as a Web server-based application and specifically using Internet Information Server (IIS) as the platform, we leverage the existing authentication and rights-assignment subsystem within the platform, including the directory and all related security policies.
+
+<Callout type="success" title="No Unauthorized Access">
+No one can access our system until the customer's existing environment says it is ok.
+</Callout>
+
+Because Visual KPI components run as part of a virtual directory structure in IIS, each virtual directory has a set of permissions that govern which users may see or execute functions contained and managed by the virtual directory. Since each of our feature sets (Visual KPI websites, Visual KPI Designer, Visual KPI Interfaces) have unique virtual directories, Visual KPI has complete flexibility and access to the power of Active Directory as our native user authentication and rights assignment engine.
+
+## How You Manage Security with Visual KPI
+
+The Visual KPI Server runs under the context of an IIS website. Installing the Visual KPI Server automatically creates the main Transpara website, which includes the Visual KPI website and Visual KPI's virtual directories. You then install any Visual KPI Interfaces you want to run on either the Visual KPI Server or another machine.
+
+You'll then determine who needs access to Visual KPI websites and the Visual KPI Designer and use IIS and the Visual KPI Server Manager to set permissions.
+
+- To limit who can view your KPI data, you'll set up permissions for your Visual KPI websites.
+- To limit who can modify your KPI configurations, you'll set up permissions for the Visual KPI Designer.
+
+## Multiple Visual KPI Websites with Object-level Security
+
+You can implement a specific security scheme that includes multiple Visual KPI websites and uses Active Directory (AD) security or any other form of standard security used on an application server. You have complete control over who sees what.
+
+Object-level security refers to who sees any of the various “objects” in Visual KPI. For example, you may want users to view only certain Groups, KPIs, Trends, Charts, or Tables. You can restrict the visibility of these objects by creating several Visual KPI websites or by setting permissions and object-level security to allow access to your user groups based on what they need to see.
+
+<Callout type="transpara" title="Security Model">
+From the top to the bottom, your organization's security model determines the security of your Visual KPI Server, Visual KPI Designer, and Visual KPI websites, right down to website objects.
+</Callout>
