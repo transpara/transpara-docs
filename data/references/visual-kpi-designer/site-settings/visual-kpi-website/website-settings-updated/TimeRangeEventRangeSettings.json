@@ -1,0 +1,18 @@
+[
+  {
+    "Attribute": "Show Time Ranges",
+    "Description": "Controls whether or not the predefined list of time ranges will be displayed on range pickers (Note: The predefined list of ranges must also be configured)."
+  },
+  {
+    "Attribute": "Show Event Ranges",
+    "Description": "Controls whether or not query based event ranges will be displayed on range pickers (Note: Event Range connectstring and query must also be defined)."
+  },
+  {
+    "Attribute": "Show OSIsoft AF Event Frames",
+    "Description": "Controls whether or not OSIsoft AF Event Frames will be displayed on range pickers (Note: Event Frame search criteria must be defined in an AF model with an associated AF RCS)."
+  },
+  {
+    "Attribute": "Default Expanded Range Section",
+    "Description": "Controls which range selection section is expanded by default (Note: This will only apply if both event and time ranges have been configured and set to show)."
+  }
+]

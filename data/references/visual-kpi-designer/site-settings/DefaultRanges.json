@@ -1,0 +1,14 @@
+[
+  {
+    "Attribute": "Default Range Name",
+    "Description": "Read-only system level name"
+  },
+  {
+    "Attribute": "Start Time",
+    "Description": "The Start Time for the Chart Range. (Note: The Start Time must be < the End Time, and the value can be an actual or relative date. e.g. 6/12/2019 or *-7Days)."
+  },
+  {
+    "Attribute": "End Time",
+    "Description": "The End Time for the Chart Range. (Note: The End Time must be > the Start Time, and the value can be an actual or relative date. e.g. 6/12/2019 or *-7Days)."
+  }
+]

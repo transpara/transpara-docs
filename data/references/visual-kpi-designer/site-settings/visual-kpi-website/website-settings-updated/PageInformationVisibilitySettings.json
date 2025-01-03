@@ -1,0 +1,86 @@
+[
+  {
+    "Attribute": "Sticky Header",
+    "Description": "Controls whether or not the page header will scroll as the page is scrolled."
+  },
+  {
+    "Attribute": "Show Legend",
+    "Description": "Controls whether or not page legends are displayed."
+  },
+  {
+    "Attribute": "Show Site Information",
+    "Description": "Controls whether or not the site information page is available."
+  },
+  {
+    "Attribute": "Show Group Detail",
+    "Description": "Controls whether or not Group detail pages are available."
+  },
+  {
+    "Attribute": "Show KPI Detail",
+    "Description": "Controls whether or not KPI detail pages are available."
+  },
+  {
+    "Attribute": "Show Chart Detail",
+    "Description": "Controls whether or not Chart detail pages are available."
+  },
+  {
+    "Attribute": "Show Table Detail",
+    "Description": "Controls whether or not Table detail pages are available."
+  },
+  {
+    "Attribute": "Show Site Rollup Links",
+    "Description": "Controls whether or not links on Site Rollups are available."
+  },
+  {
+    "Attribute": "Show Group Links",
+    "Description": "Controls whether or not links on Groups are available."
+  },
+  {
+    "Attribute": "Show KPI Links",
+    "Description": "Controls whether or not links on KPIs are available."
+  },
+  {
+    "Attribute": "Show Chart Links",
+    "Description": "Controls whether or not links on Charts are available."
+  },
+  {
+    "Attribute": "Show Table Links",
+    "Description": "Controls whether or not links on Tables are available."
+  },
+  {
+    "Attribute": "Show Target on KPI Sparkline",
+    "Description": "Controls whether or not KPI sparklines show Target pen."
+  },
+  {
+    "Attribute": "Show Empty Groups",
+    "Description": "Controls whether or not groups with no data will be displayed (Note: If Object Level Security is enabled then Empty Groups will always be hidden)."
+  },
+  {
+    "Attribute": "Show KPI Roll-Ups",
+    "Description": "Controls whether or not group KPI Roll-Up bars are displayed."
+  },
+  {
+    "Attribute": "Default Group Rollup Click Expansion",
+    "Description": "Controls whether the KPIs view will be expanded (show KPIs in child Groups) or collapsed when the group rollup is clicked."
+  },
+  {
+    "Attribute": "Show Name Tooltip",
+    "Description": "Controls whether or not an object's name will display a tooltip on mouse-over."
+  },
+  {
+    "Attribute": "Show Unused Fields in Detail Pages",
+    "Description": "Detail pages will show 'N/A' for all empty or unused fields if this setting is true."
+  },
+  {
+    "Attribute": "Display Alert History on KPI Detail Page",
+    "Description": "Controls whether or not alert history appears on KPI detail pages."
+  },
+  {
+    "Attribute": "Show Group Description in Rollup Page",
+    "Description": "Controls whether or not Group descriptions appear in column next to rollups."
+  },
+  {
+    "Attribute": "Show Child Objects With Groups",
+    "Description": "Controls whether or not child objects (KPIs, Charts and Tables) are shown on the same page as Groups in list view."
+  }
+]

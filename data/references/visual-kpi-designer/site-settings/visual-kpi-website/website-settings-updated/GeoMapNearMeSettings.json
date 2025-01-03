@@ -1,0 +1,34 @@
+[
+  {
+    "Attribute": "Default Near Me Distance Unit",
+    "Description": "Default unit of measure for Near Me distance."
+  },
+  {
+    "Attribute": "Default Group Geo Map Label Format",
+    "Description": "Default format of Group Geo Map labels."
+  },
+  {
+    "Attribute": "Default KPI Geo Map Label Format",
+    "Description": "Default format of KPI Geo Map labels."
+  },
+  {
+    "Attribute": "Show Geo Map Info Window On Large Screens",
+    "Description": "Controls whether or not to display the pop-up Geo Map info windows on screens with 768 or more pixels of horizontal resolution."
+  },
+  {
+    "Attribute": "Show Geo Map Info Window On Small Screens",
+    "Description": "Controls whether or not to display the pop-up Geo Map info windows on screens with less than 768 pixels of horizontal resolution."
+  },
+  {
+    "Attribute": "Geo Marker Merge Factor",
+    "Description": "Controls how close geo map markers must be before merging. (Note: 1 will always keep them separated unless they have the same lat/long. Higher numbers force a merge sooner for objects when zooming. 1 min and 200 max)."
+  },
+  {
+    "Attribute": "Show Location History on Geo Map",
+    "Description": "Controls whether or not location history is shown on the Geo Map. This feature requires that location data (latitude/longitude) is interfaced based."
+  },
+  {
+    "Attribute": "Location History Display Type",
+    "Description": "Controls how location history is displayed on the Geo Map."
+  }
+]

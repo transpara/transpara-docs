@@ -1,0 +1,34 @@
+[
+  {
+    "Attribute": "Default Group Map KPI Cell Count",
+    "Description": "Number of KPI cells displayed on each Group Map (1 min and 20 max)."
+  },
+  {
+    "Attribute": "Default Group Map Header Priority",
+    "Description": "Controls Group Map header cell behavior. 'Recently Changed' sets header to color of most recently changed KPI and Icon to overall KPI status. 'Overall' sets header to color of most severe KPI status and Icon to most recently changed status. 'Custom Colors' sets the header color to either the custom recently changed or not recently changed colors with no icons."
+  },
+  {
+    "Attribute": "Recently Changed Color",
+    "Description": "Group Map header color if one or more KPIs in the group has recently changed (applies only if Custom Colors is selected for Header Priority)."
+  },
+  {
+    "Attribute": "Not Recently Changed Color",
+    "Description": "Group Map header color if no KPIs in the group have recently changed (applies only if Custom Colors is selected for Header Priority)."
+  },
+  {
+    "Attribute": "Group Map Fit to Page",
+    "Description": "Controls whether or not the Group Map will be displayed on a single screen (no scrolling). This can cause large group maps to render with very small cells making it harder to read. If the cell size gets too small text will be removed."
+  },
+  {
+    "Attribute": "Default Group Map Expansion Setting",
+    "Description": "Controls whether or not the Group Map is expanded or collapsed (header only) by default."
+  },
+  {
+    "Attribute": "Group Map Header Severity",
+    "Description": "Controls how the system calculates severity of status for use in header colors and icons. (Note: Not In Service always overrides other statuses)."
+  },
+  {
+    "Attribute": "Default Group Map Header Click Path",
+    "Description": "Controls what happens when a user clicks the header of a Group Map. The user will either be shown the List of the KPIs in the group (default) or the user will be taken to the first Link defined on the Group (if one exists)."
+  }
+]

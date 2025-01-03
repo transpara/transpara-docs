@@ -1,0 +1,46 @@
+[
+  {
+    "Attribute": "Enable Trend Auto Play",
+    "Description": "Controls whether or not trends will dynamically update."
+  },
+  {
+    "Attribute": "Maximum Large Screen Chart Cursors",
+    "Description": "Controls how many lockable cursors are allowed on charts displayed on screens with 768 or more pixels of horizontal resolution (10 max)."
+  },
+  {
+    "Attribute": "Maximum Small Screen Chart Cursors",
+    "Description": "Controls how many lockable cursors are allowed on charts displayed on screens with less than 768 pixels of horizontal resolution (10 max)."
+  },
+  {
+    "Attribute": "Show Calculations in Chart Cursors",
+    "Description": "Controls whether calculations (equations) are displayed in chart cursors."
+  },
+  {
+    "Attribute": "Show Gridlines on Trends",
+    "Description": "Controls whether or not gridlines are visible on Trends."
+  },
+  {
+    "Attribute": "Show Gridlines on Pareto Charts",
+    "Description": "Controls whether or not gridlines are visible on Pareto Charts."
+  },
+  {
+    "Attribute": "Show Gridlines on Bar Charts",
+    "Description": "Controls whether or not gridlines are visible on Bar Charts."
+  },
+  {
+    "Attribute": "Show Gridlines on XY Plots",
+    "Description": "Controls whether or not gridlines are visible on XY Plots."
+  },
+  {
+    "Attribute": "Scroll Increment",
+    "Description": "Length of time that timestamp based charts and tables can be scrolled."
+  },
+  {
+    "Attribute": "Scroll Increment Unit",
+    "Description": "Unit of time that timestamp based charts and tables can be scrolled."
+  },
+  {
+    "Attribute": "Default Trend Pen Width",
+    "Description": "Default width (in pixels) for all trend pens. This setting can be changed by the end user (Factory setting is 2)."
+  }
+]

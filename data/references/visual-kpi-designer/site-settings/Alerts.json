@@ -1,0 +1,326 @@
+[
+  {
+    "Attribute": "Name",
+    "Description": "The name of the Alert Template that appears in Designer pull-down menus. This name will not be displayed to site users."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Alert Template, for use by Designer admins only and will not appear to site users."
+  },
+  {
+    "Attribute": "Alert Reminder Interval (Minutes)",
+    "Description": "The wait time, in minutes, until reminders will be resent (0=never remind)."
+  },
+  {
+    "Attribute": "Time In State (Minutes; 0 is off)",
+    "Description": "The number of minutes that a KPI must remain in a state before any notifications will be sent."
+  },
+  {
+    "Attribute": "Minimum Alert Silence Duration (Minutes)",
+    "Description": "The minimum wait time, in minutes, until normal alerts are resumed."
+  },
+  {
+    "Attribute": "Alert Silence",
+    "Description": "A boolean value used to turn the Alert Silence feature ON or OFF. If silenced, no notifications will be sent. Pair this with an interface to display a dynamic value."
+  },
+  {
+    "Attribute": "Alert Silence Interface",
+    "Description": "The interface used to retrieve the 'In Alert Silence' value. If this field is blank, the Alert Silence field is treated as a constant value."
+  },
+  {
+    "Attribute": "Send First KPI Alert When Silenced",
+    "Description": "Controls whether a notification is sent after the KPI alerting is silenced."
+  },
+  {
+    "Attribute": "Alert Silence Contact",
+    "Description": "The contact notified when a KPI alert becomes silenced. This is not a standard Alert notification, but rather an informative message stating the KPI has been silenced."
+  },
+  {
+    "Attribute": "Alert When Low Low Low",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Low Low Low",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Low Low Low",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Low Low Low",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Low Low Low",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Low Low",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Low Low",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Low Low",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Low Low",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Low Low",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Low",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Low",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Low",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Low",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Low",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Good",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Good",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Good",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Good",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Good",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When High",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When High",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When High",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When High",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When High",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When High High",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When High High",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When High High",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When High High",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When High High",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When High High High",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When High High High",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When High High High",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When High High High",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When High High High",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Out Of Range",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Out Of Range",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Out Of Range",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Out Of Range",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Out Of Range",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Not In Service",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Not In Service",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Not In Service",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Not In Service",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Not In Service",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When NA",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When NA",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When NA",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When NA",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When NA",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Custom Status (1-10)",
+    "Description": "Controls whether or not a KPI with this status will trigger a notification."
+  },
+  {
+    "Attribute": "Remind When Custom Status (1-10)",
+    "Description": "Controls whether or not a KPI with this status will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Custom Status (1-10)",
+    "Description": "Controls whether or not the KPI Contact is notified once the KPI enters (or stays within) Time in State."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Custom Status (1-10)",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Custom Status (1-10)",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified once the KPI enter (or stays within) Time in State. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Transient",
+    "Description": "Controls whether or not a KPI in a transient state, never settling in an alternate state, will trigger a notification. 'Time in State' must be greater than 0 for this to apply."
+  },
+  {
+    "Attribute": "Remind When Transient",
+    "Description": "Controls whether or not a KPI in a transient state will trigger an Alert Reminder notification. The 'Alert Reminder Interval' must be greater than 0."
+  },
+  {
+    "Attribute": "Notify Contact When Transient",
+    "Description": "Controls whether or not the KPI Contact is notified when the KPI becomes transient."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Transient",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified when the KPI becomes transient. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Transient",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified when the KPI becomes transient. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Alert When Status Returned To Non-Alertable",
+    "Description": "Controls whether or not a KPI that was in an alertable state, but is no longer in an alertable state, will trigger a notification."
+  },
+  {
+    "Attribute": "Notify Contact When Status Returned to Non-Alertable",
+    "Description": "Controls whether or not the KPI Contact is notified when the KPI goes from alertable to non-alertable state. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 1 When Status Returned to Non-Alertable",
+    "Description": "Controls whether or not the KPI Alt Contact 1 is notified when the KPI goes from alertable to non-alertable state. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Notify Alt Contact 2 When Status Returned to Non-Alertable",
+    "Description": "Controls whether or not the KPI Alt Contact 2 is notified when the KPI goes from alertable to non-alertable state. Alt Contacts can be used as escalation contacts (supervisors, etc.) for severe Status."
+  },
+  {
+    "Attribute": "Include History in Alert",
+    "Description": "Controls whether or not the KPI alert history is included in the notification."
+  },
+  {
+    "Attribute": "Include Limits in Alert",
+    "Description": "Controls whether or not the KPI limits are included in the notification."
+  },
+  {
+    "Attribute": "Include Source (Tag) in Alert",
+    "Description": "Controls whether or not the KPI source (tag or index) is included in the notification."
+  },
+  {
+    "Attribute": "Include Attributes in Alert",
+    "Description": "Controls whether or not the KPI custom attributes are included in the notification."
+  },
+  {
+    "Attribute": "Include Groups in Alert",
+    "Description": "Controls whether or not the Group(s) the KPI belongs to are included in the notification."
+  },
+  {
+    "Attribute": "Template Enabled",
+    "Description": "Controls whether or not this Alert Template is enabled. If disabled, no notifications will be sent for KPIs using the template."
+  },
+  {
+    "Attribute": "Reference Count",
+    "Description": "The number of times this Alert Template has been used (read-only)."
+  },
+  {
+    "Attribute": "Alert Template ID",
+    "Description": "Read-only system level identifier."
+  }
+]

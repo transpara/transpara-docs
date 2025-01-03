@@ -1,0 +1,38 @@
+[
+  {
+    "Attribute": "Default Numerical Format",
+    "Description": "Default numerical format string for KPIs and Info. For system defaults leave this blank."
+  },
+  {
+    "Attribute": "Lookup Text Length",
+    "Description": "Maximum length of lookup text displayed on chart cursors (0 = No lookup text displayed)."
+  },
+  {
+    "Attribute": "Maximum Group Count",
+    "Description": "Maximum number of Groups initially retrieved for display. Additional Groups can be shown by clicking 'Show More' (250 max)."
+  },
+  {
+    "Attribute": "Maximum Object Count",
+    "Description": "Maximum number of KPIs, Charts and Tables initially retrieved for display. Additional KPIs, Charts and Tables can be shown by clicking 'Show More' (250 max)."
+  },
+  {
+    "Attribute": "Maximum KPI Map Cell Count",
+    "Description": "Maximum number of KPIs initially retrieved for display as a KPI Map. Additional KPIs can be shown by clicking 'Show More' (500 max)."
+  },
+  {
+    "Attribute": "Maximum KPI Column Count",
+    "Description": "Fixed number of columns displayed on a KPI Map. A setting of System will attempt a best fit algorithm."
+  },
+  {
+    "Attribute": "Maximum Group Map Count",
+    "Description": "Maximum number of Groups initially retrieved for display as a Group Map. Additional Groups can be shown by clicking 'Show More' (200 max)."
+  },
+  {
+    "Attribute": "Maximum Pareto Chart Bar Count",
+    "Description": "Maximum number of bars displayed for dynamic Pareto Charts given a large enough screen (5 min and 50 max)."
+  },
+  {
+    "Attribute": "Profile Most Recently Used Count",
+    "Description": "Maximum number of recently used profiles shown in profile list (3 min and 10 max)."
+  }
+]

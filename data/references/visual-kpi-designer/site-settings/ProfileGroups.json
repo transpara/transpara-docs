@@ -1,0 +1,34 @@
+[
+  {
+    "Attribute": "Name",
+    "Description": "The name of the Profile Group that will appear to your users. Longer names may be truncated on small devices, so consider short names."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Profile Groups. Profile Groups with blanks will be sorted alphanumerically and displayed below Profile Groups with numbers."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Profile Group that will appear to your users. Use longer descriptions in conjunction with shorter names to accommodate small screen formats."
+  },
+  {
+    "Attribute": "Private",
+    "Description": "Controls if this Profile Group is accessible to the user in the Private User column or if it's a Public Profile Group (accessible by all). Only applicable if ISS security is enabled on the site."
+  },
+  {
+    "Attribute": "Private User",
+    "Description": "Active Directory or Local User associated with the Profile Group. Only applicable if the Profile Group is marked as Private and if IIS security is enabled on the site."
+  },
+  {
+    "Attribute": "Locked",
+    "Description": "Controls if users can add Profiles to this Profile Group. A locked Profile Group is considered read-only and cannot be modified."
+  },
+  {
+    "Attribute": "Show",
+    "Description": "A boolean value used to specify the Profile Group's 'Show' setting (visibility). 'False' will suppress the display of the Profile Group to users."
+  },
+  {
+    "Attribute": "Profile Group ID",
+    "Description": "Read-only system level identifier."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Attribute": "Default Info Column Display Name",
+    "Description": "Default name used when displaying the info column in groups, KPIs, charts and tables."
+  },
+  {
+    "Attribute": "Default KPI Actual Column Display Name",
+    "Description": "Default name used when displaying the actual column in KPIs."
+  },
+  {
+    "Attribute": "Default KPI Target Column Display Name",
+    "Description": "Default name used when displaying the target column in KPIs."
+  }
+]
