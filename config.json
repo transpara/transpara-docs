@@ -10,16 +10,13 @@
     "en"
   ],
   "styles": {
-    "mainColor": "#0029F5",
+    "mainColor": "#669900",
     "darkModeMainColor": "#F0F0FF",
-    "navbarColor": "#000621",
+    "navbarColor": "#ffffff",
     "navbarDarkModeColor": "#000621",
     "pagination": false,
     "navbarMode": "tabbed"
   },
-  "apiFiles": [
-    "example.yml"
-  ],
   "homepage": "/what-is-visual-kpi",
   "changelog": true,
   "navbar": [
