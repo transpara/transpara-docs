@@ -23,10 +23,6 @@
     {
       "label": "Guides",
       "sidebarRef": "guides"
-    },
-    {
-      "label": "API Reference",
-      "sidebarRef": "apiReference"
     }
   ],
   "externalLinks": [],
@@ -340,18 +336,6 @@
           "pages": [
             "supporting-pages/faqs",
             "supporting-pages/glossary"
-          ]
-        }
-      ]
-    },
-    {
-      "sidebarRef": "apiReference",
-      "categories": [
-        {
-          "categoryName": "Example",
-          "pages": [
-            "reference/example/get-items",
-            "reference/example/create-item"
           ]
         }
       ]
