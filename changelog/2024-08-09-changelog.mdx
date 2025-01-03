@@ -1,0 +1,53 @@
+---
+title: Release Notes for Build 5.100.44.640
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+This update introduces new features for enhanced KPI chart interaction, improved bookmark management, and optimized page load performance. Several issues have been resolved, including dashboard responsiveness and chart rendering on small screens.
+
+{/* truncate */}
+
+## New Features
+
+- **Requirements Update:**  
+  Visual KPI now requires SQL Server 2016 or newer, updating from the previous requirement of SQL Server 2012. For more details, visit the [system requirements page](https://www.transpara.com/system-requirements).
+
+- **Inline Multi-Select KPI-Based Charts:**  
+  You can now multi-select KPIs in a list and choose a visualization. The list is retained for quick toggling between various visualizations or changing which KPIs to include or exclude.
+
+- **Change Chart Type for Multi-Select KPI-Based Charts:**  
+  A new feature allows you to change the chart type within a single dashboard widget for multi-select KPI-based charts.
+
+<StylizedImage
+imgURL="img/changelog/multi-select-kpi-charts.gif"
+alt=""
+/>
+
+- **Bookmark Folders:**  
+  Introduced the ability to group bookmarks into folders on the bookmark bar. To configure, drag and indent an existing bookmark using the "edit bookmarks…" function. Indenting a bookmark makes it a child of the bookmark above it.
+
+<StylizedImage
+imgURL="img/changelog/bookmark-folders.gif"
+alt=""
+/>
+
+- **Page Load Performance Enhancements:**  
+  Improved page load performance through lazy/delayed loading of widgets and sparklines below the fold, optimizing the user experience.
+
+## Fixes
+
+- **Edit Rights for Locked Dashboards:**  
+  Resolved an issue where membership in "Visual KPI Admins" resulted in failed edit rights for locked dashboards.
+
+- **Dashboard Responsiveness for 1/4 Width KPI Blocks:**  
+  Fixed an issue where 1/4 width KPI Blocks sometimes left "white space" on the dashboard.
+
+- **KPI Blocks Time Range:**  
+  Addressed a problem where KPI Blocks did not always change the time range on a latched dashboard.
+
+- **Chart Widgets Rendering on Small Screens:**  
+  Corrected an issue where some chart widgets were not rendering correctly at 1/4 width on small screens.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.

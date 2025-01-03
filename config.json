@@ -21,7 +21,7 @@
     "example.yml"
   ],
   "homepage": "/what-is-visual-kpi",
-  "changelog": false,
+  "changelog": true,
   "navbar": [
     {
       "label": "Guides",
