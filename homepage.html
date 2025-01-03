@@ -36,7 +36,6 @@
 
     .header_container h1 {
       margin-bottom: 20px;
-      font-family: 'Raleway' !important;
       color: #282a30;
       font-size: 80px;
       font-style: normal;
@@ -48,7 +47,6 @@
     .header_container .first_column p {
       margin: 0 0 40px 12px;
       max-width: 462px;
-      font-family: 'Raleway' !important;
       color: #282a30;
       font-size: 23.762px;
       font-style: normal;
@@ -59,10 +57,9 @@
 
     .header_container .second_column p {
       color: #000000;
-      font-family: var(--main-font);
       font-style: normal;
       line-height: 100%;
-      max-width: 462px;
+      max-width: 562px;
       font-size: 18px;
       font-weight: 400;
       line-height: 24px;
@@ -79,7 +76,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 11px 25px;
-      background-color: var(--transpara-primary-color1);
+      background-color: var(--primary-color);
       transition: all 0.5s ease;
     }
 
@@ -93,8 +90,8 @@
     .sectionBtn:hover {
       background: transparent;
       text-decoration: none;
-      color: var(--transpara-primary-color1);
-      border: 1px solid var(--transpara-primary-color1);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
@@ -102,11 +99,10 @@
       color: black;
       display: flex;
       justify-content: center;
-      margin: 0;
       flex-wrap: wrap;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      margin: 0 60px 50px 60px;
+      margin: 0 auto 50px;
       gap: 15px;
     }
 
@@ -150,27 +146,27 @@
     }
 
     .cards_container .card .image1 {
-      background-image: url('media/homepage/card1.png');
+      background-image: url("../../static/media/homepage/card1.png");
     }
 
     .cards_container .card .image2 {
-      background-image: url('media/homepage/card2.png');
+      background-image: url("../../static/media/homepage/card2.png");
     }
 
     .cards_container .card .image3 {
-      background-image: url('media/homepage/card3.png');
+      background-image: url("../../static/media/homepage/card3.png");
     }
 
     .cards_container .card .image4 {
-      background-image: url('media/homepage/card4.png');
+      background-image: url("../../static/media/homepage/card4.png");
     }
 
     .cards_container .card .image5 {
-      background-image: url('media/homepage/card5.png');
+      background-image: url("../../static/media/homepage/card5.png");
     }
 
     .cards_container .card .image6 {
-      background-image: url('media/homepage/card6.png');
+      background-image: url("../../static/media/homepage/card6.png");
     }
 
     /* .cards_container .card_text {
@@ -182,7 +178,6 @@
       margin: 0;
       /* margin-top: 5px; */
       color: #282a30;
-      font-family: 'Raleway' !important;
       font-size: 17.5px;
       font-style: normal;
       font-weight: 700 !important;
@@ -194,7 +189,6 @@
       min-height: 40px;
       height: fit-content;
       color: #282a30;
-      font-family: Raleway;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -417,7 +411,7 @@
 </head>
 
 <body>
-  <header class="hero hero--primary heroBanner">
+  <header class="heroBanner">
     <div class="container header_container">
       <div class="first_column">
         <h1>Visual KPI Docs</h1>

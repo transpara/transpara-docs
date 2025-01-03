@@ -15,10 +15,11 @@
     "navbarColor": "#ffffff",
     "navbarDarkModeColor": "#000621",
     "pagination": false,
-    "navbarMode": "tabbed"
+    "navbarMode": "tabbed",
+    "logoSize": "medium"
   },
   "colorMode": {
-    "default": "dark",
+    "default": "light",
     "switchOff": true
   },
   "apiFiles": [
