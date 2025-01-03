@@ -1,0 +1,67 @@
+---
+id: box-plots
+title: Box Plots
+slug: box-plots
+description: ''
+tags: ['documentation']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+Box Plots allow you to quickly compare distributions among groups of data or data sets. This article demonstrates how to configure Box Plots in Visual KPI Designer. Users can also configure them ad-hoc in Visual KPI sites. Box Plots can be set up to display the statistical distribution of data, and, as always in Visual KPI, you can view this data over time.
+
+<Image
+  src="media/designer/authoring/charts/charts-boxplot-enduser.png"
+  alt="Box Plot End User"
+/>
+
+In Visual KPI sites, hover over Box Plots to see the distributed values. You can configure Box Plots based on time-series or non-time-series data. You can also configure Box Plots manually, or you can configure query-based Box Plots.
+
+There are four ways to render Box Plots in Visual KPI:
+
+- **KPI-based Box Plots** (created ad-hoc in Visual KPI sites)
+- **Managed Box Plots** (defined Pens)
+- **Query-based Box Plots** (pre-calculated stats)
+- **Query-based Box Plots** (raw data)
+
+You can configure managed and query-based Box Plots in Visual KPI Designer.
+
+## Define Box Plots Attributes
+
+To configure Box Plots in Visual KPI Designer, create a new chart and define attributes. Box Plots are in Charts in Visual KPI Designer.
+
+After creating and configuring some basic attributes for a Box Plot, such as the name, description, and display order, you can begin to describe the data that will build the Box Plots. Here, we show you the basic attributes you need to set to design a basic Box Plot.
+
+## Configure Box Plot Values and Interfaces
+
+To add data to your Box Plots, you add a value, calculation and/or interface for each box. You can also add Connect Strings.
+
+You can select the color for each box or leave the attribute blank, and Visual KPI will assign a default color. Bar colors can also be read from a database.
+
+## Query-based Box Plots (pre-calculated stats)
+
+The query or stored procedure can take in:
+- No date (static).
+- A timestamp (point in time with scroll interval).
+- A start and end timestamp (range-based).
+
+The query must return the following fields (names are important):
+
+- Required: Min, Q1, Median, Q3 and Max.
+- Optional: Name and Color (hex).
+
+## Query-based Box Plots (raw data)
+
+The query or stored procedure can take in:
+- No data (static).
+- A timestamp (point in time with scroll interval).
+- A start and end timestamp (range-based).
+
+<Callout title="Optimizing Box Plot Performance">
+If you have a lot of data, raw data query-based Box Plots will perform more slowly. Calculate the stats in your database and let Visual KPI read the stats.
+</Callout>
+
+The query must return the following fields (names are important):
+
+- Required: Name, Value.
+- Optional: Color (hex).

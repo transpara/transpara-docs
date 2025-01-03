@@ -1,0 +1,64 @@
+---
+id: kpis-sources
+title: Using Values from Multiple Data Sources
+slug: kpis-sources
+description: ''
+tags: ['documentation']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+The Parameters feature in the Visual KPI Designer enables you to:
+
+- Combine data from multiple data sources, including with calculation, into a single value (e.g., actual, target, limits).
+- Define more complex or nested functions to be performed on the fly (e.g., use the results of 3 different calculations from separate data sources in another calculation as your target).
+- Get data from external sources to make other attributes dynamic (e.g., get the current product grade running in this machine from a data source and make it the attribute for this KPI. Every time the data source changes, the attribute in Visual KPI changes to match it).
+
+### Add values and interfaces
+
+The usual way to return data from a source is to call the Interface and an associated tag or set of parameters. In the Visual KPI Designer, select the Interface you want from a pull-down menu. Interfaces are added to the system in the Visual KPI Server Manager.
+
+For example, if you're setting up Actual and Target values for a KPI, you can return values from an interface. You can even calculate the returned value, and the final result is what users will see on your Visual KPI site.
+
+You have always been able to use multiple data sources in a KPI, but you were limited to using only one data source per attribute/column (e.g., actual from 1 source, target from another, etc.). With parameters, this limitation is no longer a problem.
+
+<Image
+  src="media/designer/authoring/kpis/kpi-externalsource.png"
+  alt="KPI Worksheet"
+/>
+
+### Using multiple data sources via parameters
+
+Using parameters, you can return values from multiple data sources. You can set up to 10 parameters for each KPI. Enter a value (or function) and an Interface for each parameter. For example, you could return the current temperature in San Francisco from one data source and the Oakland temperature from a separate data source. You could also call market prices from a variety of data sources.
+
+<Image
+  src="media/designer/authoring/kpis/kpi-parameters.png"
+  alt="KPI Parameters"
+/>
+
+You can also perform calculations on parameters. For example, you could use a calculation to return the average temperature in San Francisco for 1 week. In the example above, you can see that Parameter 3 calls the same data source as Parameter 2 but instead of just returning the value from the source, it divides that value by 3.
+
+### Using parameters as inputs for other fields
+
+Parameters can be used in many other fields and other calculations. Users of your Visual KPI site don't see the values returned as parameters. What they see are the values returned from other fields. You use parameters to return data from multiple data sources to create a value you want to be displayed in a Visual KPI site.
+
+Once you've set up parameters (up to 10), you can then use the values returned from any of those parameters to populate an attribute field or in a calculation to return a new KPI value. In the temperature example, you could calculate the average temperature in the San Francisco Bay area and set this as the Actual value in your Visual KPI site.
+
+Using the market price example, the Actual Price displayed in your Visual KPI site would be an average of the market prices from three data sources. The actual value returned is the result of multiple calculations or multiple steps. Parameters can be used in many ways and can be as simple or complex as you want. You can use calculations in the parameters field and the final parameter value in another calculation as input for another KPI attribute.
+
+<Image
+  src="media/designer/authoring/kpis/kpi-parameters-example1.png"
+  alt="KPI Parameters Example"
+/>
+
+<Callout type="tip" title="Using Calculation">
+When you use a parameter calculation for a field, leave the Interface field empty because your final value comes from the parameters, which could represent several data sources (and it will most likely fail).
+</Callout>
+
+### Example
+
+In many industries, products are sometimes run in batches at random times. In this oil refinery example, we have different types of petrol run in batches: unleaded and premium unleaded.
+
+If we wanted to compare these batches, regardless of the time run, we could use offset time ranges to compare them against similar batches. We could use P1 to get the start time of batch 1, and P2 could be the start time of batch 2. Then, we could use those P1 and P2 values in a calculation.
+
+Or let's say we want to use P1 as an attribute for a KPI to tell us what grade of oil is running currently in a unit. If P1 is set to retrieve the current grade from a data source in the example below, the attribute will change as the data in the source does, automating the system in many ways. For example, I might have a group of KPIs called **unleaded** and set to only show KPIs where Unit Type = Unleaded. As this attribute changes, this KPI will dynamically move in and out of that group on the fly.

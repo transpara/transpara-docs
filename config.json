@@ -14,7 +14,8 @@
     "darkModeMainColor": "#F0F0FF",
     "navbarColor": "#000621",
     "navbarDarkModeColor": "#000621",
-    "pagination": false
+    "pagination": false,
+    "navbarMode": "tabbed"
   },
   "apiFiles": [
     "example.yml"
@@ -97,6 +98,90 @@
               "groupName": "Automation",
               "page": "setup-and-administration/automation/automation",
               "subpages": []
+            }
+          ]
+        },
+        {
+          "categoryName": "Visual KPI Designer",
+          "pages": [
+            "visual-kpi-designer/overview",
+            {
+              "groupName": "Installation and Setup",
+              "page": "visual-kpi-designer/installation-and-setup/overview",
+              "subpages": [
+                "visual-kpi-designer/installation-and-setup/installation",
+                "visual-kpi-designer/installation-and-setup/connecting",
+                "visual-kpi-designer/installation-and-setup/basic-setup"
+              ]
+            },
+            "visual-kpi-designer/ui-tour",
+            {
+              "groupName": "Settings",
+              "page": "visual-kpi-designer/settings/overview",
+              "subpages": [
+                "visual-kpi-designer/settings/profiles-dashboards",
+                "visual-kpi-designer/settings/ranges-dates",
+                "visual-kpi-designer/settings/contacts-alerts",
+                "visual-kpi-designer/settings/features-config",
+                "visual-kpi-designer/settings/advanced"
+              ]
+            },
+            {
+              "groupName": "Authoring",
+              "page": "visual-kpi-designer/authoring/overview",
+              "subpages": [
+                {
+                  "groupName": "Groups",
+                  "page": "visual-kpi-designer/authoring/groups/groups",
+                  "subpages": [
+                    "visual-kpi-designer/authoring/groups/query-builder",
+                    "visual-kpi-designer/authoring/groups/group-maps"
+                  ]
+                },
+                {
+                  "groupName": "KPIs",
+                  "page": "visual-kpi-designer/authoring/kpis/kpis",
+                  "subpages": [
+                    "visual-kpi-designer/authoring/kpis/kpis-sources",
+                    "visual-kpi-designer/authoring/kpis/spc-kpis",
+                    "visual-kpi-designer/authoring/kpis/kpis-trends"
+                  ]
+                },
+                {
+                  "groupName": "Charts",
+                  "page": "visual-kpi-designer/authoring/charts/charts",
+                  "subpages": [
+                    "visual-kpi-designer/authoring/charts/bar-chart",
+                    "visual-kpi-designer/authoring/charts/gantt-chart",
+                    "visual-kpi-designer/authoring/charts/pareto-chart",
+                    "visual-kpi-designer/authoring/charts/pie-chart",
+                    "visual-kpi-designer/authoring/charts/xy-plots",
+                    "visual-kpi-designer/authoring/charts/box-plots",
+                    "visual-kpi-designer/authoring/charts/query-based-chart"
+                  ]
+                },
+                "visual-kpi-designer/authoring/tables",
+                "visual-kpi-designer/authoring/trends"
+              ]
+            },
+            "visual-kpi-designer/best-practices",
+            "visual-kpi-designer/additional-features"
+          ]
+        },
+        {
+          "categoryName": "End User",
+          "pages": [
+            "end-user/overview",
+            {
+              "groupName": "Core Concepts",
+              "page": "end-user/core-concepts/core-concepts",
+              "subpages": [
+                "end-user/core-concepts/kpi",
+                "end-user/core-concepts/browser",
+                "end-user/core-concepts/responsive",
+                "end-user/core-concepts/real-time",
+                "end-user/core-concepts/interactive"
+              ]
             }
           ]
         }

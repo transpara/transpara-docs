@@ -1,0 +1,90 @@
+---
+title: UI Tour
+slug: ui-tour
+description: 'Presents the Visual KPI Designer UI functionalities.'
+tags: ['worksheet','Visual KPI Designer', 'Excel', 'UI']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+Once installed and connected, Visual KPI Designer appears as an extra set of tools within Excel, tailored for creating and managing KPIs, charts, and tables for your Visual KPI website. While the [Visual KPI Designer toolbar](#visual-kpi-designer-toolbar) makes the tools and actions available, you will configure the system by working on the [worksheets](#visual-kpi-designer-worksheets).
+
+## Using Excel features
+
+It is essential to understand that Visual KPI Designer is installed as an add-in to Excel. Most interactions with the Designer happen through the add-in, although essential Excel functions like sorting, filtering, and deleting rows are still available.
+
+<Callout type="danger" title="Saving spreadsheets">
+When working with Visual KPI Designer, you won't use the Excel save button to store your work because it only saves the current spreadsheet. Instead, to save your work within Visual KPI Designer, you'll use the **Save** (<SvgFont icon='8'/>) button from the Visual KPI Designer panel.
+</Callout>
+
+When you open Visual KPI Designer in Excel, you're not just working on a spreadsheet. Instead, the Visual KPI Designer fetches data from the Visual KPI Server and presents it in a spreadsheet-like format. You can manipulate this data, make changes, and create new elements within the Designer interface. When you save your work using the Visual KPI add-in, it packages the changes and sends them back to the server for runtime use. You only use Excel during the design phase.
+
+## Visual KPI Designer toolbar
+
+When you open Excel after installing the Visual KPI Designer, you'll notice a new section or toolbar dedicated to Visual KPI functions, indicating that it is ready to use. The worksheet toolbar in Visual KPI Designer provides specific controls to manage data within your Excel sheets, which will affect the active worksheet or all open worksheets:
+
+<Callout type="note" title="Selected rows in a worksheet">
+An **x** placed in the first column of a row means that the row is selected. The column **(x)** specifies whether an entry should be affected by various actions, such as Save, Delete, or Preview. By default, all entries are selected when you open a worksheet.
+</Callout>
+
+1. **Select all** (<PngFont name='selectall28a.fw' />): Places an **x** in the column **(x)** for each populated row in the active worksheet.
+2. **Unselect all** (<PngFont name='unselectall28a.fw' />): Removes all **x** from the column **(x)** for each populated row in the active worksheet.
+3. **Close worksheet** (<PngFont name='closeworksheet28' />): Closes the active worksheet. Before closing the worksheet, you may see a warning asking if you want to close the worksheet. Unsaved data will be lost.
+4. **Close all worksheets but this** (<PngFont name='closeallbutthis28.fw' />): Closes all open worksheets except the active worksheet. Before closing other worksheets, a warning displays asking if you want to close all other worksheets. Unsaved data will be lost.
+5. **Close all worksheets** (<PngFont name='closeallworksheets28.fw' />): Closes all open worksheets (except the default Visual KPI Designer worksheet).
+6. **Refresh metadata** (<PngFont name='refreshmetadata28.fw' />): Refreshes the contents of the pull-down lists in the opened worksheets.
+7. **Toggle basic and advanced modes** (<PngFont name='advancedmode28gray' />): Hides or shows advanced columns. When working in Basic Mode, you see fewer columns. For more details, go to the [Additional Features guide](/docs/visual-kpi-designer/additional-features).
+8. **Toggle context help** (<PngFont name='tooltip28gray' />): Hides or shows the tooltips that appear when you click on cells. You can show tooltips only for header cells or for all cells.
+9. **Site settings** (<PngFont name='options28' />): Access the sitewide settings menu to access Profiles & Dashboards/Website.
+10. **Session record**: Displays a list of all activities that occurred between the KPI Designer and the server since you last opened the Visual KPI Designer.
+
+<Image
+  src="media/designer/ui-tour/basic-icons-designer.png"
+  alt="Basic Icons Visual Designer"
+/>
+
+In the Visual KPI Designer, you'll work with different object types, such as Groups, KPIs, Charts, and Tables. Each of these represents a different aspect of your Visual KPI website. For example, if you want to create or edit a KPI, you'll select the KPI object type, opening a new worksheet customized for KPIs.
+
+The Object Toolbar in the Visual KPI Designer changes depending on which type of data or object you're working with. For instance, when dealing with KPIs, the toolbar will show options relevant to KPIs. You may see any of these icons for a given worksheet:
+
+1. **Create a new object** (<PngFont name='new28' />): Opens a new worksheet for each object (Groups, KPIs, Charts, Tables).
+2. **Open a object** (<PngFont name='open28' />): Opens an existing object.
+3. **Save all selected objects in a worksheet** (<PngFont name='save28' />): In the Visual KPI Designer, you don't save an Excel spreadsheet. **You save using this icon.** It will save any object rows marked with an **x**. This sends the data to the server.
+4. **Preview updates** (<PngFont name='preview28-2.fw' />): Shows a preview of the calculations of the selected objects. This can take a long time if you mark many items on the worksheet. For more details, go to the [Additional Features guide](/docs/visual-kpi-designer/additional-features).
+5. **Membership of selected objects** (<PngFont name='membership28' />): Adds a new worksheet called Membership, which displays all selected items and the Groups they belong to. This can take some time if many items are selected in the worksheet.
+6. **Load/Refresh selected objects** (<PngFont name='refreshmetadata28old' />): Updates data spreadsheet to reflect current data saved on the Visual KPI site.
+7. **Delete selected objects** (<PngFont name='clear28a' />): The delete icon will erase all selected objects from the spreadsheet and the server.
+
+<Callout type="danger" title="Deleting objects">
+Make sure you select only the desired objects before using the Delete option. This action erases all selected objects from the spreadsheet and the server.
+</Callout>
+
+<Image
+  src="media/designer/ui-tour/object-icons-designer.png"
+  alt="Basic Icons Visual Designer"
+/>
+
+## Visual KPI Designer worksheets
+
+Worksheets are all spreadsheets you use to configure your Visual KPI site.
+
+If you are using a new installation of Visual KPI Designer, you'll notice that much of the setup has already been added for you. You can start adding KPIs, which will appear on your Visual KPI website.
+
+When working with worksheets, you'll see tabs at the bottom of Excel showing any open worksheets. You must always have a Visual KPI Designer worksheet open. If you just opened Excel, you'll see a blank spreadsheet, allowing you to enter KPI data immediately. You can also open existing data using the Visual KPI Tab Tools.
+
+
+<Image
+  src="media/designer/ui-tour/worksheet.png"
+  alt="Worksheet example"
+/>
+
+When entering data, you can enter text like in any Excel worksheet. You type the data into a cell.
+
+Rows in Excel represent Visual KPI items or objects. Each column represents an attribute. You enter a new KPI, for example, on a row. As you scroll along the columns, you set its attributes. This concept applies to every type of worksheet in the Visual KPI Designer. For example, if you are working on profiles, each row is a profile, and each column represents an attribute for that profile.
+
+Depending on the attribute, you can select data from a list. When you choose a cell, if it supports a selection list, it shows a pull-down arrow indicating you can select from a list. Click the pull-down arrow to display the contents of the list. Make a selection from the list to place the text in the cell.
+
+## What's next?
+
+After understanding more about the disposition of Visual KPI Designer parts, you can start configuring the basic information for your site by accessing [Basic Setup](/docs/visual-kpi-designer/installation-and-setup/basic-setup).
