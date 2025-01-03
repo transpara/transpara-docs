@@ -1,0 +1,18 @@
+---
+id: table-keywords
+title: Table Keywords
+slug: /reference/setup-and-administration/af-databases/table-keywords
+description: ''
+tags: ['documentation']
+---
+
+import table from '@site/data/references/setup-and-administration/af-database-keywords/table.json';
+import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
+
+The Visual KPI Remote Context Service will automatically create a Table if it finds one of more of the following keywords or sub-attributes:
+
+<Callout title="Notes">
+If the parent attribute has a description in AF, that description will be used as the Table's description in Visual KPI.
+</Callout>
+
+<JsonToTable jsonData={table} />

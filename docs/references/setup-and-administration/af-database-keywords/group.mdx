@@ -1,0 +1,18 @@
+---
+id: group-keywords
+title: Group Keywords
+slug: /reference/setup-and-administration/af-databases/group-keywords
+description: ''
+tags: ['documentation']
+---
+
+import table from '@site/data/references/setup-and-administration/af-database-keywords/group.json';
+import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
+
+AF Elements will be automatically converted to Visual KPI Groups and the following AF Attributes will be converted to Group properties:
+
+<Callout title="Notes">
+If the AF Element has a description, that description will be used as the Group's description in Visual KPI.
+</Callout>
+
+<JsonToTable jsonData={table} />
