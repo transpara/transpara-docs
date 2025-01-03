@@ -1,22 +1,15 @@
 ---
-id: rcs-with-sql-databases
 title: RCS with SQL databases
 slug: /setup-and-administration/automation/rcs-with-sql-databases
 description: 'Describe RCS with SQL databases.'
 tags: ['documentation']
 ---
 
-import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
-import SvgFont from '@site/src/components/SvgFont/SvgFont';
-
-import table from '@site/static/data/tables/setup-adm/automation/how-to-use/AFObjectTypesAndValues.json';
-import JsonToTable from '@site/src/components/Table/JsonToTable';
-
 The Visual KPI Remote Context Server can connect to any SQL data source. All that is required is ODBC access with appropriate read-level permissions. This page guides you on what you need to know and do to use RCS with your SQL database.
 
-:::training
+<Callout type="training" title="Training">
 Refer to **[Visual KPI training](https://www.transpara.com/course/visual-kpi-remote-context-server-rcs-training/)** to learn all about Visual KPI RCS.
-:::
+</Callout>
 
 ## SQL RCS Best Practices
 
@@ -35,9 +28,9 @@ You can either:
 
 For effective mapping between foreign systems and Visual KPI, it is crucial to assign a unique and consistent identifier to each object in the system such as KPI, Group, Trend, etc. This identifier can be in the form of a string, GUID or an integer, and it should be specific to the object type. By doing so, Visual KPI can ensure that there is no confusion in the mapping process. 
 
-:::note
+<Callout type="note">
 If the ID changes in the foreign system, a new object will be created in Visual KPI and the old object will be deleted.
-:::
+</Callout>
 
 Every definition query (KPI, Group, Chart) must include a column called **METAID** with a unique value.
 
@@ -50,4 +43,4 @@ For your reference, please see the links to the reference tables below:
 
 ## Tutorial
 
-Refer to the [SQL Tutorial](/docs/setup-and-administration/automation/rcs-sql-tutorial) page for a full guide and demo on how to install and use  the SQL Remote Context Server.
+Refer to the [SQL Tutorial](/docs/setup-and-administration/automation/rcs-sql-tutorial) page for a full guide and demo on how to install and use the SQL Remote Context Server.

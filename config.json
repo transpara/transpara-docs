@@ -97,7 +97,18 @@
             {
               "groupName": "Automation",
               "page": "setup-and-administration/automation/automation",
-              "subpages": []
+              "subpages": [
+                "setup-and-administration/automation/rcs",
+                {
+                  "groupName": "RCS Configuration",
+                  "page": "setup-and-administration/automation/configuration/rcs-configuration",
+                  "subpages": [
+                    "setup-and-administration/automation/configuration/rcs-with-af-databases",
+                    "setup-and-administration/automation/configuration/rcs-with-sql-databases",
+                    "setup-and-administration/automation/configuration/sql-tutorial"
+                  ]
+                }
+              ]
             }
           ]
         },
