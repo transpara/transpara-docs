@@ -88,6 +88,40 @@
                 "end-user/core-concepts/real-time",
                 "end-user/core-concepts/interactive"
               ]
+            },
+            {
+              "groupName": "Basic Navigation",
+              "page": "end-user/basic-navigation/basic-navigation",
+              "subpages": [
+                "end-user/basic-navigation/profiles",
+                "end-user/basic-navigation/dashboards",
+                "end-user/basic-navigation/groups",
+                "end-user/basic-navigation/visualization",
+                "end-user/basic-navigation/search",
+                "end-user/basic-navigation/analytics",
+                "end-user/basic-navigation/alerts",
+                "end-user/basic-navigation/dark-light-theme",
+                "end-user/basic-navigation/time"
+              ]
+            },
+            {
+              "groupName": "Features",
+              "page": "end-user/features/features",
+              "subpages": [
+                "end-user/features/profiles",
+                "end-user/features/dashboards",
+                "end-user/features/groups",
+                {
+                  "groupName": "Visualizations",
+                  "page": "end-user/features/visualizations/visualizations",
+                  "subpages": [
+                    "end-user/features/visualizations/kpis",
+                    "end-user/features/visualizations/charts",
+                    "end-user/features/visualizations/trends",
+                    "end-user/features/visualizations/embedded-content"                    
+                  ]
+                }
+              ]
             }
           ]
         }
