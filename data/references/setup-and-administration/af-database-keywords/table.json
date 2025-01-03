@@ -1,0 +1,27 @@
+[
+  {
+    "AF Attribute Name": "ConnectString, Connect String, ConnectionString, Connection String",
+    "Data Type": "String",
+    "Valid Values": "Valid database connection string."
+  },
+  {
+    "AF Attribute Name": "Query, Table Query, TableQuery, SQL Query, SQLQuery",
+    "Data Type": "String",
+    "Valid Values": "Any valid SQL statement"
+  },
+  {
+    "AF Attribute Name": "Parameter n, Parametern, Parameter0n, Parameter 0n\n(n = 1 to 9)\ni.e. (Parameter 1, Parameter09)",
+    "Data Type": "Any",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Parameter 10, Parameter10",
+    "Data Type": "Any",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Query Delimeter, QueryDelimeter",
+    "Data Type": "Character / Short String",
+    "Valid Values": "Any"
+  }
+]

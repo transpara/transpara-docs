@@ -1,0 +1,10 @@
+[
+  {
+    "Attribute": "Default Watchlist View",
+    "Description": "Determines the default view for Watchlist KPIs."
+  },
+  {
+    "Attribute": "Default Watchlist Attribute Grouping",
+    "Description": "Default setting for attribute grouping of Watchlist KPIs."
+  }
+]

@@ -1,0 +1,284 @@
+---
+id: bookmarks
+title: Bookmarks
+slug: /reference/setup-and-administration/af-rcs-dashboard/bookmarks
+description: ''
+tags: ['documentation']
+---
+
+import tables from '@site/data/references/setup-and-administration/af-rcs-dashboard/tables.json';
+import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
+
+<CardList cols={4}>
+  <Card 
+    title="Group Bookmarks"
+    link="#group-bookmarks"
+  />
+  <Card 
+    title="KPI Bookmarks"
+    link="#kpi-bookmarks"
+  />
+  <Card 
+    title="Chart Bookmarks"
+    link="#chart-bookmarks"
+  />
+  <Card 
+    title="Table Bookmarks"
+    link="#table-bookmarks"
+  />
+  <Card 
+    title="Link Bookmarks"
+    link="#link-bookmarks"
+  />
+</CardList>
+
+
+## Group Bookmarks
+
+<CardList cols={2}>
+  <Card 
+    title="Group List"
+    link="#group-list"
+  />
+  <Card 
+    title="Group Geo"
+    link="#Group-geo"
+  />
+</CardList>
+
+### Group List
+
+<JsonToTable jsonData={tables.groupBookmarks.groupList} />
+
+### Group Geo
+
+<JsonToTable jsonData={tables.groupBookmarks.groupGeo} />
+
+## KPI Bookmarks
+
+<CardList cols={4}>
+  <Card 
+    title="KPI List"
+    link="#kpi-list"
+  />
+  <Card 
+    title="KPI Geo"
+    link="#kpi-geo"
+  />
+  <Card 
+    title="KPI Bullet"
+    link="#kpi-bullet"
+  />
+  <Card 
+    title="KPI Map"
+    link="#kpi-map"
+  />
+  <Card 
+    title="Group Map"
+    link="#group-map"
+  />
+  <Card 
+    title="KPI Summary History"
+    link="#kpi-summary-history"
+  />
+  <Card 
+    title="KPI Status History"
+    link="#kpi-status-history"
+  />
+  <Card 
+    title="KPI Notification History"
+    link="#kpi-notification-history"
+  />
+  <Card 
+    title="KPI Trend"
+    link="#kpi-trend"
+  />
+  <Card 
+    title="Gauge Chart"
+    link="#gauge-chart-kpi-gauge"
+  />
+</CardList>
+
+### KPI List
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiList} />
+
+### KPI Geo
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiGeo} />
+
+### KPI Bullet
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiBullet} />
+
+### KPI Map
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiMap} />
+
+### Group Map
+
+<JsonToTable jsonData={tables.kpiBookmarks.groupMap} />
+
+### KPI Summary History
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiSummaryHistory} />
+
+### KPI Status History
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiStatusHistory} />
+
+### KPI Notification History
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiNotificationHistory} />
+
+### KPI Trend
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiTrend} />
+
+### Gauge Chart (KPI Gauge)
+
+<JsonToTable jsonData={tables.kpiBookmarks.gaugeChart} />
+
+## Chart Bookmarks
+
+<CardList cols={4}>
+  <Card 
+    title="Chart List"
+    link="#chart-list"
+  />
+  <Card 
+    title="Chart Geo"
+    link="#chart-geo"
+  />
+  <Card 
+    title="Bar Chart"
+    link="#bar-chart"
+  />
+  <Card 
+    title="Box Plot"
+    link="#box-plot"
+  />
+  <Card 
+    title="Embedded Content"
+    link="#embedded-content"
+  />
+  <Card 
+    title="Gantt Chart"
+    link="#gantt-chart"
+  />
+  <Card 
+    title="Pareto Chart"
+    link="#pareto-chart"
+  />
+  <Card 
+    title="Pie Chart"
+    link="#pie-chart"
+  />
+  <Card 
+    title="Trend"
+    link="#trend"
+  />
+  <Card 
+    title="XY Plot"
+    link="#xy-plot"
+  />
+</CardList>
+
+
+### Chart List
+
+<JsonToTable jsonData={tables.chartBookmarks.chartList} />
+
+### Chart Geo
+
+<JsonToTable jsonData={tables.chartBookmarks.chartGeo} />
+
+### Bar Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.barChart} />
+
+### Box Plot
+
+<JsonToTable jsonData={tables.chartBookmarks.boxPlot} />
+
+### Embedded Content
+
+<JsonToTable jsonData={tables.chartBookmarks.embeddedContent} />
+
+### Gantt Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.ganttChart} />
+
+### Pareto Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.paretoChart} />
+
+### Pie Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.pieChart} />
+
+### Trend
+
+<JsonToTable jsonData={tables.chartBookmarks.trend} />
+
+### XY Plot
+
+<JsonToTable jsonData={tables.chartBookmarks.xyPlot} />
+
+## Table Bookmarks
+
+<CardList cols={3}>
+  <Card 
+    title="Table List"
+    link="#table-list"
+  />
+  <Card 
+    title="Table Geo"
+    link="#table-geo"
+  />
+  <Card 
+    title="Table"
+    link="#table"
+  />
+</CardList>
+
+### Table List
+
+<JsonToTable jsonData={tables.tableBookmarks.tableList} />
+
+### Table Geo
+
+<JsonToTable jsonData={tables.tableBookmarks.tableGeo} />
+
+### Table
+
+<JsonToTable jsonData={tables.tableBookmarks.table} />
+
+## Link Bookmarks
+
+<CardList cols={3}>
+  <Card 
+    title="Generic Link"
+    link="#generic-link"
+  />
+  <Card 
+    title="Dashboard"
+    link="#dashboard"
+  />
+  <Card 
+    title="System Link"
+    link="#system-link"
+  />
+</CardList>
+
+### Generic Link
+
+<JsonToTable jsonData={tables.linkBookmarks.genericLink} />
+
+### Dashboard
+
+<JsonToTable jsonData={tables.linkBookmarks.dashboard} />
+
+### System Link
+
+<JsonToTable jsonData={tables.linkBookmarks.systemLink} />

@@ -1,0 +1,1642 @@
+{
+  "profileGroups": [
+    {
+      "Attribute Name": "Object Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Display Order",
+      "Attribute Type": "Int",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Name",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Description",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Locked",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Show",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    }
+  ],
+  "profiles": [
+    {
+      "Attribute Name": "Object Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Profile Group ID",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Display Order",
+      "Attribute Type": "Int",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Name",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Description",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Locked",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Show",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Is Default",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    }
+  ],
+  "dashboards": [
+    {
+      "Attribute Name": "Object Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Profile ID",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Display Order",
+      "Attribute Type": "Int",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Name",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Description",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Locked",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Show",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Is Default",
+      "Attribute Type": "Boolean",
+      "Required": "No"
+    }
+  ],
+  "widgets": [
+    {
+      "Attribute Name": "Object Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Widget Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Dashboard ID",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Row Start",
+      "Attribute Type": "Int",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Column Start",
+      "Attribute Type": "Int",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Height",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Width",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    }
+  ],
+  "groupWidgets": {
+    "groupList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child groups while a setting of true will list all descendant groups"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "groupGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child groups while a setting of true will list all descendant groups"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "groupBlock": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ]
+  },
+  "kpiWidgets": {
+    "kpiList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g., Unit, Region, etc.) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "kpiGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiBullet": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g., Unit, Region, etc.) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "kpiMap": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g., Unit, Region, etc.) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "groupMap": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g. Unit, Region, etc) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Group Map Expansion",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Group Map (Header) Expansion.  Value should be either Collapsed or Expanded"
+      }
+    ],
+    "kpiSummaryHistory": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiStatusHistory": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiNotificationHistory": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiBlock": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI KPI"
+      },
+      {
+        "Attribute Name": "Show Sparkline",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      },
+      {
+        "Attribute Name": "Show Bullet Chart",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      },
+      {
+        "Attribute Name": "Show Status History Chart",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      },
+      {
+        "Attribute Name": "Show Statistics",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      },
+      {
+        "Attribute Name": "Show Actions",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      },
+      {
+        "Attribute Name": "Show Contact",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      }
+    ],
+    "kpiTrend": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI KPI"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Trend.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Trend.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Show Status Background",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      }
+    ],
+    "gaugeChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI KPI"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ]
+  },
+  "chartWidgets": {
+    "chartList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Charts of the Group while a setting of true will list all descendant Charts"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Chart Type, Group) and Custom Attributes (e.g., Unit, Region, etc) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "chartGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Charts of the Group while a setting of true will list all descendant Charts"
+      }
+    ],
+    "barChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Bar Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "boxPlot": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Box Plot"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "embeddedContent": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Embedded Content"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the content.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for content.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the content.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "ganttChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Gantt Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the content.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "paretoChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Pareto Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "pieChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Pie Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "trend": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Trend"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Trend.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Trend.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "xyPlot": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI XY Plot"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ]
+  },
+  "tableWidgets": {
+    "tableList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Tables of the Group while a setting of true will list all descendant Tables."
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None,  Group) and Custom Attributes (e.g. Unit, Region, etc) can be used."
+      }
+    ],
+    "tableGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Tables of the Group while a setting of true will list all descendant Tables."
+      }
+    ],
+    "table": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Table"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Table.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Table.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Table.  Can be relative (*) or a fixed timestamp"
+      }
+    ]
+  },
+  "linkTextWidgets": {
+    "genericLink": [
+      {
+        "Attribute Name": "Link URL",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "URL of the link"
+      },
+      {
+        "Attribute Name": "Link Name",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Name alias for the URL"
+      },
+      {
+        "Attribute Name": "Link Description",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Description for the link"
+      },
+      {
+        "Attribute Name": "Widget Color",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Hex color code for the widget (e.g., #669900)"
+      },
+      {
+        "Attribute Name": "Widget Icon",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Icon for the widget (e.g., tf-fire22)"
+      }
+    ],
+    "dashboardLink": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Dashboard"
+      },
+      {
+        "Attribute Name": "Widget Color",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Hex color code for the widget (e.g., #669900)"
+      },
+      {
+        "Attribute Name": "Widget Icon",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Icon for the widget (e.g., tf-fire22)"
+      }
+    ],
+    "textBlock": [
+      {
+        "Attribute Name": "Label",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Label for the Text Block"
+      },
+      {
+        "Attribute Name": "Text",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Text for the Text Block"
+      },
+      {
+        "Attribute Name": "Text Interface",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Name of the Interface to retrieve data for text (only required if text is a lookup)"
+      },
+      {
+        "Attribute Name": "Text Alignment",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Left (default), Center, Right"
+      },
+      {
+        "Attribute Name": "Numeric Format",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Numeric format override (e.g., ##.000)"
+      },
+      {
+        "Attribute Name": "Text Size",
+        "Attribute Type": "Int",
+        "Required": "No",
+        "Notes": "Override (in pixels) for text size"
+      },
+      {
+        "Attribute Name": "Widget Color",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Hex color code for the widget (e.g., #669900)"
+      }
+    ]
+  },
+  "bookmarks": [
+    {
+      "Attribute Name": "Object Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Bookmark Type",
+      "Attribute Type": "String",
+      "Required": "Yes"
+    },
+    {
+      "Attribute Name": "Profile ID",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Display Order",
+      "Attribute Type": "Int",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Bookmark Name",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Bookmark Description",
+      "Attribute Type": "String",
+      "Required": "No"
+    },
+    {
+      "Attribute Name": "Bookmark Icon",
+      "Attribute Type": "String",
+      "Required": "No"
+    }
+  ],
+  "groupBookmarks": {
+    "groupList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child groups while a setting of true will list all descendant groups"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "groupGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child groups while a setting of true will list all descendant groups"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ]
+  },
+  "kpiBookmarks": {
+    "kpiList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g., Unit, Region, etc.) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "kpiGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiBullet": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g., Unit, Region, etc.) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "kpiMap": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g., Unit, Region, etc.) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "groupMap": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Status, Group) and Custom Attributes (e.g. Unit, Region, etc) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Group Map Expansion",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Group Map (Header) Expansion.  Value should be either Collapsed or Expanded"
+      }
+    ],
+    "kpiSummaryHistory": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiStatusHistory": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiNotificationHistory": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child KPIs of the Group while a setting of true will list all descendant KPIs"
+      },
+      {
+        "Attribute Name": "Filter",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "A semicolon (;) delimited list of status ordinals to filter out.  E.g. \u201c3:0:-102\u201d will filter out HHH, Good and Not In Service"
+      }
+    ],
+    "kpiTrend": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI KPI"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Trend.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Trend.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Show Status Background",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "True to enable, False to disable"
+      }
+    ],
+    "gaugeChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI KPI"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ]
+  },
+  "chartBookmarks": {
+    "chartList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Charts of the Group while a setting of true will list all descendant Charts"
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None, Chart Type, Group) and Custom Attributes (e.g., Unit, Region, etc) can be used."
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for Sparklines.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for Sparklines.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "chartGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Charts of the Group while a setting of true will list all descendant Charts"
+      }
+    ],
+    "barChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Bar Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "boxPlot": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Box Plot"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "embeddedContent": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Embedded Content"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the content.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for content.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the content.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "ganttChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Gantt Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the content.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "paretoChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Pareto Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "pieChart": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Pie Chart"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Chart.  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "trend": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Trend"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Trend.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Trend.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ],
+    "xyPlot": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI XY Plot"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Chart.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Chart.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      }
+    ]
+  },
+  "tableBookmarks": {
+    "tableList": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Tables of the Group while a setting of true will list all descendant Tables."
+      },
+      {
+        "Attribute Name": "Group By",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "This can be used to override the default grouping.  Standard Attributes (None,  Group) and Custom Attributes (e.g. Unit, Region, etc) can be used."
+      }
+    ],
+    "tableGeo": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Element mapping to the Visual KPI Group"
+      },
+      {
+        "Attribute Name": "Expand",
+        "Attribute Type": "Boolean",
+        "Required": "No",
+        "Notes": "A setting of false (default) will only list child Tables of the Group while a setting of true will list all descendant Tables."
+      }
+    ],
+    "table": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Table"
+      },
+      {
+        "Attribute Name": "Start Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Start Time for the Table.  This must be paired with an End Time).  Can be relative (*-8h) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "End Time",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default End Time for the Table.  This must be paired with a Start Time).  Can be relative (*) or a fixed timestamp"
+      },
+      {
+        "Attribute Name": "Timestamp",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Overrides the default Chart Time for the Table.  Can be relative (*) or a fixed timestamp"
+      }
+    ]
+  },
+  "linkBookmarks": {
+    "genericLink": [
+      {
+        "Attribute Name": "Bookmark URL",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "URL of the link.  This is meant for external links.  For internal Visual KPI links use the System Link bookmark."
+      }
+    ],
+    "dashboard": [
+      {
+        "Attribute Name": "AF Object ID",
+        "Attribute Type": "String",
+        "Required": "Yes",
+        "Notes": "ID of AF Attribute mapping to the Visual KPI Dashboard"
+      }
+    ],
+    "systemLink": [
+      {
+        "Attribute Name": "Bookmark URL",
+        "Attribute Type": "String",
+        "Required": "No",
+        "Notes": "Partial system link (query string).  This partial url is everything but the base URL and be be found by browsing the Visual KPI site and copying the query string. (e.g., ?pid=10&gid=43cf45a9-61a7-11ec-897e-ccd0c6467bcf&gid0=62d7a593-61a6-11ec-897e-ccd0c6467bcf)"
+      }
+    ]
+  }
+}

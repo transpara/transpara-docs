@@ -1,0 +1,95 @@
+---
+title: Basic Setup
+slug: basic-setup
+description: 'Explore how to start configuring your Visual KPI website using Visual KPI Designer.'
+tags: ['Visual KPI Designer', 'basic configuration']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+When you start, visual KPI Designer is already set up with basic configuration. Setting your site's branding and finishing details takes only a few minutes. In addition, you can quickly add a few KPIs and have your website ready.
+
+Visual KPI Designer allows you to control many configurations. This guide will help you create the basic configurations and explain the available features.
+
+## Contextual help
+
+In the Visual KPI Designer, each worksheet includes headers that indicate the data to be entered in a cell. Click in any header cell to see a tooltip explaining the data in that column.
+
+<Image
+  src="media/designer/installation-and-setup/basic-setup/contextual-helper.png"
+  alt="Visual KPI Designer contextual help"
+/>
+
+In addition, some configuration worksheets have **Description** columns to add context to the current parameter. It tells you exactly what that item means and helps you know what kind of value to enter. For example, in the **Website Configuration** worksheet, the description for Site Title tells you that whatever you enter here will appear in the website's title bar.
+
+<Image
+  src="media/designer/installation-and-setup/basic-setup/site-title-configuration.png"
+  alt="Site title contextual help"
+/>
+
+## Website worksheet
+
+On the Visual KPI Designer toolbar, you have access to site settings. To configure you site, select site settings (<PngFont name='options28' />) &#8594; **Features & Config** &#8594; **Website** which will open the **Website Configuration worksheet**. You can choose to keep any of the default settings, but here we will present some basic configurations you may want to set up immediately:
+
+### Site title
+
+The default Value is Transpara Visual KPI. You can change this to reflect your website's name, to be displayed in the title bar.
+
+1. In the **Site Title** row of the worksheet, click the **Value** column.
+2. Enter your site's title.
+3. Click the Save icon (<PngFont name='save28' />) in the Visual KPI Designer toolbar.
+
+### Admin information
+
+Choose the contact for your Visual KPI site. The contact will appear in some System Configuration pages on your site and will also be used for cache server error notifications.
+
+1. Select the Value cell in the **Site Administrator Contact** row.
+2. Use the pulldown menu to select the appropriate contact.
+
+<Image
+  src="media/designer/installation-and-setup/basic-setup/site-administrator-contact.png"
+  alt="Site Administrator Contact"
+/>
+
+### Cache warning
+
+To receive notifications of issues relating to cache errors, follow the instructions below:
+
+1. In the **Cache Alert Notification Protocol** field, select a notification method using the pull-down menu. When set to **None**, notifications will not be sent.
+2. In the **Cache Alert Reminder Interval** field, enter a value in minutes indicating the frequency of sending cache alert reminders. When the value is 0, the Reminders will not be sent.
+3. In the **Cache Warning Interval** field, enter a value in minutes. When the value is 0, the Cache Warning is disabled.
+
+<Image
+  src="media/designer/installation-and-setup/basic-setup/cache-alert.png"
+  alt="Cache alart configuration"
+/>
+
+### Site logo
+
+The default logo is from Transpara Visual KPI, but you can easily change it following the steps bellow:
+
+1. On the Visual KPI Designer toolbar, click the Upload Logo icon (<PngFont name='selecticon28' />) in the Web Site Configuration toolbar.
+2. Browse and select an image file (JPG or PNG) of your logo. Click Open.
+3. Click the Save icon (<PngFont name='save28' />) in the Website configuration toolbar.
+
+<Image
+  src="media/designer/installation-and-setup/basic-setup/logo-selection.png"
+  alt="Company logo selection"
+/>
+
+:::note Dark mode
+
+You can add different logos for light and dark modes.
+
+:::
+
+:::note Logo size
+
+If the logo file doesn't match the required size (140 x 40 pixels), the image will be forced into the specified size, causing some distortion in the image.
+
+:::
+
+## What's next?
+
+Now that you know how to do a basic setup, learn how to further customize your Visual KPI pages on the [Authoring](/visual-kpi-designer/authoring/overview) guide.

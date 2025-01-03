@@ -1,0 +1,147 @@
+[
+  {
+    "Field": "Access Group List",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Attribute Grouping",
+    "Type": "List Selection",
+    "Limit": "System Defined Plus Attributes 1 – 20"
+  },
+  {
+    "Field": "Contact",
+    "Type": "List Selection",
+    "Limit": null
+  },
+  {
+    "Field": "Default Tab",
+    "Type": "List Selection",
+    "Limit": null
+  },
+  {
+    "Field": "Description",
+    "Type": "Text",
+    "Limit": 400
+  },
+  {
+    "Field": "Display Order",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Group ID",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "Group Info Column Display Name",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Group Name",
+    "Type": "List Selection",
+    "Limit": null
+  },
+  {
+    "Field": "Group Selection Query",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Info",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Info Description",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Info Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "KPI Info Column Display Name",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "KPI Map Type",
+    "Type": "List Selection",
+    "Limit": "System Defined KPI Map Types"
+  },
+  {
+    "Field": "KPI Selection Query",
+    "Type": "Text",
+    "Limit": 2000
+  },
+  {
+    "Field": "Link Info Column Display Name",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Link Selection Query",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Map Text",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Map Text Interface",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Parent Name",
+    "Type": "List Selection",
+    "Limit": null
+  },
+  {
+    "Field": "Show",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Show Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Sparkline End Time",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Sparkline Start Time",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Trend Info Column Display Name",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Trend Selection Query",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Value Info Column Display Name",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Value Selection Query",
+    "Type": "Text",
+    "Limit": null
+  }
+]

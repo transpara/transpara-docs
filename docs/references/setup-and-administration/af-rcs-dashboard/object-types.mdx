@@ -1,0 +1,315 @@
+---
+id: object-types
+title: Object Types
+slug: /reference/setup-and-administration/af-rcs-dashboard/object-types
+description: ''
+tags: ['documentation']
+---
+
+import tables from '@site/data/references/setup-and-administration/af-rcs-dashboard/tables.json';
+import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
+
+This page lists the Attributes and values (both required and optional) to fully automate Dashboard creation from within OSIsoft’s PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes.
+
+## Profile Groups
+
+<JsonToTable jsonData={tables.profileGroups} />
+
+<Callout type="info" title="Info">
+Name and Description would be overrides for the parent’s attribute name and description.
+</Callout>
+
+<Image
+  src="media/references/setup-and-administration/af-rcs-dashboard/af-8.png"
+/>
+
+## Profiles
+
+<JsonToTable jsonData={tables.profiles} />
+
+<Callout type="info" title="Info">
+Name and Description would be overrides for the parent’s attribute name and description.  Profile Group ID is only needed if the Profile is not nested under a Profile Group Attribute
+</Callout>
+
+<Image
+  src="media/references/setup-and-administration/af-rcs-dashboard/af-9.png"
+/>
+
+## Dashboards
+
+<JsonToTable jsonData={tables.dashboards} />
+
+<Callout type="info" title="Info">
+Name and Description would be overrides for the parent’s attribute name and description.  Profile ID is only needed if the Dashboard is not nested under a Profile Attribute
+</Callout>
+
+<Image
+  src="media/references/setup-and-administration/af-rcs-dashboard/af-10.png"
+/>
+
+## Widgets
+
+All widgets require the following six AF Attributes along with the optional Dashboard ID (if not nested under a Dashboard Attribute):
+
+<JsonToTable jsonData={tables.widgets} />
+
+<Callout type="info" title="Info">
+Valid Height and Widths are based on Widget Type however the complete list is as follows:
+
+- **Height**: 1x, 2x, 4x, 8x, 16x, 32x
+- **Width**: : 25%, 50%, 100%
+</Callout>
+
+Each individual widget will also use other Attributes, some required and some optional, based on the widget type.   Below is an example of what an AF Model (Attributes) might look like when completed.  Note that in this example Dashboard ID is not specified in any of the Widgets as they all fall under the AF KPI Dashboard Attribute.  The names of the Widgets are not important and in this example the convention of [Row Start].[Column Start] [Widget Type] has been used but certainly is not required.
+
+<Image
+  src="media/references/setup-and-administration/af-rcs-dashboard/af-11.png"
+/>
+
+### Widgets Types
+
+<CardList cols={4}>
+  <Card 
+    title="Group List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#group-list"
+  />
+  <Card 
+    title="Group Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#group-geo"
+  />
+  <Card 
+    title="Group Block"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#group-block"
+  />
+  <Card 
+    title="KPI List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-list"
+  />
+  <Card 
+    title="KPI Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-geo"
+  />
+  <Card 
+    title="KPI Bullet"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-bullet"
+  />
+  <Card 
+    title="KPI Map"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-map"
+  />
+  <Card 
+    title="Group Map"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#group-map"
+  />
+  <Card 
+    title="KPI Summary History"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-summary-history"
+  />
+  <Card 
+    title="KPI Status History"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-status-history"
+  />
+  <Card 
+    title="KPI Notification History"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-notification-history"
+  />
+  <Card 
+    title="KPI Block"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-block"
+  />
+  <Card 
+    title="KPI Trend"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-trend"
+  />
+  <Card 
+    title="Gauge Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#gauge-chart"
+  />
+  <Card 
+    title="Chart List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#chart-list"
+  />
+  <Card 
+    title="Chart Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#chart-geo"
+  />
+  <Card 
+    title="Bar Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#bar-chart"
+  />
+  <Card 
+    title="Box Plot"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#box-plot"
+  />
+  <Card 
+    title="Embedded Content"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#embedded-content"
+  />
+  <Card 
+    title="Gantt Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#gantt-chart"
+  />
+  <Card 
+    title="Pareto Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#pareto-chart"
+  />
+  <Card 
+    title="Pie Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#pie-chart"
+  />
+  <Card 
+    title="Trend"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#trend"
+  />
+  <Card 
+    title="XY Plot"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#xy-plot"
+  />
+  <Card 
+    title="Table List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#table-list"
+  />
+  <Card 
+    title="Table Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#table-geo"
+  />
+  <Card 
+    title="Table"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#table"
+  />
+  <Card 
+    title="Generic Link"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#generic-link"
+  />
+  <Card 
+    title="Dashboard Link"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#dashboard-link"
+  />
+  <Card 
+    title="Text Block"
+    link="/reference/setup-and-administration/af-rcs-dashboard/widgets#text-block"
+  />
+</CardList>
+
+## Bookmarks
+
+All bookmarks require the following two AF Attributes along with the several optional AF Attributes (including Profile ID if not nested under a Profile Attribute):
+
+<JsonToTable jsonData={tables.bookmarks} />
+
+### Bookmarks Types
+
+<CardList cols={4}>
+  <Card 
+    title="Group List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#group-list"
+  />
+  <Card 
+    title="Group Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#group-geo"
+  />
+  <Card 
+    title="KPI List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-list"
+  />
+  <Card 
+    title="KPI Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-geo"
+  />
+  <Card 
+    title="KPI Bullet"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-bullet"
+  />
+  <Card 
+    title="KPI Map"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-map"
+  />
+  <Card 
+    title="Group Map"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#group-map"
+  />
+  <Card 
+    title="KPI Summary History"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-summary-history"
+  />
+  <Card 
+    title="KPI Status History"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-status-history"
+  />
+  <Card 
+    title="KPI Notification History"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-notification-history"
+  />
+  <Card 
+    title="KPI Trend"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-trend"
+  />
+  <Card 
+    title="Gauge Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#gauge-chart"
+  />
+  <Card 
+    title="Chart List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#chart-list"
+  />
+  <Card 
+    title="Chart Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#chart-geo"
+  />
+  <Card 
+    title="Bar Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#bar-chart"
+  />
+  <Card 
+    title="Box Plot"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#box-plot"
+  />
+  <Card 
+    title="Embedded Content"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#embedded-content"
+  />
+  <Card 
+    title="Gantt Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#gantt-chart"
+  />
+  <Card 
+    title="Pareto Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#pareto-chart"
+  />
+  <Card 
+    title="Pie Chart"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#pie-chart"
+  />
+  <Card 
+    title="Trend"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#trend"
+  />
+  <Card 
+    title="XY Plot"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#xy-plot"
+  />
+  <Card 
+    title="Table List"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#table-list"
+  />
+  <Card 
+    title="Table Geo"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#table-geo"
+  />
+  <Card 
+    title="Table"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#table"
+  />
+  <Card 
+    title="Generic Link"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#generic-link"
+  />
+  <Card 
+    title="Dashboard"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#dashboard"
+  />
+  <Card 
+    title="System Link"
+    link="/reference/setup-and-administration/af-rcs-dashboard/bookmarks#system-link"
+  />
+</CardList>

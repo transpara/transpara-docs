@@ -1,0 +1,22 @@
+[
+  {
+    "Attribute": "Default Tab",
+    "Description": "Determines the default tab for each group. 'System' automatically displays the first non-empty tab in this series (Groups, KPIs, Charts, Tables)."
+  },
+  {
+    "Attribute": "Default Group View",
+    "Description": "Determines the default view for groups on the home page."
+  },
+  {
+    "Attribute": "Default KPI View",
+    "Description": "Determines the default view for KPIs."
+  },
+  {
+    "Attribute": "Default Chart View",
+    "Description": "Determines the default view for charts."
+  },
+  {
+    "Attribute": "Default Table View",
+    "Description": "Determines the default view for tables."
+  }
+]

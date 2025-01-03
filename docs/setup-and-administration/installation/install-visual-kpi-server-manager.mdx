@@ -1,0 +1,83 @@
+---
+title: Install Visual KPI Server Manager
+slug: /setup-and-administration/installation/install-visual-kpi
+description: 'Presents the steps the administrator must follow to install Visual KPI into their server or cloud.'
+tags: ['documentation']
+---
+
+This guide outlines the steps to install and use Visual KPI Server Manager. After installing our system, you will be ready to create your [Interfaces](/setup-and-administration/interfaces) and take full advantage of Visual KPI.
+
+## Installing Visual KPI Server Manager
+
+Follow the steps below to set up the Visual KPI Server Manager:
+
+1. Access our [Downloads page](https://www.transpara.com/software-downloads/) and download **Visual KPI Server Manager**.
+2. Run the downloaded executable installer.
+3. Go through the installation wizard as required and install our system.
+4. Open **Visual KPI Server Manager**.
+
+<Callout type="transpara" title="Prerequisites">
+If Visual KPI Server Manager fails to open, make sure your computer meets all [prerequisites](/setup-and-administration/installation/prepare-your-system).
+</Callout>
+
+As Visual KPI Server Manager opens, it will look like the following picture:
+
+<Image 
+  src="media/setup-and-administration/installation/install-visual-kpi-server-manager/server-manager-home.png" 
+  alt="Visual-KPI-Server-Manager"
+/>
+
+## Installing a Visual KPI Instance
+
+The next step is installing a Visual KPI Instance. You can choose to install it on a new Site or an existing one from the list shown on the server manager. For both options, you will go through the same process:
+
+1. Right-click on **Sites** or on an existing site listed inside **Sites**.
+2. Select the **Install New Visual KPI Instance** option.
+3. Go through the required steps of the installation wizard.
+4. Accept the terms of the license agreement.
+5. Add your **License Key**.
+
+  <Callout type="transpara" title="Valid License">
+  A green checkmark will appear to the right of the number when you enter a valid license number.
+  </Callout>
+
+6. Set your Website Settings and Instance Settings.
+7. Choose the directory to install the new instance.
+8. Define your Database Server. It can be a remote or local server.
+
+  <Callout type="note">
+  This is the Database Visual KPI uses for all its configuration information, not a data source.
+  </Callout>
+
+9. Add your credentials to connect to the database. If you have your SQL login mapped to windows, you can use Windows authentication, otherwise you need to add your SQL login and password.
+10. Add the administrator information. This is used to send alerts to the system administrator when the website requires attention.
+11. Choose whether to install prebuilt demos and sample data.
+12. Validate everything and install it.
+
+Below, you will find a visual guide to these steps:
+
+<Video src="media/setup-and-administration/installation/install-visual-kpi-server-manager/instance-install.mp4" width="100%"/>
+
+### Run your application
+
+Once you have installed the new instance, you can validate if everything is working as expected. To do this:
+
+1. Right-click the new created Instance.
+2. Select the **Browse** option.
+
+Your browser should open with a Visual KPI Website similar to this:
+
+<Image 
+  src="media/setup-and-administration/installation/install-visual-kpi-server-manager/website.png" 
+  alt="website-example"
+/>
+
+<Callout type="note">
+If your instance of Visual KPI doesn't open or isn't working as expected, review the instructions on [Preparing your system](/setup-and-administration/installation/prepare-your-system), [Installing a Virtual Machine](/setup-and-administration/installation/hyper-v) (if you used a Virtual Machine), and this guide to see if you missed something.
+</Callout>
+
+## Video guide
+
+Check the following video to see a guide on how to install Visual KPI Server Manager, as presented in this page.
+
+<Video src="https://www.youtube.com/embed/qjLk-N7fkqU?start=643" width="100%"/>

@@ -1,0 +1,232 @@
+[
+  {
+    "Field": "Access Group List",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Actual",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Actual Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Auto-Scale Y Axis",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Attributes 1-20",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Bottom Text",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Bottom Text Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Contact",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Description",
+    "Type": "Text",
+    "Limit": 400
+  },
+  {
+    "Field": "Display Order",
+    "Type": "Number",
+    "Limit": null
+  },
+  {
+    "Field": "Group Map Position",
+    "Type": "List Selection",
+    "Limit": null
+  },
+  {
+    "Field": "Group Name",
+    "Type": "List Selection",
+    "Limit": null
+  },
+  {
+    "Field": "High",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "High High",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "High High Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "High Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Info",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Info Description",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Info Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "InService",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "InService Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "KPI ID",
+    "Type": "Automatically Assigned",
+    "Limit": null
+  },
+  {
+    "Field": "KPI Name",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Low",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Low Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Low Low",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Low Low Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Max",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Max Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Min",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Min Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Notification Type",
+    "Type": "List Selection",
+    "Limit": "System Defined Notification Types"
+  },
+  {
+    "Field": "Show",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Show Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Status",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Status Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Target",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Target Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Top Text",
+    "Type": "Text",
+    "Limit": 200
+  },
+  {
+    "Field": "Top Text Interface",
+    "Type": "List Selection",
+    "Limit": "User Defined Interfaces"
+  },
+  {
+    "Field": "Trend End Time",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "Trend Line Type",
+    "Type": "List Selection",
+    "Limit": "System Defined Trend Types"
+  },
+  {
+    "Field": "Trend Scale",
+    "Type": "List Selection",
+    "Limit": "System Defined Scale Types"
+  },
+  {
+    "Field": "Trend Start Time",
+    "Type": "Text",
+    "Limit": null
+  },
+  {
+    "Field": "URL",
+    "Type": "Text",
+    "Limit": 2000
+  },
+  {
+    "Field": "URL Descriptor",
+    "Type": "Text",
+    "Limit": 400
+  }
+]

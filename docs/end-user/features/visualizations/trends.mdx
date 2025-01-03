@@ -1,0 +1,99 @@
+---
+title: Trends
+slug: trends
+description: Presents advanced information about Trends visualization features of Visual KPIs software for an end user.
+tags: ['features', 'end-user', 'advanced', 'visualization', 'view', 'trends', 'pen', 'kpi']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+Trends, or Ad Hoc Trends, are a custom type of trend that you can build right inside your Visual KPI site. You can save an Ad Hoc Trend, add it to the Dashboard, and update it in real-time.
+
+Click anywhere in an individual KPI to enlarge the trend and get access to options for visualizing your trend based on the parameters you choose. Trends can monitor a value or show a current status if your administrator has configured targets and limits. The default trend view will depend on how your admin has configured trends. Still, you have many options for viewing Visual KPI trends and quickly seeing how a KPI performs over time.
+
+You can do many different things with Trends to see data in various ways. When visualizing a trend, you have the following visualization options:
+
+1. **Trend Options** (<SvgFont icon="263"/>): Choose Trend Scale and Line types, turn on/off Trend live updates, and define the Pen width.
+2. **Modify Trend** (<SvgFont icon="165"/>): Select minimum and maximum for the Y axis, add pens, and customize your Trend.
+3. **Raw Data** (<SvgFont icon="182"/>): Export data to CSV or view it in Visual KPI.
+4. **Time Ranges** (<SvgFont icon="244"/>): Configure a start and end time for your Trend.
+5. **Revert** (<SvgFont icon="222"/>): Return to the default KPI view.
+6. **View Details** (<SvgFont icon="200"/>): See more details of the KPI, such as Contacts, Links, KPI properties, KPI stats, and Parameters.
+7. **View as Gauge** (<SvgFont icon="178"/>): View KPI as a Gauge Chart.
+8. **View as Histogram**: View KPI as a Histogram Chart.
+9. **Status Background** (<SvgFont icon="32"/>): Turn on/off the background to see the historical status changes of a trend in full color.
+10. **Box Zoom Mode** (<SvgFont icon="123"/>): Select an area to zoom in.
+11. **Drag Mode** (<SvgFont icon="180"/>): Click and drag to change the time view.
+12. **Cursor Mode** (<SvgFont icon="242"/>): Scroll over the trend chart with your mouse to see more data details associated with specific points in time along the Trend. Clicking or tapping on the Trend will lock the current cursor and let you add additional cursors for comparison.
+13. **Snap to** (<SvgFont icon="228"/>): Snap your cursor to point along the trend line where actual values exist in the data source, highlighting the difference between actual values and interpolated lines drawn between values.
+14. **Comments** (<SvgFont icon="235"/>): Click the comments icon to view and add comments at specific times in the Trend. You can click a specific point or click and drag to select a time span. Comments can include pre-defined messages or customized ones. You can also reply to existing comments.
+15. **Timestamp** (<SvgFont icon="148"/>/<SvgFont icon="149"/>): Use paddles to change the time view.
+16. **Legend**: You can define the limits and references for your Trend and name each of those references as you like. These names will be shown on the legend.
+
+<Image src="media/end-user/features/visualizations/trends/trend-top-bar.png"/>
+
+For a standard Visual KPI trend with targets and limits, you'll see a trend of the KPI value over time, along with targets and limits and the current status. A legend will appear below the trend to indicate how to read targets and limits. You can change everything from the time range view to the status history using the Trend menu. You can view raw data and details about the KPI.
+
+<Callout type="info" title="Trend Highlighting">
+The trend line is amplified when you hover over it or its legend name. This is especially useful when dealing with several pens on the same tread.
+</Callout>
+
+## Trend view options
+
+The Trend Options icon (<SvgFont icon="263"/>) lets you change how you view data, targets, and limits in a trend.
+
+### Trend scale
+
+As you know, you can add several KPIs to the same trend. However, each trend may have completely different scales, making it harder to compare the KPIs or views in a single trend.
+
+The trend scale feature enables you to use single or multi-scale in a Trend. The multi-scale option is most appropriate when viewing managed or Ad Hoc trends with multiple pens with very different scales. Clicking on the pen name in the trend legend when using multi-scale trends will adjust the Y-axis.
+
+<Image src="media/end-user/features/visualizations/trends/trend-scale.gif"/>
+
+### Trend Gestures
+
+Trend Gestures in VisualKPI allow users to interact with trend charts more dynamically and in detail, enhancing the ability to analyze and interpret data visually. These gestures are primarily performed using a mouse or touch interface, depending on the device. The first gesture is the **Mouse Wheel Zoom**, where you can zoom in and out of the trend chart by scrolling the mouse wheel. The zoom is centered on the current position of the mouse pointer, allowing you to focus on specific areas of the trend. Additionally, holding down the **Control** key while scrolling will zoom only along the x-axis, while holding the **Alt** key will zoom along the y-axis. The **Pinch-to-Zoom** gesture offers similar functionality for touch devices like tablets, allowing users to zoom in and out using two fingers.
+
+Another powerful feature is the **Box Zoom**. When drawing a large rectangle on the chart, the selected area zooms in, providing a closer view of the data. However, if you draw a horizontal line or narrow rectangle, the zoom will apply only to the selected time period, but with the ideal zoom to visualize everything in that period. These gestures, while more commonly used on desktop setups, can also be utilized on mobile devices, allowing users to interact precisely with Trends, even on the go.
+
+<Image src="media/end-user/features/visualizations/trends/trend-gestures.gif"/>
+
+### Trend type
+
+Change the Trend Type to view Interpolated, Step, Symbol, or a combination of views. The Default Trend Type is interpolated unless set by your admin in the Visual KPI Designer.
+
+<Image src="media/end-user/features/visualizations/trends/scale-type.png"/>
+
+## Trends in the KPI tab
+
+In the KPI tab, use the Trend Options icon (<SvgFont icon="192"/>) to change how you view data, targets, and limits in a trend. When comparing KPIs, it is as easy as selecting them to create multi-KPI charts and trends. This feature allows you to select up to 20 KPIs and view them as a trend, bar chart, Pareto chart, or pie chart.
+
+From any KPI list view, click the **Select KPI** icon (<SvgFont icon="255"/>) and select multiple KPIs by clicking the box to the left of the KPIs in the list. From the sub-menu, select the trend icon or type of chart you wish to view.
+
+1. Trend
+2. Bar chart
+3. Pareto chart
+4. Pie chart
+5. Box plot
+
+<Image src="media/end-user/features/visualizations/trends/trend-options.png"/>
+
+Regardless of the trend or chart type you selected to view, you can use the menu in the new view to choose any of the other trends or chart types to visualize data in. When in a trend, you can add a background color to show status changes over time using the Show Status Background icon.
+
+## SPC
+
+[Statistical Process Control (SPC)](https://en.wikipedia.org/wiki/Statistical_process_control) is a method for monitoring, controlling, and improving processes based on statistical analysis. It measures whether processes are within control limits.
+
+You can use SPC rules to measure quality and productivity. Data is plotted on control charts over a time range using standard deviations and other statistics so you can quickly visualize and analyze it and see when a process is out of control and needs attention.
+
+SPC contains a handy set of rules for defining control limits in cases where time values don't correlate. An example would be data collected from lab samples or tracking blood sugar results in diabetes patients.
+
+By charting the data over time and using statistical decision rules, you can determine whether your process or data is stable or has variations that denote instability. You can see where improvements need to be made or take action in real-time with processes outside control limits.
+
+When you apply SPC rules, a KPI may be charted with a Center Line (control value or xBar) or at 1, 2, or 3 standard deviations.
+
+<Image src="media/end-user/features/visualizations/trends/spc.png"/>
+
+## What's next?
+
+To finish your learning, check out the [Embedded Content](/end-user/features/visualizations/embedded-content) for more information on using external links in Visual KPI or embedding Visual KPI in other applications.

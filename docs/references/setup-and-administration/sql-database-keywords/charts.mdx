@@ -1,0 +1,79 @@
+---
+id: charts-keywords
+title: Charts Attributes
+slug: /reference/setup-and-administration/sql-databases/charts-keywords
+description: ''
+tags: ['documentation']
+---
+
+import BarCharts from '@site/data/references/setup-and-administration/sql-database-keywords/BarCharts.json';
+import EmbeddedContent from '@site/data/references/setup-and-administration/sql-database-keywords/EmbeddedContent.json';
+import GanttCharts from '@site/data/references/setup-and-administration/sql-database-keywords/GanttCharts.json';
+import ManagedTrends from '@site/data/references/setup-and-administration/sql-database-keywords/ManagedTrends.json';
+import ParetoCharts from '@site/data/references/setup-and-administration/sql-database-keywords/ParetoCharts.json';
+import PieCharts from '@site/data/references/setup-and-administration/sql-database-keywords/PieCharts.json';
+import XYPlots from '@site/data/references/setup-and-administration/sql-database-keywords/XYPlots.json';
+import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
+
+# Charts Attributes & Keywords Reference
+
+Use this table to reference valid attributes and keywords for mapping all chart types, including managed trends, metadata from AF, SQL, and inmation databases to Visual KPI Remote Context Service (RCS).
+
+- **First column**: Represents the Visual KPI Attribute to which you can map your external elements. Use the Value column to get more information about specific attribute values.
+- **Last three columns**: Tell you if such a mapping is possible in either AF, SQL or inmation databases.
+
+### Visual KPI Designer, AF, SQL and inmation Attributes
+
+You find the following tables below:
+
+<CardList cols={3}>
+  <Card 
+    title="Bar Chart"
+    link="#bar-chart"
+  />
+  <Card 
+    title="Gantt Charts"
+    link="#gantt-charts"
+  />
+  <Card 
+    title="Pareto Charts"
+    link="#pareto-charts"
+  />
+  <Card 
+    title="Pie Charts"
+    link="#pie-charts"
+  />
+  <Card 
+    title="XY Plots"
+    link="#xy-plots"
+  />
+  <Card 
+    title="Managed Trends"
+    link="#managed-trends"
+  />
+  <Card 
+    title="Embedded Content"
+    link="#embedded-content"
+  />
+</CardList>
+
+## Bar Chart
+<JsonToTable jsonData={BarCharts} />
+
+## Gantt Charts
+<JsonToTable jsonData={GanttCharts} />
+
+## Pareto Charts
+<JsonToTable jsonData={ParetoCharts} />
+
+## Pie Charts
+<JsonToTable jsonData={PieCharts} />
+
+## XY Plots
+<JsonToTable jsonData={XYPlots} />
+
+## Managed Trends
+<JsonToTable jsonData={ManagedTrends} />
+
+## Embedded Content
+<JsonToTable jsonData={EmbeddedContent} />

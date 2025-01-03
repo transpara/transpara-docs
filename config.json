@@ -10,25 +10,27 @@
     "en"
   ],
   "styles": {
-    "mainColor": "#0029F5",
+    "mainColor": "#669900",
     "darkModeMainColor": "#F0F0FF",
-    "navbarColor": "#000621",
+    "navbarColor": "#ffffff",
     "navbarDarkModeColor": "#000621",
-    "pagination": false
+    "pagination": false,
+    "navbarMode": "tabbed",
+    "logoSize": "medium"
+  },
+  "colorMode": {
+    "default": "light",
+    "switchOff": true
   },
   "apiFiles": [
     "example.yml"
   ],
-  "homepage": "/introduction",
-  "changelog": false,
+  "homepage": "homepage.html",
+  "changelog": true,
   "navbar": [
     {
       "label": "Guides",
       "sidebarRef": "guides"
-    },
-    {
-      "label": "API Reference",
-      "sidebarRef": "apiReference"
     }
   ],
   "externalLinks": [],
@@ -39,35 +41,309 @@
         {
           "categoryName": "Getting Started",
           "pages": [
-            "getting-started/introduction",
-            "getting-started/local-development"
-          ]
-        },
-        {
-          "categoryName": "Basics",
-          "pages": [
-            "basics/global-settings",
-            "basics/markdown-basics",
+            "getting-started/what-is-visual-kpi",
+            "getting-started/the-visual-kpi-approach",
+            "getting-started/how-visual-kpi-works",
+            "getting-started/how-to-use-the-documentation",
             {
-              "groupName": "Page Templates",
+              "groupName": "Core Concepts",
+              "page": "getting-started/core-concepts/core-concepts",
               "subpages": [
-                "basics/page-templates/api-introduction",
-                "basics/page-templates/environments",
-                "basics/page-templates/authentication"
+                "getting-started/core-concepts/kpi",
+                "getting-started/core-concepts/hierarchy",
+                "getting-started/core-concepts/design",
+                "getting-started/core-concepts/data-sources",
+                "getting-started/core-concepts/interfaces",
+                "getting-started/core-concepts/access-level"
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "sidebarRef": "apiReference",
-      "categories": [
+        },
         {
-          "categoryName": "Example",
+          "categoryName": "Setup and Administration",
           "pages": [
-            "reference/example/get-items",
-            "reference/example/create-item"
+            "setup-and-administration/overview",
+            {
+              "groupName": "Installation",
+              "page": "setup-and-administration/installation/instalation",
+              "subpages": [
+                "setup-and-administration/installation/prepare-your-system",
+                "setup-and-administration/installation/install-a-vm-with-hyper-v",
+                "setup-and-administration/installation/install-visual-kpi-server-manager",
+                "setup-and-administration/installation/visual-kpi-website-and-virtual-directory-structure",
+                "setup-and-administration/installation/system-upgrade"
+              ]
+            },
+            {
+              "groupName": "Interfaces",
+              "page": "setup-and-administration/interfaces/interfaces",
+              "subpages": [
+                "setup-and-administration/interfaces/core-concepts",
+                "setup-and-administration/interfaces/configuring-interfaces",
+                "setup-and-administration/interfaces/available-interfaces",
+                "setup-and-administration/interfaces/data-sources",
+                {
+                  "groupName": "Working with Interfaces",
+                  "page": "setup-and-administration/interfaces/working-with-interfaces/working-with-interfaces",
+                  "subpages": [
+                    "setup-and-administration/interfaces/working-with-interfaces/odbc",
+                    "setup-and-administration/interfaces/working-with-interfaces/json",
+                    "setup-and-administration/interfaces/working-with-interfaces/python",
+                    "setup-and-administration/interfaces/working-with-interfaces/tstore",
+                    "setup-and-administration/interfaces/working-with-interfaces/parameterizing-interfaces"
+                  ]
+                }
+              ]
+            },
+            {
+              "groupName": "Automation",
+              "page": "setup-and-administration/automation/automation",
+              "subpages": [
+                "setup-and-administration/automation/rcs",
+                {
+                  "groupName": "RCS Configuration",
+                  "page": "setup-and-administration/automation/configuration/rcs-configuration",
+                  "subpages": [
+                    "setup-and-administration/automation/configuration/rcs-with-af-databases",
+                    "setup-and-administration/automation/configuration/rcs-with-sql-databases",
+                    "setup-and-administration/automation/configuration/sql-tutorial"
+                  ]
+                }
+              ]
+            },
+            {
+              "groupName": "Security",
+              "page": "setup-and-administration/security/security",
+              "subpages": [
+                "setup-and-administration/security/security-inheritance",
+                "setup-and-administration/security/enable-security"
+              ]
+            }
+          ]
+        },
+        {
+          "categoryName": "Visual KPI Designer",
+          "pages": [
+            "visual-kpi-designer/overview",
+            {
+              "groupName": "Installation and Setup",
+              "page": "visual-kpi-designer/installation-and-setup/overview",
+              "subpages": [
+                "visual-kpi-designer/installation-and-setup/installation",
+                "visual-kpi-designer/installation-and-setup/connecting",
+                "visual-kpi-designer/installation-and-setup/basic-setup"
+              ]
+            },
+            "visual-kpi-designer/ui-tour",
+            {
+              "groupName": "Settings",
+              "page": "visual-kpi-designer/settings/overview",
+              "subpages": [
+                "visual-kpi-designer/settings/profiles-dashboards",
+                "visual-kpi-designer/settings/ranges-dates",
+                "visual-kpi-designer/settings/contacts-alerts",
+                "visual-kpi-designer/settings/features-config",
+                "visual-kpi-designer/settings/advanced"
+              ]
+            },
+            {
+              "groupName": "Authoring",
+              "page": "visual-kpi-designer/authoring/overview",
+              "subpages": [
+                {
+                  "groupName": "Groups",
+                  "page": "visual-kpi-designer/authoring/groups/groups",
+                  "subpages": [
+                    "visual-kpi-designer/authoring/groups/query-builder",
+                    "visual-kpi-designer/authoring/groups/group-maps"
+                  ]
+                },
+                {
+                  "groupName": "KPIs",
+                  "page": "visual-kpi-designer/authoring/kpis/kpis",
+                  "subpages": [
+                    "visual-kpi-designer/authoring/kpis/kpis-sources",
+                    "visual-kpi-designer/authoring/kpis/spc-kpis",
+                    "visual-kpi-designer/authoring/kpis/kpis-trends"
+                  ]
+                },
+                {
+                  "groupName": "Charts",
+                  "page": "visual-kpi-designer/authoring/charts/charts",
+                  "subpages": [
+                    "visual-kpi-designer/authoring/charts/bar-chart",
+                    "visual-kpi-designer/authoring/charts/gantt-chart",
+                    "visual-kpi-designer/authoring/charts/pareto-chart",
+                    "visual-kpi-designer/authoring/charts/pie-chart",
+                    "visual-kpi-designer/authoring/charts/xy-plots",
+                    "visual-kpi-designer/authoring/charts/box-plots",
+                    "visual-kpi-designer/authoring/charts/query-based-chart"
+                  ]
+                },
+                "visual-kpi-designer/authoring/tables",
+                "visual-kpi-designer/authoring/trends"
+              ]
+            },
+            "visual-kpi-designer/best-practices",
+            "visual-kpi-designer/additional-features"
+          ]
+        },
+        {
+          "categoryName": "End User",
+          "pages": [
+            "end-user/overview",
+            {
+              "groupName": "Core Concepts",
+              "page": "end-user/core-concepts/core-concepts",
+              "subpages": [
+                "end-user/core-concepts/kpi",
+                "end-user/core-concepts/browser",
+                "end-user/core-concepts/responsive",
+                "end-user/core-concepts/real-time",
+                "end-user/core-concepts/interactive"
+              ]
+            },
+            {
+              "groupName": "Basic Navigation",
+              "page": "end-user/basic-navigation/basic-navigation",
+              "subpages": [
+                "end-user/basic-navigation/profiles",
+                "end-user/basic-navigation/dashboards",
+                "end-user/basic-navigation/groups",
+                "end-user/basic-navigation/visualization",
+                "end-user/basic-navigation/search",
+                "end-user/basic-navigation/analytics",
+                "end-user/basic-navigation/alerts",
+                "end-user/basic-navigation/dark-light-theme",
+                "end-user/basic-navigation/time"
+              ]
+            },
+            {
+              "groupName": "Features",
+              "page": "end-user/features/features",
+              "subpages": [
+                "end-user/features/profiles",
+                "end-user/features/dashboards",
+                "end-user/features/groups",
+                {
+                  "groupName": "Visualizations",
+                  "page": "end-user/features/visualizations/visualizations",
+                  "subpages": [
+                    "end-user/features/visualizations/kpis",
+                    "end-user/features/visualizations/charts",
+                    "end-user/features/visualizations/trends",
+                    "end-user/features/visualizations/embedded-content"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "categoryName": "Reference Guides",
+          "pages": [
+            {
+              "groupName": "Setup and Administration",
+              "page": "references/setup-and-administration/setup-and-administration-reference",
+              "subpages": [
+                {
+                  "groupName": "AF RCS Dashboard",
+                  "subpages": [
+                    "references/setup-and-administration/af-rcs-dashboard/object-types",
+                    "references/setup-and-administration/af-rcs-dashboard/widgets",
+                    "references/setup-and-administration/af-rcs-dashboard/bookmarks"
+                  ]
+                },
+                {
+                  "groupName": "AF Database Keywords",
+                  "subpages": [
+                    "references/setup-and-administration/af-database-keywords/kpi-keywords",
+                    "references/setup-and-administration/af-database-keywords/trend-keywords",
+                    "references/setup-and-administration/af-database-keywords/table-keywords",
+                    "references/setup-and-administration/af-database-keywords/group-keywords",
+                    "references/setup-and-administration/af-database-keywords/value-keywords"
+                  ]
+                },
+                {
+                  "groupName": "SQL Database Keywords",
+                  "subpages": [
+                    "references/setup-and-administration/sql-database-keywords/kpi-keywords",
+                    "references/setup-and-administration/sql-database-keywords/table-keywords",
+                    "references/setup-and-administration/sql-database-keywords/group-keywords",
+                    "references/setup-and-administration/sql-database-keywords/charts-keywords"
+                  ]
+                }
+              ]
+            },
+            {
+              "groupName": "Visual KPI Designer",
+              "page": "references/visual-kpi-designer/visual-kpi-designer-references",
+              "subpages": [
+                {
+                  "groupName": "Data Limits",
+                  "subpages": [
+                    "references/visual-kpi-designer/data-limits/data-limits-for-attributes",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-default-ranges",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-groups",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-interfaces",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-kpis",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-links",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-trend-ranges",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-trends",
+                    "references/visual-kpi-designer/data-limits/data-limits-for-website-configuration"
+                  ]
+                },
+                {
+                  "groupName": "Attributes & Keywords",
+                  "subpages": [
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-bar-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-embedded-content",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-gantt-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-groups",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-kpis",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-managed-trends",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-pareto-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-pie-charts",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-tables",
+                    "references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-xy-plots"
+                  ]
+                },
+                {
+                  "groupName": "Site Settings",
+                  "subpages": [
+                    "references/visual-kpi-designer/site-settings/site-settings-alerts",
+                    "references/visual-kpi-designer/site-settings/site-settings-chart-color",
+                    "references/visual-kpi-designer/site-settings/site-settings-chart-dates",
+                    "references/visual-kpi-designer/site-settings/site-settings-chart-ranges",
+                    "references/visual-kpi-designer/site-settings/site-settings-contacts",
+                    "references/visual-kpi-designer/site-settings/site-settings-dashboards",
+                    "references/visual-kpi-designer/site-settings/site-settings-default-ranges",
+                    "references/visual-kpi-designer/site-settings/site-settings-event-ranges",
+                    "references/visual-kpi-designer/site-settings/site-settings-features",
+                    "references/visual-kpi-designer/site-settings/site-settings-kpi-status",
+                    "references/visual-kpi-designer/site-settings/site-settings-profile-groups",
+                    "references/visual-kpi-designer/site-settings/site-settings-profiles",
+                    "references/visual-kpi-designer/site-settings/site-settings-visual-kpi-website"
+                  ]
+                },
+                {
+                  "groupName": "Advanced Site Settings",
+                  "subpages": [
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-attributes",
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-interfaces",
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-nav-bar-links",
+                    "references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-site-rollups"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "categoryName": "Supporting Pages",
+          "pages": [
+            "supporting-pages/faqs",
+            "supporting-pages/glossary"
           ]
         }
       ]

@@ -1,0 +1,490 @@
+[
+  {
+    "Attribute": "Table Name",
+    "Description": "The name of the Table that will appear to your users. Longer names may be truncated on small devices, so consider short names with unique attributes at the beginning (e.g., 'Site 1 Table').",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Tables. Tables with blanks will be sorted alphanumerically and displayed below Tables with numbers.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Table that will appear to your users. Use longer descriptions in conjunction with shorter names to accommodate small screen formats. Can either be the description of the attribute or a sub attribute called Description.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Group Name",
+    "Description": "The name of Group that Table belongs to (used when Tables belong to only one group). Parent-Child relationships are defined by either this field or a combination of Table Selection Query (on Group) and custom attributes (on Table)",
+    "Value": "no",
+    "AF": "no",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "ConnectString",
+    "Description": "The ConnectString for the data source used in the query. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "ConnectString Interface",
+    "Description": "The interface used to retrieve data based on the contents of the ConnectString field. If this field is blank, then the ConnectString field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Query",
+    "Description": "SQL query (or delimited queries) to execute to get data for the Table. Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Query Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Query field. If this field is blank, then the Query field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Query Delimiter",
+    "Description": "Delimiter used to separate multiple queries.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Query Date Format",
+    "Description": "Formatting applied to {TIMESTAMP} and {TIMESTAMP.Date} parameters passed into the query. If this field is empty windows settings will be used.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Query Time Format",
+    "Description": "Formatting applied to {TIMESTAMP} and {TIMESTAMP.Time} parameters passed into the query. If this field is empty windows settings will be used.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Start Time",
+    "Description": "Overrides the default Start Time for the Table (Note: The Start Time must be < the End Time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Start Time Interface",
+    "Description": "The interface used to retrieve the Start Time value. If this field is blank, then the Start Time field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "End Time",
+    "Description": "Overrides the default End Time for the Table (Note: The End Time must be > the Start time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "End Time Interface",
+    "Description": "The interface used to retrieve the End Time value. If this field is blank, then the End Time field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Chart Time",
+    "Description": "Overrides the default Chart Time for the Table (Note: The value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Chart Time Interface",
+    "Description": "Interface used to retrieve the Chart Time value. If this field is blank then the Chart Time field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Database Time Zone",
+    "Description": "The time zone setting for the database you are querying. Only set this field if the database time zone differs from the web server. string field based on Ids from .Net (http://remy.supertext.ch/2012/04/the-net-timezoneinfo-getsystemtimezones-list/)",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Convert Timestamps",
+    "Description": "Boolean (True/False). Controls whether or not timestamps in the returned table will be converted to client time for display. A setting of True will convert all timestamps in the returned table. boolean (t/f) or numeric 1/0",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Scroll Interval",
+    "Description": "Numeric Length of time that timestamp based charts and tables can be scrolled (pair with Scroll Interval UOM)",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Scroll Interval UOM",
+    "Description": "Unit of time that timestamp based charts and tables can be scrolled (pair with Scroll Interval)",
+    "Value": "Minutes, Hours, Days, Weeks",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "CUSTOM ATTRIBUTES",
+    "Description": "User-defined attribute. These are used for the grouping of objects and can be used in Group selection queries to determine parent-child relationships. Select 'Attributes' under the Options menu (gear icon) to view/edit custom attributes. Need to have AFAttribute name the same as the VKPI Custom attribute. If I have a VKPI custom attribute called Plant Type, I can have a string AF Attribute called Plant Type with a value of Coal.",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Contact",
+    "Description": "The main contact for the Table, as selected from the Contact tab collection (can be one or more people). The contact appears in Table details. Contact with valid values being the Contact Name as defined in the VKPI",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Show",
+    "Description": "Boolean (True/False) or equivalent (Non-zero = True, 0 = False). Sets the Show (visibility) of the Table. A setting of False will suppress the display of the Table to the users. Pair this with an interface to have a dynamic value.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Show Interface",
+    "Description": "The interface used to retrieve the In Show value. If this field is blank, then the Show field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Latitude",
+    "Description": "The geo location latitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Latitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Latitude field. If this field is blank, then the Latitude field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Longitude",
+    "Description": "The geo location longitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Longitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Longitude field. If this field is blank, then the Longitude field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Info",
+    "Description": "Additional relevant information (can be hyperlinked).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Info Interface",
+    "Description": "Interface used to retrieve the data based on the Info field contents. If this field is blank then the Info field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "no",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Info Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed. Click the link in the header for more information.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Info UOM",
+    "Description": "Unit of measure for the Info value (applicable if value is numeric).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Info Display Format",
+    "Description": "The display position of the UoM (e.g., $100, 42.5kg).",
+    "Value": "Number, Number + UOM, UOM + Number",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Info URL",
+    "Description": "URL link for the Info field (creates a hyperlink in the Info field).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Info Description",
+    "Description": "If the Info field is a hyperlinked value, then this will be the tooltip or mouseover text for the link. If only a URL is used, then this will be the text displayed in Info.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Links",
+    "Description": "List of associated Links or URLs (semicolon separated, limit 10) for the object.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Link Descriptions",
+    "Description": "List of associated Link or URL descriptions (semicolon separated, limit 10) for the object. These are used to both shorten and give better meaning to links (e.g., instead of www.xyz.com?x=5&type=2, the user could see SOPs or Shift Report)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Calculation Type",
+    "Description": "Override for how non-numeric values in calculations are handled. This is useful when dealing with exception data (i.e., BadValue) returned from calculation-derived data sources. Default, Standard, Force Numeric",
+    "Value": "yes",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Parameter 1",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 1 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Attribute": "Parameter 2",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 2 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Attribute": "Parameter 3",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 3 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Attribute": "Parameter 4",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 4 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Attribute": "Parameter 5",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 5 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Attribute": "Parameter 6",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 6 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "auto"
+  },
+  {
+    "Attribute": "Parameter 7",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for a single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 7 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 8",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for a single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 8 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 9",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for a single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 9 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 10",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description. Specify in square brackets, e.g. [P1] for a single value. Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Parameter 10 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "auto",
+    "AF": "yes",
+    "SQL": "auto",
+    "Inmation": "yes"
+  },
+  {
+    "Attribute": "Access Group List",
+    "Description": "List of Active Directory or local groups (semicolon-separated) defining access rights to the object. Only applies if Object Level Security is enabled and the site is secured.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "Inmation": "no"
+  },
+  {
+    "Attribute": "Table ID",
+    "Description": "Read-only system level identifier.",
+    "Value": "auto",
+    "AF": "auto",
+    "SQL": "auto",
+    "Inmation": "auto"
+  }
+]

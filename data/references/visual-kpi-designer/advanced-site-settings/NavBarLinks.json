@@ -1,0 +1,26 @@
+[
+  {
+    "Attribute": "Name",
+    "Description": "The name of the Nav Bar Link as it appears to site users."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "The numeric value that overrides the default alphanumeric order of Nav Bar Links. Nav Bar Links with blank fields will be sorted alphanumerically and displayed below Nav Bar Links with numbers."
+  },
+  {
+    "Attribute": "Description",
+    "Description": "The description of the Nav Bar Link as it appears to site users in a tooltip. Use longer descriptions in conjunction with a shorter name to accommodate screen space."
+  },
+  {
+    "Attribute": "URL",
+    "Description": "The navigation link (URL) the user is redirected to once the Nav Bar Link is clicked."
+  },
+  {
+    "Attribute": "Show",
+    "Description": "Boolean value to set the visibility of the Nav Bar Link to site users. Setting this to FALSE will suppress the display of the Nav Bar Link to site users."
+  },
+  {
+    "Attribute": "Nav Bar Link ID",
+    "Description": "Read-only system-level identifier."
+  }
+]

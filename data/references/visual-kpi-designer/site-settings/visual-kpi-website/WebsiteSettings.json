@@ -1,0 +1,507 @@
+[
+  {
+    "Category": "Site Basics",
+    "Attribute": "Site Title",
+    "Description": "Website title displayed in the browser title bar."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Default Attribute Grouping",
+    "Description": "Default setting for attribute grouping of KPIs, Charts and Tables."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Site Administrator Contact",
+    "Description": "Visual KPI site administrator contact (also be used for cache server error notifications)."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Site Logo Link",
+    "Description": "Default link action when clicking site logos."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Screen Data Update Interval",
+    "Description": "Controls screen data update interval (in seconds) for Web pages.  Set 0 to turn off page data refresh.  (Note: This should not be faster than your cache cycle as the cache time determines how often data is refreshed on the server)."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Default Color Theme",
+    "Description": "Controls the default color theme (light or dark) for the site. Users can override this setting on each site if allowed."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Allow Users to Change Color Theme",
+    "Description": "Determines whether or not site users can select between Dark and Light themes."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Default Client Display Time",
+    "Description": "Controls the default display time (client time or server time) for all rendered timestamps. Site users can override this setting on each site if allowed."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Allow Users to Change Client Display Time",
+    "Description": "Determines whether or not site users will be able to select between client and server times for all rendered timestamps."
+  },
+  {
+    "Category": "Site Basics",
+    "Attribute": "Garbage Collection Interval",
+    "Description": "Controls the interval (in minutes) for a full page refresh. This helps clear memory leaks--unfortunately common and not entirely unavoidable (yet) in Web applications. (Note: User actions will reset the interval. 0 = turn off this refresh)."
+  },
+  {
+    "Category": "Cache and Alert Server",
+    "Attribute": "Cache Alert Notification Protocol",
+    "Description": "Cache server error notification delivery mechanism."
+  },
+  {
+    "Category": "Cache and Alert Server",
+    "Attribute": "Cache Alert Reminder Interval",
+    "Description": "Controls how often (in minutes) cache server error alerts are sent to the site administrator."
+  },
+  {
+    "Category": "Cache and Alert Server",
+    "Attribute": "Cache Warning Interval",
+    "Description": "Determines the time (in minutes) that should elapse before displaying a site level cache failure warning (0 = always hide this warning)."
+  },
+  {
+    "Category": "Cache and Alert Server",
+    "Attribute": "Cache Status History Duration",
+    "Description": "Determines the time (in days) a KPI status history should be stored (Forever = keep all history). Note: A large number of Forever settings causes the size of the Visual KPI database to grow."
+  },
+  {
+    "Category": "Cache and Alert Server",
+    "Attribute": "Alert Warning Interval",
+    "Description": "Determines time (in minutes) that should elapse before displaying a site level alert failure warning (0 = always hide this warning)."
+  },
+  {
+    "Category": "Cache and Alert Server",
+    "Attribute": "KPI Status History Storage Duration",
+    "Description": "Determines time (in days) a KPI status history is stored."
+  },
+  {
+    "Category": "Tab Defaults",
+    "Attribute": "Default Tab",
+    "Description": "Determines the default tab for each group.  'System' automatically displays the first non-empty tab in this series (Groups, KPIs, Charts, Tables)."
+  },
+  {
+    "Category": "Tab Defaults",
+    "Attribute": "Default Group View",
+    "Description": "Determines the default view for Groups on the home page."
+  },
+  {
+    "Category": "Tab Defaults",
+    "Attribute": "Default KPI View",
+    "Description": "Determines the default view for KPIs."
+  },
+  {
+    "Category": "Tab Defaults",
+    "Attribute": "Default Chart View",
+    "Description": "Determines the default view for Charts."
+  },
+  {
+    "Category": "Tab Defaults",
+    "Attribute": "Default Table View",
+    "Description": "Determines the default view for Tables."
+  },
+  {
+    "Category": "Column Defaults",
+    "Attribute": "Default Info Column Display Name",
+    "Description": "Default name used to display the info column in Groups, KPIs, Charts and Tables."
+  },
+  {
+    "Category": "Column Defaults",
+    "Attribute": "Default KPI Actual Column Display Name",
+    "Description": "Default name used to display the actual column in KPIs."
+  },
+  {
+    "Category": "Column Defaults",
+    "Attribute": "Default KPI Target Column Display Name",
+    "Description": "Default name used to display the target column in KPIs."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Default Numerical Format",
+    "Description": "Default numeric format string for KPIs and Info. Leave blank for system defaults."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Use KPI Name as Top Text",
+    "Description": "Determines whether or not the KPI name is used by default as the KPI Map top text if no other top text has been entered."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Use KPI Actual as Bottom Text",
+    "Description": "Determines whether or not the KPI actual value is used by default as the KPI Map bottom text if no other bottom text has been entered."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Use KPI Description as Additional Text",
+    "Description": "Determines whether or not the KPI description is used by default as the KPI Map additional text if no other additional text has been entered."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Lookup Text Length",
+    "Description": "Maximum length of lookup text displayed on chart cursors (0 = No lookup text displayed)."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Maximum Group Count",
+    "Description": "Maximum number of Groups displayed. Additional Groups can be shown by clicking 'Show More' (100 max)."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Maximum Object Count",
+    "Description": "Maximum number of KPIs, Charts and Tables initially displayed. Additional KPIs, Charts and Tables can be shown by clicking 'Show More' (100 max)."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Maximum KPI Map Cell Count",
+    "Description": "Maximum number of KPIs initially displayed as a KPI Map. Additional KPIs can be shown by clicking 'Show More' (500 max)."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Maximum Group Map Count",
+    "Description": "Maximum number of Groups initially displayed as a Group Map. Additional Groups can be shown by clicking 'Show More' (200 max)."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Maximum Pareto Chart Bar Count",
+    "Description": "Maximum number of bars displayed for dynamic Pareto Charts given a large enough display (5 min and 50 max)."
+  },
+  {
+    "Category": "Text, Number and Size Defaults",
+    "Attribute": "Profile Most Recently Used Count",
+    "Description": "Maximum number of recently used Profiles shown in profile list (3 min and 10 max)."
+  },
+  {
+    "Category": "Geo Map and Near Me Settings",
+    "Attribute": "Default Near Me Distance Unit",
+    "Description": "Default unit of measure for Near Me distance."
+  },
+  {
+    "Category": "Geo Map and Near Me Settings",
+    "Attribute": "Default Group Geo Map Label Format",
+    "Description": "Default format of Group Geo Map labels."
+  },
+  {
+    "Category": "Geo Map and Near Me Settings",
+    "Attribute": "Default KPI Geo Map Label Format",
+    "Description": "Default format of KPI Geo Map labels."
+  },
+  {
+    "Category": "Geo Map and Near Me Settings",
+    "Attribute": "Show Geo Map Info Window On Large Screens",
+    "Description": "Controls whether or not to display the pop-up Geo Map info panels on screens with a horizontal resolution of 768 pixels or more."
+  },
+  {
+    "Category": "Geo Map and Near Me Settings",
+    "Attribute": "Show Geo Map Info Window On Small Screens",
+    "Description": "Controls whether or not to display the pop-up Geo Map info panel on screens with a horizontal resolution of 768 pixels or less."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Enable Trend Auto Play",
+    "Description": "Controls whether or not Trends will dynamically update."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Maximum Large Screen Chart Cursors",
+    "Description": "Controls how many lockable cursors (10 max) are allowed on Charts displayed on screens with a horizontal resolution of 768 pixels or more."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Maximum Small Screen Chart Cursors",
+    "Description": "Controls how many lockable cursors (10 max) are allowed on Charts displayed on screens with a horizontal resolution of 768 pixels or less."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Calculations in Chart Cursors",
+    "Description": "Controls whether or calculations (equations) are displayed in Chart cursors."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Limits on KPI Trends",
+    "Description": "Controls whether or not to initially display limits on KPI Trends (can toggle ON/OFF)."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Target on KPI Trends",
+    "Description": "Controls whether or not to initially display target on KPI Trends (can toggle ON/OFF)."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Status Background on KPI Trends",
+    "Description": "Controls whether or not to initially display status bars on the background of KPI Trends (can toggle ON/OFF--requires KPI Status History Storage Duration > 0)."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Gridlines on Trends",
+    "Description": "Controls whether or not gridlines are visible on Trends."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Gridlines on Pareto Charts",
+    "Description": "Controls whether or not gridlines are visible on Pareto Charts."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Gridlines on Bar Charts",
+    "Description": "Controls whether or not gridlines are visible on Bar Charts."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Show Gridlines on XY Plots",
+    "Description": "Controls whether or not gridlines are visible on XY Plots."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Scroll Increment",
+    "Description": "Length of time that timestamp-based Charts and Tables can be scrolled."
+  },
+  {
+    "Category": "Chart & Table Settings",
+    "Attribute": "Scroll Increment Unit",
+    "Description": "Unit of time that timestamp-based Charts and Tables can be scrolled."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Sticky Header",
+    "Description": "Controls whether or not the page header will scroll as the page is scrolled."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Legend",
+    "Description": "Controls whether or not page legends are displayed."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Site Information",
+    "Description": "Controls whether or not the site information page is available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Group Detail",
+    "Description": "Controls whether or not Group detail pages are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show KPI Detail",
+    "Description": "Controls whether or not KPI detail pages are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Chart Detail",
+    "Description": "Controls whether or not Chart detail pages are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Table Detail",
+    "Description": "Controls whether or not Table detail pages are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Site Rollup Links",
+    "Description": "Controls whether or not links on Site Rollups are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Group Links",
+    "Description": "Controls whether or not links on Groups are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show KPI Links",
+    "Description": "Controls whether or not links on KPIs are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Chart Links",
+    "Description": "Controls whether or not links on Charts are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Table Links",
+    "Description": "Controls whether or not links on Tables are available."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Target on KPI Sparkline",
+    "Description": "Controls whether or not KPI sparklines show Target pen."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Empty Groups",
+    "Description": "Controls whether or not Groups with no data are displayed (Note: Empty Groups will always be hidden if Object Level Security is enabled)."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show KPI Roll-Ups",
+    "Description": "Controls whether or not Group KPI Roll-Up bars are displayed."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Name Tooltip",
+    "Description": "Controls whether or not an object's name displays a tooltip on mouse-over."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Unused Fields in Detail Pages",
+    "Description": "Detail pages will show 'N/A' for all empty or unused fields if this setting is TRUE."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Display Alert History on KPI Detail Page",
+    "Description": "Controls whether or not alert history appears on KPI detail pages."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show KPI Override Indicator",
+    "Description": "Controls whether or not the KPI override indicator (*) is shown on KPIs with a status override."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Recently Changed Time Limit",
+    "Description": "Controls time (in minutes) the system considers a KPI status change to be 'recent'."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Recently Changed \"Flash\" Duration",
+    "Description": "Controls time (in seconds) the KPI will 'flash' after screen load for a recently changed KPI. (Off = Never, Max = Until no longer 'recent', or any numeric value)."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Group Description in Rollup Page",
+    "Description": "Controls whether or not Group descriptions appear in column next to Rollups."
+  },
+  {
+    "Category": "Page and Information Visibility Settings",
+    "Attribute": "Show Child Objects With Groups",
+    "Description": "Controls whether or not child objects (KPIs, Charts and Tables) are shown on the same page as Groups in List View."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Default Group Map KPI Cell Count",
+    "Description": "Number of KPI cells displayed on each Group Map (1 minimum and 20 max)."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Default Group Map Header Priority",
+    "Description": "Controls Group Map header cell behavior. Sets the header color and icon based on status: 'Recently Changed' = color of most recently changed KPI and icon to overall KPI status. 'Overall' = color of most severe KPI status and icon to most recently changed status. 'Custom Colors' = color to either the custom recently changed or not recently changed colors and no icons."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Recently Changed Color",
+    "Description": "Group Map header color if one or more KPIs in the Group has recently changed (applies only if Custom Colors is selected for Header Priority)."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Not Recently Changed Color",
+    "Description": "Group Map header color if no KPIs in the Group have recently changed (applies only if Custom Colors is selected for Header Priority)."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Group Map Force Fit",
+    "Description": "Controls whether or not the Group Map will display on a single screen (no scrolling). This can cause large Group Maps to render with very small cells that are difficult to read. If the cell size gets too small text will be removed."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Default Group Map Expansion Setting",
+    "Description": "Controls whether or not the Group Map is expanded or collapsed (header only) by default."
+  },
+  {
+    "Category": "Group Map Settings",
+    "Attribute": "Group Map Header Severity",
+    "Description": "Controls how the system calculates severity of status for use in header colors and icons. (Note: Not In Service always overrides other statuses)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Simplify KPI Blocks with Missing Data",
+    "Description": "Simplify KPI block widget if a valid sparkline and Bullet Chart cannot be rendered. (TRUE = remove sparkline, Bullet Chart, actions, statistics and contact)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Show Sparkline on KPI Blocks",
+    "Description": "Display a sparkline (trend) on KPI Blocks (Note: Can override setting on each block)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Show Bullet Chart on KPI Blocks",
+    "Description": "Display a Bullet Chart on KPI Blocks (Note: Can override setting on each block)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Show Status History Chart on KPI Blocks",
+    "Description": "Display a Status History Chart on KPI Blocks (Note: Can override setting on each block)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Show Statistics on KPI Blocks",
+    "Description": "Display statistics on KPI Blocks (Note: Can override setting on each block)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Show Actions on KPI Blocks",
+    "Description": "Display actions on KPI Blocks (Note: Can override setting on each block)."
+  },
+  {
+    "Category": "KPI Block (Widget) Settings",
+    "Attribute": "Show Contact on KPI Blocks",
+    "Description": "Display KPI contact on KPI Blocks (Note: Can override setting on each block)."
+  },
+  {
+    "Category": "Time Range and Event Range Settings",
+    "Attribute": "Show Time Ranges",
+    "Description": "Controls whether or not the predefined list of time ranges displays on range pickers (Note: The predefined list of ranges must also be configured)."
+  },
+  {
+    "Category": "Time Range and Event Range Settings",
+    "Attribute": "Show Event Ranges",
+    "Description": "Controls whether or not query based event ranges displays on range pickers (Note: Event Range connectstring and query must also be defined)."
+  },
+  {
+    "Category": "Time Range and Event Range Settings",
+    "Attribute": "Default Expanded Range Section",
+    "Description": "Controls which range selection section is expanded by default (Note: This will only apply if both event and time ranges have been configured and set to SHOW)."
+  },
+  {
+    "Category": "Calculation Settings",
+    "Attribute": "Calculation Type",
+    "Description": "Controls how non numeric values in calculations are handled."
+  },
+  {
+    "Category": "Calculation Settings",
+    "Attribute": "Numeric Substitution Value",
+    "Description": "Substitution value for string results in numeric calculations. This is useful when dealing with exception data (e.g. BadValue) returned from data sources used in a calculation."
+  },
+  {
+    "Category": "Calculation Settings",
+    "Attribute": "Status Calculation",
+    "Description": "Used to determine KPI status change calculation behavior. 'Exceeds Only' = Actual is less than < a low limit or greater than > a high limit. 'Meets or Exceeds' (default) = Actual is less than < or equal to = a low limit or greater than > or equal to = a high limit."
+  },
+  {
+    "Category": "Watchlist Settings",
+    "Attribute": "Default Watchlist View",
+    "Description": "Determines the default view for Watchlist KPIs."
+  },
+  {
+    "Category": "Watchlist Settings",
+    "Attribute": "Default Watchlist Attribute Grouping",
+    "Description": "Default setting for attribute grouping of Watchlist KPIs."
+  },
+  {
+    "Category": "Security Settings",
+    "Attribute": "Windows Security All Access Group",
+    "Description": "Windows Security Group that grants user(s) access to all objects. (Used when Object Level Security is enabled)."
+  },
+  {
+    "Category": "Security Settings",
+    "Attribute": "Visual KPI Admin Group",
+    "Description": "Windows Security Group that grants user(s) admin rights to objects via the website. (Used for Trend Comments and Profile management)."
+  },
+  {
+    "Category": "Security Settings",
+    "Attribute": "Enable Outbound Requests",
+    "Description": "Controls whether or not outbound links (e.g. URLs, Fonts, Google APIs) are enabled (Note: Must enable to use Geo Maps)."
+  }
+]

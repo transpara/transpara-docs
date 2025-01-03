@@ -1,0 +1,74 @@
+---
+title: Settings
+slug: overview
+description: 'A group of pages will be placed here. They will address topics related to the customization of profiles, dashboards, contacts, alerts, and site settings in general.'
+tags: ['documentation']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+The site settings feature within Visual KPI Designer empowers you to modify settings that impact your entire Visual KPI site. Any adjustments made here are applied sitewide.
+
+When you click on the Site Settings icon (<PngFont name='options28' />), another toolset will open, enabling you to configure all sorts of things in your Visual KPI sites. Changes you make are immediately reflected in the Visual KPI site you're connected to while editing these configurations. End users accessing the site will see these modifications when data refreshes.
+
+<Image
+  src="media/designer/settings/overview/site-settings.png"
+  alt="Visual Designer Options Menu"
+/>
+
+Site-wide settings are grouped for easy navigation. When you hover over each category, Visual KPI Designer reveals all available site settings, which are listed and described below.
+
+- [Profiles & Dashboards](/visual-kpi-designer/settings/profiles-dashboards)
+    - **Profile Groups**: Enable or restrict access and lock down editing capabilities.
+    - **Profiles**: Define and manage Visual KPI Profiles.
+    - **Dashboard**: Configure default settings and associated profiles for Visual KPI Dashboards.
+- [Ranges & Dates](/visual-kpi-designer/settings/ranges-dates)
+    - **Chart Ranges**: Define time ranges for chart trends.
+    - **Chart Dates**: Specify chart names and their corresponding timeframes.
+    - **Default Ranges**: Set default trend ranges for Trends and Sparklines.
+    - **Event Ranges**: Customize time ranges for data retrieval queries, database time zones, and filter settings.
+- [Contacts & Alerts](/visual-kpi-designer/settings/contacts-alerts)
+    - **Contacts**: Create and configure contacts for reference within Visual KPI data.
+    - **Alert Templates**: Define alert types, email content, intervals, and other parameters.
+- [Features & Configuration](/visual-kpi-designer/settings/features-config)
+    - **Web Site**: Configure basic information for Visual KPI sites.
+    - **KPI Status**: Customize status symbols and colors for light and dark themes.
+    - **Chart Colors**: Define custom colors for charts, including light and dark theme variations.
+    - **Features**: Enable or turn off specific Visual KPI features.
+- [Advanced](/visual-kpi-designer/settings/advanced)
+    - **Interfaces**: Specify locations and parameters of Visual KPI web services or database sources.
+    - **Attributes**: Define attributes within KPI data definitions and determine display orders.
+    - **Languages**: Translate everything in Visual KPI sites to your language.
+    - **Nav Bar Links**: Add custom links to the Visual KPI navigation bar.
+    - **Site Rollups**: Configure parameters for displaying site rollups within Visual KPI.
+    - **Comment Codes**: Define default comments available to end users in comment lists.
+
+## Settings Hierarchy
+
+Many settings you can change in each Object can also be set up in a Group or sitewide. The preference is always for the settings in that specific Object. If there is no Object setting, the preference goes to the Group. If there is no Group setting, the sitewide settings will be used.
+
+<Image
+  src="media/designer/settings/overview/core-patterns-settings-hierarchy.png"
+  alt="Settings Hierarchy"
+/>
+
+### Settings Example
+
+You set up the default range as one week. That means that, by default, all of your site's objects will show one week of data. However, there is one group in which you wish to show the data as three days by default. You can set that up in the group configurations, and if you do that, your site will show, by default, one week of information, but that group will show three days. And, if in that group you have one specific KPI you wish to see as one month by default, you can do that by changing that KPI's configuration.
+
+:::tip Change as you Wish
+
+Remember that the user can always change the range of any view. Setting a default is for the initial view when opening an object.
+
+:::
+
+## What's next?
+
+Each of the available options is addressed individually in the documentation. Use the following links to access the content and learn how to configure your Visual KPI site:
+
+- [Profiles & Dashboards](/visual-kpi-designer/settings/profiles-dashboards)
+- [Ranges & Dates](/visual-kpi-designer/settings/ranges-dates)
+- [Contacts & Alerts](/visual-kpi-designer/settings/contacts-alerts)
+- [Features & Configuration](/visual-kpi-designer/settings/features-config)
+- [Advanced](/visual-kpi-designer/settings/advanced)

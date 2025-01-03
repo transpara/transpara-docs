@@ -1,0 +1,61 @@
+---
+title: Connecting Visual KPI Designer
+slug: connecting
+description: Explore how to connect the VIsual KPI Designer to your application.
+tags: ['connecting','Visual KPI Designer']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+
+The Visual KPI Designer allows you to configure your Visual KPI site. You can manipulate and prepare the data presentation without directly interacting with the end-user interface of the Visual KPI website. But first, you need to connect to your site.
+
+## Connecting
+
+To connect the Visual KPI Designer to your site, you should follow the steps below:
+
+1. Open Visual KPI Designer.
+2. Click the **Instance Connections** icon (<PngFont name='instanceconnections28a' />) to open the dialog settings.
+
+<Callout type="note" title="First configuration">
+If it is the first time you open Visual KPI Designer after installing, it will automatically present the **Instance Connections** dialog.
+</Callout>
+
+3. Click **New** to add a new connection.
+4. Provide a **Name** to reference the new connection.
+
+<Callout type="tip" title="Naming">
+When connecting to a Visual KPI instance, it is best to name it in a specific and easily identifiable manner. Say your company has one power plant, so you want to name your instance "Plant." While that might be easy to identify now, future changes, such as acquiring a new power plant, might make it harder to quickly identify the instance. Even if you only have one instance of Visual KPI, make sure to name it well.
+</Callout>
+
+5. Specify the **WebService URL**. 
+
+<Callout type="info" title="Using the test application.">
+If you're testing the Visual KPI Designer for the first time, you can connect to [Transpara's Demo](https://demo.transpara.com/powergen) page. In this case, for **WebService URL**, use https://demo.transpara.com/powergen/webservice/kpiws.asmx. 
+</Callout>
+
+6. If your system administrator has set up authentication, select the correct **Authentication** mode and provide the **User Name** and **Password**. Otherwise, choose Anonymous for the  **Authentication** field.
+7. Click **Test Connection**. If the server is running and accessible, you should see the **Connection successful** message.
+8. Click **OK**.
+
+<Image
+  src="media/designer/installation-and-setup/connecting/connecting-visualdesigner.png"
+  alt="Connecting Visual KPI Designer"
+/>
+
+The View Site icon (<SvgFont icon='189'/>) allows you to open the Visual KPI site to which you are currently connected, and you'll see your server connection just to the right of the View Site icon.
+
+<Callout type="info" title="Licence Information">
+When an instance is selected, you can click **License Information** to see all the information associated with your license, such as license key, type of license, and initial and final valid dates.
+</Callout>
+
+## Connecting additional Visual KPI sites
+
+Using the Visual KPI Designer allows you to manage multiple Visual KPI site connections, which is helpful if you oversee several projects or environments.
+
+Follow the steps above to add another site to the Visual KPI Design. You will create a new connection, providing a unique name and the specific URL of each additional site. You can also delete sites to clean up your workspace using the **Remove** button in the Instance Connections dialog.
+
+## What's next?
+
+Now that you have connected your instance, it's time to learn more about the available functionalities. Access the [Visual KPI Designer UI Tour](/visual-kpi-designer/ui-tour) to see all available options.

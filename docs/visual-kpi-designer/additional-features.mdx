@@ -1,0 +1,105 @@
+---
+id: additional-features
+title: Additional Features
+slug: /visual-kpi-designer/additional-features
+description: 'Describes some of the most important features of Visual KPI Designer.'
+tags: ['documentation','features']
+---
+
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+If you read through all the guides of the Visual KPI Designer, you will already have read about these features. However, here you will find more detailed information on how to use them to create a better experience for you and the End User.
+
+## Preview
+
+In the [UI Tour](/visual-kpi-designer/ui-tour), we presented the Preview button (<PngFont name='preview28-2.fw' />). Here, we will explain it in more detail.
+
+The Preview feature is very useful when filling a KPI with functions or if you wish to check whether the limits you established encompass the received data. When you turn it on, it will fill the sheet with the results that will appear on the Visual KPI site.
+
+<Image
+  src="media/designer/additional-features/additional-features-preview-off.png"
+  alt="KPI table with Preview off"
+/>
+
+<Image
+  src="media/designer/additional-features/additional-features-preview-on.png"
+  alt="KPI table with Preview on"
+/>
+
+## Basic and Advanced columns
+
+Another feature we presented in the [UI Tour](/visual-kpi-designer/ui-tour) is the button to toggle Basic and Advanced modes of the worksheets (<PngFont name='advancedmode28gray' />). You can use this button to make your use of Visual KPI Designer easier.
+
+Whenever using only the basic features of Visual KPI Designer, we recommend keeping this option deactivated. That way, your worksheets will have less columns to worry about. However, if you want to make certain customizations, you'll probably need to click the advanced mode button to see all possible columns.
+
+<Image
+  src="media/designer/additional-features/additional-features-toggle-advanced-mode.gif"
+  alt="Toggle Basic and Advanced modes"
+/>
+
+## Object-level Security
+
+Visual KPI has object-level security for Visual KPI sites, so you can choose the security model and level of security detail that best works for your organization. The security models in Visual KPI are standard Microsoft Active Directory and/or local Server Groups and Users.
+
+Each object (Groups, KPIs, Values, Trends) in Visual KPI can have its visibility restricted based on any combination of these local and Domain users and groups.
+
+<Callout type="info" title="Before You Continue">
+To set up object-level security, you or the system admin must first follow the steps outlined in the [Enable Security](/setup-and-administration/security/enable-security) guide.
+</Callout>
+
+Once the admin side of the security is set, you will have to access Visual KPI Designer and follow these steps to finish setting up access security.
+
+1. Open the Visual KPI Designer and connect to the appropriate Visual KPI site.
+
+2. Go to the Sitewide Settings configuration icon (<PngFont name='options28' />), select **Features & Config**, and then **Features**.
+
+<Image
+  src="media/designer/additional-features/object-level-security-1.png"
+  alt="Feature Configuration Menu"
+/>
+
+3. You will see the Features Configuration Workbook. Scroll down until you see the **Enable Object Level Security** line and set it to **TRUE**.
+
+<Image
+  src="media/designer/additional-features/object-level-security-2.png"
+  alt="Object Level Security"
+/>
+
+4. Click the Save Icon (<PngFont name='save28' />) to save your modifications.
+
+<Callout type="warning" title="Always Add Users to Objects' Access Groups">
+After completing this process, users cannot see anything in your Visual KPI website until you add them to an Access Group that is allowed in some object. You must also repeat the following steps whenever you create a new object.
+</Callout>
+
+5. Create a new KPI or open an existing one.
+
+6. Scroll the workbook sideways until you see the column **Access Group List**.
+
+<Callout type="tip" title="Advanced Mode">
+If you don't see the Access Group List column, you need to click the Advanced Mode icon (<PngFont name='advancedmode28gray' />). To learn more about it, go to the [Advanced Mode section](#basic-and-advanced-columns) of this page.
+</Callout>
+
+7. Add the names of the allowed groups, separating multiple groups by a semicolon.
+
+<Image
+  src="media/designer/additional-features/object-level-security-3.png"
+  alt="Allowed Groups"
+/>
+
+8. Click the Save Icon (<PngFont name='save28' />) to save your modifications.
+
+### Examples
+
+In the Visual KPI Designer, you put each group that is allowed to see an object in the Access Group List field separated by semicolons. You can use any combination of local server groups and users. The basic format of this is:
+
+- **Name\Access Group List**: KPI xyz DomainName\DomainGroup; ServerName\LocalGroup;
+
+For example, if the domain name is ALPHA and the server on which Visual KPI is running is named SERVER, this might look like:
+
+- KPI xyz ALPHA\Domain Admins; ALPHA\Unit One Users; ALPHA\Bob Weldon; SERVER\Administrators; SERVER\Jimmy
+
+This combination gives two Domain groups and one Local group access, plus it grants access to Domain User Bob and local user Jimmy.
+
+The following combination ensures that everyone can see the home page, but only a person in one of the two Domain groups can see the contents:
+
+- -Home-Everyone Site One ALPHA\Domain Admins; ALPHA\Unit One Users

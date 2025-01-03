@@ -1,0 +1,67 @@
+[
+  {
+    "AF Attribute Name": "Pen n, Penn, Pn, Pen 0n, Pen0n, P0n\n(n = 1 to 9)\ni.e. (Pen 1, Pen 02, Pen3, Pen04, P05)",
+    "Data Type": "Any",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Pen 10, Pen10, P10",
+    "Data Type": "Any",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Pen n, Penn, Pn, Pen 0n, Pen0n, P0n + Color\nI.e. (Pen 1 Color, Pen02Color)",
+    "Data Type": "String / Enum",
+    "Valid Values": "Black, Blue, Brown, Gray, Grey, Green, Orange, Pink, Red, Yellow, Violet, Purple"
+  },
+  {
+    "AF Attribute Name": "Pen n, Penn, Pn, Pen 0n, Pen0n, P0n + MinimumYAxis\nI.e. (Pen 1 MinimumYAxis, Pen02MinimumYAxis)",
+    "Data Type": "Numeric",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Pen n, Penn, Pn, Pen 0n, Pen0n, P0n + MaximumYAxis\nI.e. (Pen 1 MaximumYAxis, Pen02MaximumYAxis)",
+    "Data Type": "Numeric",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Pen n, Penn, Pn, Pen 0n, Pen0n, P0n + Offset\nI.e. (Pen 1 Offset, Pen02Offset)",
+    "Data Type": "String",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Pen n, Penn, Pn, Pen 0n, Pen0n, P0n + Trend Type\nI.e. (Pen 1 Trend Type, Pen02TrendType)",
+    "Data Type": "String / Enum",
+    "Valid Values": "Interpolated, Step, Symbol, Interpolated + Symbol, Interpolated+Symbol, InterpolatedSymbol, Interpolated Symbol, Step + Symbol, Step+Symbol, StepSymbol, Step Symbol"
+  },
+  {
+    "AF Attribute Name": "Trend Start Time, Trend Start Date, Trend Start, TrendStartTime, TrendStartDate, TrendStart, Start Time, Start Date, StartTime, StartDate",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)"
+  },
+  {
+    "AF Attribute Name": "Trend End Time, Trend End Date, Trend End, TrendEndTime, TrendEndDate, TrendEnd, End Time, End Date, EndTime, EndDate",
+    "Data Type": "String / Date",
+    "Valid Values": "Relative Date (*-n Days) or Actual Date (6/12/2013 1:00:00)"
+  },
+  {
+    "AF Attribute Name": "Min Y Axis, MinYAxis, Minimum Y Axis, MinimumYAxis",
+    "Data Type": "Numeric",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Max Y Axis, MaxYAxis, Maximum Y Axis, MaximumYAxis",
+    "Data Type": "Numeric",
+    "Valid Values": "Any"
+  },
+  {
+    "AF Attribute Name": "Trend Scale, TrendScale",
+    "Data Type": "String / Enum",
+    "Valid Values": "Single, Single-Scale, SingleScale, Single Scale, Multi, Multi-Scale, MultiScale, Multi Scale"
+  },
+  {
+    "AF Attribute Name": "Trend Y Axis, TrendYAxis",
+    "Data Type": "String / Enum",
+    "Valid Values": "Auto-Scale, Auto-Scale, Auto, Multi Scale, Pen Min and Max Y Axis, Pen Min Max Y Axis, PenMinMaxYAxis, Trend Min and Max Y Axis, Trend Min Max Y Axis, TrendMinMaxYAxis"
+  }
+]

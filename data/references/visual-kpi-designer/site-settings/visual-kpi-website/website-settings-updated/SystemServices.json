@@ -1,0 +1,46 @@
+[
+  {
+    "Attribute": "Cache Alert Notification Protocol",
+    "Description": "Cache server error notification delivery mechanism."
+  },
+  {
+    "Attribute": "Cache Alert Reminder Interval",
+    "Description": "Controls how often (in minutes) cache server error alerts are sent to the site administrator."
+  },
+  {
+    "Attribute": "Cache Warning Interval",
+    "Description": "Determines how long (in minutes) should elapse prior to displaying a site level cache failure warning (a setting of 0 will always hide this warning)."
+  },
+  {
+    "Attribute": "Alert Warning Interval",
+    "Description": "Determines how long (in minutes) should elapse prior to displaying a site level alert failure warning (a setting of 0 will always hide this warning)."
+  },
+  {
+    "Attribute": "Status History Warning Interval",
+    "Description": "Determines how long (in minutes) should elapse prior to displaying a site level status history failure warning (a setting of 0 will always hide this warning)."
+  },
+  {
+    "Attribute": "KPI Alert History Storage Duration",
+    "Description": "Determines how long (in days) KPI alert history is stored."
+  },
+  {
+    "Attribute": "Cache Metrics Storage Duration",
+    "Description": "Determines how long (in days) cache service metrics should be stored (a setting of 'Forever' will keep all history, a setting of 'None Stored' will keep no history). Please note that a large number or Forever will cause the size of the Visual KPI database to grow."
+  },
+  {
+    "Attribute": "Remote Context Metrics Storage Duration",
+    "Description": "Determines how long (in days) remote context service(s) metrics should be stored (a setting of 'Forever' will keep all history, a setting of 'None Stored' will keep no history). Please note that a large number or Forever will cause the size of the Visual KPI database to grow."
+  },
+  {
+    "Attribute": "Alert Metrics Storage Duration",
+    "Description": "Determines how long (in days) alert service metrics should be stored (a setting of 'Forever' will keep all history, a setting of 'None Stored' will keep no history). Please note that a large number or Forever will cause the size of the Visual KPI database to grow."
+  },
+  {
+    "Attribute": "Status History Metrics Storage Duration",
+    "Description": "Determines how long (in days) status history service metrics should be stored (a setting of 'Forever' will keep all history, a setting of 'None Stored' will keep no history). Please note that a large number or Forever will cause the size of the Visual KPI database to grow."
+  },
+  {
+    "Attribute": "Performance Monitor Metrics Storage Duration",
+    "Description": "Determines how long (in days) performance monitor metrics should be stored (a setting of 'Forever' will keep all history, a setting of 'None Stored' will keep no history). Please note that a large number or Forever will cause the size of the Visual KPI database to grow."
+  }
+]

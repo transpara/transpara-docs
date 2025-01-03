@@ -1,0 +1,219 @@
+---
+title: ODBC Interface
+slug: /setup-and-administration/interfaces/odbc
+description: ''
+tags: ['documentation']
+---
+
+You can use ODBC interfaces to connect to an SQL database. In this section, you will learn how to configure ODBC interfaces using Visual KPI Server Manager.
+
+<Callout type="warning" title="Installing interfaces">
+If you haven't installed your ODBC interface, refer to the [Configuration page](/setup-and-administration/interfaces/configuration) to learn how to install it.
+</Callout>
+
+## Configuration
+
+To use Visual KPI with ODBC interfaces, you will need to create SQL queries. These must return a value and a date column at all times, as these are needed by Visual KPI. Upon installation of an ODBC interface, example queries are automatically added. Edit these queries to fit your requirements.
+
+<Callout type="training" title="Training">
+Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-odbc-interfaces-sql-2/)** to learn all about how Visual KPI interfaces reads from thousands of data sources and how to create your own interfaces.
+</Callout>
+
+After installing a new ODBC interface following these [instructions](/setup-and-administration/interfaces/configuration), you are ready to configure your interface. As an exercise, below you find an example SQL table that this guide uses to create the needed queries:
+
+| id  | cost   | timestamp  | truck_id   | distance_traveled      | tons_transported |
+|-----|--------|------------|------------|------------------------|------------------|
+| 1   | 100.50 | 2024-06-01 | 1          | 150                    | 200              |
+| 1   | 100.50 | 2024-06-01 | 3          | 80                     | 95               |
+| 2   | 250.75 | 2024-06-09 | 3          | 110                    | 400              |
+| 3   | 175.00 | 2024-06-09 | 2          | 250                    | 350              |
+| 4   | 300.25 | 2024-06-13 | 3          | 100                    | 450              |
+| 5   | 220.40 | 2024-06-13 | 2          | 350                    | 300              |
+| 6   | 220.40 | 2024-06-13 | 1          | 456                    | 400              |
+| 7   | 220.40 | 2024-06-13 | 3          | 125                    | 200              |
+
+The links below show you how to create your own queries:
+
+- [Get Current Value](#get-current-value-query)
+- [Get Trend Data](#get-trend-data-query)
+- [Get Historical Value](#get-historical-value-query)
+- [Get Historical Data](#get-historical-data-query)
+
+<Callout type="info" title="Parameterizing your queries">
+Visual KPI gives you the power to parameterize most data allowing you to create one interface to query for different data. To learn more about it, refer to the [Parameterizing Interfaces](/setup-and-administration/interfaces/parameterizing) page.
+</Callout>
+
+### Get Current Value Query
+
+To retrieve the current value of what you're looking for, you need to run a specific query that returns one row with two columns named `Value` and `Date`. Any additional columns or rows will be disregarded.
+
+For instance, if you want to select a KPI value called `distance_traveled` for a specific truck, you can use this query:
+
+<Tabs>
+  <TabItem value="Hard coded" label="Hard coded">
+  ```sql
+    SELECT SUM(distance_traveled) AS Value,
+    GETDATE() AS Date
+    FROM SampleData
+    WHERE truck_id = '3'
+    AND tons_transported >= '400';
+  ```
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized" default>
+  ```sql
+    SELECT SUM(distance_traveled) AS Value,
+    GETDATE() AS Date
+    FROM SampleData
+    WHERE truck_id = {0}
+    AND tons_transported >= {1};
+  ```
+  </TabItem>
+</Tabs>
+
+Using `3|400` as **lookup**, this query will use `truck_id = 3` and `tons_transported >= 400`, returning the following data:
+
+| Value | Date       |
+|-------|------------|
+| 210   | 2024-06-14 |
+
+<Callout type="info">
+If this table or query has an actual timestamp column, you can also return that instead of GetDate.
+</Callout>
+
+### Get Trend Data Query
+
+To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag name associated with a particular KPI column, such as Value, Target, Low, etc. Then, it searches the `SampleData` table for each row that fits the filters and that the timestamp falls within the correct time range. The time range is based on the current Trend Range in Visual KPI. Once the search is complete, the interface retrieves the `Value` and `Date` from the same row and returns them to Visual KPI, which draws the trend graph.
+
+<Tabs>
+  <TabItem value="Hard coded" label="Hard coded">
+  ```sql
+  SELECT distance_traveled AS Value,
+  timestamp AS Date
+  FROM SampleData
+  WHERE truck_id = '3'
+  AND Date BETWEEN '2024-06-01' and '2024-06-13'
+  ORDER BY Date;
+  ```
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized" default>
+  ```sql
+  SELECT distance_traveled AS Value,
+  timestamp AS Date
+  FROM SampleData
+  WHERE truck_id = {0}
+  AND Date BETWEEN {STARTDATE} and {ENDDATE}
+  ORDER BY Date;
+  ```
+  </TabItem>
+</Tabs>
+
+In the query above, `STARTDATE` and `ENDDATE` are [parameters](/setup-and-administration/interfaces/parameterizing) that will be replaced with actual timestamps when configuring in Visual KPI Designer to create a time range for the trend data.
+
+Using `3` as **lookup**, `2024-06-01` as **STARTDATE**, and `2024-06-13` as **ENDDATE**, the query will return the following data:
+
+| Value | Date       |
+|-------|------------|
+| 80    | 2024-06-01 |
+| 110   | 2024-06-09 |
+| 100   | 2024-06-13 |
+| 125   | 2024-06-13 |
+
+<Callout type="warning" title="Using the correct data type">
+When calculating a sum, it is important to determine whether to use daily, hourly, or weekly data. To handle this logic using a start and end date, you should create a query that considers these factors. For instance, if you request a year's worth of data, your query should sum the daily data, resulting in 365 values, one for each day. To accomplish this, you could create a parameter that allows you to choose between Daily, Hourly, and Weekly and then use SQL logic to perform the calculation accurately.
+</Callout>
+
+### Get Historical Value Query
+
+The Get Historical Value Query is similar to the Get Current Value Query, however, it requires an additional parameter called `{TIMESTAMP}`. This query should return one row with two columns, namely `Value` and `Date`. The purpose of this query is to retrieve the Value at or before a given timestamp.
+
+<Tabs>
+  <TabItem value="Hard coded" label="Hard coded">
+  ```sql
+    SELECT SUM(distance_traveled) AS Value,
+    timestamp AS Date
+    FROM SampleData
+    WHERE truck_id = '3' AND tons_transported >= '400'
+    AND timestamp='2024-06-09';
+  ```
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized" default>
+  ```sql
+    SELECT SUM(distance_traveled) AS Value,
+    timestamp AS Date
+    FROM SampleData
+    WHERE truck_id = {0} AND tons_transported >= {1}
+    AND timestamp={TIMESTAMP};
+  ```
+  </TabItem>
+</Tabs>
+
+Where `TIMESTAMP` is a [parameter](/setup-and-administration/interfaces/parameterizing) that will be replaced with an actual timestamp when configuring in Visual KPI Designer to use this query.
+
+Using `3|400` as **lookup**, and `2024-06-09` as **TIMESTAMP**, the query will return the following data:
+
+| Value | Date       |
+|-------|------------|
+| 110   | 2024-06-09 |
+
+
+### Get Historical Data Query
+
+The Historial Data, similarly to the trend data, will return multiple rows, allowing Visual KPI to display a historical graph out of the returned data. It will search the `SampleData` table for each row that fits the filters and that the timestamp is previous to the informed date.
+
+<Tabs>
+  <TabItem value="Hard coded" label="Hard coded">
+  ```sql
+  SELECT distance_traveled AS Value,
+  timestamp AS Date
+  FROM SampleData
+  WHERE truck_id = '3'
+  AND timestamp <= '2024-06-09'
+  ORDER BY Date;
+  ```
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized" default>
+  ```sql
+  SELECT distance_traveled AS Value,
+  timestamp AS Date
+  FROM SampleData
+  WHERE truck_id = {0}
+  AND timestamp <= {TIMESTAMP}
+  ORDER BY Date;
+  ```
+  </TabItem>
+</Tabs>
+
+Using `3` as **lookup**, and `2024-06-09` as **TIMESTAMP**, the query will return the following data:
+
+| Value | Date       |
+|-------|------------|
+| 80    | 2024-06-01 |
+| 110   | 2024-06-09 |
+
+## Aggregate Raw Data with ODBC Interface
+
+ODBC Aggregation Settings can be used in conjunction with an ODBC interface to perform mathematical operations on the data returned by the interface. Instead of delivering raw data, Visual KPI can aggregate the queried data based on the parameters specified by you. The raw data is first queried via the interface, then aggregated according to your settings, and finally returned to your Visual KPI site.
+
+This feature can be useful if you prefer not to write queries in Visual KPI Designer. Aggregation Settings enables Visual KPI to perform calculations on the server side. However, you can still write queries in Visual KPI Designer and customize them to your liking.
+
+### Aggregation Setting
+
+Aggregation Setting has three entities:
+
+- **Aggregation Type**: Tells Visual KPI what type of function to perform on the returned data.
+- **Bucket Duration**: Sets the time duration of the data returned.
+- **Bucket Duration Unit**: Set the unit of time for the duration.
+
+You can opt for an aggregation type of average with a duration of 30 minutes, for example. By doing so, Visual KPI will return one value that averages all the raw data collected over a 30-minute period. This way, instead of receiving raw data every few seconds, you receive a single value every 30 minutes that represents the data gathered during that duration.
+
+<Image src="media/setup-and-administration/interfaces/working-with-interfaces/odbc/aggregation-odbc.png" alt="Aggregation ODBC"/>
+
+## Stored Procedures
+
+You can use stored procedures (sprocs) and reference them in Visual KPI Server Manager. You'll need to return the same parameters for each query type, along with the named sproc.
+
+- **Get Current Value**: `exec MyCurrentValueSproc {0}`
+
+- **Get Historical Value**: `exec MyHistoricalValueSproc {0}, {TIMESTAMP}`
+
+- **Get Trend Data**: `exec MyTrendDataSproc {0}, {STARTDATE}, {ENDDATE}`

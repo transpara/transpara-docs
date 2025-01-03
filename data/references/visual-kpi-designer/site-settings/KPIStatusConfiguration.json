@@ -1,0 +1,58 @@
+[
+  {
+    "Attribute": "Default Name",
+    "Description": "Read-only Status Name. Use Custom Name to modify."
+  },
+  {
+    "Attribute": "Custom Name",
+    "Description": "Override for the Default Name. Should be short and descriptive."
+  },
+  {
+    "Attribute": "Custom Abbreviation",
+    "Description": "Short form abbreviation for Custom Name. (e.g. HH or Unk) Create one for each Custom Name. This may be used for small format devices."
+  },
+  {
+    "Attribute": "Display Order",
+    "Description": "Controls the order for KPIs when group by status is used, KPI filter lists are viewed, or if KPIs are sorted by status."
+  },
+  {
+    "Attribute": "Custom Icon ID",
+    "Description": "Override for default Status icon. Select an icon from the status grid in the right panel."
+  },
+  {
+    "Attribute": "Default Color (Light Theme)",
+    "Description": "Read-only default Status color (for Light Theme). Use Custom Light Theme Color to override."
+  },
+  {
+    "Attribute": "Custom Color (Light Theme)",
+    "Description": "Override for default Status color (for Light Theme). Enter as a Hex value or select a color from the status grid in the right panel."
+  },
+  {
+    "Attribute": "Default Color (Dark Theme)",
+    "Description": "Read-only default Status color (for Dark Theme). User Custom Dark Theme Color to override."
+  },
+  {
+    "Attribute": "Custom Color (Dark Theme)",
+    "Description": "Override for default Status color (for Dark Theme). Enter as a Hex value or select a color from the status grid in the right panel."
+  },
+  {
+    "Attribute": "Show As Filter",
+    "Description": "Controls whether or not this Status is displayed to site users in the Status Filter dialogue. If FALSE, users will not be able to filter this status."
+  },
+  {
+    "Attribute": "Include In Rollups",
+    "Description": "Controls whether or not KPIs with this status are displayed in the Group rollup bars. If FALSE, the KPIs will be shown, but not included in rollups."
+  },
+  {
+    "Attribute": "Is Alert",
+    "Description": "Controls whether or not KPIs with this status are considered In Alert."
+  },
+  {
+    "Attribute": "Ordinal",
+    "Description": "Read-only ordinal value for status, which can be used when overriding system status."
+  },
+  {
+    "Attribute": "Status ID",
+    "Description": "Read-only system level identifier."
+  }
+]

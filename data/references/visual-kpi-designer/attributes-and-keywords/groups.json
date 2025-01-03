@@ -1,0 +1,618 @@
+[
+  {
+    "Visual KPI Attribute": "Group Name",
+    "Description": "The name of the Group that will appear to your users. Longer names may be truncated on small screen devices, so consider short names with unique attributes at the beginning (e.g., 'Site 1').",
+    "Value": "Elements are groups, so name of element.  Can also be a sub attribute called Name. SQL: Name, Group Name or GroupName, Display Order or DisplayOrder",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Display Order",
+    "Description": "Numeric value that overrides the default alphanumeric order of Groups. Groups with blanks will be sorted alphanumerically and displayed below Groups with numbers.",
+    "Value": "Numeric Value",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Description",
+    "Description": "The description of the Group that will appear to your users. Use longer descriptions, in conjunction with shorter names, to accommodate small screen formats.",
+    "Value": "Can either be the description of the Element or a sub attribute called Description. SQL: isplay Order or DisplayOrder",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Parent Name",
+    "Description": "The name of the parent Group that this Group belongs to (Note: This is used when Groups have only one parent). Parent-Child relationships are defined by either this field or a combination of Group Selection Query and custom attributes.",
+    "Value": "",
+    "AF": "auto from position in hierarchy",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Group Selection Query",
+    "Description": "Determines what child Groups will appear in this Group based on their attributes (e.g., all Groups where 'Region' =  'Region NE'). For Groups with only 1 parent, it's best to use the Parent Name field on the child Groups.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "KPI Selection Query",
+    "Description": "Determines what KPIs will appear in this Group based on their attributes (e.g., all KPIs where 'Region' =  'Region NE'). For KPIs with only 1 parent, it's best to use the Group Name field on the KPIs.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Chart Selection Query",
+    "Description": "Determines what Charts (Trends, Pareto Charts, XY Plots, etc.) will appear in this Group based on their attributes (e.g., all Charts where 'Region' =  'Region NE'). For Charts with only 1 parent, it's best to use the Group Name field on the Charts.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Table Selection Query",
+    "Description": "Determines what Tables will appear in this Group based on their attributes (e.g., all Tables where 'Region' =  'Region NE'). For Tables with only 1 parent, it's best to use the Group Name field on the Tables.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "CUSTOM ATTRIBUTES",
+    "Description": "User-defined attribute. These are used for the grouping of objects and can be used in Group selection queries to determine parent-child relationships. Select 'Attributes' under the Options menu (gear icon) to view/edit custom attributes.",
+    "Value": "Need to have AF Attribute name and inmation custom property name the same as the VKPI Custom attribute.  If I have a VKPI custom attribute called Plant Type, I can have a string AF Attribute (or inmation custom property) called Plant Type with a value of Coal.",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Contact",
+    "Description": "The main contact for the Group chosen from the collection defined in the Contact tab (can be one or more people). This appears in Group details.",
+    "Value": "Contact with valid values being the Contact Name as defined in the VKPI",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Tab",
+    "Description": "Overrides the default tab selection (Groups, KPIs, Charts, etc.) when the Group is selected.",
+    "Value": "Default, Groups, KPIs, Charts, Tables, System",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Group View",
+    "Description": "Overrides the default Group View (List, Geo Map, etc.) when the Groups tab is selected.",
+    "Value": "Default, List, Geo Map",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default KPI View",
+    "Description": "Overrides the default KPI View (List, Geo Map, KPI Map, etc.) when the KPIs tab is selected.",
+    "Value": "Default, List, KPI Map, Bullet Chart, Geo Map, Group Map",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Chart View",
+    "Description": "Overrides the default Chart View (List, Geo Map, etc.) when the Charts tab is selected.",
+    "Value": "Default, List, Geo Map",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Table View",
+    "Description": "Overrides the default Table View (List, Geo Map, etc.) when the Tables tab is selected.",
+    "Value": "Default, List, Geo Map",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Group Expansion",
+    "Description": "Controls whether the Groups view will be expanded (show child groups) or collapsed when the Groups tab is selected.",
+    "Value": "Collapsed, Expanded",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default KPI Expansion",
+    "Description": "Controls whether the KPIs view will be expanded (show KPIs in child Groups) or collapsed when the KPIs tab is selected.",
+    "Value": "Collapsed, Expanded",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Chart Expansion",
+    "Description": "Controls whether the Charts view will be expanded (show child Charts in child Groups) or collapsed when the Charts tab is selected.",
+    "Value": "Collapsed, Expanded",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Default Table Expansion",
+    "Description": "Controls whether the Tables view will be expanded (show child Tables in child Groups) or collapsed when the Charts tab is selected.",
+    "Value": "Collapsed, Expanded",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Attribute Grouping",
+    "Description": "Overrides the default way objects are grouped (by Status, Group, custom attributes, etc.) when expanded.",
+    "Value": "Default, None, Status, Group, any custom attribute defined in vKPI (ie Plant, Unit, etc). inmation: use custom properties.",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show",
+    "Description": "A boolean value used to specify the Group's 'Show' setting (visibility) -- a setting of 'False' will suppress the display of the Group to the users. Pair this with an interface to display a dynamic value.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Interface",
+    "Description": "The interface used to retrieve the In Show value. If this field is blank, then the Show field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Show Sparklines",
+    "Description": "Controls whether or not Sparklines are shown for KPIs and Charts in this Group (Sparklines feature must be enabled).",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline Start Time",
+    "Description": "Overrides the default End Time for sparklines in this group (Note: The End Time must be > the Start Time and the value can be an actual or relative date [e.g., 6/12/2015 or *-7Days]). Pair this with an interface to display a dynamic value.",
+    "Value": "Relative or absolute (ie * or 4/25/2018 1:00:04 PM)",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline Start Time Interface",
+    "Description": "The interface used to retrieve the Sparkline Start Time value. If this field is blank, then the Trend Start Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline End Time",
+    "Description": "Overrides the default end time for and sparklines in this group. This value can be either an actual or relative date (e.g. 6/12/2015 or *-7Days). End time must be > Start time. Pair this with an interface to have a dynamic value.",
+    "Value": "Relative or absolute (ie * or 4/25/2018 1:00:04 PM)",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Sparkline End Time Interface",
+    "Description": "The interface used to retrieve the Sparkline End Time value. If this field is blank, then the Trend End Time field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Latitude",
+    "Description": "The geo location latitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Latitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Latitude field. If this field is blank, then the Latitude field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Longitude",
+    "Description": "The geo location longitude value used for display on a Geo Map. Pair this with an interface to display a dynamic location.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Longitude Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Longitude field. If this field is blank, then the Longitude field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Zoom Level",
+    "Description": "Overrides the default Google Maps zoom level on Geo Maps.",
+    "Value": "Numeric Value 1 - 21",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Geo Label Format",
+    "Description": "Overrides what is displayed for a Group on a Geo Map.",
+    "Value": "Default, Name, Name: Info",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info",
+    "Description": "Additional relevant information (can be hyperlinked).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Interface",
+    "Description": "Interface used to retrieve the data based on the Info field contents. If this field is blank then the Info field is treated as a constant value.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Info Numeric Format",
+    "Description": "The numeric formatting code (.NET) used to modify how numbers are displayed. Click the link in the header for more information.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info UOM",
+    "Description": "Unit of measure for the Info value (applicable if value is numeric).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Display Format",
+    "Description": "The display position of the UoM (e.g., $100, 42.5kg).",
+    "Value": "Number, Number + UOM, UOM + Number",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info URL",
+    "Description": "URL link for the Info field (creates a hyperlink in the Info field).",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Info Description",
+    "Description": "If the Info field is a hyperlinked value, then this will be the tooltip or mouseover text for the link. If only a URL is used, then this will be the text displayed in Info.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "KPI Actual Column Display Name",
+    "Description": "Overrides the default Actual column name (header) for KPIs in this Group.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "KPI Target Column Display Name",
+    "Description": "Overrides the default Target column name (header) for KPIs in this Group.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Info Column Display Name",
+    "Description": "Overrides the default Info column name (header) for Groups in this Group.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Group Info Column",
+    "Description": "Controls if the Info column is displayed for Groups in this Group.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "KPI Info Column Display Name",
+    "Description": "Overrides the default Info column name (header) for KPIs in this Group.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show KPI Info Column",
+    "Description": "Controls if the Info column is displayed for KPIs in this Group.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Chart Info Column Display Name",
+    "Description": "Overrides the default Info column name (header) for Charts in this Group.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Chart Info Column",
+    "Description": "Controls if the Info column is displayed for Charts in this Group.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Table Info Column Display Name",
+    "Description": "Overrides the default Info column name (header) for Tables in this Group.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Show Table Info Column",
+    "Description": "Controls if the Info column is displayed for Tables in this Group.",
+    "Value": "boolean (t/f) or numeric 1/0",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Map KPI Cell Count",
+    "Description": "Overrides the default number of KPI cells displayed on each Group Map (1 min and 20 max).",
+    "Value": "1 to 20",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Map Header Priority",
+    "Description": "Overrides default Group Map cell header behavior.  'Recently Changed' sets the header color to the recently changed KPI status and Icon to overall KPI status.  'Overall' sets header color to the overall KPI status and Icon to recently changed status.",
+    "Value": "Overall, Recently Changed, Custom Colors",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Group Map Expansion",
+    "Description": "Overrides the default Group Map settings for expanded or collapsed (header only).",
+    "Value": "Collapsed, Expanded",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Links",
+    "Description": "List of associated Links or URLs (semicolon separated, limit 10) for the object.",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Link Descriptions",
+    "Description": "List of associated Link or URL descriptions (semicolon separated, limit 10) for the object. These are used to both shorten and give better meaning to links (e.g., instead of www.xyz.com?x=5&type=2, the user could see SOPs or Shift Report)",
+    "Value": "",
+    "AF": "yes",
+    "SQL": "yes",
+    "inmation": "yes"
+  },
+  {
+    "Visual KPI Attribute": "Calculation Type",
+    "Description": "Override for how non-numeric values in calculations are handled. This is useful when dealing with exception data (i.e., BadValue) returned from calculation-derived data sources.",
+    "Value": "Default, Standard, Force Numeric",
+    "AF": "",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 1 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 2 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 3 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 4 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 5 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 6 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 7 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 8 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 9 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10",
+    "Description": "Can be used in many fields that need data from multiple sources like Actual, Bar3, Pen4 (any Dynamic field) plus Attributes and Description.  Specify in square brackets, e.g. [P1] for single value.  Use equation form otherwise, e.g. <[P1]+[P2]-[Min]>",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Parameter 10 Interface",
+    "Description": "The interface used to retrieve data based on the contents of the Parameter field. If this field is blank, then the Parameter field is treated as a constant value.",
+    "Value": "",
+    "AF": "no",
+    "SQL": "yes",
+    "inmation": "no"
+  },
+  {
+    "Visual KPI Attribute": "Group ID",
+    "Description": "Read-only system level identifier.",
+    "Value": "",
+    "AF": "auto",
+    "SQL": "auto",
+    "inmation": "auto"
+  }
+]

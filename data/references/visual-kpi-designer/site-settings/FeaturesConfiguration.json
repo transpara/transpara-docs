@@ -1,0 +1,126 @@
+[
+  {
+    "Feature": "Enable Sparklines",
+    "Description": "Controls whether or not sparklines are displayed."
+  },
+  {
+    "Feature": "Enable Ad Hoc Trending",
+    "Description": "Controls whether or not Ad Hoc trending is available."
+  },
+  {
+    "Feature": "Enable Dashboard",
+    "Description": "Controls whether or not the Dashboard is available."
+  },
+  {
+    "Feature": "Enable Watchlist",
+    "Description": "Controls whether or not the Watchlist is available."
+  },
+  {
+    "Feature": "Enable Profile Creation",
+    "Description": "Controls whether or not users can create new Profiles."
+  },
+  {
+    "Feature": "Enable Groups",
+    "Description": "Controls whether or not Groups are available."
+  },
+  {
+    "Feature": "Enable KPIs",
+    "Description": "Controls whether or not KPIs are available."
+  },
+  {
+    "Feature": "Enable Trends",
+    "Description": "Controls whether or not Trends are available."
+  },
+  {
+    "Feature": "Enable Pareto Charts",
+    "Description": "Controls whether or not Pareto Charts are available."
+  },
+  {
+    "Feature": "Enable XY Plots",
+    "Description": "Controls whether or not XY Plots are available."
+  },
+  {
+    "Feature": "Enable Bar Charts",
+    "Description": "Controls whether or not Bar Charts are available."
+  },
+  {
+    "Feature": "Enable Pie Charts",
+    "Description": "Controls whether or not Pie Charts are available."
+  },
+  {
+    "Feature": "Enable Gantt Charts",
+    "Description": "Controls whether or not Gantt Charts are available."
+  },
+  {
+    "Feature": "Enable Embedded Content",
+    "Description": "Controls whether or not Embedded Content is available."
+  },
+  {
+    "Feature": "Enable Trend Comments",
+    "Description": "Controls whether or not Trend Comments are available (also requires Windows authentication to be enabled on the Web server)."
+  },
+  {
+    "Feature": "Enable Tables",
+    "Description": "Controls whether or not Tables are available."
+  },
+  {
+    "Feature": "Enable Search",
+    "Description": "Controls whether or not search is available."
+  },
+  {
+    "Feature": "Enable Geo Maps",
+    "Description": "Controls whether or not Geo Maps are available (Note: Requires setting Enable Outbound Requests to TRUE)."
+  },
+  {
+    "Feature": "Enable Near Me",
+    "Description": "Controls whether or not the Near Me feature is available (Note: Setting this feature to TRUE will have some impact on cache time)."
+  },
+  {
+    "Feature": "Enable KPI Maps",
+    "Description": "Controls whether or not KPI Maps are available."
+  },
+  {
+    "Feature": "Enable Group Maps",
+    "Description": "Controls whether or not Group Maps are available."
+  },
+  {
+    "Feature": "Enable KPI Status History Storage",
+    "Description": "Controls whether or not KPI Status History is stored (Note: Setting this feature to TRUE will have some impact on cache time and will cause your database to grow, depending on your history duration)."
+  },
+  {
+    "Feature": "Enable KPI Status Summary",
+    "Description": "Controls whether or KPI Status Summary is available (Note: This feature requires KPI Status History Storage to be turned ON)."
+  },
+  {
+    "Feature": "Enable KPI Status History",
+    "Description": "Controls whether or KPI Status History is available (Note: This feature requires KPI Status History Storage to be turned ON)."
+  },
+  {
+    "Feature": "Enable KPI Notification History",
+    "Description": "Controls whether or not KPI Notification History is available (Note: This feature requires KPI Status History Storage to be turned ON)."
+  },
+  {
+    "Feature": "Enable KPI Trend Status Background",
+    "Description": "Controls whether or not Trends of KPIs can show Status history in the background (Note: This feature requires KPI Status History Storage to be turned ON)."
+  },
+  {
+    "Feature": "Enable Group Trends",
+    "Description": "Controls whether or not Group Trends are available."
+  },
+  {
+    "Feature": "Enable KPI Bullet Charts",
+    "Description": "Controls whether or not KPI bullet charts are available."
+  },
+  {
+    "Feature": "Enable Status History Charts",
+    "Description": "Controls whether or not Status History charts are available."
+  },
+  {
+    "Feature": "Enable Site Roll-Ups",
+    "Description": "Controls whether or not Site Roll-Ups (KPI Roll-Ups from other Visual KPI sites) are available."
+  },
+  {
+    "Feature": "Enable Object Level Security",
+    "Description": "Determines whether or not access to KPIs, Charts and Tables is based on Windows Security Groups (Note: Setting this feature to TRUE will have some impact on cache time)."
+  }
+]

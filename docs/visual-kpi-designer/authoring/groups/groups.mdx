@@ -1,0 +1,93 @@
+---
+id: groups
+title: Groups
+slug: /visual-kpi-designer/authoring/groups
+description: ''
+tags: ['documentation']
+---
+
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import PngFont from '@site/src/components/PngFont/PngFont';
+
+Visual KPI Groups allow you to organize your data in a way that makes sense for your organization. You can organize any Visual KPI object in a Group, such as a KPI, Chart, Table, or embedded content.
+
+Let's say you create Groups based on regions where your company is present. Each Group can contain data relevant to a specific region. You can have Groups within Groups and objects within the Groups at any level. For example, you could add sub-groups to organize data for each plant within a region.
+
+<Image
+  src="media/designer/authoring/groups/groups-enduser.png"
+  alt="Group View for End Users"
+/>
+
+## Create a new Group
+
+To create a new Group, follow these steps:
+
+1. Select the Groups tab and click the New Group icon (<PngFont name='new28' />).
+2. Enter a name for the Group.
+3. Add the new Group.
+    - Click **Apply** to add the new Group and its default settings to the Groups worksheet and continue adding Groups.
+    - Click **OK** to add the new Group and its default settings to the Groups worksheet and close the dialogue.
+    - Click **Cancel** to cancel the creation of the new Group. Once you have clicked the Group button, the Group(s) already added to the Groups worksheet will not be removed.
+
+:::tip Groups Pro Tip 
+
+If you have a worksheet with Groups open and want to remove all KPIs from the current KPI worksheet, select the **Replace worksheet** contents checkbox (any unsaved changes are lost). This will also remove the existing Groups from your site.
+
+:::
+
+## Static vs. Dynamic Groups
+
+The data visualized on your Visual KPI site can be in one or multiple Groups.
+
+A static Group means that objects are in only one assigned Group. Continuing with the regional Group example, you may assign all KPIs for the plants in that region to that one regional Group. That way, this data will only show up in the Group for that region.
+
+A Dynamic Group will show data based on the attributes you select. For example, if you create a [custom attribute](/visual-kpi-designer/settings/advanced#attributes) called “Temp” for temperature, you can dynamically display all KPIs that have a “Temp” attribute.
+
+Dynamic Groups are especially useful for moving targets, such as assets that change geolocation. If you have transportation moving materials, you can create Dynamic Groups to track assets in time and according to location. For example, you could create a Dynamic Group that returns the data for all trains inbound to San Francisco. In this Group, you could have KPIs based on the materials each is transporting.
+
+<Image
+  src="media/designer/authoring/groups/groups-worksheet.png"
+  alt="Groups Worksheet"
+/>
+
+## Define Group attributes
+
+When you add a new Group to the Groups worksheet, it keeps the default settings and attributes. You can edit any of the default settings and configure additional attributes. After editing, remember to save by placing an **x** in the first column and clicking the Save icon (add icon) in the open Groups tab of the Objects Toolbar. Note that all Groups with an **x** in the (x) column will be saved. You can remove the **x** for any Group you don't want to save or update.
+
+### Basic attributes
+
+There are many attributes that you can explore, and you can learn about them all on our [Groups Attributes & Keywords Reference](/reference/visual-kpi-designer/attributes-and-keywords/groups) page. Some of the basic attributes are presented below.
+
+:::tip Info Column
+
+You can find more details about the Info Column in the [Info Column section](/visual-kpi-designer/authoring/overview#info-column).
+
+:::
+
+#### Define Display Order
+
+Select a Display Order for the Group. A Display Order of 1 means the Group will appear at the top of the Groups list. Groups not assigned a Display Order will appear alphabetically, following any Groups assigned a Display Order.
+
+#### Add Text to Display on the Visual KPI Site
+
+The Description appears under the Group Name on the Visual KPI site. By default, the name of the Group is displayed as a description. You can add text to the Description column if you want a different descriptor. For example, a Group called Region NE could have the Description "NE Region Power Gen Sites".
+
+#### Define the Group Parent Name
+
+The Group Parent Name tells Visual KPI whether the Group is a Home Group or sub-group. Select Home if you want the Group to appear on the Group Home page. If you wish the Group to be a sub-group of any other Group, select the Parent Name. Alternatively, you can use Group Selection Query to create a Dynamic Group.
+
+#### Define the Default Group View
+
+If you want the data on the Groups page to be displayed differently from the default Rollup visualization, define another default view. For example, you could select a List View or Geo Map view. You can also choose the visualizations for the other objects in the Group, such as KPI View, Chart View, and Table View.
+
+If you select a Geo Map visualization, enter the latitude and longitude parameters or select an interface that will return the latitude and longitude parameters.
+
+:::tip Group Query
+
+If you want to add KPIs, Charts, or Tables to a Dynamic Group, build a query in the respective columns: KPI Selection Query, Chart Selection Query, Table Selection Query.
+
+:::
+
+## What's next?
+
+Learn how to use the [Query Builder](/visual-kpi-designer/authoring/groups/query-builder) to configure Dynamic Groups.

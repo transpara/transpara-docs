@@ -1,0 +1,19 @@
+.hidesvg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  color: #444444;
+  width: 1.2em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.path1 {
+  fill: black !important;
+  color: black;
+}
