@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .heroBanner {
+      padding: 4rem 0;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 996px) {
+      .heroBanner {
+        padding: 2rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header_container {
+      align-self: center;
+      color: #282a30;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+      gap: 15%;
+    }
+
+    .header_container h1 {
+      margin-bottom: 20px;
+      font-family: 'Raleway' !important;
+      color: #282a30;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 700 !important;
+      line-height: 100px;
+      letter-spacing: -2px;
+    }
+
+    .header_container .first_column p {
+      margin: 0 0 40px 12px;
+      max-width: 462px;
+      font-family: 'Raleway' !important;
+      color: #282a30;
+      font-size: 23.762px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 29.702px;
+      letter-spacing: -0.594px;
+    }
+
+    .header_container .second_column p {
+      color: #000000;
+      font-family: var(--main-font);
+      font-style: normal;
+      line-height: 100%;
+      max-width: 462px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 10px 0 32px 0;
+    }
+
+    .headerBtn {
+      width: fit-content;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 25px;
+      background-color: var(--transpara-primary-color1);
+      transition: all 0.5s ease;
+    }
+
+    .headerBtn h4,
+    .sectionBtn h4 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .headerBtn:hover,
+    .sectionBtn:hover {
+      background: transparent;
+      text-decoration: none;
+      color: var(--transpara-primary-color1);
+      border: 1px solid var(--transpara-primary-color1);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .cards_container {
+      color: black;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      margin: 0 60px 50px 60px;
+      gap: 15px;
+    }
+
+    .secondary_cards_section {
+      margin-bottom: 5%;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #d7d7d7;
+      border-radius: 6px;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+      flex-shrink: 0;
+      height: fit-content;
+      /* margin: 16px; */
+      transition: all 0.3s ease, border 0.1s ease;
+      width: 100%;
+      display: inline-flex;
+      height: 100%;
+      padding: 14px;
+      gap: 25px;
+    }
+
+    .card:hover {
+      color: black;
+      text-decoration: none;
+      border: 1px solid #9c0;
+      box-shadow: 0px 4px 25.6px 0px rgba(0, 0, 0, 0.05);
+      transform: translateY(-1px);
+    }
+
+    .card .card_image {
+      background-position: center;
+      background-size: cover;
+      border-radius: 6px;
+      height: 131px;
+      /* padding: 14px; */
+    }
+
+    .cards_container .card .image1 {
+      background-image: url('media/homepage/card1.png');
+    }
+
+    .cards_container .card .image2 {
+      background-image: url('media/homepage/card2.png');
+    }
+
+    .cards_container .card .image3 {
+      background-image: url('media/homepage/card3.png');
+    }
+
+    .cards_container .card .image4 {
+      background-image: url('media/homepage/card4.png');
+    }
+
+    .cards_container .card .image5 {
+      background-image: url('media/homepage/card5.png');
+    }
+
+    .cards_container .card .image6 {
+      background-image: url('media/homepage/card6.png');
+    }
+
+    /* .cards_container .card_text {
+  padding-top: 16px;
+} */
+
+    .cards_container .card_text h4 {
+      height: 24px;
+      margin: 0;
+      /* margin-top: 5px; */
+      color: #282a30;
+      font-family: 'Raleway' !important;
+      font-size: 17.5px;
+      font-style: normal;
+      font-weight: 700 !important;
+      line-height: 30.702px;
+    }
+
+    .cards_container .card_text p {
+      margin: 8px 0 0 0;
+      min-height: 40px;
+      height: fit-content;
+      color: #282a30;
+      font-family: Raleway;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+
+    .cards_container .card a {
+      border-radius: 15px;
+      color: var(--transpara-primary-color1);
+      font-weight: 700;
+      margin-top: 8px;
+      padding: 3px 0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      width: fit-content;
+    }
+
+    .cards_container .card:hover a {
+      text-decoration: underline !important;
+      color: var(--transpara-highlights-color2) !important;
+    }
+
+    @media (min-width: 1690px) {
+      .cards_container {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    }
+
+    @media (max-width: 1440px) {
+      .header_container {
+        margin-left: 151px;
+        margin-right: 151px;
+      }
+
+      .cards_container {
+        margin-left: 151px;
+        margin-right: 151px;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 1390px) {
+      .cards_container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 1285px) {
+      .header_container {
+        margin-left: 69px;
+        margin-right: 69px;
+      }
+
+      .cards_container {
+        margin-left: 69px;
+        margin-right: 69px;
+      }
+    }
+
+    @media (max-width: 997px) {
+      .header_container {
+        margin: 0;
+        gap: 6%;
+      }
+
+      .hero {
+        padding-left: 69px !important;
+        padding-right: 69px !important;
+      }
+    }
+
+    @media (max-width: 970px) {
+      .cards_container {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+    }
+
+    @media (max-width: 870px) {
+      .cards_container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 844px) {
+      .header_container .first_column p {
+        font-size: 20px !important;
+      }
+
+      .header_container .second_column p {
+        font-size: 16px !important;
+      }
+    }
+
+    @media screen and (max-width: 822px) {
+      .header_container .first_column h1 {
+        font-size: 60px !important;
+        line-height: 70px;
+      }
+    }
+
+    @media (max-width: 775px) {
+      .cards_container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .header_container {
+        gap: 5%;
+        flex-direction: column;
+      }
+
+      .header_container .first_column h1 {
+        /* font-size: 40px !important; */
+        margin-bottom: 10px;
+      }
+
+      .header_container .first_column p {
+        /* font-size: 16px !important; */
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      .header_container .second_column p {
+        font-size: 12px !important;
+      }
+    }
+
+    @media screen and (max-width: 560px) {
+      .hero {
+        padding: 0 !important;
+      }
+
+      .header_container {
+        padding: 60px;
+      }
+    }
+
+    @media screen and (max-width: 520px) {
+      .header_container {
+        padding: 50px;
+      }
+
+      .cards_container {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    }
+
+    @media screen and (max-width: 470px) {
+      .header_container {
+        padding: 30px;
+      }
+
+      .cards_container {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+
+    @media screen and (max-width: 440px) {
+      .header_container .first_column h1 {
+        font-size: 40px !important;
+      }
+
+      .header_container .first_column p {
+        font-size: 16px !important;
+      }
+    }
+
+    @media screen and (max-width: 341px) {
+      .header_container .first_column h1 {
+        line-height: 50px;
+      }
+    }
+
+    @media screen and (max-width: 325px) {
+      .header_container .first_column h1 {
+        margin-top: 20px;
+        font-size: 30px !important;
+      }
+
+      .header_container .first_column p {
+        font-size: 14px !important;
+      }
+
+      .header_container .headerBtn {
+        padding: 10px 20px;
+      }
+
+      .header_container .headerBtn h4 {
+        font-size: 12px !important;
+      }
+
+      .cards_container {
+        margin: 10px;
+      }
+    }
+
+    @media screen and (max-width: 260px) {
+      .header_container .headerBtn {
+        padding: 8px 16px;
+      }
+
+      .header_container .headerBtn h4 {
+        font-size: 12px !important;
+      }
+    }
+
+    @media screen and (max-width: 250px) {
+      .header_container .headerBtn {
+        padding: 8px 2px;
+      }
+
+      .header_container .headerBtn h4 {
+        font-size: 12px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero hero--primary heroBanner">
+    <div class="container header_container">
+      <div class="first_column">
+        <h1>Visual KPI Docs</h1>
+        <p>Everything in One Place, From Any Place</p>
+      </div>
+      <div class="second_column">
+        <p>
+          Get one single view of operations across all of your data sources without moving anything or enduring a huge
+          project. Visual KPI supports thousands of industrial, business and external data sources and delivers stunning
+          visualizations, KPIs, dashboards, analytics, and alerts.
+        </p>
+        <a class="headerBtn" href="/what-is-visual-kpi">
+          <h4>Get started</h4>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div className="cards_container">
+
+    <a className="card" href="/end-user/overview">
+      <div className="card_image image1">
+      </div>
+      <div className="card_text">
+        <h4 className='cardTitle'>Use Visual KPI</h4>
+        <p>Explore all features and functionalities available on Visual KPI.</p>
+      </div>
+    </a>
+
+    <a className="card" href="/visual-kpi-designer/overview">
+      <div className="card_image image3">
+      </div>
+      <div className="card_text">
+        <h4 className='cardTitle'>Design</h4>
+        <p>Create KPIs, charts, tables and define the hierarchy of your data.</p>
+      </div>
+    </a>
+
+    <a className="card" href="/setup-and-administration/interfaces">
+      <div className="card_image image2">
+      </div>
+      <div className="card_text">
+        <h4 className='cardTitle'>Interfaces</h4>
+        <p>Use existing interfaces or create new ones to connect new data sources into your system.</p>
+      </div>
+    </a>
+
+    <a className="card" href="/setup-and-administration">
+      <div className="card_image image4">
+      </div>
+      <div className="card_text">
+        <h4 className='cardTitle'>Setup and Instalation</h4>
+        <p>Prepare your system and intall the Visual KPI software.</p>
+      </div>
+    </a>
+
+    <a className="card" target="_blank" href="https://www.transpara.com/training/">
+      <div className="card_image image5">
+      </div>
+      <div className="card_text">
+        <h4 className='cardTitle'>Tutorial</h4>
+        <p>Check our free and online courses.</p>
+      </div>
+    </a>
+
+    <a className="card" href="/faqs">
+      <div className="card_image image6">
+      </div>
+      <div className="card_text">
+        <h4 className='cardTitle'>FAQ</h4>
+        <p>Access Transpara Visual KPI to find answers for your questions.</p>
+      </div>
+    </a>
+
+  </div>
+</body>
+
+</html>

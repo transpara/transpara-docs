@@ -17,10 +17,14 @@
     "pagination": false,
     "navbarMode": "tabbed"
   },
+  "colorMode": {
+    "default": "dark",
+    "switchOff": true
+  },
   "apiFiles": [
     "example.yml"
   ],
-  "homepage": "/what-is-visual-kpi",
+  "homepage": "homepage.html",
   "changelog": true,
   "navbar": [
     {
