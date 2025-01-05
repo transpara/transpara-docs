@@ -29,7 +29,16 @@ The tStore interface can receive up to four parameter, with only the first one b
 - **Metric**: The value which needs to be recovered.
 - **Filter** (Optional): Conditions applied to the data source to selectively include or exclude specific elements. You can add multiple filters, separating them with commas.
 - **AggregationFunction** (Optional): Operation applied to a set of values or data points to produce a single, summarized result. The available options for this are:
-    - `raw, avg, sum, count, min, max, range, stddev, median, twavg`
+    - `raw`
+    - `avg`
+    - `sum`
+    - `count`
+    - `min`
+    - `max`
+    - `range`
+    - `stddev`
+    - `median`
+    - `twavg`
 - **AggregationBucket** (Optional): Grouping of data points based on certain criteria.
 
 ### Retrieving Available Lookups
