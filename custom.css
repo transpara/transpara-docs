@@ -7,6 +7,11 @@
 }
 
 .row .col:first-child:not(.footer__col),
-.docMainContainer_TBSr {
+.docMainContainer_TBSr,
+.main-wrapper .container.margin-vert--lg .row .col.col--7 {
   background-color: #fff;
+}
+
+.main-wrapper .container.margin-vert--lg .row .col.col--3 {
+  background-color: transparent;
 }
