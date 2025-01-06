@@ -1,0 +1,12 @@
+#__docusaurus {
+  background-image: url("../../static/media/circles-background.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.row .col:first-child:not(.footer__col),
+.docMainContainer_TBSr {
+  background-color: #fff;
+}
