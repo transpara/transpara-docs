@@ -1,96 +1,96 @@
 import SearchWrapper from '@site/src/components/AccordionSearchWrapper/SearchWrapper';
 
 <SearchWrapper>
-<AccordionGroup>
-  <Accordion title="How to obtain hash values for the Visual KPI installation?">
-    If your organization's IT governance has strict requirements for ensuring that our installation media haven't been altered, you can contact our [Support](https://www.transpara.com/contact-us/). We will be happy to provide you with the relevant MD5 or SHA checksum to validate any Visual KPI build that you require.
+  <AccordionGroup>
+    <Accordion title="How to obtain hash values for the Visual KPI installation?">
+      If your organization's IT governance has strict requirements for ensuring that our installation media haven't been altered, you can contact our [Support](https://www.transpara.com/contact-us/). We will be happy to provide you with the relevant MD5 or SHA checksum to validate any Visual KPI build that you require.
 
-    ## Why checksums matter
+      **Why checksums matter?**
 
-    MD5 (or SHA-1, SHA256, , SHA512, ccHas64) are mathematical functions that originated in the cryptography discipline. It's a long string of digits that gets computed by reading the binary executable we make.
+      MD5 (or SHA-1, SHA256, , SHA512, ccHas64) are mathematical functions that originated in the cryptography discipline. It's a long string of digits that gets computed by reading the binary executable we make.
 
-    <Callout type="note" title="MD5">
-    Learn more about [MD5](https://en.wikipedia.org/wiki/MD5).
-    </Callout>
+      <Callout type="note" title="MD5">
+      Learn more about [MD5](https://en.wikipedia.org/wiki/MD5).
+      </Callout>
 
-    Transpara uses a string of digits as a ["checksum"](https://en.wikipedia.org/wiki/Checksum) to ensure the integrity of its downloadable executables. You can find this string of digits on our website along with the downloadable .exe file. Once you download the file, you can run an MD5 or SHA hash checker on it and compare the generated string with the one on our website. If the strings match, you can be confident that the file you are installing is the same as the one we posted online.
+      Transpara uses a string of digits as a ["checksum"](https://en.wikipedia.org/wiki/Checksum) to ensure the integrity of its downloadable executables. You can find this string of digits on our website along with the downloadable .exe file. Once you download the file, you can run an MD5 or SHA hash checker on it and compare the generated string with the one on our website. If the strings match, you can be confident that the file you are installing is the same as the one we posted online.
 
-    It's important to ensure that the files you place on your computer are safe and haven't been tampered with by someone else. A checksum is a way to guarantee that a file has not been modified to be harmful by a third party before it reaches your computer. While you can trust Transpara, it's a good idea to check that no one else has intercepted the files while they were being transferred over the internet.
-  </Accordion>
+      It's important to ensure that the files you place on your computer are safe and haven't been tampered with by someone else. A checksum is a way to guarantee that a file has not been modified to be harmful by a third party before it reaches your computer. While you can trust Transpara, it's a good idea to check that no one else has intercepted the files while they were being transferred over the internet.
+    </Accordion>
 
-  <Accordion title="Can the # symbol be removed for a KPI with no Low-High interface?">
-    If a KPI has no Low High interface it displays **#** symbol.
+    <Accordion title="Can the # symbol be removed for a KPI with no Low-High interface?">
+      If a KPI has no Low High interface it displays **#** symbol.
 
-    You can set the Status to Good or anything else you wish. Use Visual KPI Designer to set the Status column, and the pull-down menu to set the value.    
-  </Accordion>
+      You can set the Status to Good or anything else you wish. Use Visual KPI Designer to set the Status column, and the pull-down menu to set the value.    
+    </Accordion>
 
-  <Accordion title="Visual KPI Search: What Fields or Attributes Are Used?">
-    The Visual KPI search function provides a comprehensive search result of dashboards, groups, KPIs, charts, and tables that match with your input. It returns results in real-time, along with the status of KPIs and groups that contain KPIs. 
+    <Accordion title="Visual KPI Search: What Fields or Attributes Are Used?">
+      The Visual KPI search function provides a comprehensive search result of dashboards, groups, KPIs, charts, and tables that match with your input. It returns results in real-time, along with the status of KPIs and groups that contain KPIs. 
 
-    So what attributes the search function uses to generate results?
+      So what attributes the search function uses to generate results?
 
-    | Field          | Attributes                      |
-    |----------------|---------------------------------|
-    | **Dashboards** | name, description.              |
-    | **Groups**     | name, description.              |
-    | **KPIs**       | name, description, actual lookups (tags, equations, etc.) |
-    | **Charts**     | name, description.              |
-    | **Tables**     | name, description.              |
-    | **Trends**     | pen names, pen lookups.         |
+      | Field          | Attributes                      |
+      |----------------|---------------------------------|
+      | **Dashboards** | name, description.              |
+      | **Groups**     | name, description.              |
+      | **KPIs**       | name, description, actual lookups (tags, equations, etc.) |
+      | **Charts**     | name, description.              |
+      | **Tables**     | name, description.              |
+      | **Trends**     | pen names, pen lookups.         |
 
-    <Callout type="support" title="Support">
-    Visual KPI will continue to improve by adding more search attributes over time. If you have any questions, contact our [Support](https://www.transpara.com/contact-us/).
-    </Callout>
+      <Callout type="support" title="Support">
+      Visual KPI will continue to improve by adding more search attributes over time. If you have any questions, contact our [Support](https://www.transpara.com/contact-us/).
+      </Callout>
 
-    To learn more about how to use Visual KPI seach feature refer to the [Search page](/end-user/basic-navigation/search) of the Basic Navigation guide.
-  </Accordion>
+      To learn more about how to use Visual KPI seach feature refer to the [Search page](/end-user/basic-navigation/search) of the Basic Navigation guide.
+    </Accordion>
 
-  <Accordion title="Do I have to move or migrate all of my data into the Transpara platform?">
-    No. Transpara isn't a data lake unless you specifically want it to be. Transpara is designed to leverage your existing data sources and applications to provide immediate value without an expensive, time-consuming data migration project. Most of our customers leave their data in existing sources (wherever makes the most sense) and put that data to use in Transpara on the fly. It even lets you change your data sources without disruption.
-  </Accordion>
+    <Accordion title="Do I have to move or migrate all of my data into the Transpara platform?">
+      No. Transpara isn't a data lake unless you specifically want it to be. Transpara is designed to leverage your existing data sources and applications to provide immediate value without an expensive, time-consuming data migration project. Most of our customers leave their data in existing sources (wherever makes the most sense) and put that data to use in Transpara on the fly. It even lets you change your data sources without disruption.
+    </Accordion>
 
-  <Accordion title="Can you automate the system (initial and ongoing configuration)?">
-    Yes. Transpara gives you the power to automate the configuration of the system based on existing applications or systems. Using a Transpara Remote Context Service (RCS), the system reads metadata dynamically from applications like AVEVA OSIsoft AF, VMware, Zabbix, Aspentech inmation and other applications where this information lives. We even support RCS creation against custom sources of configuration information. You can learn more about our RCS feature at [training link].
-  </Accordion>
+    <Accordion title="Can you automate the system (initial and ongoing configuration)?">
+      Yes. Transpara gives you the power to automate the configuration of the system based on existing applications or systems. Using a Transpara Remote Context Service (RCS), the system reads metadata dynamically from applications like AVEVA OSIsoft AF, VMware, Zabbix, Aspentech inmation and other applications where this information lives. We even support RCS creation against custom sources of configuration information. You can learn more about our RCS feature at [training link].
+    </Accordion>
 
-  <Accordion title="Is this a SaaS application or can we host it ourselves (on-premise or our own cloud)?">
-    Transpara isn't a SaaS application, so you are never sending your data to us or relying on us to manage security, privacy, users or your intellectual property. The software can live on-premise or in your own private or public cloud environment, under your control and following your own IT and security policies. It's cloud-friendly (containers, scale-out, etc) but equally at home on servers or virtual machines inside your own local environments or data centers.
-  </Accordion>
+    <Accordion title="Is this a SaaS application or can we host it ourselves (on-premise or our own cloud)?">
+      Transpara isn't a SaaS application, so you are never sending your data to us or relying on us to manage security, privacy, users or your intellectual property. The software can live on-premise or in your own private or public cloud environment, under your control and following your own IT and security policies. It's cloud-friendly (containers, scale-out, etc) but equally at home on servers or virtual machines inside your own local environments or data centers.
+    </Accordion>
 
-  <Accordion title="How easy is it to move Transpara between platforms (e.g. to new hardware, from on-premise to cloud, or between different cloud providers)?">
-    Transpara is a completely portable platform with no specific allegiance to hardware, VM platforms or cloud providers. It's also a product, so it's simple to migrate or move between systems. We've hundreds of on-premise systems running at customers and in various private or public cloud environments (Azure, AWS, GCP). Curious about a specific implementation? Just ask our [Support](https://www.transpara.com/contact-us/).
-  </Accordion>
+    <Accordion title="How easy is it to move Transpara between platforms (e.g. to new hardware, from on-premise to cloud, or between different cloud providers)?">
+      Transpara is a completely portable platform with no specific allegiance to hardware, VM platforms or cloud providers. It's also a product, so it's simple to migrate or move between systems. We've hundreds of on-premise systems running at customers and in various private or public cloud environments (Azure, AWS, GCP). Curious about a specific implementation? Just ask our [Support](https://www.transpara.com/contact-us/).
+    </Accordion>
 
-  <Accordion title="How easy is it to move Transpara out of the stack if we're unhappy (export data, etc)?">
-    Very easy. Transpara doesn't lock you in or make it difficult to get at your data or migrate away, even if we're a primary data store or if you have significant analytics defined and executing in the platform. We hate being held hostage by vendors just as much as you do.
-  </Accordion>
+    <Accordion title="How easy is it to move Transpara out of the stack if we're unhappy (export data, etc)?">
+      Very easy. Transpara doesn't lock you in or make it difficult to get at your data or migrate away, even if we're a primary data store or if you have significant analytics defined and executing in the platform. We hate being held hostage by vendors just as much as you do.
+    </Accordion>
 
-  <Accordion title="Do you support templates?">
-    Yes. Transpara supports templates at any level, including but not limited to the following: 
-    - Group templates (hierarchy and asset model) 
-    - KPI templates 
-    - Custom attribute templates 
-    - Calculation and algorithm templates 
-    - Chart templates 
-    - Table templates 
-    - Dashboard templates
-    
-    We work with high-scale and large systems where templates are critical for success. It would be impossible to manage a system with hundreds of thousands of metrics if there were no templates.
-  </Accordion>
+    <Accordion title="Do you support templates?">
+      Yes. Transpara supports templates at any level, including but not limited to the following: 
+      - Group templates (hierarchy and asset model) 
+      - KPI templates 
+      - Custom attribute templates 
+      - Calculation and algorithm templates 
+      - Chart templates 
+      - Table templates 
+      - Dashboard templates
+      
+      We work with high-scale and large systems where templates are critical for success. It would be impossible to manage a system with hundreds of thousands of metrics if there were no templates.
+    </Accordion>
 
-  <Accordion title="How long does a typical implementation take?">
-    As little as 90 minutes in some cases, but to be safe we usually say it's measured in days, not weeks or months. Transpara is a product, so the deployment is straightforward and doesn't involve custom code or project-ware. The length of time your implementation will take will depend on your specific needs, but Transpara was designed to eliminate deployment time and risk (which benefits you and us). In extremely complex environments, we would still have you operational in less than a month.
-  </Accordion>
+    <Accordion title="How long does a typical implementation take?">
+      As little as 90 minutes in some cases, but to be safe we usually say it's measured in days, not weeks or months. Transpara is a product, so the deployment is straightforward and doesn't involve custom code or project-ware. The length of time your implementation will take will depend on your specific needs, but Transpara was designed to eliminate deployment time and risk (which benefits you and us). In extremely complex environments, we would still have you operational in less than a month.
+    </Accordion>
 
-  <Accordion title="What customer resources are required for implementation?">
-    This depends heavily on your specific use, but in most cases we require just the following: 
-    - A home for the software. This can be a local virtual machine on an existing server, dedicated on-premise hardware, or a cloud environment. Detailed system requirements and prerequisites can be found at the [Installation guide](/setup-and-administration/installation/prepare-your-system).
-    - Access to the appropriate staff on your side. This usually includes the following: 
-        - Staff with knowledge of and access rights to your data sources and the environment Transpara will run on.
-        - Staff with knowledge of the use case and “what you want to achieve.” This is often operations staff, management or others who can answer questions like what core metrics should be enabled up-front, how data should be organized, what makes your initial KPIs good or bad (limits, targets). 
-        
-    Deployment is handled remotely via web meetings and Transpara does not require direct access to your systems.
-  </Accordion>
+    <Accordion title="What customer resources are required for implementation?">
+      This depends heavily on your specific use, but in most cases we require just the following: 
+      - A home for the software. This can be a local virtual machine on an existing server, dedicated on-premise hardware, or a cloud environment. Detailed system requirements and prerequisites can be found at the [Installation guide](/setup-and-administration/installation/prepare-your-system).
+      - Access to the appropriate staff on your side. This usually includes the following: 
+          - Staff with knowledge of and access rights to your data sources and the environment Transpara will run on.
+          - Staff with knowledge of the use case and “what you want to achieve.” This is often operations staff, management or others who can answer questions like what core metrics should be enabled up-front, how data should be organized, what makes your initial KPIs good or bad (limits, targets). 
+          
+      Deployment is handled remotely via web meetings and Transpara does not require direct access to your systems.
+    </Accordion>
 
-</AccordionGroup>
+  </AccordionGroup>
 </SearchWrapper>
