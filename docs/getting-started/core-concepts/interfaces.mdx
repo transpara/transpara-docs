@@ -1,17 +1,22 @@
 ---
 title: Interfaces
 slug: /core-concepts/interfaces
-description: 'Describes the Interfaces definition and how they are used to integrate different data sources to Visual KPI.'
-tags: ['Interfaces']
+description: Discover how Interfaces in Visual KPI connect and adapt data from various external sources. Learn about their components, purpose, and integration process to standardize and make real-time data available for KPI monitoring.
+tags: ['core-concepts', 'interfaces', 'data-integration', 'data-sources', 'administrator']
 ---
+
+<head>
+  <title>Interfaces</title>
+  <meta name="keywords" content="Visual KPI, interfaces, data integration, read-only interfaces, data sources, admin configuration, KPI data, data retrieval, integration process"/>
+</head>
 
 Visual KPI Interfaces serve as essential tools for fetching data from external systems. These interfaces are designed for read-only purposes, allowing End Users to retrieve data without the ability to modify it. Admins must only make this process once, unless the data source changes, and must choose the appropriate Interface type to meet their specific data access requirements.
 
-## Purpose of interfaces
+## Purpose of Interfaces
 
 The primary goal of Interfaces is to adapt data from various sources and standardize it for use within the Visual KPI server. External data may come with different configurations or organization from that used by Visual KPI, requiring preparation to shape the data into a uniform collection. After an Administrator sets up an Interface, this data preparation occurs in real-time when the Visual KPI server receives updated information, ensuring that the external data is seamlessly translated for use by Visual KPI and presented to End Users.
 
-## Interface outputs
+## Interface Outputs
 
 An Interface should provide three fundamental data structures to ensure Visual KPI functions properly:
 
@@ -19,7 +24,7 @@ An Interface should provide three fundamental data structures to ensure Visual K
 - **Trend Data**: Users can retrieve a series of trend KPI values between two timestamps.
 - **Historical Value**: Provides access to historical data at a specific time or before a given time.
 
-## Interface components
+## Interface Components
 
 To make data available, an Interface needs to be built with three main components:
 
@@ -27,7 +32,8 @@ To make data available, an Interface needs to be built with three main component
 - **Query System**: Reads requests and prepares received data for use within Visual KPI.
 - **Security Systems**: Ensures authentication and prevents data leakage.
 
-## Integration process
+## Integration Process
+
 The process to set up and use an Interface involves the following steps:
 
 1. Define the KPI, such as reactor temperature.
@@ -38,10 +44,10 @@ The process to set up and use an Interface involves the following steps:
 6. Identify security and authentication actions required for data consumption.
 7. Write the Interface code, a one-time process unless the data source is modified.
 
-## What's next?
-
-Understanding Visual KPI Interfaces is crucial for understanding how data is captured and made available effectively. Refer to the [Interfaces](/setup-and-administration/interfaces) documentation for detailed guides on setting up Interfaces in Visual KPI. Additional training resources are available through the [Visual KPI Interfaces Training](https://www.transpara.com/course/visual-kpi-interfaces/).
-
 <Callout type="training" title="Visual KPI Interfaces Training">
 You also have the option to register and watch the [Visual KPI Interfaces Training](https://www.transpara.com/course/visual-kpi-interfaces/) which is available for free.
 </Callout>
+
+## What's Next?
+
+Understanding Visual KPI Interfaces is crucial for understanding how data is captured and made available effectively. Refer to the [Interfaces](/setup-and-administration/interfaces) documentation for detailed guides on setting up Interfaces in Visual KPI. Additional training resources are available through the [Visual KPI Interfaces Training](https://www.transpara.com/course/visual-kpi-interfaces/).
