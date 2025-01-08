@@ -2,9 +2,14 @@
 id: value-keywords
 title: Value Keywords
 slug: /reference/setup-and-administration/af-databases/value-keywords
-description: ''
-tags: ['documentation']
+description: Details on how Visual KPI converts unmatched AF attributes into Values and assigns properties based on sub-attributes.
+tags: ['reference', 'administrator', 'setup-and-administration']
 ---
+
+<head>
+  <title>Value Keywords</title>
+  <meta name="keywords" content="Value Keywords, Visual KPI, AF Databases, setup and administration, reference, administrator"/>
+</head>
 
 import table from '@site/data/references/setup-and-administration/af-database-keywords/value.json';
 import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
@@ -12,8 +17,8 @@ import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
 Any AF attribute that doesn't match any other Visual KPI object selection criteria (either object specific or a base property) will be converted to a Visual KPI value and the following sub-attributes will be converted to Value properties:
 
 <Callout title="Notes">
-- If the parent attribute has a UOM, that UOM will be used as the Value’s UOM in Visual KPI and by default the Display Format of Number + UOM will be set.
-- If the parent attribute has a description that description will be used as the Value’s description.
+- If the parent attribute has a UOM, that UOM will be used as the Value's UOM in Visual KPI and by default the Display Format of Number + UOM will be set.
+- If the parent attribute has a description that description will be used as the Value's description.
 </Callout>
 
 <JsonToTable jsonData={table} />

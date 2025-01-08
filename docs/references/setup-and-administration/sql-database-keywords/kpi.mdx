@@ -2,9 +2,14 @@
 id: kpi-keywords
 title: KPIs Attributes
 slug: /reference/setup-and-administration/sql-databases/kpi-keywords
-description: ''
-tags: ['documentation']
+description: Reference guide for mapping KPI attributes and keywords from external data sources to Visual KPI, including AF, SQL, and inmation databases.
+tags: ['reference', 'administrator', 'setup-and-administration']
 ---
+
+<head>
+  <title>KPIs Attributes</title>
+  <meta name="keywords" content="KPIs Attributes, Visual KPI, SQL Databases, AF Databases, setup and administration, reference, administrator"/>
+</head>
 
 import table from '@site/data/references/setup-and-administration/sql-database-keywords/kpi.json';
 import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
@@ -16,6 +21,6 @@ Use this table to reference valid attributes and keywords for mapping KPI metada
 - **First column**: Represents the Visual KPI Attribute to which you can map your external elements. Use the Value column to get more information about specific attribute values.
 - **Last three columns**: tell you if such a mapping is possible in either AF, SQL or inmation databases.
 
-### Visual KPI Designer, AF, SQL and inmation Attributes
+### Visual KPI Designer, AF, SQL and Inmation Attributes
 
 <JsonToTable jsonData={table} />

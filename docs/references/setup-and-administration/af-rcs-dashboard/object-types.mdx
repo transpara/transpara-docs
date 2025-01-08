@@ -2,21 +2,26 @@
 id: object-types
 title: Object Types
 slug: /reference/setup-and-administration/af-rcs-dashboard/object-types
-description: ''
-tags: ['documentation']
+description: Comprehensive documentation on the attributes and values required to automate dashboard creation in Visual KPI.
+tags: ['reference', 'administrator', 'setup-and-administration']
 ---
+
+<head>
+  <title>Object Types</title>
+  <meta name="keywords" content="Object Types, Visual KPI, AF RCS Dashboard, setup and administration, reference, administrator"/>
+</head>
 
 import tables from '@site/data/references/setup-and-administration/af-rcs-dashboard/tables.json';
 import JsonToTable from '@site/src/components/JsonToTable/JsonToTable';
 
-This page lists the Attributes and values (both required and optional) to fully automate Dashboard creation from within OSIsoft’s PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes.
+This page lists the Attributes and values (both required and optional) to fully automate Dashboard creation from within OSIsoft's PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes.
 
 ## Profile Groups
 
 <JsonToTable jsonData={tables.profileGroups} />
 
 <Callout type="info" title="Info">
-Name and Description would be overrides for the parent’s attribute name and description.
+Name and Description would be overrides for the parent's attribute name and description.
 </Callout>
 
 <Image
@@ -28,7 +33,7 @@ Name and Description would be overrides for the parent’s attribute name and de
 <JsonToTable jsonData={tables.profiles} />
 
 <Callout type="info" title="Info">
-Name and Description would be overrides for the parent’s attribute name and description.  Profile Group ID is only needed if the Profile is not nested under a Profile Group Attribute
+Name and Description would be overrides for the parent's attribute name and description.  Profile Group ID is only needed if the Profile is not nested under a Profile Group Attribute
 </Callout>
 
 <Image
@@ -40,7 +45,7 @@ Name and Description would be overrides for the parent’s attribute name and de
 <JsonToTable jsonData={tables.dashboards} />
 
 <Callout type="info" title="Info">
-Name and Description would be overrides for the parent’s attribute name and description.  Profile ID is only needed if the Dashboard is not nested under a Profile Attribute
+Name and Description would be overrides for the parent's attribute name and description.  Profile ID is only needed if the Dashboard is not nested under a Profile Attribute
 </Callout>
 
 <Image
