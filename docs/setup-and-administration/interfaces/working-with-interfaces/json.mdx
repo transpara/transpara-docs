@@ -1,9 +1,14 @@
 ---
 title: JSON Interface
 slug: /setup-and-administration/interfaces/json
-description: ''
-tags: ['documentation']
+description: Learn how to configure a JSON interface for integrating RESTful APIs with Visual KPI, including security settings, data paths, and parameterization for trend and historical data.
+tags: ['interfaces', 'data-integration', 'configuration', 'data-sources']
 ---
+
+<head>
+  <title>JSON Interface</title>
+  <meta name="keywords" content="json interface, rest api, data integration, parameterization, configuration, historical data, trend data, kpi interface, visual kpi"/>
+</head>
 
 A JSON Interface will be used when you need to connect to restFUL databases. This guide aims to explain how you can configure your new JSON interface when needed.
 
@@ -29,7 +34,7 @@ All REST-based interfaces have some components in common that need to be set:
 - **Value field**: The value field name in the JSON.
 - **Timestamp field**: The timestamp field in the JSON.
 
-<Callout type="info">
+<Callout type="info" title="JSON Data URL Formation">
 The base address together with the request URI will form a URL that returns the JSON data.
 </Callout>
 
@@ -67,7 +72,7 @@ Using the example below as base address, you can see how you can parameterize it
   </TabItem>
 </Tabs>
 
-## How to access JSON data
+## How to Access JSON Data
 
 To complete the result base path, value field and timestamp field, you need to understand how to access information in a JSON. Using the JSON below as example:
 

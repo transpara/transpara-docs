@@ -1,15 +1,20 @@
 ---
 title: Visual KPI Website and Virtual Directory Structure
 slug: /setup-and-administration/installation/visual-kpi-website-and-virtual-directory-structure
-description: 'Describes how to perform the software update.'
-tags: ['documentation']
+description: Understand the folder and virtual directory structure of a Visual KPI installation, including the relationships between IIS components and application folders.
+tags: ['virtual-machine', 'website-structure', 'iis', 'installation', 'administrator', 'directory-mapping']
 ---
+
+<head>
+  <title>Visual KPI Website and Virtual Directory Structure</title>
+  <meta name="keywords" content="virtual directories, visual kpi, website structure, iis, installation, administrator, directory mapping, visual kpi server"/>
+</head>
 
 This page will help you understand the folder/directory structure of a Visual KPI installation.
 
 By default, Visual KPI is installed under the main Transpara website, but you can install it into any existing website.
 
-## Virtual directories
+## Virtual Directories
 
 A new Visual KPI Server installation will add three virtual directories:
 
@@ -25,7 +30,7 @@ C:\Program Files\Transpara\Visual KPI
 
 Within this directory, you will find a sub-folder for each instance of Visual KPI that's installed on your machine.
 
-### Components relationships
+### Components Relationships
 
 The table below illustrates the relationship between the Visual KPI components, the corresponding IIS components, and the application folders (using the default names).
 
@@ -82,7 +87,6 @@ The table below illustrates the relationship between the Visual KPI components, 
   </tbody>
 </table>
 
-<Callout type="note" >
+<Callout type="note" title="Customizable Virtual Directory Names">
 With the exception of the **WebService** virtual directory, the names shown here can be changed during the installation of the Visual KPI Server.
 </Callout>
-
