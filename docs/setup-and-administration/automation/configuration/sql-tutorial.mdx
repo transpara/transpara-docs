@@ -1,9 +1,14 @@
 ---
 title: SQL Tutorial
 slug: /setup-and-administration/automation/rcs-sql-tutorial
-description: 'RCS with SQL tutorial.'
-tags: ['documentation']
+description: Step-by-step tutorial on using a SQL Remote Context Server (RCS) with Visual KPI to automate data visualization, including setup, database creation, and building dashboards for a fictitious mining company.
+tags: ['sql', 'automation', remote-context-server', 'data-visualization', 'administrator']
 ---
+
+<head>
+  <title>SQL Tutorial</title>
+  <meta name="keywords" content="SQL tutorial, Remote Context Server SQL, KPI automation, Visual KPI SQL, SQL RCS setup, mining data visualization, SQL database tutorial, ODBC configuration, RCS KPI tutorial, SQL for Visual KPI"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
@@ -20,7 +25,7 @@ What you will need before starting the tutorial:
 - Access (admin) to a SQL Server. This is necessary to create two databases. One of them is installed by the Server Manager for Visual KPI, while the other will be created manually and populated via a SQL script.
 - The scripts required to follow this tutorial, found here: [**SQLRCSTutorialScripts.zip**](https://www.transpara.com/wp-content/uploads/SQLRCSTutorialScripts.zip).
 
-<Callout type="info">
+<Callout type="info" title="Downloading the Latest Visual KPI Software">
 To install the most recent versions of Visual KPI software components, go to [Transpara's download](http://transpara.com/dl) page.
 </Callout>
 
@@ -56,7 +61,7 @@ In this step you need to configure Visual KPI Designer to work with SQL RCS. Onc
 
 With everything installed and connected, you will need to create attributes and disable the stale age default setting. These processes are described below.
 
-### Create attributes
+### Create Attributes
 
 To begin, you need to create a list of attributes to use in the SQL RCS demo. Attributes are used for many things, including relationships of objects to groups, but for our demo we will be using them to view data by attributes (by Mine Type or Truck Model, etc).
 
@@ -82,13 +87,13 @@ The image below exemplifies how this should look like in Visual KPI Designer:
   src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-2.png"
 />
 
-### Disable the stale age default setting
+### Disable the Stale Age Default Setting
 
 To ensure accurate data representation on the KPI dashboard, it is recommended to modify the default setting for **KPI Stale Age**. The default setting is 60 minutes, which implies that when data retrieved via an Interface (such as truck or mine metrics) is older than an hour (timestamp), the KPI status will change to Stale. Therefore, it's advisable to adjust this setting to better suit your data requirements and ensure that the KPIs reflect the latest data.
 
 In this demo, data can be either hourly or daily, and the concept of Stale should be ignored accordingly.
 
-<Callout type="info">
+<Callout type="info" title="Global Setting vs Individual KPI Override">
 This setting can also be set as an override per individual KPI, but for our exercise it's easier to change the global setting.
 </Callout>
 
@@ -101,11 +106,11 @@ To Disable the default setting, do the following:
 
 This will turn off the feature.
 
-<Callout type="note">
+<Callout type="note" title="Future Modifications Under Gear Icon">
 Items under the gear icon aren't modifiable via the RCS at the time of this document's creation. We do plan to address this in a future build.
 </Callout>
 
-## Step 3: Create a database for mining sample data
+## Step 3: Create a Database for Mining Sample Data
 
 We recommended using SQL Server Management Studio to create a database for the mining demo data. The database should contain metadata, such as information about the mines, trucks, and their locations, and metric or process data, such as the amount mined per hour and truck utilization.
 
@@ -135,7 +140,7 @@ First, you need to create a database to hold this data. Follow the steps below:
   size = "80%"
 />
 
-### Execute the script to add data
+### Execute the Sscript to Add Data
 
 Once the database is created, you need to add data to it. Here you will use the **demoscript1.sql** script [downloaded earlier](https://www.transpara.com/wp-content/uploads/SQLRCSTutorialScripts.zip).
 
@@ -161,15 +166,15 @@ To learn how to install a new ODBC Interface, refer to the [Interfaces guide](/s
 If your verification fails and the Connect String isn't correct, that means there is some database security problem. Step 2 talks about this, but if you are still stuck then please [contact our Support](https://www.transpara.com/contact-us/) and we will help you out.
 </Callout>
 
-### Verify and test the ODBC connection
+### Verify and Test the ODBC Connection
 
 Once you have installed and configured the ODBC interface, you should verify if the interface can connect to the database. Use Visual KPI Server Manager to confirm the connection.
 
-<Callout type="success">
+<Callout type="success" title="Ensuring Proper Setup">
 To learn how to verify that everything is set up correctly, refer to the [Interfaces guide](/setup-and-administration/interfaces/configuration#verifying-an-interface-connection) of this documentation.
 </Callout>
 
-### Write queries to access data
+### Write Queries to Access Data
 
 With an installed interface that points and connects to the **MiningData** database, you need to write three queries that will access the data needed for the KPIs.
 
@@ -230,11 +235,11 @@ Now you will install a SQL Remote Context Server and understand the queries need
 
 Install a new Remote Context Server (RCS). To learn how, refer to the [Installation guide](/setup-and-administration/automation/rcs-configuration#installing-visual-kpi-rcs).
 
-<Callout type="info">
+<Callout type="info" title="Select SQL RC Service">
 When installing, select **SQL RC Service** option.
 </Callout>
 
-### Connect to the database
+### Connect to the Database
 
 You need to configure the Source ConnectString to connect to the **MiningData** database. Remember the interface interacts with the Metrics table and the RCS will interact with the Mines and Trucks tables. Follow these steps:
 
@@ -243,7 +248,7 @@ You need to configure the Source ConnectString to connect to the **MiningData** 
 3. Select the **MiningData** database.
 4. **Apply** the changes.
 
-### Configure RCS properties
+### Configure RCS Properties
 
 Consider the settings for each section of properties for the SQL remote context service just installed.
 
@@ -348,7 +353,7 @@ After the RCS and Cache Server finish running, you can see the following in your
   </TabItem>
 </Tabs>
 
-## Step 9: Using queries to create dashboards
+## Step 9: Using Queries to Create Dashboards
 
 Dashboards are collections of widgets that belong to profiles and profile groups. In order to create functional dashboards on Visual KPI sites, the following need to be created:
 

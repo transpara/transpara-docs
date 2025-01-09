@@ -1,9 +1,14 @@
 ---
 title: RCS with SQL databases
 slug: /setup-and-administration/automation/rcs-with-sql-databases
-description: 'Describe RCS with SQL databases.'
-tags: ['documentation']
+description: Learn how to configure and use the Visual KPI Remote Context Service (RCS) with SQL databases for seamless automation and integration of data into Visual KPI.
+tags: ['administrator', 'configuration', 'automation', 'rcs', 'remote-context-service', 'sql']
 ---
+
+<head>
+  <title>RCS with SQL Databases</title>
+  <meta name="keywords" content="Visual KPI, Remote Context Service, RCS, SQL databases, ODBC, configuration, automation, data mapping, KPI attributes, SQL tutorial"/>
+</head>
 
 The Visual KPI Remote Context Server can connect to any SQL data source. All that is required is ODBC access with appropriate read-level permissions. This page guides you on what you need to know and do to use RCS with your SQL database.
 
@@ -28,7 +33,7 @@ You can either:
 
 For effective mapping between foreign systems and Visual KPI, it is crucial to assign a unique and consistent identifier to each object in the system such as KPI, Group, Trend, etc. This identifier can be in the form of a string, GUID or an integer, and it should be specific to the object type. By doing so, Visual KPI can ensure that there is no confusion in the mapping process. 
 
-<Callout type="note">
+<Callout type="note" title="Changing Foreign System IDs">
 If the ID changes in the foreign system, a new object will be created in Visual KPI and the old object will be deleted.
 </Callout>
 

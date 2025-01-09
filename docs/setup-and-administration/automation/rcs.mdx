@@ -2,17 +2,22 @@
 id: rcs
 title: Remote Context Server (RCS)
 slug: /setup-and-administration/automation/rcs
-description: 'Describes what the RCS is.'
-tags: ['documentation']
+description: Learn how the Remote Context Server (RCS) automates Visual KPI configuration, discover its key features, and explore use cases for external metadata integration.
+tags: ['remote-context-server', 'rcs', 'automation', 'kpis', 'charts', 'alerts', 'dashboards', 'configuration', 'administrator']
 ---
+
+<head>
+  <title>Remote Context Server (RCS)</title>
+  <meta name="keywords" content="remote context server, rcs, automation, visual kpi, metadata, hierarchy, kpis, charts, alerts, dashboards, configuration, osi af, sql data source"/>
+</head>
 
 Visual KPI RCS allows you to configure Visual KPI dynamically or automatically, using information from another system or external application as the primary source of metadata. 
 
-## When should you use the RCS?
+## When Should you Use the RCS?
 
 You can use the RCS to read that information if you have already defined a hierarchy and KPIs in another application. This way, KPIs, groups and other objects will be created automatically without any extra work.
 
-## How does it work?
+## How Does it Work?
 
 RCS will automatically detect new KPIs or objects added to your master application. You can choose the frequency in which RCS reads those changes, and the new objects will appear in Visual KPI without any manual intervention. The same is true for any changes or deletions you make to objects. Visual KPI automates everything every time RCS runs.
 
@@ -20,7 +25,7 @@ RCS will automatically detect new KPIs or objects added to your master applicati
 The RCS feature of Visual KPI was initially created for OSIsoft's AF (Asset Framework) application, and it remains the most widely used application of the RCS. However, Transpara now provides the same degree of integration with any SQL data source, and additional historians such as enterprise:inmation, and more are being added all the time.
 </Callout>
 
-### What type of information RCS can read?
+### What Type of Information Can RCS Read?
 
 Visual KPI RCS can extract various types of data from different external applications, such as:
 
@@ -31,7 +36,7 @@ Visual KPI RCS can extract various types of data from different external applica
 - Dashboard definitions;
 - Security information.
 
-## Important to know
+## Important to Know
 
 Here are a few things to know about using the Visual KPI RCS to automate configuration:
 

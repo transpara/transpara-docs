@@ -1,9 +1,14 @@
 ---
 title: Prepare Your System
 slug: /setup-and-administration/installation/prepare-your-system
-description: 'Describes the actions the administrator needs to take to prepare their server or cloud befre installing the Visual KPI software.'
-tags: ['documentation']
+description: Learn how to prepare your system for Visual KPI installation, including configuring Windows Server, enabling IIS, setting up SQL Server, and meeting all prerequisites.
+tags: ['installation', 'system-preparation', 'administrator', 'prerequisites', 'configuration', 'sql', 'iis', 'dotnet', 'windows-server']
 ---
+
+<head>
+  <title>Prepare Your System</title>
+  <meta name="keywords" content="installation, system preparation, administrator, prerequisites, configuration, sql server, iis, dotnet, windows server, visual kpi"/>
+</head>
 
 This guide describes the necessary steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing the required software.
 
@@ -69,7 +74,7 @@ Your system needs to have .NET 4.5.2 or newer installed. To check your current v
 2. Go to **Programs > Programs and Features**.
 3. Validate your current version.
 
-<Callout type="note">
+<Callout type="note" title="Windows Server Compatibility">
 If you are using Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
 </Callout>
 
@@ -144,7 +149,7 @@ Below, you will find a visual guide to these steps:
 
 To install the Visual KPI Server and ensure that it operates as expected, you'll need an SQL Server with admin permissions or higher enabled.
 
-<Callout type="info">
+<Callout type="success" title="SQL Server Configuration">
 This configuration refers to the SQL Server database that Visual KPI uses for all configuration information, and it is essential for Visual KPI to function correctly. The information in this guide doesn't apply to using SQL Server as a data source at runtime as an interface, which is also possible.
 </Callout>
 
@@ -164,7 +169,7 @@ By default, Visual KPI uses **NT AUTHORITY\NETWORK SERVICE** as the account for 
 - **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as `NT AUTHORITY\NETWORK SERVICE`.
 - **Separate machine**: When the Visual KPI Server and SQL Server are installed on separate Windows Servers, IIS connects to SQL Server as `[YOUR_DOMAIN]\[your Visual KPI server name]$` (for example, `TRANSPARA\VKPI_1$` where Transpara is the domain name and VKPI_1 is the Windows Server name).
 
-#### Confirm SQL Server permissions
+#### Confirm SQL Server Permissions
 
 To confirm SQL Server permissions you need to do the following:
 
@@ -182,5 +187,3 @@ Check the following video to see a guide on how to prepare your system, as prese
 ## What's Next?
 
 After performing all steps above, your system is ready to have Visual KPI Server Manager installed. To learn how to install our system, refer to the [Install Visual KPI](/setup-and-administration/installation/install-visual-kpi) page.
-
-

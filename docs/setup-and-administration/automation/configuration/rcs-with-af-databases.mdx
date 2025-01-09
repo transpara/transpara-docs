@@ -1,9 +1,14 @@
 ---
 title: RCS with AF databases
 slug: /setup-and-administration/automation/rcs-with-af-databases
-description: 'Describe RCS with AF databases.'
-tags: ['documentation']
+description: Learn how to configure the Visual KPI Remote Context Service (RCS) with AF databases to automate the setup of Visual KPI, including Profile Groups, Dashboards, Widgets, and Attributes mapping.
+tags: ['administrator', 'configuration', 'automation', 'rcs', 'remote-context-service']
 ---
+
+<head>
+  <title>RCS with AF Databases</title>
+  <meta name="keywords" content="Visual KPI, Remote Context Service, RCS, AF databases, configuration, automation, dashboards, attributes mapping, profile groups, widgets"/>
+</head>
 
 Visual KPI allows you to automatically set up Visual KPI sites using external applications or systems. By using a Visual KPI Remote Context Service (RCS), you can connect with applications such as OSIsoft PI System (AF). This page guides you on how to use the Visual KPI AF Remote Context Service to automate the creation of Visual KPI Profile Groups, Profiles, Dashboards, and Bookmarks.
 
@@ -122,7 +127,7 @@ The image below showcases this approach:
   src="/media/setup-and-administration/automation/rcs-with-af-databases/af-2.png"
 />
 
-## Attribute mapping
+## Attribute Mapping
 
 Each information in your AF database will be mapped, becoming Visual KPI keys. 
 
@@ -171,7 +176,7 @@ Once enabled, you can both view and copy the ID. The following example shows how
   src="/media/setup-and-administration/automation/rcs-with-af-databases/af-4.png"
 />
 
-<Callout type="info">
+<Callout type="info" title="Using Visual KPI Object IDs as References">
 If you wish to reference an object not created via the AF RCS, you can replace **AF Object ID** with **Visual KPI Object ID** and use the ID value found in the Visual KPI Designer.
 </Callout>
 
@@ -188,7 +193,7 @@ Using an attribute called **Object Type** is the preferred method of identifying
 </CardList>
 
 
-<Callout type="note">
+<Callout type="note" title="Nesting Visual KPI Attributes">
 Transpara recommends to always nest Visual KPI Attributes under another Attribute called Visual KPI Properties.
 </Callout>
 
@@ -274,7 +279,7 @@ To keep your model as clean as possible, you can place all of these keyword attr
 
 The Child Elements attribute isn't required by default. It's simply a way to tidy up your model. You can specify some or all of your attributes as Child Elements of the Visual KPI Properties attribute. The RCS will first check for this Child Elements property and then read the attributes nested below it, then it will check for attributes outside Child Elements.
 
-#### Ignoring attributes
+#### Ignoring Attributes
 
 The Child Elements attribute can also be used to mark an element or attribute that you want to be ignored by Visual KPI Remote Context Server. To do this, you need to set the Visual KPI Properties Child Element to **False**, **0** or **Omit**.
 
@@ -285,7 +290,7 @@ In the following example image, we've added a Level attribute to Unit 1 and set 
   size="80%"
 />
 
-<Callout type="note">
+<Callout type="warning" title="Ignoring Visual KPI Properties">
 If the Visual KPI Properties attribute is set to be ignored on an AF element, then the whole group will be ignored along with all the AF properties and AF Child Elements within it.
 </Callout>
 
@@ -323,7 +328,7 @@ The image below shows both options:
   size="80%"
 />
 
-<Callout type="note">
+<Callout type="info" title="Simplified Nested Keywords">
 If you nest these properties, the "Info" portion of the nested keywords isn't needed. In this example, Info Display Format has become Display Format as a child attribute of Info.
 </Callout>
 
@@ -334,7 +339,7 @@ When modeling Visual KPI Trends, it can be useful to group AF attributes. Each T
   size="80%"
 />
 
-#### Custom Visual KPI attributes
+#### Custom Visual KPI Attributes
 
 You can create up to 20 custom attributes in Visual KPI to help you group your objects.
 
@@ -345,10 +350,9 @@ Custom attributes such as Plant, Unit, Region, Country, Operation Type, Departme
   size="80%"
 />
 
-<Callout type="info">
+<Callout type="note" title="Attribute Mapping Keyword Reference">
 To discover which attributes the Visual KPI Remote Context Service looks for to determine which Visual KPI object to create from an AF attribute, refer to the [Attribute mapping keyword tables](#attribute-mapping) pages.
 </Callout>
-
 
 ## Reference
 
