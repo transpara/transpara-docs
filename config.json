@@ -162,6 +162,7 @@
                   "groupName": "KPIs",
                   "page": "visual-kpi-designer/authoring/kpis/kpis",
                   "subpages": [
+                    "visual-kpi-designer/authoring/kpis/enabling-special-visualizations",
                     "visual-kpi-designer/authoring/kpis/kpis-sources",
                     "visual-kpi-designer/authoring/kpis/spc-kpis",
                     "visual-kpi-designer/authoring/kpis/kpis-trends"
