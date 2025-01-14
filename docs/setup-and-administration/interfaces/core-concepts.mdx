@@ -1,9 +1,14 @@
 ---
 title: Core Concepts
 slug: /setup-and-administration/interfaces/core-concepts
-description: ''
-tags: ['documentation']
+description: Understand the core concepts of Visual KPI interfaces, including their components, configuration, security practices, and how they enable data integration and visualization.
+tags: ['interfaces', 'core-concepts', 'data-integration', 'configuration', 'kpi', 'security', 'remote-context-service', 'administrator']
 ---
+
+<head>
+  <title>Core Concepts</title>
+  <meta name="keywords" content="interfaces, core concepts, data integration, configuration, kpi interface, security, queries, visual kpi, remote context service"/>
+</head>
 
 Visual KPI Server can connect with and retrieve data from almost any data source by interfacing with them. Visual KPI can import specific portions of the source data by connecting to different databases or third-party platforms. This page provides you with the necessary information to understand the basics of Visual KPI Interfaces.
 
@@ -20,7 +25,7 @@ The image below illustrates the architecture of different components of Visual K
   alt="architecture"
 />
 
-<Callout type="note">
+<Callout type="note" title="Interface Maintenance Only During Upgrades">
 Once an interface is created, you should never have to go back to it for maintenance, except when upgrading to a newer version of Visual KPI.
 </Callout>
 
@@ -31,7 +36,7 @@ The Visual KPI interface is composed of three fundamental elements:
 - **[Queries](#queries)**: Define what information can be requested from the data and what the system should expect to receive in response. 
 - **[Security](#security)**: The authentication information to access the data, which ensures that only authorized users can access the data.
 
-<Callout type="note">
+<Callout type="note" title="Pre-Packaged Interfaces">
 Visual KPI offers pre-packaged interfaces that include all components and can be configured using a wizard without the need for queries.
 </Callout>
 

@@ -1,9 +1,14 @@
 ---
 title: Enable Security
 slug: enable-security
-description: ''
-tags: ['documentation']
+description: Learn how to enable security for Visual KPI websites and the Designer, set up permissions, and configure authentication using IIS Manager.
+tags: ['security', 'iis', 'permissions', 'administrator']
 ---
+
+<head>
+  <title>Enable Security</title>
+  <meta name="keywords" content="security, authentication, IIS Manager, Visual KPI, website permissions, user groups, object-level security, Windows authentication"/>
+</head>
 
 To secure your Visual KPI websites, data, and the Visual KPI Designer, you first need to enable security. Visual KPI supports any security model that uses IIS, such as VPN, RSA, and other two-factor authentication methods.
 
@@ -13,12 +18,12 @@ Integrating the Visual KPI Server Manager with IIS saves you the time of setting
 
 To enable security, follow the steps below to use IIS and the Visual KPI Server Manager:
 
-- [**Step 1: Decouple parent inheritance in IIS**](#step-1-decouple-parent-inheritance-in-iis)
-- [**Step 2: Enable security in IIS Manager**](#step-2-enable-security-in-iis-manager)
-- [**Step 3: Determine who gets access to websites**](#step-3-determine-who-gets-access-to-websites)
-- [**Step 4: Set up rights assignment**](#step-4-set-up-rights-assignment)
+- [**Step 1: Decouple Parent Inheritance in IIS**](#step-1-decouple-parent-inheritance-in-iis)
+- [**Step 2: Enable Security in IIS Manager**](#step-2-enable-security-in-iis-manager)
+- [**Step 3: Determine who Gets Access to Websites**](#step-3-determine-who-gets-access-to-websites)
+- [**Step 4: Set up Rights Assignment**](#step-4-set-up-rights-assignment)
 
-## Step 1: Decouple parent inheritance in IIS
+## Step 1: Decouple Parent Inheritance in IIS
 
 To set security for each component of Virtual KPI separately, you need to decouple directory inheritance from the Visual KPI website parent directory so that the Interface and WebService (for the Visual KPI Designer) won't inherit the same security as the Visual KPI website.
 
@@ -71,7 +76,7 @@ The UI may be different for other versions of Microsoft Windows Server.
 After you finish, remeber to repeat this for each component.
 </Callout>
 
-## Step 2: Enable security in IIS Manager
+## Step 2: Enable Security in IIS Manager
 
 For every Visual KPI website, use IIS Manager to turn off anonymous access on the Visual KPI website and WebServices (hosts Visual KPI Designer).
 
@@ -87,7 +92,7 @@ Before you start this process, you should complete [Step 1: Decouple parent inhe
 
 You can either allow open access to each server or set security, which requires users to authenticate with a username and password.
 
-#### For open access:
+#### For Open Access:
 
 1. In IIS Manager, click the virtual directory for which you want to set authentication.
 2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
@@ -105,7 +110,7 @@ You can either allow open access to each server or set security, which requires 
   alt="Authentication"
 />
 
-#### To set secure access:
+#### To set Secure Access:
 1. In IIS Manager, click the virtual directory for which you want to set authentication.
 2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
 
@@ -121,7 +126,7 @@ You can either allow open access to each server or set security, which requires 
   src="media/setup-and-administration/security/enable-security/iis-manager-3.png"
 />
 
-## Step 3: Determine who gets access to websites
+## Step 3: Determine who Gets Access to Websites
 
 Once you set security in IIS, you must determine who gets access. For example, you can set authentication for the entire website. This sets up who can get access, not who gets to see what.
 
@@ -207,7 +212,7 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 6. Click **OK** to save.
 
 
-## Step 4: Set up rights assignment
+## Step 4: Set up Rights Assignment
 
 
 Once users get access to the website, what can they see? This is where you'll set up rights assignment or object-level inheritance for users or user groups in the Visual KPI Designer. This final step must be completed in Visual KPI Designer. To learn more about it, go to the [Object-level Security](/visual-kpi-designer/additional-features#object-level-security) guide.

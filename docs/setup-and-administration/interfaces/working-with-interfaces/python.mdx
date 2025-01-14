@@ -1,9 +1,14 @@
 ---
 title: Python Interface
 slug: /setup-and-administration/interfaces/python
-description: ''
-tags: ['documentation']
+description: Learn how to configure Python interfaces for Visual KPI to retrieve and process data from any source, including examples of required methods for trends, historical values, and more.
+tags: ['interfaces', 'data-integration', 'configuration', 'kpi', 'administrator']
 ---
+
+<head>
+  <title>Python Interface</title>
+  <meta name="keywords" content="python interface, data integration, configuration, kpi interface, trend data, historical data, custom scripting, visual kpi"/>
+</head>
 
 Python interfaces are a powerful tool for retrieving data for KPIs from any data source. These interfaces provide great flexibility, allowing you to use a script to fetch data from various sources. With a Python interface, you can easily customize your data retrieval process to fit the unique requirements of your project. Whether you need to extract data from a database, a web service, or any other type of data source, a Python interface can be used as a wildcard.
 
@@ -20,7 +25,7 @@ When creating a new Python interface, a boilerplate script is generated to provi
 - `get_table`: Returns a JSON to be turned into a table.
 - `verify_connection`: Verifies that there is connectivity to python and also to the external resource you are accessing.
 
-<Callout type="note">
+<Callout type="note" title="Python.NET Limitations">
 At present, the python.net integration doesn't support f strings and typing.
 </Callout>
 
@@ -257,6 +262,6 @@ The boilerplate script is shown below:
     ```
 </Accordion>
 
-<Callout type="info">
+<Callout type="info" title="Additional Examples in Python Interface Folder">
 More examples can be found inside the python interface installation folder.
 </Callout>
