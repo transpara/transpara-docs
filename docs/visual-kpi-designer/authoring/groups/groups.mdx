@@ -2,9 +2,14 @@
 id: groups
 title: Groups
 slug: /visual-kpi-designer/authoring/groups
-description: ''
-tags: ['documentation']
+description: Organize and manage your data efficiently in Visual KPI using Groups. Learn to create static and dynamic Groups, configure attributes, and enhance data visualization.
+tags: ['groups', 'kpi-management', 'data-visualization', 'designer']
 ---
+
+<head>
+  <title>Groups</title>
+  <meta name="keywords" content="groups, dynamic groups, static groups, kpi organization, data visualization, group attributes, visual kpi designer, group hierarchy, kpi management"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 import PngFont from '@site/src/components/PngFont/PngFont';
@@ -18,7 +23,7 @@ Let's say you create Groups based on regions where your company is present. Each
   alt="Group View for End Users"
 />
 
-## Create a new Group
+## Create a New Group
 
 To create a new Group, follow these steps:
 
@@ -29,11 +34,9 @@ To create a new Group, follow these steps:
     - Click **OK** to add the new Group and its default settings to the Groups worksheet and close the dialogue.
     - Click **Cancel** to cancel the creation of the new Group. Once you have clicked the Group button, the Group(s) already added to the Groups worksheet will not be removed.
 
-:::tip Groups Pro Tip 
-
+<Callout type="info" title="Groups Pro Tip">
 If you have a worksheet with Groups open and want to remove all KPIs from the current KPI worksheet, select the **Replace worksheet** contents checkbox (any unsaved changes are lost). This will also remove the existing Groups from your site.
-
-:::
+</Callout>
 
 ## Static vs. Dynamic Groups
 
@@ -50,19 +53,17 @@ Dynamic Groups are especially useful for moving targets, such as assets that cha
   alt="Groups Worksheet"
 />
 
-## Define Group attributes
+## Define Group Attributes
 
 When you add a new Group to the Groups worksheet, it keeps the default settings and attributes. You can edit any of the default settings and configure additional attributes. After editing, remember to save by placing an **x** in the first column and clicking the Save icon (add icon) in the open Groups tab of the Objects Toolbar. Note that all Groups with an **x** in the (x) column will be saved. You can remove the **x** for any Group you don't want to save or update.
 
-### Basic attributes
+### Basic Attributes
 
 There are many attributes that you can explore, and you can learn about them all on our [Groups Attributes & Keywords Reference](/reference/visual-kpi-designer/attributes-and-keywords/groups) page. Some of the basic attributes are presented below.
 
-:::tip Info Column
-
+<Callout type="info" title="Info Column">
 You can find more details about the Info Column in the [Info Column section](/visual-kpi-designer/authoring/overview#info-column).
-
-:::
+</Callout>
 
 #### Define Display Order
 
@@ -82,12 +83,10 @@ If you want the data on the Groups page to be displayed differently from the def
 
 If you select a Geo Map visualization, enter the latitude and longitude parameters or select an interface that will return the latitude and longitude parameters.
 
-:::tip Group Query
-
+<Callout type="info" title="Group Query">
 If you want to add KPIs, Charts, or Tables to a Dynamic Group, build a query in the respective columns: KPI Selection Query, Chart Selection Query, Table Selection Query.
+</Callout>
 
-:::
-
-## What's next?
+## What's Next?
 
 Learn how to use the [Query Builder](/visual-kpi-designer/authoring/groups/query-builder) to configure Dynamic Groups.

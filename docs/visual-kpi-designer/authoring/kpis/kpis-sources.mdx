@@ -2,9 +2,14 @@
 id: kpis-sources
 title: Using Values from Multiple Data Sources
 slug: kpis-sources
-description: ''
-tags: ['documentation']
+description: Learn how to use parameters in Visual KPI Designer to combine and calculate data from multiple data sources, automate dynamic attributes, and enhance KPI visualization.
+tags: ['kpis', 'data-integration', 'designer', 'real-time', 'data-sources']
 ---
+
+<head>
+  <title>Using Values from Multiple Data Sources</title>
+  <meta name="keywords" content="multiple data sources, kpi parameters, visual kpi, dynamic attributes, data integration, data calculation, real-time data, visual kpi designer"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
@@ -14,7 +19,7 @@ The Parameters feature in the Visual KPI Designer enables you to:
 - Define more complex or nested functions to be performed on the fly (e.g., use the results of 3 different calculations from separate data sources in another calculation as your target).
 - Get data from external sources to make other attributes dynamic (e.g., get the current product grade running in this machine from a data source and make it the attribute for this KPI. Every time the data source changes, the attribute in Visual KPI changes to match it).
 
-### Add values and interfaces
+## Add Values and Interfaces
 
 The usual way to return data from a source is to call the Interface and an associated tag or set of parameters. In the Visual KPI Designer, select the Interface you want from a pull-down menu. Interfaces are added to the system in the Visual KPI Server Manager.
 
@@ -27,7 +32,7 @@ You have always been able to use multiple data sources in a KPI, but you were li
   alt="KPI Worksheet"
 />
 
-### Using multiple data sources via parameters
+## Using Multiple Data Sources Via Parameters
 
 Using parameters, you can return values from multiple data sources. You can set up to 10 parameters for each KPI. Enter a value (or function) and an Interface for each parameter. For example, you could return the current temperature in San Francisco from one data source and the Oakland temperature from a separate data source. You could also call market prices from a variety of data sources.
 
@@ -38,7 +43,7 @@ Using parameters, you can return values from multiple data sources. You can set 
 
 You can also perform calculations on parameters. For example, you could use a calculation to return the average temperature in San Francisco for 1 week. In the example above, you can see that Parameter 3 calls the same data source as Parameter 2 but instead of just returning the value from the source, it divides that value by 3.
 
-### Using parameters as inputs for other fields
+## Using Parameters as Inputs for Other Fields
 
 Parameters can be used in many other fields and other calculations. Users of your Visual KPI site don't see the values returned as parameters. What they see are the values returned from other fields. You use parameters to return data from multiple data sources to create a value you want to be displayed in a Visual KPI site.
 

@@ -2,9 +2,14 @@
 id: tables
 title: Tables
 slug: tables
-description: ''
-tags: ['documentation']
+description: Learn how to create and configure tables in Visual KPI Designer, including defining attributes, linking to trends, and utilizing SQL-based data sources for dynamic data visualization.
+tags: ['tables', 'designer', 'data-visualization', 'sql']
 ---
+
+<head>
+  <title>Tables</title>
+  <meta name="keywords" content="tables, visual kpi designer, data visualization, table configuration, sql integration, maintenance log, shift report, dynamic groups, geolocation"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 import PngFont from '@site/src/components/PngFont/PngFont';
@@ -27,7 +32,7 @@ While tables have some limitations, you can add functions and formulas, includin
   alt="Tables End User"
 />
 
-## Create a new table
+## Create a New Table
 
 To create a new table, follow the steps below:
 
@@ -38,11 +43,11 @@ To create a new table, follow the steps below:
     - Click **OK** to add the new Table and its default settings to the Tables worksheet and close the dialogue.
     - Click **Cancel** to cancel the creation of the new Table. Once you have clicked the Apply button, the Table(s) already added to the Tables worksheet will not be removed.
 
-<Callout title="Working with Tables">
+<Callout type="info" title="Working with Tables">
 If you have a worksheet with Tables open and want to remove all Tables from the current Table worksheet, select the Replace worksheet contents checkbox (any unsaved changes are lost). This will also remove the existing Tables from your site.
 </Callout>
 
-## Define table attributes
+## Define Table Attributes
 
 Use the attribute fields (columns) to configure your Tables.
 
@@ -50,21 +55,21 @@ To save a Table, place an **x** in the first column and click the Save icon (<Pn
 
 See a full list of all possible Table attributes in the [Tables Attributes & Keyword Reference](/reference/visual-kpi-designer/attributes-and-keywords/tables).
 
-### Define display order
+### Define Display Order
 
 In the Tables worksheet, enter the Table's Display Order. This is the order in which the Table will be listed on the Tables menu on your Visual KPI site.
 
 Tables with an assigned Display Order are listed at the top of the page in Display Order. Tables without an assigned Display Order are displayed in alphabetical order, following the Tables with an assigned Display Order.
 
-### Add a table description
+### Add a Table Description
 
 Tables display a Description column, allowing you to add a simple description or other information users may need.
 
-### Add Table to a group
+### Add Table to a Group
 
 If the Table should only be included in a single Group, select the Group Name from the list of already defined groups. If you prefer that the Tables displayed in Groups be determined at run-time, it's best to build a query to create a Dynamic Group. The **Home group** is the Home page for Visual KPI.
 
-### Link to related information
+### Link to Related Information
 
 Using the **Info attribute** column, you can add a link to a Trend, another table, a KPI or even external content. The Info column appears on the list of Tables in the main menu of your Visual KPI site.
 

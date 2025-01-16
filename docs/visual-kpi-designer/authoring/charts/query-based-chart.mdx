@@ -2,15 +2,20 @@
 id: query-based-chart
 title: Query Based Chart
 slug: query-based-chart
-description: ''
-tags: ['documentation']
+description: Query-based charts in Visual KPI provide a powerful way to visualize data directly from databases using SQL queries. These charts support advanced configurations like ranged-based, stacked, and clustered visualizations for various data insights.
+tags: ['data-visualization', 'charts', 'sql', 'interfaces', 'designer']
 ---
+
+<head>
+  <title>Query Based Chart</title>
+  <meta name="keywords" content="query based charts, data visualization, sql queries, interface charts, ranged-based charts, stacked charts, clustered charts, series-based charts, data insights, chart creation"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
 There are two ways to create charts in Visual KPI: via an interface or query-based charts.
 
-## Create charts via an Interface
+## Create Charts via an Interface
 
 Using Visual KPI Designer, you can enter a set of lookup/interface pairs. (These lookups can also come via Remote Context Server). For example:
 
@@ -21,7 +26,7 @@ Using Visual KPI Designer, you can enter a set of lookup/interface pairs. (These
 
 This creates a chart (Bar chart in this example) that shows the values of the resulting data returned for Bar 1 and Bar 2 at a moment in time. This chart can be scrolled back and forth in time but will always show values at the particular time selected by the end-user on your Visual KPI site. The same method can be used for Bar Charts, Pareto Charts and Pie Charts (or new chart types we might add occasionally). This is a quick way of showing data with minimal configuration effort.
 
-## Create query-based charts
+## Create Query-Based Charts
 
 Another method for creating charts is to use SQL queries. We refer to these as Query-Based Charts.
 
@@ -31,15 +36,15 @@ Data historians, such as OSIsoft's PI System, Aspentech, GE, Aveva/Wonderware, a
 
 Also, query-based charts must be used if you want to do any of the following:
 
-### Create Ranged-based charts
+### Create Ranged-Based Charts
 
 Instead of a bar or pie slice representing a value at a single point in time, each bar or slice would represent data over a time range. This is useful for charts showing things like outages over a week, production totals per day, or monthly incidents. The idea is to write a query aggregating data over a time range (defined at design time and overridable at run time).
 
-### Create Stacked or Clustered Bar charts
+### Create Stacked or Clustered Bar Charts
 
 Create a series of values, such as production totals per day per factory or incidents per month per region. Stacked and Clustered bar charts can be range-based or time-based, but either case will require a query-based approach.
 
-## An example scenario using query-based charts
+## An Example Scenario Using Query-Based Charts
 
 Let's take a look at the following sample data. In this example, we are manufacturing widgets. They come in three sizes (small, medium and large) and are made from one of six different materials (straw, sticks, bricks, glass, steel and carbon fiber). We have four factories (Factory A, Factory B, Factory C, and Factory D), and each factory produces a number of widgets of a certain size and material each hour. The hourly output of these factories is recorded in a table (tableWidgetProduction).
 
@@ -51,10 +56,10 @@ This table has the following fields: Timestamp (datetime), Factory (nvarchar), M
   size="70%"
 />
 
-## Query-based charts: types
+## Query-Based Charts: Types
 Visual KPI Chart queries come in 2 types: basic and series-based. Basic queries can be used in Bar Charts, Pareto Charts and Pie Charts, while series-based queries can only be used in Bar Charts (set to Clustered or Stacked).
 
-## Query-based charts: parameters
+## Query-Based Charts: Parameters
 Visual KPI Chart queries can optionally use a TIMESTAMP parameter, STARTDATE and ENDDATE parameters or no parameters. These date-based parameter keywords will have dates substituted at runtime to allow for time-based (user-selected) charts.
 
 Here's an example query:
@@ -89,7 +94,7 @@ group by Material
 order by Material
 ```
 
-## Basic queries
+## Basic Queries
 
 At its most basic, Visual KPI looks for a column called Value that should hold the data for each bar (Bar Chart and Pareto Chart) or slice (Pie Chart).
 
@@ -192,7 +197,7 @@ Which results in the following data and chart (as bar, pareto and pie charts):
   alt="Query Based Chart Result Example 3 Chart Pie"
 />
 
-## Series-based queries
+## Series-Based Queries
 
 To create a series-based Bar Chart (Clustered or Stacked), you need to return a SeriesName, Name and Value column:
 

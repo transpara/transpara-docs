@@ -2,9 +2,14 @@
 id: profiles-dashboards
 title: Profiles & Dashboards
 slug: profiles-dashboards
-description: ''
-tags: ['documentation']
+description: Learn how to configure Profiles, Profile Groups, and Dashboards in Visual KPI Designer, including options for locking settings, privacy, and customization.
+tags: ['profiles', 'dashboards', 'settings', 'designer']
 ---
+
+<head>
+  <title>Profiles & Dashboards</title>
+  <meta name="keywords" content="Profiles, Dashboards, Profile Groups, Site Configuration, Customization"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
@@ -38,7 +43,7 @@ After creating and saving the new profile, it immediately becomes available on t
   alt="Profile creation process"
 />
 
-<Callout type="tip" title="Toolbar buttons">
+<Callout type="tip" title="Toolbar Buttons">
 Remember to use the toolbar buttons to speed up the creation process. However, if you prefer, you can type directly on the worksheet.
 </Callout>
 
@@ -69,7 +74,7 @@ You can set the following behaviors when creating a dashboard:
 - Set specific time ranges, or relative time functions, for all KPIs on the dashboard. By default, no configuration is defined (blank field), meaning each object can have its independent time range. If you leave it blank, users can choose their device preferences.
 - Assign each dashboard to one or multiple profiles. To specify multiple profiles, enter them separated by semicolons in the **Profile** field.
 
-<Callout type="note" title="Default dashboard">
+<Callout type="note" title="Default Dashboard">
 If you want new users or devices accessing the site for the first time to be directed to a specific dashboard, set it as the default.
 
 You need to assign one dashboard for each profile. If you don't choose a default dashboard, new users will see an empty dashboard and have to choose one.
@@ -88,7 +93,7 @@ You have two methods for copying dashboards:
 
 - **Browser**: In the dashboard selection pull-down, choose **New Dashboard**, and when creating the new dashboard, be sure to check the box labeled **Copy Existing Dashboard**. This approach creates a copy of the current dashboard, which you can edit in your device's browser.
 
-<Callout type="transpara" title="Automatically add dashboards">
+<Callout type="transpara" title="Automatically add Dashboards">
 You can automatically add dashboards from SQL or other sources via the Visual KPI [Remote Context Service](/setup-and-administration/automation/rcs). When you have hundreds of sites or assets, this is a good way to generate dashboards automatically following the same pattern rather than creating them manually.
 
 If you would like to automate dashboards, [contact us](https://www.transpara.com/contact-us/).

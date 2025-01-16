@@ -2,9 +2,14 @@
 id: contacts-alerts
 title: Contacts & Alerts
 slug: contacts-alerts
-description: ''
-tags: ['documentation']
+description: Learn how to configure contacts and alert templates in Visual KPI Designer to manage notifications, customize alert behavior, and streamline KPI monitoring.
+tags: ['settings', 'designer']
 ---
+
+<head>
+  <title>Contacts & Alerts</title>
+  <meta name="keywords" content="contacts, alerts, alert templates, notification settings, configure contacts, manage alerts, notification timing, alert control, KPI alerts"/>
+</head>
 
 import PngFont from '@site/src/components/PngFont/PngFont';
 
@@ -27,7 +32,7 @@ To add and configure new contacts, follow the steps:
 
 On the **Contacts** worksheet, you find all existing contacts.
 
-### Add a new contact
+### Add a New Contact
 
 To add a new contact to the list, follow the steps:
 
@@ -68,7 +73,7 @@ To access the Alert Templates, follow the steps:
 
 On the **Alert Templates** worksheet, you find all existing templates.
 
-### Add a new template
+### Add a New Template
 
 To add a new template to the list, follow the steps:
 
@@ -80,18 +85,17 @@ To add a new template to the list, follow the steps:
 
 The Alert Templates are defined for the existing KPI status, which refers to the different statuses a KPI can have, such as Low, High, and Out of Range. The notifications will be triggered when the KPI enters or remains within a specified status for a certain period.
 
-<Callout type="note" title="Configured notifications for each status">
+<Callout type="note" title="Configured Notifications for Each Status">
 When configuring a template, you can define the notification behavior for each possible KPI status. For example, you may choose not to trigger notifications for **Low** status, configuring the notifications only for **High**, **High High**, and **High High High** status. In addition, you can set different contacts for each status.
 </Callout>
 
-### Available configurations
+### Available Configurations
 
 Several configurations are available when configuring a template. However, most of them repeat for each KPI status available. Use the following buttons to view a general description of the available configurations. For details about each parameter available, see the [Alerts](/reference/visual-kpi-designer/site-settings/alerts) reference page.
 
-<Callout type="info" title="Advanced mode">
+<Callout type="info" title="Advanced Mode">
 Visual KPI Designer enables you to toggle between basic and advanced modes (<PngFont name='advancedmodereddot28gray' />). The advanced mode makes more configurations (worksheet columns) available. Therefore, if you aren't finding a specific configuration, check if you have enabled the advanced mode.
 </Callout>
-
 
 <AccordionGroup>
 <Accordion title="Basic settings">
@@ -142,7 +146,7 @@ Visual KPI Designer enables you to toggle between basic and advanced modes (<Png
 
 </AccordionGroup>
 
-### Alert Templates usage
+### Alert Templates Usage
 
 You can verify the KPIs currently using each Alert Template. Follow the steps below to access the information:
 

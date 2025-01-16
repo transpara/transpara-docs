@@ -2,9 +2,14 @@
 id: spc-kpis
 title: SPC KPI Configuration
 slug: spc-kpis
-description: ''
-tags: ['documentation']
+description: Configure SPC KPIs in Visual KPI Designer to monitor trends and alerts using Western Electric SPC rules. Learn how to set control limits, sample size, and more.
+tags: ['spc-kpi-configuration', 'statistical-process-control', 'kpi-designer', 'visual-kpi', 'spc-rules', 'process-monitoring', 'control-limits']
 ---
+
+<head>
+  <title>SPC KPI Configuration</title>
+  <meta name="keywords" content="spc kpi configuration, statistical process control, spc rules, designer, process monitoring, control limits, kpi trends, western electric rules"/>
+</head>
 
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
@@ -33,7 +38,7 @@ When you apply SPC rules, a KPI may be charted with a Center Line (control value
   alt="KPI SPC Example"
 />
 
-## How do SPC rules work in Visual KPI?
+## How do SPC Rules Work in Visual KPI?
 
 In Visual KPI, SPC is a type of trend, but its limits are set according to SPC rules. You can use Western Electric rules and enter data manually or use an interface to collect data and calculate and chart a KPI based on these rules. In Visual KPI Designer, you can configure KPIs using the four most common [SPC rules](https://en.wikipedia.org/wiki/Statistical_process_control).
 
@@ -41,11 +46,11 @@ When enabled for a KPI, users on your Visual KPI site will visualize the KPI as 
 
 To use SPC rules in Visual KPI, all limits must be symmetric. Visual KPI does not manage asymmetrical control limits. Visual KPI is not a full SPC implementation system. It helps implement controls on uncorrelated systems in those rare cases you may need to do so.
 
-<Callout type="tip" title="Don't overuse SPC rules">
+<Callout type="warning" title="Don't overuse SPC rules">
 Only enable this on KPIs that require SPC because the calculations add load to the system and unnecessarily increase your cache time.
 </Callout>
 
-## Determining control limits in Visual KPI
+## Determining Control Limits in Visual KPI
 
 Using the Visual KPI Designer, you control how to define SPC KPIs. You can go as straightforward or as complex as you want.
 
@@ -55,7 +60,7 @@ The Visual KPI Designer offers you three options for determining control limits:
 - Define start and end time
 - Define control limits
 
-### Define SPC control limits in Visual KPI
+### Define SPC Control Limits in Visual KPI
 
 SPC is a feature that's bound to a KPI. In other words, you need a KPI first.
 
@@ -71,7 +76,7 @@ This tells Visual KPI whether this KPI will be displayed based on SPC rules or n
 If you want, SPC KPIs can have standard KPI limits and a target in addition to the automatically calculated SPC limits. Users can toggle each of these on or off when viewing the trend.
 </Callout>
 
-### Define a sample size
+### Define a Sample Size
 
 The sample size is the only setting required for defining control limits via SPC in Visual KPI.
 
@@ -87,13 +92,13 @@ Next, decide which option is best for determining control limits for your KPI.
   size="50%"
 />
 
-### Let Visual KPI calculate control limits
+### Let Visual KPI Calculate Control Limits
 
 To let Visual KPI calculate limits for you, leave **Start time** and **End time** blank and leave the **LCL**, **Centre Line**, and **UCL** blank. Visual KPI will use the screen time range on the displayed chart to calculate control limits.
 
 For example, if a user opens a one-week trend in the Visual KPI site, it will use one week of data to calculate the lower and upper limits and the center line.
 
-### Define start and end time
+### Define Start and End Time
 
 Enter start and end times to define control limits based on a time range. Ideally, when setting Start and End times, you want to use a time range when the process was under control. This time range will be used as a basis for control limits.
 
@@ -113,7 +118,7 @@ Start and End times in SPC work similarly to a regular KPI Start and End time. Y
   alt="KPI SPC Dynamic Time"
 />
 
-### Define control limits
+### Define Control Limits
 
 You can manually set control limits or return a control limit based on an Interface that returns values calculated outside Visual KPI.
 

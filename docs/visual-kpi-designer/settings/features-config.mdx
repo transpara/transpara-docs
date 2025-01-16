@@ -2,9 +2,14 @@
 id: features-config
 title: Features & Configuration
 slug: features-config
-description: ''
-tags: ['documentation']
+description: Configure the appearance, behavior, and advanced settings of your Visual KPI site, including website basics, KPI statuses, chart colors, and site-wide features.
+tags: ['settings', 'designer']
 ---
+
+<head>
+  <title>Features & Configuration</title>
+  <meta name="keywords" content="features config, website settings, KPI status, chart colors, Visual KPI, site configuration, customization, advanced settings"/>
+</head>
 
 import PngFont from '@site/src/components/PngFont/PngFont';
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
@@ -42,7 +47,7 @@ Use the following buttons to check the available configurations for each one of 
 
 The Website settings enable you to define basic configuration information for Visual KPI sites. The available configurations are grouped into categories, which you can explore below. Access the [Visual KPI Website](/reference/visual-kpi-designer/site-settings/visual-kpi-website#group-map-settings) reference page to check the descriptions for all settings.
 
-<Callout type="info" title="Website worksheet management">
+<Callout type="info" title="Website Worksheet Management">
 It is important to note that you shouldn't create any additional configuration within the Website worksheet. You should only edit the cells from the **Value** column.
 </Callout>
 
@@ -129,19 +134,19 @@ It is important to note that you shouldn't create any additional configuration w
   </Accordion>
 </AccordionGroup>
 
-### Light & Dark themes
+### Light & Dark Themes
 
 By default, Visual KPI sites have a white background, which is the light theme. However, you can add a dark theme to reduce on-screen glare in environments where a black background would make more sense. In the Website configuration worksheet, find the attribute for **Default Color Theme**. Under the column **Value**, use the pull-down menu to select the light or dark theme as the default.
 
 In addition, to choose the default theme, you can enable users to change between them. For the attribute **Allow Users to Change Color Theme**, select **TRUE** to allow, and **FALSE** if you don't want to enable this option. If you set **TRUE**, Visual KPI site users will see the option to toggle between light and dark themes under the Options icon.
 
-### Timestamp display
+### Timestamp Display
 
 Visual KPI shows your data in near real-time. The timestamp display in the top bar of Visual KPI sites shows you the exact time, down to the second, that the currently viewed data was returned. You can choose to display the timestamp based on the server or client time, even if the server and Visual KPI client are in different time zones.
 
 Use **Allow Users to Change Client Display Time** and **Default Client Display Time** settings to define if users can change the display time and the default display time for your users. By default, the timestamp display in Visual KPI sites is set to **Client Time**, the time indicated by the device on which you access the Visual KPI client. If the timestamp is set to **Server Time** and your server is, for instance, set to New York time, the timestamp in Visual KPI will show New York time.
 
-## KPI status
+## KPI Status
 
 The KPI status configurations enable you to define each existing status's colors, icons, and custom names and abbreviations. In addition, if your company needs customized status, you can update the existing defaults or customize one of the **Custom Status** available. You can change anything and everything.
 
@@ -165,7 +170,7 @@ When you access the KPI status worksheet, you will notice that a new panel with 
 
 You can perform the above configuration through the worksheet as well. In addition, the worksheet allows you to enable a status as a filter, include it in roll-ups, and enable it as an alert. When you define statuses as alerts, you can configure the alert behavior. See [Alert Templates](/visual-kpi-designer/settings/contacts-alerts#configure-alert-templates) for additional information.
 
-## Chart colors
+## Chart Colors
 
 Visual KPI automatically adds default colors to charts. Using Visual KPI Designer, you can configure these chart colors, replacing the defaults with any color.
 
