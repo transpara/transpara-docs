@@ -27,6 +27,10 @@
   ],
   "homepage": "homepage.html",
   "changelog": true,
+  "integrations": {
+    "askAi": {
+      "helpscout": "f188798e-9505-4b74-b363-2a8a0a452fe4"
+    }
   "navbar": [
     {
       "label": "Guides",
