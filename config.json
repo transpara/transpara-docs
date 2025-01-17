@@ -29,8 +29,9 @@
   "changelog": true,
   "integrations": {
     "askAi": {
-      "helpscout": "f188798e-9505-4b74-b363-2a8a0a452fe4"
-    },
+      "helpscout": "bbe370dc-0dba-4c79-85c1-7a0dbc13548c"
+    }
+  },
   "navbar": [
     {
       "label": "Guides",
