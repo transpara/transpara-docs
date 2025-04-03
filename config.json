@@ -22,9 +22,7 @@
     "default": "light",
     "switchOff": true
   },
-  "apiFiles": [
-    "example.yml"
-  ],
+  "apiFiles": [],
   "homepage": "homepage.html",
   "changelog": true,
   "integrations": {
