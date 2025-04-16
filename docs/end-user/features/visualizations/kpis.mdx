@@ -124,7 +124,33 @@ For any group, see how many times notifications have been sent for the KPIs in a
 
 <Image src="media/end-user/features/visualizations/kpis/notification.png"/>
 
-## KPI details view
+## Optional KPI insights
+
+Visual KPI provides detailed context to help you make sense of complex metrics. With features like Influencer KPIs, map views, links, and detail pages, you can quickly uncover what's driving performance, where it is happening, and how it connects to broader operations.
+
+### View influencer KPIs
+
+The Influencer KPI feature provides visibility into the KPIs that significantly affect a parent KPI's performance. This allows users to better understand the driving factors behind changes in complex metrics, such as fuel cost or average temperature. For example, if a top-level KPI such as “Fuel Cost” is behaving unexpectedly, the Influencer KPI feature helps identify which underlying KPIs most affect it—regardless of whether they are direct children in the KPI hierarchy.
+
+The KPI detail view includes a new icon that lets users switch from the standard hierarchical drill-down to an influencer view, which highlights KPIs that have a direct impact on the selected metric.
+
+<Image src="media\end-user\features\visualizations\kpis\influencer-kpis.png"/>
+
+### View links
+
+You'll find links all over Visual KPI. Links can be configured by Visual KPI administrators or users. The link view isn't limited to internal links. You can add external links to software or other tools you often use. Some of the most common places you'll find the link icon (<SvgFont icon="261"/>) are:
+
+1. **Visual KPI objects**: Links from an object, such as a KPI, chart, or group. These are added as an attribute via Visual KPI Designer, and they're tied to the object and available to all profiles.
+2. **Dashboard link widgets**: using the [Customize Dashboard widget](/end-user/features/dashboards), you can tie a link to a Dashboard. However, only profiles with access to these Dashboards will see them.
+3. **Bookmark bar links**: Links on the [Bookmark bar](/end-user/features/profiles) are tied to a profile.
+4. **Navigation bar links**: These links, configured by your admin, are sitewide, and everyone with access to the site will see them.
+5. **KPI detail pages**: Links for the KPI detail view must be configured by your admin.
+
+### View on map
+
+If you click the View on map icon (<SvgFont icon="264"/>), you can view the geographical location of KPIs with associated latitude and longitude data. When this information is provided, users can visualize KPI performance in a spatial context, supporting more informed, location-based analysis. KPI coordinates must be added by the Designer during setup. If coordinates are missing, the KPI will not appear on the map.
+
+### View details
 
 When accessing KPIs, you may want to know more about a particular one. Clicking the **View Details** icon (<SvgFont icon="267"/>), you may find any of the following KPI details:
 
@@ -138,16 +164,6 @@ When accessing KPIs, you may want to know more about a particular one. Clicking 
 - Membership
 
 <Image src="media/end-user/features/visualizations/kpis/kpi-details.gif"/>
-
-## KPI link view
-
-You'll find links all over Visual KPI. Links can be configured by Visual KPI administrators or users. The link view isn't limited to internal links. You can add external links to software or other tools you often use. Some of the most common places you'll find the Visual KPI links view are:
-
-1. **Visual KPI objects**: Links from an object, such as a KPI, chart, or group. These are added as an attribute via Visual KPI Designer, and they're tied to the object and available to all profiles.
-2. **Dashboard link widgets**: using the [Customize Dashboard widget](/end-user/features/dashboards), you can tie a link to a Dashboard. However, only profiles with access to these Dashboards will see them.
-3. **Bookmark bar links**: Links on the [Bookmark bar](/end-user/features/profiles) are tied to a profile.
-4. **Navigation bar links**: These links, configured by your admin, are sitewide, and everyone with access to the site will see them.
-5. **KPI detail pages**: Links for the KPI detail view must be configured by your admin.
 
 ## What's next?
 
