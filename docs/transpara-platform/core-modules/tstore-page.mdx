@@ -1,0 +1,68 @@
+---
+title: tStore
+description: Learn how tStore manages time-series and historical data in the Transpara Platform.
+slug: core-modules/tstore
+---
+
+
+tStore is the Transpara Platform's time-series data engine. It provides flexible, high-performance storage for streaming and historical data, acting both as an analytics cache and an optional primary data source.
+
+Built on [TimescaleDB](https://www.timescale.com/), tStore is optimized for long-running, high-frequency, and large-volume calculations. It enables the platform to deliver fast, consistent results—whether working with real-time sensor streams or batch-imported datasets.
+
+
+## What it does
+
+tStore is responsible for:
+- Storing time-series and performance data from multiple sources.
+- Caching results from real-time calculations and analytics.
+- Serving as an optional long-term database when live access is unavailable or impractical.
+- Reconstructing historical views using static files, spreadsheets, or other archived data.
+
+
+## How it works
+
+tStore operates as a scalable storage layer within the platform. It receives inputs from:
+- Live data sources (via pass-through interfaces and extractors).
+- Processed results from tCalc.
+- Uploaded or batch-imported files (CSV, JSON, text logs).
+
+Data is organized into high-resolution time-series tables, indexed for fast querying. The system automatically aggregates data based on frequency, use case, and retention settings—allowing analytics to scale without manual tuning.
+
+tStore integrates directly with:
+- **tCalc** for on-demand and event-driven computations.
+- **tModel** to ensure stored data is contextually mapped to your semantic model.
+- **tStudio** for managing storage settings, retention, and upload options.
+
+
+## Main features
+
+| Feature                          | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| **Built on TimescaleDB**         | Combines SQL flexibility with time-series performance.                     |
+| **Optional persistence**         | Store data when needed; skip it when live data is sufficient.              |
+| **Analytics cache**              | Accelerates repeated calculations by storing prior results.                |
+| **History from files**           | Import CSV, Excel, JSON, or text to recreate past performance data.        |
+| **Automatic aggregation**        | Supports downsampling and long-period queries without performance loss.    |
+| **High availability**            | Can be scaled and replicated in container-based deployments.               |
+| **Supports structured queries**  | Easily accessed by tCalc, dashboards, or external tools.                 |
+
+
+## Architecture diagram
+
+> *Figure: Role of tStore in the Transpara architecture*
+> *(Insert relevant section of the April 2025 or Architecture diagram showing tStore and its connections to tCalc, tModel, and interfaces)*
+
+
+## When to use tStore
+
+Use tStore when you need to:
+- Store and analyze large volumes of time-series data over time.
+- Reuse previously calculated results for performance optimization.
+- Preserve and visualize historical performance from non-streaming sources.
+- Support dashboards that must display recent trends or full history.
+
+
+## Next steps
+
+Learn how real-time logic is applied using [tCalc](../tcalc), or go back to the [Core Modules](../core-modules) page.
+

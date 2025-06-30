@@ -1,0 +1,91 @@
+---
+title: Architecture
+description: Understand how the Transpara Platform works—from external data sources to real-time visualization—and how its modular components interact.
+slug: architecture
+---
+
+
+The Transpara Platform is built on a modular, event-driven architecture that delivers real-time operational intelligence at scale. It integrates data from hundreds of external sources, applies analytics in motion, and presents results through intuitive interfaces accessible on any device.
+
+This page explains how the system is structured, how its components work together, and how it differs from traditional architectures.
+
+## High-level architecture
+
+At the foundation of the platform is the **Virtual Data Lake (VDL)**—a dynamic layer that connects to data without requiring migration. Data remains in-place but can be read, queried, or copied into Transpara if desired.
+
+From there, modular components manage and process the data:
+
+- **Data ingestion**: External sources send raw data into the system via extractors and interfaces.
+- **tStore** and **tGraph**: Data is cached, persisted, or modeled as needed.
+- **tCalc**: Event-driven calculations process raw and structured data in real time.
+- **tDataGateway**: Serves as the system’s API, enabling secure data delivery to user interfaces and third-party systems.
+- **tView** and **tStudio**: Users interact with the results—through dashboards, alerts, collaboration tools, and system configuration.
+
+<Image 
+  src="media/transpara-platform/Archi-diagram2.png" 
+  alt="Diagram of the technical architecture"
+/>
+
+## Data flow
+
+The platform's data pipeline is designed to support high-volume, high-frequency, and heterogeneous inputs.
+
+**1. External Data Sources**  
+The Transpara Platform connects to a wide range of data sources, including real-time systems, databases, and external services. Supported examples include AVEVA PI, MySQL, ODBC-compliant systems, Aspentech, GE platforms, and open-source tools like Telegraf.
+
+For a complete list of supported data sources, see the Supported Data Sources (link) page.
+
+**2. Ingestion and Interfaces**  
+Each source is connected via a **Pass-through Interface** or **Data Extractor**, which standardizes and forwards data into the platform.
+
+**3. Storage and Structure**
+- **tStore** handles time-series and historical data. It stores data from real-time interfaces or uploaded files, acting as both an analytics cache and an optional primary data source. It enables fast reading, aggregation, and persistence—supporting high-frequency, long-running calculations, and large-scale data workloads.
+
+**4. Semantic Graph Layer**
+- **tModel** organizes operational context by mapping data to a semantic graph. Built on tGraph (a MEM Graph-powered database), it defines relationships between assets, KPIs, and systems. This model provides the structure used by tCalc, tStudio, and tView, enabling consistent, reusable logic across the platform.
+
+**5. Real-time Calculations**
+- **tCalc** performs logic-based processing using structured data from tStore and contextual relationships from tModel. It runs calculations triggered by events, schedules, or thresholds, using reusable templates and statements. Results are produced as KPIs, alerts, or other outputs, and can include AI-powered computations when needed.
+
+**6. Delivery and Visualization**
+-  Dashboards and KPIs are consumed in tView or configured in tStudio, providing real-time visibility across devices.
+-  Users receive alerts based on thresholds, anomalies, or events—delivered via mobile, email, or integrated messaging channels.
+-  The platform supports collaborative workflows, allowing users to comment directly on KPIs, visualizations, and dashboards. This enables shared context, faster response times, and aligned decision-making across teams.
+
+<Callout type="info">
+The sequence above is presented for clarity and does not represent a required execution order within the platform. Transpara's modular architecture allows components to operate independently or concurrently, depending on your data flow, configuration, and preferences.*
+</Callout>
+
+## Metadata and Automated Configuration
+
+The architecture supports metadata from external systems through the **Remote Context Service (RCS)**. This enables:
+- Reading and synchronizing metadata (i.e.: hierarchies) from tools like Aviva PI AF, SQL/ODBC, VMware, Zabbix, and AspenTech Inmation.
+- Reusing existing context and definitions inside the Transpara semantic model.
+- Can be achieved through automated means, mannually, or both.
+- Connecting disparate systems under a **Unified Naming Space (UNS)**.
+
+**Event Brokers** (MQTT-based) ensure that updates propagate in real-time across modules, including user dashboards and integrations.
+
+## Optional data migration (Virtual Data Lake)
+
+A key advantage of Transpara is that **data migration is optional**:
+- You can read and analyze data **in place** via live connections (pass-through interface concept).
+- If needed, you can also **copy or cache data** into tStore for persistence, performance, or data fusion (extraction concept).
+- This approach eliminates the need for expensive, risky, and time-consuming data migration and ETL projects.
+
+## AI integration
+
+Artificial intelligence is embedded throughout the architecture:
+
+- **tStudio** includes AI-assisted modeling tools for building relationships, defining KPIs, and suggesting calculations.
+- **tCalc** supports Python-based logic and can integrate external or internal AI models to:
+  - Create calculations
+  - Detect anomalies
+  - Perform predictive analytics
+  - Run advanced statistical calculations
+- AI features are available both **on-premise** and in the costumer's **cloud**, depending on your infrastructure needs.
+- Options between local, self-contained models (i.e.: Ollama) and public models (i.e.: ChatGPT).
+
+## Next steps
+
+Explore how each component works in detail on the [Core Modules](../core-modules) page.

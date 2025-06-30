@@ -1,0 +1,117 @@
+---
+title: tCalc
+description: Learn how tCalc enables real-time, event-triggered calculations across the Transpara Platform.
+slug: core-modules/tcalc
+---
+
+
+tCalc is Transpara's event-driven calculation engine, designed to deliver fast, scalable, and flexible data processing across distributed systems. It enables users to define, execute, and manage real-time or scheduled calculations triggered by system events, time schedules, or manual input.
+
+Unlike traditional calculators, tCalc acts as an **event-driven workflow engine**, capable of integrating with external services, AI/ML models, and APIs. Each calculation runs within the semantic model defined by tModel, interacts with live or historical data through the tDataGateway, and stores results in tStore or other configured destinations.
+
+## What tCalc Does
+
+tCalc transforms raw and modeled data into actionable insights by:
+
+- Running calculations based on schedules, events, or data changes.
+- Applying reusable templates with versioned statements and logic.
+- Dynamically mapping inputs from diverse sources via the Virtual Data Lake.
+- Executing workflows, including external API calls, email notifications, and AI model integrations.
+- Writing results to time-series databases or external systems via flexible output routing.
+
+tCalc supports simple math, advanced analytics, event detection, machine learning, and real-world process logic—scaling from basic KPIs to complex industrial workflows.
+
+## Key Features
+
+- **Event-Driven Processing**: React instantly to changes in input data—no unnecessary polling or wasted computation.
+- **Scalable Architecture**: Dynamically distributes workload across local or remote tCalc workers without skipping executions or causing latency.
+- **Workflow Integration**: Go beyond math—run sequences, call APIs, use AI models, trigger alerts, or notify users.
+- **Reusable Templates**: Define calculation logic once and apply it across many assets with version control.
+- **Custom Triggers**: Use any combination of time-based (including solar patterns) or data-based triggers.
+- **Flexible Inputs/Outputs**: Reference any number of source variables, from any system, and write results wherever needed.
+- **Backfill Support**: Recalculate historical data to ensure consistency when logic changes.
+- **AI & ML Integration**: Include Python logic and model inference in calculation steps.
+
+## How It Works
+
+tCalc uses a modular, distributed approach:
+
+### 1. Define Inputs
+
+Inputs are connected via the tDataGateway, using lookup mappings defined in the asset model (tModel). Inputs may come from:
+
+- Live streaming sources (e.g., MQTT, PI, SQL)
+- Historical data in tStore or other time-series systems
+- External APIs or AI models
+
+Each input variable is mapped using standard protocols, enabling seamless data access regardless of origin.
+
+### 2. Configure Triggers
+
+Calculations can be triggered by:
+
+- Data changes (event-driven)
+- Custom time schedules (e.g., every minute, every Monday at 9 a.m., solar cycles)
+- Manual execution
+- Any combination of the above
+
+Multiple triggers can be combined to fit operational needs.
+
+### 3. Build Templates and Statements
+
+Templates define the logic and structure of a calculation. Each template includes:
+
+- **Statements**: Ordered steps written using a no-code UI or Python logic.
+- **Input/Output variables**: Bound to attributes in the object hierarchy.
+- **Conditions**: Optional logic for when statements should run.
+- **Template pathing**: Allows template reuse across similar objects (e.g., assets with the same attribute names).
+
+Templates are versioned, enabling safe testing and updates across the system.
+
+### 4. Execute and Scale
+
+Once deployed, tCalc:
+
+- Evaluates triggers in real time
+- Distributes tasks to available workers
+- Executes statements in order
+- Produces one or more output variables
+- Writes results through the tDataGateway to the configured destinations (e.g., tStore, SQL, PI, cloud APIs)
+
+Workers can be scaled horizontally—on-prem or via remote nodes—to meet demand.
+
+### 5. Visualize and Manage
+
+Outputs from tCalc power KPIs, dashboards, and alerts in tView, and are fully traceable and testable within tStudio. Authors can:
+
+- View calculation previews over time
+- Perform batch backfills
+- Inspect logs and debug errors
+- Monitor worker performance and scheduling
+
+## Common Use Cases
+
+- KPI status calculations (e.g., Actual vs. Limit)
+- Batch ID and phase tracking
+- OEE and downtime metrics
+- Event and anomaly detection
+- Predictive maintenance using ML models
+- Smart averages and conditional filters
+- Notifications based on thresholds or custom logic
+
+## Architecture and Data Flow
+
+tCalc connects to:
+
+- **tDataGateway** for input and output data across all systems
+- **tEvent Broker** (MQTT) for real-time event triggers
+- **tModel** for hierarchical structure and semantic mapping
+
+It does **not** access tStore or external interfaces directly—everything is abstracted via tDataGateway to maintain decoupling and flexibility.
+
+All results are routed based on the configured destination of each attribute, whether that's tStore, SQL, or other systems. This enables seamless integration while maintaining data governance and control.
+
+## Summary
+
+tCalc is more than a calculator. It's a distributed, extensible, AI-capable execution engine for real-time operations. Whether you're calculating a rolling average, forecasting asset failure, or coordinating a complex set of rules across a global enterprise, tCalc provides the power and flexibility to handle it.
+

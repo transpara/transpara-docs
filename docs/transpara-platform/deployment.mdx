@@ -1,0 +1,92 @@
+---
+title: Deployment
+description: Learn how to deploy the Transpara Platform using containerized infrastructure, hybrid environments, and secure configurations.
+slug: deployment
+---
+
+
+Transpara is designed to be deployed flexibly—on-premise, in the cloud, or in hybrid environments—using container-based technologies that support scalability, modularity, and high availability. This page explains supported deployment models, configuration strategies, and system architecture.
+
+## Containerized infrastructure
+
+Transpara is packaged using **Docker containers** and orchestrated through **Kubernetes**, enabling modular deployment across any infrastructure.
+
+### Benefits:
+- **Scalable**: Add or remove components based on load and data volume.
+- **High availability**: Redundant instances and failover support.
+- **Modular**: Deploy only the components you need (e.g., tCalc, tView, tStudio).
+- **Environment agnostic**: Compatible with bare metal, VMs, or managed Kubernetes services.
+
+### Components typically containerized:
+- tStore
+- tCalc
+- tDataGateway
+- tModel (via tGraph)
+- tStudio, tView
+- tEventBroker
+- tAuth
+- Monitoring tools
+
+📌 **Diagram placement**  
+> *Figure: Example Kubernetes-based deployment architecture*  
+> *(Insert a diagram from the April 2025 deck or V6 Architecture document showing container layout and service mesh)*
+
+
+## On-premise vs cloud deployment
+
+Transpara supports multiple deployment environments. You can host it in:
+
+### On-premise
+- Full control over security and data governance
+- Ideal for regulated industries (e.g., pharma, energy)
+- Integration with local systems like SCADA, DCS, or PI
+
+### Cloud (AWS, Azure, GCP)
+- Elastic infrastructure scaling
+- Easy integration with cloud-native services
+- Managed Kubernetes and container services support (e.g., EKS, AKS, GKE)
+
+### Hybrid
+- Combine cloud compute with on-prem data storage
+- Use the **Bridge Release** model to extend legacy systems gradually
+
+
+## Bridge release model
+
+The **Bridge Release** strategy allows for **gradual migration** from legacy systems to Transpara. You can run Transpara in parallel with existing tools (e.g., traditional historians, Excel-based workflows) without full replacement.
+
+This approach supports:
+- Side-by-side evaluation and rollout
+- Continuous syncing of metadata and data streams
+- Progressive onboarding of teams and departments
+- Minimal risk of disruption
+
+## Security and system health
+
+Transpara includes built-in security, authentication, and monitoring capabilities to ensure robust system operation.
+
+### Authentication (tAuth)
+- Supports LDAP, Active Directory, OpenID, OAuth 2.0, and SAML 2.0
+- Centralized user management
+- Role-based access control for modules and views
+
+### Monitoring
+- Health status dashboards within tStudio
+- Logging and alerting per service container
+- Integration with third-party tools (e.g., Prometheus, Grafana)
+
+## Summary
+
+| Deployment Feature        | Details                                                     |
+|---------------------------|-------------------------------------------------------------|
+| **Core platform**         | Docker + Kubernetes                                          |
+| **Cloud support**         | AWS, Azure, GCP, hybrid models                               |
+| **Bridge release**        | Run in parallel with legacy tools                            |
+| **Security**              | Enterprise SSO, RBAC, centralized auth via `tAuth`           |
+| **System health**         | Built-in and external monitoring options                     |
+| **Infrastructure options**| Fully modular, scalable, and high-availability compatible    |
+
+
+## Next steps
+
+Explore how to model your system in [tStudio](../core-modules/tstudio), or return to the [Overview](../overview) to revisit the platform’s architecture and goals.

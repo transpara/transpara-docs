@@ -243,6 +243,26 @@
           ]
         },
         {
+          "categoryName": "transpara-platform",
+          "pages": [
+            "transpara-platform/overview",
+            "transpara-platform/architecture",
+            {
+              "groupName": "Core Modules",
+              "page": "transpara-platform/core-modules/core-modules-page",
+              "subpages": [
+                "transpara-platform/core-modules/tstore-page",
+                "transpara-platform/core-modules/tcalc-page",
+                "transpara-platform/core-modules/tmodel-page",
+                "transpara-platform/core-modules/tstudio-page",
+                "transpara-platform/core-modules/tview-page"
+              ]
+            },
+            "transpara-platform/deployment",
+            "transpara-platform/system-requirements"
+          ]
+        },
+        {
           "categoryName": "Reference Guides",
           "pages": [
             {

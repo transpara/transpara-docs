@@ -1,0 +1,63 @@
+---
+title: tView
+description: Learn how tView enables real-time KPI visualization and collaboration across devices in the Transpara Platform.
+slug: core-modules/tview
+---
+
+
+tView is the Transpara Platform’s real-time visualization and collaboration interface. It displays KPIs, metrics, alerts, and dashboards tailored for decision-makers, engineers, and field operators—on any device.
+
+Designed for speed and clarity, tView lets users monitor performance, detect anomalies, and collaborate across teams without technical training. It’s fully mobile-optimized and updates live via the platform’s event-driven architecture.
+
+
+## What it does
+
+tView transforms calculated and modeled data into intuitive visualizations. It provides:
+- Real-time dashboards that reflect the current state of operations.
+- Alerts and notifications for threshold breaches or anomalies.
+- Interactive charts and tables for exploring trends and comparisons.
+- A collaborative interface where users can annotate, share, and discuss data.
+
+It’s where insights become actions, supporting rapid decision-making on the shop floor, in the control room, or in the field.
+
+
+## How it works
+
+tView receives its data through two core platform components:
+
+- **tDataGateway**: Serves as the unified API layer, delivering structured data from tCalc, tStore, and tModel.
+- **tEventBroker**: Sends real-time updates via MQTT, ensuring dashboards stay synchronized with live system events.
+
+Dashboards are configured in tStudio and automatically reflect the models, templates, and KPIs defined in the platform. Users can personalize views, subscribe to alerts, and access the interface securely from desktop or mobile devices.
+
+
+## Main features
+
+| Feature                           | Description                                                                 |
+|-----------------------------------|-----------------------------------------------------------------------------|
+| **Real-time dashboards**          | Automatically updated via tEventBroker for live status tracking.           |
+| **Mobile-friendly interface**     | Designed for any screen size, with full functionality on tablets and phones.|
+| **Collaboration tools**           | Share dashboards, add notes, and discuss insights across teams.            |
+| **Alerting and subscriptions**    | Receive push notifications, SMS, or email based on KPI thresholds.         |
+| **KPI visualizations**            | Use color-coded statuses, gauges, charts, and tables to interpret data.    |
+| **Context-aware views**           | Automatically reflects your asset hierarchy and user access level.         |
+| **Integration ready**             | Data can be exported to Excel, Power BI, Grafana, and other tools.         |
+
+
+## Interface screenshot
+
+> *Figure: Example tView dashboard displaying KPIs, alerts, and trend charts*  
+> *(Insert screenshot or mockup from the April 2025 deck showing tView in use on desktop and mobile)*
+
+
+## Example use cases
+
+- View current energy usage across multiple plants from a mobile device.
+- Receive alerts when equipment performance drops below standard.
+- Track KPIs like OEE, downtime, or output in real time.
+- Share insights across field teams and supervisors for faster responses.
+
+
+## Next steps
+
+Return to the [Core Modules](../core-modules) overview, or explore how dashboards and templates are built in [tStudio](../tstudio).

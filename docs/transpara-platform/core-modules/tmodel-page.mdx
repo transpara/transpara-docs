@@ -1,0 +1,58 @@
+---
+title: tModel
+description: Learn how tModel provides the semantic modeling layer for structuring KPIs, assets, and metadata in the Transpara Platform.
+slug: core-modules/tmodel
+---
+
+
+tModel is the semantic modeling layer of the Transpara Platform. It structures your data by defining relationships between assets, KPIs, metrics, templates, and organizational hierarchies. This model-driven foundation enables consistency, scalability, and reusability across the entire system.
+
+tModel is built on top of tGraph, a high-performance graph database powered by MEM Graph. It stores and links nodes (representing entities like machines, sensors, KPIs, or systems) to reflect your operational structure.
+
+
+## What it does
+
+tModel enables you to:
+- Build a digital representation of your physical and logical systems.
+- Assign KPIs, alerts, and calculation logic to specific assets or groups.
+- Apply reusable templates to multiple objects using a unified structure.
+- Define hierarchies, relationships, and naming conventions across your enterprise.
+
+This graph-based structure is essential for complex environments where context, relationships, and inheritance matter—like manufacturing lines, power grids, or multi-site operations.
+
+
+## How it works
+
+tModel stores and organizes data using nodes and edges, where:
+- **Nodes** represent physical or logical items (e.g., pumps, sensors, departments, KPIs).
+- **Edges** define relationships (e.g., "is part of", "monitors", "calculates").
+
+The model is maintained in tGraph, the underlying graph database. Users configure and edit it through tStudio, which provides tools to:
+- Import external metadata (e.g., from PI AF, SQL, or spreadsheets).
+- Create new nodes and link them using standard relationship types.
+- Apply calculation templates and visualization settings to objects.
+
+Once the model is created, it powers everything else—calculations in tCalc, visualizations in tView, and context-aware analytics.
+
+
+## Main features
+
+| Feature                             | Description                                                                    |
+|-------------------------------------|--------------------------------------------------------------------------------|
+| **Graph-based modeling**            | Uses a flexible, scalable graph to represent real-world systems.              |
+| **Unified Naming Space (UNS)**      | Enables consistent naming and referencing across all components.             |
+| **Reusable templates**              | Apply standard logic or display settings across many assets or KPIs.         |
+| **Inheritance and hierarchy**       | Child nodes can inherit attributes or calculations from parent structures.   |
+| **External metadata import**        | Supports automated model creation from sources like PI AF or SQL.            |
+| **Tied to tCalc and tView**         | Provides structure and context for calculations and dashboards.              |
+
+
+## Architecture diagram
+
+> *Figure: tModel as the core semantic layer of the Transpara Platform*  
+> *(Insert architecture diagram or graph modeling screenshot from tStudio showing hierarchy of objects and KPI relationships)*
+
+
+## Next steps
+
+ Learn how to configure the system using [tStudio](../tstudio), or return to the [Core Modules](../core-modules) overview.
