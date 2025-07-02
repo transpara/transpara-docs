@@ -7,7 +7,7 @@ slug: core-modules/tcalc
 
 tCalc is Transpara's event-driven calculation engine, designed to deliver fast, scalable, and flexible data processing across distributed systems. It enables users to define, execute, and manage real-time or scheduled calculations triggered by system events, time schedules, or manual input.
 
-Unlike traditional calculators, tCalc acts as an **event-driven workflow engine**, capable of integrating with external services, AI/ML models, and APIs. Each calculation runs within the semantic model defined by tModel, interacts with live or historical data through the tDataGateway, and stores results in tStore or other configured destinations.
+Unlike traditional calculators, tCalc acts as an event-driven workflow engine, capable of integrating with external services, AI/ML models, and APIs. Each calculation runs within the semantic model defined by tModel, interacts with live or historical data through the tDataGateway, and stores results in tStore or other configured destinations.
 
 ## What tCalc Does
 
@@ -19,13 +19,13 @@ tCalc transforms raw and modeled data into actionable insights by:
 - Executing workflows, including external API calls, email notifications, and AI model integrations.
 - Writing results to time-series databases or external systems via flexible output routing.
 
-tCalc supports simple math, advanced analytics, event detection, machine learning, and real-world process logic—scaling from basic KPIs to complex industrial workflows.
+tCalc supports simple math, advanced analytics, event detection, machine learning, and real-world process logic, scaling from basic KPIs to complex industrial workflows.
 
 ## Key Features
 
-- **Event-Driven Processing**: React instantly to changes in input data—no unnecessary polling or wasted computation.
+- **Event-Driven Processing**: React instantly to changes in input data, no unnecessary polling or wasted computation.
 - **Scalable Architecture**: Dynamically distributes workload across local or remote tCalc workers without skipping executions or causing latency.
-- **Workflow Integration**: Go beyond math—run sequences, call APIs, use AI models, trigger alerts, or notify users.
+- **Workflow Integration**: Go beyond math, run sequences, call APIs, use AI models, trigger alerts, or notify users.
 - **Reusable Templates**: Define calculation logic once and apply it across many assets with version control.
 - **Custom Triggers**: Use any combination of time-based (including solar patterns) or data-based triggers.
 - **Flexible Inputs/Outputs**: Reference any number of source variables, from any system, and write results wherever needed.
@@ -78,7 +78,7 @@ Once deployed, tCalc:
 - Produces one or more output variables
 - Writes results through the tDataGateway to the configured destinations (e.g., tStore, SQL, PI, cloud APIs)
 
-Workers can be scaled horizontally—on-prem or via remote nodes—to meet demand.
+Workers can be scaled horizontally, on-prem or via remote nodes, to meet demand.
 
 ### 5. Visualize and Manage
 
@@ -107,11 +107,11 @@ tCalc connects to:
 - **tEvent Broker** (MQTT) for real-time event triggers
 - **tModel** for hierarchical structure and semantic mapping
 
-It does **not** access tStore or external interfaces directly—everything is abstracted via tDataGateway to maintain decoupling and flexibility.
+It does **not** access tStore or external interfaces directly, everything is abstracted via tDataGateway to maintain decoupling and flexibility.
 
 All results are routed based on the configured destination of each attribute, whether that's tStore, SQL, or other systems. This enables seamless integration while maintaining data governance and control.
 
-## Summary
+## What's next?
 
-tCalc is more than a calculator. It's a distributed, extensible, AI-capable execution engine for real-time operations. Whether you're calculating a rolling average, forecasting asset failure, or coordinating a complex set of rules across a global enterprise, tCalc provides the power and flexibility to handle it.
+Learn more about [tModel](../tmodel), or return to the [Core Modules](../core-modules) overview.
 

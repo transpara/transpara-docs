@@ -1,6 +1,6 @@
 ---
 title: Architecture
-description: Understand how the Transpara Platform works—from external data sources to real-time visualization—and how its modular components interact.
+description: Understand how the Transpara Platform works, from external data sources to real-time visualization, and how its modular components interact.
 slug: architecture
 ---
 
@@ -11,15 +11,15 @@ This page explains how the system is structured, how its components work togethe
 
 ## High-level architecture
 
-At the foundation of the platform is the **Virtual Data Lake (VDL)**—a dynamic layer that connects to data without requiring migration. Data remains in-place but can be read, queried, or copied into Transpara if desired.
+At the foundation of the platform is the Virtual Data Lake (VDL),a dynamic layer that connects to data without requiring migration. Data remains in-place but can be read, queried, or copied into Transpara if desired.
 
 From there, modular components manage and process the data:
 
 - **Data ingestion**: External sources send raw data into the system via extractors and interfaces.
 - **tStore** and **tGraph**: Data is cached, persisted, or modeled as needed.
 - **tCalc**: Event-driven calculations process raw and structured data in real time.
-- **tDataGateway**: Serves as the system’s API, enabling secure data delivery to user interfaces and third-party systems.
-- **tView** and **tStudio**: Users interact with the results—through dashboards, alerts, collaboration tools, and system configuration.
+- **tDataGateway**: Serves as the system's API, enabling secure data delivery to user interfaces and third-party systems.
+- **tView** and **tStudio**: Users interact with the results, through dashboards, alerts, collaboration tools, and system configuration.
 
 <Image 
   src="media/transpara-platform/Archi-diagram2.png" 
@@ -36,10 +36,10 @@ The Transpara Platform connects to a wide range of data sources, including real-
 For a complete list of supported data sources, see the Supported Data Sources (link) page.
 
 **2. Ingestion and Interfaces**  
-Each source is connected via a **Pass-through Interface** or **Data Extractor**, which standardizes and forwards data into the platform.
+Each source is connected via a Pass-through Interface or Data Extractor, which standardizes and forwards data into the platform.
 
 **3. Storage and Structure**
-- **tStore** handles time-series and historical data. It stores data from real-time interfaces or uploaded files, acting as both an analytics cache and an optional primary data source. It enables fast reading, aggregation, and persistence—supporting high-frequency, long-running calculations, and large-scale data workloads.
+- **tStore** handles time-series and historical data. It stores data from real-time interfaces or uploaded files, acting as both an analytics cache and an optional primary data source. It enables fast reading, aggregation, and persistence, supporting high-frequency, long-running calculations, and large-scale data workloads.
 
 **4. Semantic Graph Layer**
 - **tModel** organizes operational context by mapping data to a semantic graph. Built on tGraph (a MEM Graph-powered database), it defines relationships between assets, KPIs, and systems. This model provides the structure used by tCalc, tStudio, and tView, enabling consistent, reusable logic across the platform.
@@ -49,7 +49,7 @@ Each source is connected via a **Pass-through Interface** or **Data Extractor**,
 
 **6. Delivery and Visualization**
 -  Dashboards and KPIs are consumed in tView or configured in tStudio, providing real-time visibility across devices.
--  Users receive alerts based on thresholds, anomalies, or events—delivered via mobile, email, or integrated messaging channels.
+-  Users receive alerts based on thresholds, anomalies, or events, delivered via mobile, email, or integrated messaging channels.
 -  The platform supports collaborative workflows, allowing users to comment directly on KPIs, visualizations, and dashboards. This enables shared context, faster response times, and aligned decision-making across teams.
 
 <Callout type="note" title="Note">
@@ -58,19 +58,19 @@ The sequence above is presented for clarity and does not represent a required ex
 
 ## Metadata and Automated Configuration
 
-The architecture supports metadata from external systems through the **Remote Context Service (RCS)**. This enables:
+The architecture supports metadata from external systems through the Remote Context Service (RCS). This enables:
 - Reading and synchronizing metadata (i.e.: hierarchies) from tools like Aviva PI AF, SQL/ODBC, VMware, Zabbix, and AspenTech Inmation.
 - Reusing existing context and definitions inside the Transpara semantic model.
 - Can be achieved through automated means, mannually, or both.
-- Connecting disparate systems under a **Unified Naming Space (UNS)**.
+- Connecting disparate systems under a Unified Naming Space (UNS).
 
-**Event Brokers** (MQTT-based) ensure that updates propagate in real-time across modules, including user dashboards and integrations.
+Event Brokers (MQTT-based) ensure that updates propagate in real-time across modules, including user dashboards and integrations.
 
 ## Optional data migration (Virtual Data Lake)
 
-A key advantage of Transpara is that **data migration is optional**:
-- You can read and analyze data **in place** via live connections (pass-through interface concept).
-- If needed, you can also **copy or cache data** into tStore for persistence, performance, or data fusion (extraction concept).
+A key advantage of Transpara is that data migration is optional:
+- You can read and analyze data in place via live connections (pass-through interface concept).
+- If needed, you can also copy or cache data into tStore for persistence, performance, or data fusion (extraction concept).
 - This approach eliminates the need for expensive, risky, and time-consuming data migration and ETL projects.
 
 ## AI integration
@@ -83,7 +83,7 @@ Artificial intelligence is embedded throughout the architecture:
   - Detect anomalies
   - Perform predictive analytics
   - Run advanced statistical calculations
-- AI features are available both **on-premise** and in the costumer's **cloud**, depending on your infrastructure needs.
+- AI features are available both on-premise and in the costumer's cloud, depending on your infrastructure needs.
 - Options between local, self-contained models (i.e.: Ollama) and public models (i.e.: ChatGPT).
 
 ## What's next?
