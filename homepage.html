@@ -9,15 +9,19 @@
     /* New Platform Banner Styles */
     .platform-banner {
       display: block;
-      width: 100%;
-      background-image: url('/media/homepage/card4.png');
+      background-image: url('/media/homepage/banner-transpara.png');
       background-size: cover;
       background-position: center;
       padding: 2.5rem 0;
       text-align: center;
       text-decoration: none;
-      position: relative;
       color: white;
+
+      /* Make banner full-width */
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
     }
 
     /* Overlay to darken the background image for better text contrast */
@@ -28,7 +32,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.0);
       z-index: 1;
       transition: background-color 0.3s ease;
     }
@@ -39,10 +43,16 @@
 
     .platform-banner h3 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 600;
       position: relative;
       z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .platform-banner:hover h3 {
+      transform: scale(1.02);
+      /* Increase size on hover */
     }
 
     @media (max-width: 768px) {
