@@ -4,6 +4,19 @@ description: Review the recommended hardware requirements needed to deploy and r
 slug: system-requirements
 ---
 
+
+```mermaid
+flowchart LR
+    A([Start]) --> B[Requirements]
+    B --> C[Install K3s]
+    C --> D[Install TSYSTEM]
+    D --> E[Navigate TSTUDIO]
+    E --> F([Done])
+style B fill:#ffeb3b,stroke:#333,stroke-width:2px,color:#000
+```
+
+This guide outlines the recommended hardware and software requirements, along with setup instructions for deploying tSystem on Kubernetes. Each section provides OS-specific steps for configuring a reliable environment, followed by optional steps for advanced setups.
+
 ## Hardware Requirements
 
 - **Operating System**:

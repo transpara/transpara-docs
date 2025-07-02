@@ -6,6 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /* New Platform Banner Styles */
+    .platform-banner {
+      display: block;
+      background-image: url('/media/homepage/banner-transpara.png');
+      background-size: cover;
+      background-position: center;
+      padding: 2.5rem 0;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+
+      /* Make banner full-width */
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
+    }
+
+    /* Overlay to darken the background image for better text contrast */
+    .platform-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.0);
+      z-index: 1;
+      transition: background-color 0.3s ease;
+    }
+
+    .platform-banner:hover::before {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .platform-banner h3 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .platform-banner:hover h3 {
+      transform: scale(1.02);
+      /* Increase size on hover */
+    }
+
+    @media (max-width: 768px) {
+      .platform-banner h3 {
+        font-size: 1.8rem;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+      .platform-banner h3 {
+        font-size: 1.5rem;
+      }
+
+      .platform-banner {
+        padding: 2rem 0;
+      }
+    }
+
     @media (max-width: 1440px) and (min-width: 996px) {
       main {
         padding-left: 1.3rem;
@@ -426,6 +492,9 @@
 </head>
 
 <body>
+  <a href="/transpara-platform/overview/" class="platform-banner">
+    <h3>Explore the new Transpara Platform</h3>
+  </a>
   <header class="heroBanner">
     <div class="container header_container">
       <div class="first_column">
