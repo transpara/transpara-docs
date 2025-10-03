@@ -1,0 +1,406 @@
+---
+title: Functions and Formulas
+slug: /reference/visual-kpi-designer/functions-and-formulas
+description: Reference of supported functions, formulas, operators, and constants in Visual KPI.
+tags: ['Functions Reference']
+---
+
+Visual KPI supports an extensive list of functions and operators, including:
+
+- Math and Stat functions
+- Logical functions
+- Text functions
+- Lookup functions
+- Date and Time functions
+
+## Syntax and Supported Expressions
+
+All equations in Visual KPI are of the format `<[expression]>`, where the expression is defined as below. Tag names or other data references are enclosed in square brackets, e.g. `[tag1]`. For example, a simple equation might look like this: `<IF([tag1]>50, [tag2]/[tag3], 75)>`. This equation will return the value of tag2 divided by the value of tag3 in all displays whenever the value of tag1 is greater than 50, otherwise it will return the constant value 75.
+
+- Variables of any type (native or user-defined).
+- Nested functions e.g.: cos(x + sin(y + z – tan(…))).
+- String literals enclosed by double quotes e.g. “my string”.
+- String literals use ‘\’ as the escape character.
+- Strings may contain ‘(‘, ‘)’ characters as well as text similar to variable and function names. These do not affect the processing of the expression.
+- Date literals enclosed by hash symbols: #yyyy-mm-dd#
+- The following case insensitive keywords ‘True’ and ‘False’ to represent Boolean values.
+- Variable and function names are case insensitive.
+
+## Math and Stat functions
+
+| ABS(double) | #colspan# |
+| --- | --- |
+| Return Type | double |
+| Description | Absolute value |
+|  |  |
+| ACOS(double) | #colspan# |
+| Return Type | double |
+| Description | Arccosine |
+|  |  |
+| ACOT(double) | #colspan# |
+| Return Type | double |
+| Description | Arccotangent |
+|  |  |
+| ACSC(double) | #colspan# |
+| Return Type | double |
+| Description | Arccosecant |
+|  |  |
+| ASEC(double) | #colspan# |
+| Return Type | double |
+| Description | Arcsecant |
+|  |  |
+| ASIN(double) | #colspan# |
+| Return Type | double |
+| Description | Arcsine |
+|  |  |
+| ATAN(double) | #colspan# |
+| Return Type | double |
+| Description | Arctangent |
+|  |  |
+| AVERAGE(double, double, ...) | #colspan# |
+| Return Type | double |
+| Description | Returns the average (arithmetic mean) of the arguments. |
+|  |  |
+| CEIL(double) | #colspan# |
+| Return Type | double |
+| Description | The smallest integer greater than or equal to the specified number. |
+|  |  |
+| COS(double) | #colspan# |
+| Return Type | double |
+| Description | The cosine of the given angle (in radians). |
+|  |  |
+| COSH(double) | #colspan# |
+| Return Type | double |
+| Description | Hyperbolic cosine |
+|  |  |
+| COT(double) | #colspan# |
+| Return Type | double |
+| Description | Cotangent |
+|  |  |
+| COTH(double) | #colspan# |
+| Return Type | double |
+| Description | Hyperbolic cotangent |
+|  |  |
+| COUNT(double, double, ...) COUNT(double[ ]) | #colspan# |
+| COUNT(double[ ]) | #colspan# |
+| Return Type | double |
+| Description | Total count of parameters passed |
+|  |  |
+| CSC(double) | #colspan# |
+| Return Type | double |
+| Description | Cosecant |
+|  |  |
+| CSCH(double) | #colspan# |
+| Return Type | double |
+| Description | Hyperbolic cosecant |
+|  |  |
+| EXP(double) | #colspan# |
+| Return Type | double |
+| Description | E (the base of natural logarithms) raised to the specified power |
+|  |  |
+| FLOOR(double) INT(double) | #colspan# |
+| INT(double) | #colspan# |
+| Return Type | double |
+| Description | The greatest integer less than or equal to the specified number |
+|  |  |
+| FORMAT(double, string style) | #colspan# |
+| Return Type | String |
+| Description | Returns a string expression formatted according to instructions contained in a format string expression. For information on how to create the style argument, see the appropriate topic at MSDN: Predefined Numeric Formats User-Defined Numeric Formats |
+|  |  |
+| LN(double) | #colspan# |
+| Return Type | double |
+| Description | Natural logarithm |
+|  |  |
+| LOG(double, double base) | #colspan# |
+| Return Type | double |
+| Description | Logarithm to the specified base |
+|  |  |
+| LOG10(double) | #colspan# |
+| Return Type | double |
+| Description | Logarithm to base 10 |
+|  |  |
+| MAX(double, double, ...) MAX(double[ ]) | #colspan# |
+| MAX(double[ ]) | #colspan# |
+| Return Type | double |
+| Description | Maximum |
+|  |  |
+| MIN(double, double, ...) MIN(double[ ]) | #colspan# |
+| MIN(double[ ]) | #colspan# |
+| Return Type | double |
+| Description | Minimum |
+|  |  |
+| NEG(double) | #colspan# |
+| Return Type | double |
+| Description | Negation |
+|  |  |
+| POWER(double, double power) | #colspan# |
+| Return Type | double |
+| Description | The specified number raised to the specified power |
+|  |  |
+| RAND([double max]) | #colspan# |
+| Return Type | double |
+| Description | Random number between 0 and max. If max is undefined then RAND() returns random number between 0 and 1. |
+|  |  |
+| ROUND(double d, [int decimals]) | #colspan# |
+| Return Type | double |
+| Description | Returns the number with the specified precision nearest the specified value. |
+| Parameters | d: A number to be rounded. decimals: The number of significant fractional digits (precision) in the return value. Ranges from 0 to 28. |
+| Return Value | The number nearest d with precision equal to decimals. If d is halfway between two numbers, one of which is even and the other odd, then the even number is returned. If the precision of d is less than decimals, then d is returned unchanged. |
+| Remarks | The decimals parameter specifies the number of significant fractional digits in the return value and ranges from 0 to 28. If decimals is zero, then a whole number is returned. This kind of rounding is sometimes called rounding to nearest, or banker's rounding. |
+|  |  |
+| SEC(double) | #colspan# |
+| Return Type | double |
+| Description | Secant |
+|  |  |
+| SECH(double) | #colspan# |
+| Return Type | double |
+| Description | Hyperbolic secant |
+|  |  |
+| SIN(double) | #colspan# |
+| Return Type | double |
+| Description | The sine of the given angle (in radians). |
+|  |  |
+| SINH(double) | #colspan# |
+| Return Type | double |
+| Description | Hyperbolic sine |
+|  |  |
+| SQRT(double) | #colspan# |
+| Return Type | double |
+| Description | Square root |
+|  |  |
+| SUM(double, double, ...) SUM(double[ ]) | #colspan# |
+| SUM(double[ ]) | #colspan# |
+| Return Type | double |
+| Description | Sum of the specified numbers |
+|  |  |
+| TAN(double) | #colspan# |
+| Return Type | double |
+| Description | Tangent |
+|  |  |
+| TANH(double) | #colspan# |
+| Return Type | double |
+| Description | Hyperbolic tangent |
+
+## Logical Functions
+
+| IIF(bool condition, expression1, expression2 IF(bool condition, expression1, expression2) |  |
+| --- | --- |
+| IF(bool condition, expression1, expression2) |  |
+| Return Type | any |
+| Description | If condition evaluates to TRUE, expression1 is returned. If conditionevaluates to FALSE, expression2 is returned. This function accepts any type for its second and third parameters as long as they are both of the same type. |
+| AND(boolean, boolean, …) |  |
+| Return Type | boolean |
+| Description | Returns true if all its arguments are true; returns false if any argument is false |
+| OR(boolean, boolean, …) |  |
+| Return Type | boolean |
+| Description | Returns true if any argument is true; returns false if all arguments are false |
+| IsNull(object) IsDBNull(object) |  |
+| IsDBNull(object) |  |
+| Return Type | boolean |
+| Description | Determines whether or not a given expression is a DBNull value |
+| IsNumeric(object) |  |
+| Return Type | boolean |
+| Description | Determines whether or not a given expression is a Numeric Numeric value |
+| IsBetween(object,low,high) |  |
+| Return Type | boolean |
+| Description | Determines whether or not a given NUMERIC expression is between a low and high value |
+| IsEqualTo(object, value) |  |
+| Return Type | boolean |
+| Description | Determines whether or not a given NUMERIC expression is equal to a value |
+| IsGreaterThan(object, value) |  |
+| Return Type | boolean |
+| Description | Determines whether or not a given NUMERIC expression is greater than a value |
+| IsLessThan(object, value) |  |
+| Return Type | boolean |
+| Description | Determines whether or not a given NUMERIC expression is less than a value |
+
+## Text Functions
+
+| Concat(object1, object2, … objectN) |  |
+| --- | --- |
+| Return Type | string |
+| Description | Returns a single concatenated string from a list of strings. doubles, ints, booleans. |
+| ConcatSep(object1, object2, … objectN, string delimiter) |  |
+| Return Type | string |
+| Description | Returns a single concatenated and delimited string from a list of strings. doubles, ints, booleans |
+| Find(string textToFind, string textToSearch, int startIndex) |  |
+| Return Type | int |
+| Description | Returns the zero-based index of the first occurrence of a textToFind, within a textToSearch string. The search starts at a specified character position (zero-based). |
+| Left(string, int nCount) |  |
+| Return Type | string |
+| Description | Returns the first (leftmost) nCount characters from a string. |
+| Len(string) |  |
+| Return Type | int |
+| Description | Returns the number of characters in a string |
+| Lower(string) |  |
+| Return Type | string |
+| Description | Converts all uppercase letters in a text string to lowercase. |
+| Mid(string, int nFirst, int nCount) |  |
+| Return Type | string |
+| Description | Returns a substring of length nCount characters from a string, starting at position nFirst (zero-based). |
+| Substitute(string text, string oldText, string newText) |  |
+| Return Type | string |
+| Description | Substitutes newText for oldText in a text string. |
+| Trim(string) |  |
+| Return Type | string |
+| Description | Removes all occurrences of white space characters from the beginning and end of a string. |
+| Upper(string) |  |
+| Return Type | string |
+| Description | Converts all lowercase letters in a text string to uppercase. |
+
+## Lookup Functions
+
+| IN(string ItemToFind, string ListItem1, string ListItem2, … IN(string ItemToFind, string[] ListItem) |  |
+| --- | --- |
+| IN(string ItemToFind, string[] ListItem) |  |
+| Return Type | boolean |
+| Description | Looks for ItemToFind in the specified list of items. Returns true if item is found in the list, false otherwise. |
+
+## Date and Time Functions
+
+| NOW() |  |
+| --- | --- |
+| Return Type | DateTime |
+| Description | Current date and time according to the setting of your computer’s system date and time. |
+| TODAY() |  |
+| Return Type | DateTime |
+| Description | Current date. Time part of the day is zero (midnight). |
+| YEAR(date) |  |
+| Return Type | int |
+| Description | Number representing the year. |
+| MONTH(date) |  |
+| Return Type | int |
+| Description | Number between 1 and 12, inclusive, representing the month of the year. |
+| DAY(date) |  |
+| Return Type | int |
+| Description | Number between 1 and 31, inclusive, representing the day of the month. |
+| WEEKDAY(date) |  |
+| Return Type | DayOfWeek enumeration |
+| Description | Number representing the day of the week. |
+| HOUR(date) |  |
+| Return Type | int |
+| Description | Number between 0 and 23, inclusive, representing the hour of the day. |
+| MINUTE(date) |  |
+| Return Type | int |
+| Description | Number between 0 and 59, inclusive, representing the minute of the hour. |
+| SECOND(date) |  |
+| Return Type | int |
+| Description | Number between 0 and 59, inclusive, representing the second of the minute. |
+| DATEADD(interval, double number, DateTime date) |  |
+| Return Type | DateTime |
+| Description | Number between 0 and 59, inclusive, representing the minute of the hour. |
+| Parameters | interval: DateInterval enumeration value or string expression representing the time interval you want to add. The intervalargument can have one of the settings listed here. number: The number of intervals you want to add. It can be positive (to get dates in the future) or negative (to get dates in the past). Any fractional part of number is ignored. date: date to which the interval is added. |
+| Example | The following expressions are equivalent: DateAdd(dtMonth, 1, #2005-12-31#) DateAdd(“m”, 1, #2005-12-31#) DateAdd(2, 1, #2005-12-31#)In this example, DateAdd returns #2006-01-31#. |
+| DATEDIFF(interval, DateTime date1, DateTime date2 [, firstdayofweek [,firstweekofyear]]) |  |
+| Return Type | System.Int64 |
+| Description | Returns the number of intervals between two dates. |
+| Parameters | interval: DateInterval enumeration value or string expression representing the time interval you want to use as the unit of difference between date1 and date2. The interval argument can have one of the settings listed here. date1, date2: Date expressions. Two dates you want to use in the calculation. firstdayofweek: Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the day of the week. If not specified, Sunday is assumed. firstweekofyear: Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs. |
+| Remarks | If Date1 represents a later date and time than Date2, DATEDIFF returns a negative number. If Interval is set to DateInterval.Year, DateInterval.Quarter, or DateInterval.Month the return value is the number of date and time boundaries crossed between Date1 and Date2. Note When comparing December 31 to January 1 of the following year, DATEDIFF returns 1 for DateInterval.Year, DateInterval.Quarter, or DateInterval.Month, even though only one day has elapsed. |
+| Example | The following expressions are equivalent: DateDiff(dtYear, #2005-12-31#, #1995-12-31#) DateDiff(“yyyy”, #2005-12-31#, #1995-12-31#) DateDiff(0, #2005-12-31#, #1995-12-31#)In this example, DateDiff returns -10. |
+| DATEPART(interval, DateTime date [, firstdayofweek [,firstweekofyear]]) |  |
+| Return Type | System.Int32 |
+| Description | Returns an Integer value containing the specified component of a given Date value. |
+| Parameters | interval: DateInterval enumeration value or string expression representing the part of the date/time value you want to return. The interval argument can have one of the settings listed here. date: Date expression you want to evaluate. firstdayofweek: Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the day of the week. If not specified, Sunday is assumed. firstweekofyear: Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs. |
+| Example | The following expressions are equivalent: DatePart(dtQuarter, #2005-12-31#) DatePart(“q”, #2005-12-31#) DatePart(1, #2005-12-31#)In this example, DatePart returns 4. |
+| DATE(int year, int month, int day [, int hour, int minute, int second]) |  |
+| Return Type | DateTime |
+| Description | A Date value representing a specified year, month, day, hour, minute, and second. |
+| Parameters | year: The year (1 through 9999). month: The month (1 through 12). day: The day (1 through the number of days in month). hour: Optional. The hours (0 through 23). minute: Optional. The minutes (0 through 59). second: Optional. The seconds (0 through 59). |
+| Return Value | A Date value representing a specified year, month, day, hour, minute, and second. |
+| MIN(DateTime date1, DateTime date2, …) MIN(DateTime[ ] date) |  |
+| MIN(DateTime[ ] date) |  |
+| Return Type | DateTime |
+| Description | Returns the smallest date in a set of date values. |
+| MAX(DateTime date1, DateTime date2, …) MAX(DateTime[ ] date) |  |
+| MAX(DateTime[ ] date) |  |
+| Return Type | DateTime |
+| Description | Returns the largest date in a set of date values. |
+| FORMAT(DateTime, string style) |  |
+| Return Type | string |
+| Description | Returns a string expression formatted according to instructions contained in a format string expression. For information on how to create the style argument, see the appropriate topic at MSDN: Predefined Date Formats User-Defined Date Formats |
+
+## Operators (Input Types)
+
+### Arithmetic Operators
+
+| Operator | Num | Date | Str | Bool | Description |
+| --- | --- | --- | --- | --- | --- |
+| plus(+) | yes |  | yes |  | Positive sign or arithmetic addition |
+| – | yes |  |  |  | Negative sign or arithmetic subtraction |
+| * | yes |  |  |  | Multiplication |
+| / | yes |  |  |  | Division |
+| % | yes |  |  |  | Remainder (modulus) obtained by dividing one numeric expression into another |
+| ^ | yes |  |  |  | Power |
+
+### Comparison Operators
+
+| `<`  | yes | yes | yes |     | Less than           |
+| `>`  | yes | yes | yes |     | Greater than        |
+| `<=` | yes | yes | yes | yes | Less than or equal  |
+| `>=` | yes | yes | yes | yes | Greater than or equal |
+| equals (`==` or `=`) | yes | yes | yes | yes | Equality   |
+| `!=` or `<>` | yes | yes | yes | yes | Inequality |
+
+### Logical Operators
+
+| Operator | Num | Date | Str | Bool | Description |
+| --- | --- | --- | --- | --- | --- |
+| AND && |  |  |  | yes | Logical AND |
+| OR || |  |  |  | yes | Logical OR |
+| NOT ! |  |  |  | yes | Logical Negation |
+
+### Bitwise Operators
+
+| Operator | Num | Date | Str | Bool | Description |
+| --- | --- | --- | --- | --- | --- |
+| & | yes |  |  |  | Bitwise AND operator. |
+| | | yes |  |  |  | Bitwise OR operator. |
+| !& | yes |  |  |  | Bitwise exclusive-OR operator. |
+| ~ | yes |  |  |  | Bitwise complement operator. |
+
+## Constants
+
+| Constant | Value |
+| --- | --- |
+| PI | 3.141592654 |
+| E | 2.718281828 |
+| TRUE | 1 |
+| FALSE | 0 |
+
+### Date Interval
+
+| Constant | Numeric Value | String Expression |
+| --- | --- | --- |
+| dtYear | 0 | yyyy |
+| dtQuarter | 1 | q |
+| dtMonth | 2 | m |
+| dtDayOfYear | 3 | y |
+| dtDay | 4 | d |
+| dtWeekOfYear | 5 | ww |
+| dtWeekday | 6 | w |
+| dtHour | 7 | h |
+| dtMinute | 8 | n |
+| dtSecond | 9 | s |
+
+### FirstDayOfWeek
+
+| Constant | Numeric Value |
+| --- | --- |
+| dtSystem | 0 |
+| dtSunday | 1 |
+| dtMonday | 2 |
+| dtTuesday | 3 |
+| dtWednesday | 4 |
+| dtThursday | 5 |
+| dtFriday | 6 |
+| dtSaturday | 7 |
+
+### FirstWeekOfYear
+
+| Constant | Numeric Value |
+| --- | --- |
+| dtSystem | 0 |
+| dtJan1 | 1 |
+| dtFirstFourDays | 2 |
+| dtFirstFullWeek | 3 |
+
