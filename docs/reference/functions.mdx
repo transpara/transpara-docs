@@ -28,379 +28,54 @@ All equations in Visual KPI are of the format `<[expression]>`, where the expres
 
 ## Math and Stat functions
 
-| ABS(double) | #colspan# |
-| --- | --- |
-| Return Type | double |
-| Description | Absolute value |
-|  |  |
-| ACOS(double) | #colspan# |
-| Return Type | double |
-| Description | Arccosine |
-|  |  |
-| ACOT(double) | #colspan# |
-| Return Type | double |
-| Description | Arccotangent |
-|  |  |
-| ACSC(double) | #colspan# |
-| Return Type | double |
-| Description | Arccosecant |
-|  |  |
-| ASEC(double) | #colspan# |
-| Return Type | double |
-| Description | Arcsecant |
-|  |  |
-| ASIN(double) | #colspan# |
-| Return Type | double |
-| Description | Arcsine |
-|  |  |
-| ATAN(double) | #colspan# |
-| Return Type | double |
-| Description | Arctangent |
-|  |  |
-| AVERAGE(double, double, ...) | #colspan# |
-| Return Type | double |
-| Description | Returns the average (arithmetic mean) of the arguments. |
-|  |  |
-| CEIL(double) | #colspan# |
-| Return Type | double |
-| Description | The smallest integer greater than or equal to the specified number. |
-|  |  |
-| COS(double) | #colspan# |
-| Return Type | double |
-| Description | The cosine of the given angle (in radians). |
-|  |  |
-| COSH(double) | #colspan# |
-| Return Type | double |
-| Description | Hyperbolic cosine |
-|  |  |
-| COT(double) | #colspan# |
-| Return Type | double |
-| Description | Cotangent |
-|  |  |
-| COTH(double) | #colspan# |
-| Return Type | double |
-| Description | Hyperbolic cotangent |
-|  |  |
-| COUNT(double, double, ...) COUNT(double[ ]) | #colspan# |
-| COUNT(double[ ]) | #colspan# |
-| Return Type | double |
-| Description | Total count of parameters passed |
-|  |  |
-| CSC(double) | #colspan# |
-| Return Type | double |
-| Description | Cosecant |
-|  |  |
-| CSCH(double) | #colspan# |
-| Return Type | double |
-| Description | Hyperbolic cosecant |
-|  |  |
-| EXP(double) | #colspan# |
-| Return Type | double |
-| Description | E (the base of natural logarithms) raised to the specified power |
-|  |  |
-| FLOOR(double) INT(double) | #colspan# |
-| INT(double) | #colspan# |
-| Return Type | double |
-| Description | The greatest integer less than or equal to the specified number |
-|  |  |
-| FORMAT(double, string style) | #colspan# |
-| Return Type | String |
-| Description | Returns a string expression formatted according to instructions contained in a format string expression. For information on how to create the style argument, see the appropriate topic at MSDN: Predefined Numeric Formats User-Defined Numeric Formats |
-|  |  |
-| LN(double) | #colspan# |
-| Return Type | double |
-| Description | Natural logarithm |
-|  |  |
-| LOG(double, double base) | #colspan# |
-| Return Type | double |
-| Description | Logarithm to the specified base |
-|  |  |
-| LOG10(double) | #colspan# |
-| Return Type | double |
-| Description | Logarithm to base 10 |
-|  |  |
-| MAX(double, double, ...) MAX(double[ ]) | #colspan# |
-| MAX(double[ ]) | #colspan# |
-| Return Type | double |
-| Description | Maximum |
-|  |  |
-| MIN(double, double, ...) MIN(double[ ]) | #colspan# |
-| MIN(double[ ]) | #colspan# |
-| Return Type | double |
-| Description | Minimum |
-|  |  |
-| NEG(double) | #colspan# |
-| Return Type | double |
-| Description | Negation |
-|  |  |
-| POWER(double, double power) | #colspan# |
-| Return Type | double |
-| Description | The specified number raised to the specified power |
-|  |  |
-| RAND([double max]) | #colspan# |
-| Return Type | double |
-| Description | Random number between 0 and max. If max is undefined then RAND() returns random number between 0 and 1. |
-|  |  |
-| ROUND(double d, [int decimals]) | #colspan# |
-| Return Type | double |
-| Description | Returns the number with the specified precision nearest the specified value. |
-| Parameters | d: A number to be rounded. decimals: The number of significant fractional digits (precision) in the return value. Ranges from 0 to 28. |
-| Return Value | The number nearest d with precision equal to decimals. If d is halfway between two numbers, one of which is even and the other odd, then the even number is returned. If the precision of d is less than decimals, then d is returned unchanged. |
-| Remarks | The decimals parameter specifies the number of significant fractional digits in the return value and ranges from 0 to 28. If decimals is zero, then a whole number is returned. This kind of rounding is sometimes called rounding to nearest, or banker's rounding. |
-|  |  |
-| SEC(double) | #colspan# |
-| Return Type | double |
-| Description | Secant |
-|  |  |
-| SECH(double) | #colspan# |
-| Return Type | double |
-| Description | Hyperbolic secant |
-|  |  |
-| SIN(double) | #colspan# |
-| Return Type | double |
-| Description | The sine of the given angle (in radians). |
-|  |  |
-| SINH(double) | #colspan# |
-| Return Type | double |
-| Description | Hyperbolic sine |
-|  |  |
-| SQRT(double) | #colspan# |
-| Return Type | double |
-| Description | Square root |
-|  |  |
-| SUM(double, double, ...) SUM(double[ ]) | #colspan# |
-| SUM(double[ ]) | #colspan# |
-| Return Type | double |
-| Description | Sum of the specified numbers |
-|  |  |
-| TAN(double) | #colspan# |
-| Return Type | double |
-| Description | Tangent |
-|  |  |
-| TANH(double) | #colspan# |
-| Return Type | double |
-| Description | Hyperbolic tangent |
+<table id="tablepress-21" class="tablepress tablepress-id-21 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td colspan="2" class="column-1"><strong>ABS(double)</strong></td></tr><tr class="row-2 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-3 odd"><td class="column-1">Description</td><td class="column-2">Absolute value</td></tr><tr class="row-4 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-5 odd"><td colspan="2" class="column-1"><strong>ACOS(double)</strong></td></tr><tr class="row-6 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-7 odd"><td class="column-1">Description</td><td class="column-2">Arccosine</td></tr><tr class="row-8 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-9 odd"><td colspan="2" class="column-1"><strong>ACOT(double)</strong></td></tr><tr class="row-10 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-11 odd"><td class="column-1">Description</td><td class="column-2">Arccotangent</td></tr><tr class="row-12 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-13 odd"><td colspan="2" class="column-1"><strong>ACSC(double)</strong></td></tr><tr class="row-14 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-15 odd"><td class="column-1">Description</td><td class="column-2">Arccosecant</td></tr><tr class="row-16 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-17 odd"><td colspan="2" class="column-1"><strong>ASEC(double)</strong></td></tr><tr class="row-18 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-19 odd"><td class="column-1">Description</td><td class="column-2">Arcsecant</td></tr><tr class="row-20 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-21 odd"><td colspan="2" class="column-1"><strong>ASIN(double)</strong></td></tr><tr class="row-22 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-23 odd"><td class="column-1">Description</td><td class="column-2">Arcsine</td></tr><tr class="row-24 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-25 odd"><td colspan="2" class="column-1"><strong>ATAN(double)</strong></td></tr><tr class="row-26 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-27 odd"><td class="column-1">Description</td><td class="column-2">Arctangent</td></tr><tr class="row-28 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-29 odd"><td colspan="2" class="column-1"><strong>AVERAGE(double, double, ...)</strong></td></tr><tr class="row-30 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-31 odd"><td class="column-1">Description</td><td class="column-2">Returns the average (arithmetic mean) of the arguments.</td></tr><tr class="row-32 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-33 odd"><td colspan="2" class="column-1"><strong>CEIL(double)</strong></td></tr><tr class="row-34 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-35 odd"><td class="column-1">Description</td><td class="column-2">The smallest integer greater than or equal to the specified number.</td></tr><tr class="row-36 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-37 odd"><td colspan="2" class="column-1"><strong>COS(double)</strong></td></tr><tr class="row-38 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-39 odd"><td class="column-1">Description</td><td class="column-2">The cosine of the given angle (in radians).</td></tr><tr class="row-40 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-41 odd"><td colspan="2" class="column-1"><strong>COSH(double)</strong></td></tr><tr class="row-42 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-43 odd"><td class="column-1">Description</td><td class="column-2">Hyperbolic cosine</td></tr><tr class="row-44 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-45 odd"><td colspan="2" class="column-1"><strong>COT(double)</strong></td></tr><tr class="row-46 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-47 odd"><td class="column-1">Description</td><td class="column-2">Cotangent</td></tr><tr class="row-48 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-49 odd"><td colspan="2" class="column-1"><strong>COTH(double)</strong></td></tr><tr class="row-50 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-51 odd"><td class="column-1">Description</td><td class="column-2">Hyperbolic cotangent</td></tr><tr class="row-52 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-53 odd"><td colspan="2" class="column-1"><strong>COUNT(double, double, ...)<br/> COUNT(double[ ])</strong></td></tr><tr class="row-54 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-55 odd"><td class="column-1">Description</td><td class="column-2">Total count of parameters passed</td></tr><tr class="row-56 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-57 odd"><td colspan="2" class="column-1"><strong>CSC(double)</strong></td></tr><tr class="row-58 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-59 odd"><td class="column-1">Description</td><td class="column-2">Cosecant</td></tr><tr class="row-60 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-61 odd"><td colspan="2" class="column-1"><strong>CSCH(double)</strong></td></tr><tr class="row-62 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-63 odd"><td class="column-1">Description</td><td class="column-2">Hyperbolic cosecant</td></tr><tr class="row-64 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-65 odd"><td colspan="2" class="column-1"><strong>EXP(double)</strong></td></tr><tr class="row-66 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-67 odd"><td class="column-1">Description</td><td class="column-2">E (the base of natural logarithms) raised to the specified power</td></tr><tr class="row-68 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-69 odd"><td colspan="2" class="column-1"><strong>FLOOR(double)<br/> INT(double)</strong></td></tr><tr class="row-70 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-71 odd"><td class="column-1">Description</td><td class="column-2">The greatest integer less than or equal to the specified number</td></tr><tr class="row-72 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-73 odd"><td colspan="2" class="column-1"><strong>FORMAT(double, string style)</strong></td></tr><tr class="row-74 even"><td class="column-1">Return Type</td><td class="column-2">String</td></tr><tr class="row-75 odd"><td class="column-1">Description</td><td class="column-2">Returns a string expression formatted according to instructions contained in a format string expression.<br/> For information on how to create the style argument, see the appropriate topic at MSDN:<br/> Predefined Numeric Formats<br/> User-Defined Numeric Formats</td></tr><tr class="row-76 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-77 odd"><td colspan="2" class="column-1"><strong>LN(double)<strong></strong></strong></td></tr><tr class="row-78 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-79 odd"><td class="column-1">Description</td><td class="column-2">Natural logarithm</td></tr><tr class="row-80 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-81 odd"><td colspan="2" class="column-1"><strong>LOG(double, double base)</strong></td></tr><tr class="row-82 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-83 odd"><td class="column-1">Description</td><td class="column-2">Logarithm to the specified base</td></tr><tr class="row-84 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-85 odd"><td colspan="2" class="column-1"><strong>LOG10(double)</strong></td></tr><tr class="row-86 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-87 odd"><td class="column-1">Description</td><td class="column-2">Logarithm to base 10</td></tr><tr class="row-88 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-89 odd"><td colspan="2" class="column-1"><strong>MAX(double, double, ...)<br/> MAX(double[ ])</strong></td></tr><tr class="row-90 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-91 odd"><td class="column-1">Description</td><td class="column-2">Maximum</td></tr><tr class="row-92 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-93 odd"><td colspan="2" class="column-1"><strong>MIN(double, double, ...)<br/> MIN(double[ ])</strong></td></tr><tr class="row-94 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-95 odd"><td class="column-1">Description</td><td class="column-2">Minimum</td></tr><tr class="row-96 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-97 odd"><td colspan="2" class="column-1"><strong>NEG(double)</strong></td></tr><tr class="row-98 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-99 odd"><td class="column-1">Description</td><td class="column-2">Negation</td></tr><tr class="row-100 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-101 odd"><td colspan="2" class="column-1"><strong>POWER(double, double power)</strong></td></tr><tr class="row-102 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-103 odd"><td class="column-1">Description</td><td class="column-2">The specified number raised to the specified power</td></tr><tr class="row-104 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-105 odd"><td colspan="2" class="column-1"><strong>RAND([double max])</strong></td></tr><tr class="row-106 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-107 odd"><td class="column-1">Description</td><td class="column-2">Random number between 0 and max. If max is undefined then RAND() returns random number between 0 and 1.</td></tr><tr class="row-108 even"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-109 odd"><td colspan="2" class="column-1"><strong>ROUND(double d, [int decimals])</strong></td></tr><tr class="row-110 even"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-111 odd"><td class="column-1">Description</td><td class="column-2">Returns the number with the specified precision nearest the specified value.</td></tr><tr class="row-112 even"><td class="column-1">Parameters</td><td class="column-2">d: A number to be rounded.<br/> decimals: The number of significant fractional digits (precision) in the return value. Ranges from 0 to 28.</td></tr><tr class="row-113 odd"><td class="column-1">Return Value</td><td class="column-2">The number nearest d with precision equal to decimals. If d is halfway between two numbers, one of which is even and the other odd, then the even number is returned. If the precision of d is less than decimals, then d is returned unchanged.</td></tr><tr class="row-114 even"><td class="column-1">Remarks</td><td class="column-2">The decimals parameter specifies the number of significant fractional digits in the return value and ranges from 0 to 28. If decimals is zero, then a whole number is returned. This kind of rounding is sometimes called rounding to nearest, or banker's rounding.</td></tr><tr class="row-115 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-116 even"><td colspan="2" class="column-1"><strong>SEC(double)</strong></td></tr><tr class="row-117 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-118 even"><td class="column-1">Description</td><td class="column-2">Secant</td></tr><tr class="row-119 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-120 even"><td colspan="2" class="column-1"><strong>SECH(double)</strong></td></tr><tr class="row-121 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-122 even"><td class="column-1">Description</td><td class="column-2">Hyperbolic secant</td></tr><tr class="row-123 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-124 even"><td colspan="2" class="column-1"><strong>SIN(double)</strong></td></tr><tr class="row-125 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-126 even"><td class="column-1">Description</td><td class="column-2">The sine of the given angle (in radians).</td></tr><tr class="row-127 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-128 even"><td colspan="2" class="column-1"><strong>SINH(double)</strong></td></tr><tr class="row-129 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-130 even"><td class="column-1">Description</td><td class="column-2">Hyperbolic sine</td></tr><tr class="row-131 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-132 even"><td colspan="2" class="column-1"><strong>SQRT(double)</strong></td></tr><tr class="row-133 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-134 even"><td class="column-1">Description</td><td class="column-2">Square root</td></tr><tr class="row-135 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-136 even"><td colspan="2" class="column-1"><strong>SUM(double, double, ...)<br/> SUM(double[ ])<br/> </strong></td></tr><tr class="row-137 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-138 even"><td class="column-1">Description</td><td class="column-2">Sum of the specified numbers</td></tr><tr class="row-139 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-140 even"><td colspan="2" class="column-1"><strong>TAN(double)</strong></td></tr><tr class="row-141 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-142 even"><td class="column-1">Description</td><td class="column-2">Tangent</td></tr><tr class="row-143 odd"><td class="column-1"></td><td class="column-2"></td></tr><tr class="row-144 even"><td colspan="2" class="column-1"><strong>TANH(double)</strong></td></tr><tr class="row-145 odd"><td class="column-1">Return Type</td><td class="column-2">double</td></tr><tr class="row-146 even"><td class="column-1">Description</td><td class="column-2">Hyperbolic tangent</td></tr></tbody></table>
 
 ## Logical Functions
 
-| IIF(bool condition, expression1, expression2 IF(bool condition, expression1, expression2) |  |
-| --- | --- |
-| IF(bool condition, expression1, expression2) |  |
-| Return Type | any |
-| Description | If condition evaluates to TRUE, expression1 is returned. If conditionevaluates to FALSE, expression2 is returned. This function accepts any type for its second and third parameters as long as they are both of the same type. |
-| AND(boolean, boolean, …) |  |
-| Return Type | boolean |
-| Description | Returns true if all its arguments are true; returns false if any argument is false |
-| OR(boolean, boolean, …) |  |
-| Return Type | boolean |
-| Description | Returns true if any argument is true; returns false if all arguments are false |
-| IsNull(object) IsDBNull(object) |  |
-| IsDBNull(object) |  |
-| Return Type | boolean |
-| Description | Determines whether or not a given expression is a DBNull value |
-| IsNumeric(object) |  |
-| Return Type | boolean |
-| Description | Determines whether or not a given expression is a Numeric Numeric value |
-| IsBetween(object,low,high) |  |
-| Return Type | boolean |
-| Description | Determines whether or not a given NUMERIC expression is between a low and high value |
-| IsEqualTo(object, value) |  |
-| Return Type | boolean |
-| Description | Determines whether or not a given NUMERIC expression is equal to a value |
-| IsGreaterThan(object, value) |  |
-| Return Type | boolean |
-| Description | Determines whether or not a given NUMERIC expression is greater than a value |
-| IsLessThan(object, value) |  |
-| Return Type | boolean |
-| Description | Determines whether or not a given NUMERIC expression is less than a value |
+<table id="tablepress-23" class="tablepress tablepress-id-23 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>IIF(bool condition, expression1, expression2<br/> IF(bool condition, expression1, expression2)</strong></td><td class="column-2"></td></tr><tr class="row-2 even"><td class="column-1">Return Type</td><td class="column-2">any</td></tr><tr class="row-3 odd"><td class="column-1">Description</td><td class="column-2">If condition evaluates to TRUE, expression1 is returned. If conditionevaluates to FALSE, expression2 is returned.<br/> This function accepts any type for its second and third parameters as long as they are both of the same type.</td></tr><tr class="row-4 even"><td class="column-1"><strong>AND(boolean, boolean, …)</strong></td><td class="column-2"></td></tr><tr class="row-5 odd"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-6 even"><td class="column-1">Description</td><td class="column-2">Returns true if all its arguments are true; returns false if any argument is false</td></tr><tr class="row-7 odd"><td class="column-1"><strong>OR(boolean, boolean, …)<strong></strong></strong></td><td class="column-2"></td></tr><tr class="row-8 even"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-9 odd"><td class="column-1">Description</td><td class="column-2">Returns true if any argument is true; returns false if all arguments are false</td></tr><tr class="row-10 even"><td class="column-1"><strong>IsNull(object)<br/> IsDBNull(object)</strong></td><td class="column-2"></td></tr><tr class="row-11 odd"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-12 even"><td class="column-1">Description</td><td class="column-2">Determines whether or not a given expression is a DBNull value</td></tr><tr class="row-13 odd"><td class="column-1"><strong>IsNumeric(object)</strong></td><td class="column-2"></td></tr><tr class="row-14 even"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-15 odd"><td class="column-1">Description</td><td class="column-2">Determines whether or not a given expression is a Numeric Numeric value</td></tr><tr class="row-16 even"><td class="column-1"><strong>IsBetween(object,low,high)</strong></td><td class="column-2"></td></tr><tr class="row-17 odd"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-18 even"><td class="column-1">Description</td><td class="column-2">Determines whether or not a given NUMERIC expression is between a low and high value</td></tr><tr class="row-19 odd"><td class="column-1"><strong>IsEqualTo(object, value)</strong></td><td class="column-2"></td></tr><tr class="row-20 even"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-21 odd"><td class="column-1">Description</td><td class="column-2">Determines whether or not a given NUMERIC expression is equal to a value</td></tr><tr class="row-22 even"><td class="column-1"><strong>IsGreaterThan(object, value)</strong></td><td class="column-2"></td></tr><tr class="row-23 odd"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-24 even"><td class="column-1">Description</td><td class="column-2">Determines whether or not a given NUMERIC expression is greater than a value</td></tr><tr class="row-25 odd"><td class="column-1"><strong>IsLessThan(object, value)</strong></td><td class="column-2"></td></tr><tr class="row-26 even"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-27 odd"><td class="column-1">Description</td><td class="column-2">Determines whether or not a given NUMERIC expression is less than a value</td></tr></tbody></table>
 
 ## Text Functions
 
-| Concat(object1, object2, … objectN) |  |
-| --- | --- |
-| Return Type | string |
-| Description | Returns a single concatenated string from a list of strings. doubles, ints, booleans. |
-| ConcatSep(object1, object2, … objectN, string delimiter) |  |
-| Return Type | string |
-| Description | Returns a single concatenated and delimited string from a list of strings. doubles, ints, booleans |
-| Find(string textToFind, string textToSearch, int startIndex) |  |
-| Return Type | int |
-| Description | Returns the zero-based index of the first occurrence of a textToFind, within a textToSearch string. The search starts at a specified character position (zero-based). |
-| Left(string, int nCount) |  |
-| Return Type | string |
-| Description | Returns the first (leftmost) nCount characters from a string. |
-| Len(string) |  |
-| Return Type | int |
-| Description | Returns the number of characters in a string |
-| Lower(string) |  |
-| Return Type | string |
-| Description | Converts all uppercase letters in a text string to lowercase. |
-| Mid(string, int nFirst, int nCount) |  |
-| Return Type | string |
-| Description | Returns a substring of length nCount characters from a string, starting at position nFirst (zero-based). |
-| Substitute(string text, string oldText, string newText) |  |
-| Return Type | string |
-| Description | Substitutes newText for oldText in a text string. |
-| Trim(string) |  |
-| Return Type | string |
-| Description | Removes all occurrences of white space characters from the beginning and end of a string. |
-| Upper(string) |  |
-| Return Type | string |
-| Description | Converts all lowercase letters in a text string to uppercase. |
+<table id="tablepress-24" class="tablepress tablepress-id-24 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Concat(object1, object2, … objectN)</strong></td><td class="column-2"></td></tr><tr class="row-2 even"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-3 odd"><td class="column-1">Description</td><td class="column-2">Returns a single concatenated string from a list of strings. doubles, ints, booleans.</td></tr><tr class="row-4 even"><td class="column-1"><strong>ConcatSep(object1, object2, … objectN, string delimiter)</strong></td><td class="column-2"></td></tr><tr class="row-5 odd"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-6 even"><td class="column-1">Description</td><td class="column-2">Returns a single concatenated and delimited string from a list of strings. doubles, ints, booleans</td></tr><tr class="row-7 odd"><td class="column-1"><strong>Find(string textToFind, string textToSearch, int startIndex)</strong></td><td class="column-2"></td></tr><tr class="row-8 even"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-9 odd"><td class="column-1">Description</td><td class="column-2">Returns the zero-based index of the first occurrence of a textToFind, within a textToSearch string. The search starts at a specified character position (zero-based).</td></tr><tr class="row-10 even"><td class="column-1"><strong>Left(string, int nCount)</strong></td><td class="column-2"></td></tr><tr class="row-11 odd"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-12 even"><td class="column-1">Description</td><td class="column-2">Returns the first (leftmost) nCount characters from a string.</td></tr><tr class="row-13 odd"><td class="column-1"><strong>Len(string)</strong></td><td class="column-2"></td></tr><tr class="row-14 even"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-15 odd"><td class="column-1">Description</td><td class="column-2">Returns the number of characters in a string</td></tr><tr class="row-16 even"><td class="column-1"><strong>Lower(string)</strong></td><td class="column-2"></td></tr><tr class="row-17 odd"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-18 even"><td class="column-1">Description</td><td class="column-2">Converts all uppercase letters in a text string to lowercase.</td></tr><tr class="row-19 odd"><td class="column-1"><strong>Mid(string, int nFirst, int nCount)</strong></td><td class="column-2"></td></tr><tr class="row-20 even"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-21 odd"><td class="column-1">Description</td><td class="column-2">Returns a substring of length nCount characters from a string, starting at position nFirst (zero-based).</td></tr><tr class="row-22 even"><td class="column-1"><strong>Substitute(string text, string oldText, string newText)</strong></td><td class="column-2"></td></tr><tr class="row-23 odd"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-24 even"><td class="column-1">Description</td><td class="column-2">Substitutes newText for oldText in a text string.</td></tr><tr class="row-25 odd"><td class="column-1"><strong>Trim(string)</strong></td><td class="column-2"></td></tr><tr class="row-26 even"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-27 odd"><td class="column-1">Description</td><td class="column-2">Removes all occurrences of white space characters from the beginning and end of a string.</td></tr><tr class="row-28 even"><td class="column-1"><strong>Upper(string)</strong></td><td class="column-2"></td></tr><tr class="row-29 odd"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-30 even"><td class="column-1">Description</td><td class="column-2">Converts all lowercase letters in a text string to uppercase.</td></tr></tbody></table>
 
 ## Lookup Functions
 
-| IN(string ItemToFind, string ListItem1, string ListItem2, … IN(string ItemToFind, string[] ListItem) |  |
-| --- | --- |
-| IN(string ItemToFind, string[] ListItem) |  |
-| Return Type | boolean |
-| Description | Looks for ItemToFind in the specified list of items. Returns true if item is found in the list, false otherwise. |
+<table id="tablepress-26" class="tablepress tablepress-id-26 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>IN(string ItemToFind, string ListItem1, string ListItem2, …<br/> IN(string ItemToFind, string[] ListItem)</strong></td><td class="column-2"></td></tr><tr class="row-2 even"><td class="column-1">Return Type</td><td class="column-2">boolean</td></tr><tr class="row-3 odd"><td class="column-1">Description</td><td class="column-2">Looks for ItemToFind in the specified list of items. Returns true if item is found in the list, false otherwise.</td></tr></tbody></table>
 
 ## Date and Time Functions
 
-| NOW() |  |
-| --- | --- |
-| Return Type | DateTime |
-| Description | Current date and time according to the setting of your computer’s system date and time. |
-| TODAY() |  |
-| Return Type | DateTime |
-| Description | Current date. Time part of the day is zero (midnight). |
-| YEAR(date) |  |
-| Return Type | int |
-| Description | Number representing the year. |
-| MONTH(date) |  |
-| Return Type | int |
-| Description | Number between 1 and 12, inclusive, representing the month of the year. |
-| DAY(date) |  |
-| Return Type | int |
-| Description | Number between 1 and 31, inclusive, representing the day of the month. |
-| WEEKDAY(date) |  |
-| Return Type | DayOfWeek enumeration |
-| Description | Number representing the day of the week. |
-| HOUR(date) |  |
-| Return Type | int |
-| Description | Number between 0 and 23, inclusive, representing the hour of the day. |
-| MINUTE(date) |  |
-| Return Type | int |
-| Description | Number between 0 and 59, inclusive, representing the minute of the hour. |
-| SECOND(date) |  |
-| Return Type | int |
-| Description | Number between 0 and 59, inclusive, representing the second of the minute. |
-| DATEADD(interval, double number, DateTime date) |  |
-| Return Type | DateTime |
-| Description | Number between 0 and 59, inclusive, representing the minute of the hour. |
-| Parameters | interval: DateInterval enumeration value or string expression representing the time interval you want to add. The intervalargument can have one of the settings listed here. number: The number of intervals you want to add. It can be positive (to get dates in the future) or negative (to get dates in the past). Any fractional part of number is ignored. date: date to which the interval is added. |
-| Example | The following expressions are equivalent: DateAdd(dtMonth, 1, #2005-12-31#) DateAdd(“m”, 1, #2005-12-31#) DateAdd(2, 1, #2005-12-31#)In this example, DateAdd returns #2006-01-31#. |
-| DATEDIFF(interval, DateTime date1, DateTime date2 [, firstdayofweek [,firstweekofyear]]) |  |
-| Return Type | System.Int64 |
-| Description | Returns the number of intervals between two dates. |
-| Parameters | interval: DateInterval enumeration value or string expression representing the time interval you want to use as the unit of difference between date1 and date2. The interval argument can have one of the settings listed here. date1, date2: Date expressions. Two dates you want to use in the calculation. firstdayofweek: Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the day of the week. If not specified, Sunday is assumed. firstweekofyear: Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs. |
-| Remarks | If Date1 represents a later date and time than Date2, DATEDIFF returns a negative number. If Interval is set to DateInterval.Year, DateInterval.Quarter, or DateInterval.Month the return value is the number of date and time boundaries crossed between Date1 and Date2. Note When comparing December 31 to January 1 of the following year, DATEDIFF returns 1 for DateInterval.Year, DateInterval.Quarter, or DateInterval.Month, even though only one day has elapsed. |
-| Example | The following expressions are equivalent: DateDiff(dtYear, #2005-12-31#, #1995-12-31#) DateDiff(“yyyy”, #2005-12-31#, #1995-12-31#) DateDiff(0, #2005-12-31#, #1995-12-31#)In this example, DateDiff returns -10. |
-| DATEPART(interval, DateTime date [, firstdayofweek [,firstweekofyear]]) |  |
-| Return Type | System.Int32 |
-| Description | Returns an Integer value containing the specified component of a given Date value. |
-| Parameters | interval: DateInterval enumeration value or string expression representing the part of the date/time value you want to return. The interval argument can have one of the settings listed here. date: Date expression you want to evaluate. firstdayofweek: Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the day of the week. If not specified, Sunday is assumed. firstweekofyear: Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs. |
-| Example | The following expressions are equivalent: DatePart(dtQuarter, #2005-12-31#) DatePart(“q”, #2005-12-31#) DatePart(1, #2005-12-31#)In this example, DatePart returns 4. |
-| DATE(int year, int month, int day [, int hour, int minute, int second]) |  |
-| Return Type | DateTime |
-| Description | A Date value representing a specified year, month, day, hour, minute, and second. |
-| Parameters | year: The year (1 through 9999). month: The month (1 through 12). day: The day (1 through the number of days in month). hour: Optional. The hours (0 through 23). minute: Optional. The minutes (0 through 59). second: Optional. The seconds (0 through 59). |
-| Return Value | A Date value representing a specified year, month, day, hour, minute, and second. |
-| MIN(DateTime date1, DateTime date2, …) MIN(DateTime[ ] date) |  |
-| MIN(DateTime[ ] date) |  |
-| Return Type | DateTime |
-| Description | Returns the smallest date in a set of date values. |
-| MAX(DateTime date1, DateTime date2, …) MAX(DateTime[ ] date) |  |
-| MAX(DateTime[ ] date) |  |
-| Return Type | DateTime |
-| Description | Returns the largest date in a set of date values. |
-| FORMAT(DateTime, string style) |  |
-| Return Type | string |
-| Description | Returns a string expression formatted according to instructions contained in a format string expression. For information on how to create the style argument, see the appropriate topic at MSDN: Predefined Date Formats User-Defined Date Formats |
+<table id="tablepress-27" class="tablepress tablepress-id-27 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>NOW()</strong></td><td class="column-2"></td></tr><tr class="row-2 even"><td class="column-1">Return Type</td><td class="column-2">DateTime</td></tr><tr class="row-3 odd"><td class="column-1">Description</td><td class="column-2">Current date and time according to the setting of your computer’s system date and time.</td></tr><tr class="row-4 even"><td class="column-1"><strong>TODAY()</strong></td><td class="column-2"></td></tr><tr class="row-5 odd"><td class="column-1">Return Type</td><td class="column-2">DateTime</td></tr><tr class="row-6 even"><td class="column-1">Description</td><td class="column-2">Current date. Time part of the day is zero (midnight).</td></tr><tr class="row-7 odd"><td class="column-1"><strong>YEAR(date)</strong></td><td class="column-2"></td></tr><tr class="row-8 even"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-9 odd"><td class="column-1">Description</td><td class="column-2">Number representing the year.</td></tr><tr class="row-10 even"><td class="column-1"><strong>MONTH(date)</strong></td><td class="column-2"></td></tr><tr class="row-11 odd"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-12 even"><td class="column-1">Description</td><td class="column-2">Number between 1 and 12, inclusive, representing the month of the year.</td></tr><tr class="row-13 odd"><td class="column-1"><strong>DAY(date)</strong></td><td class="column-2"></td></tr><tr class="row-14 even"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-15 odd"><td class="column-1">Description</td><td class="column-2">Number between 1 and 31, inclusive, representing the day of the month.</td></tr><tr class="row-16 even"><td class="column-1"><strong>WEEKDAY(date)</strong></td><td class="column-2"></td></tr><tr class="row-17 odd"><td class="column-1">Return Type</td><td class="column-2">DayOfWeek enumeration</td></tr><tr class="row-18 even"><td class="column-1">Description</td><td class="column-2">Number representing the day of the week.</td></tr><tr class="row-19 odd"><td class="column-1"><strong>HOUR(date)</strong></td><td class="column-2"></td></tr><tr class="row-20 even"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-21 odd"><td class="column-1">Description</td><td class="column-2">Number between 0 and 23, inclusive, representing the hour of the day.</td></tr><tr class="row-22 even"><td class="column-1"><strong>MINUTE(date)</strong></td><td class="column-2"></td></tr><tr class="row-23 odd"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-24 even"><td class="column-1">Description</td><td class="column-2">Number between 0 and 59, inclusive, representing the minute of the hour.</td></tr><tr class="row-25 odd"><td class="column-1"><strong>SECOND(date)</strong></td><td class="column-2"></td></tr><tr class="row-26 even"><td class="column-1">Return Type</td><td class="column-2">int</td></tr><tr class="row-27 odd"><td class="column-1">Description</td><td class="column-2">Number between 0 and 59, inclusive, representing the second of the minute.</td></tr><tr class="row-28 even"><td class="column-1"><strong>DATEADD(interval, double number, DateTime date)</strong></td><td class="column-2"></td></tr><tr class="row-29 odd"><td class="column-1">Return Type</td><td class="column-2">DateTime</td></tr><tr class="row-30 even"><td class="column-1">Description</td><td class="column-2">Number between 0 and 59, inclusive, representing the minute of the hour.</td></tr><tr class="row-31 odd"><td class="column-1">Parameters</td><td class="column-2">interval: DateInterval enumeration value or string expression representing the time interval you want to add. The intervalargument can have one of the settings listed here.<br/> number: The number of intervals you want to add. It can be positive (to get dates in the future) or negative (to get dates in the past). Any fractional part of number is ignored.<br/> date: date to which the interval is added.</td></tr><tr class="row-32 even"><td class="column-1">Example</td><td class="column-2">The following expressions are equivalent:<br/> DateAdd(dtMonth, 1, #2005-12-31#) DateAdd(“m”, 1, #2005-12-31#) DateAdd(2, 1, #2005-12-31#)In this example, DateAdd returns #2006-01-31#.</td></tr><tr class="row-33 odd"><td class="column-1"><strong>DATEDIFF(interval, DateTime date1, DateTime date2 [, firstdayofweek [,firstweekofyear]])</strong></td><td class="column-2"></td></tr><tr class="row-34 even"><td class="column-1">Return Type</td><td class="column-2">System.Int64</td></tr><tr class="row-35 odd"><td class="column-1">Description</td><td class="column-2">Returns the number of intervals between two dates.</td></tr><tr class="row-36 even"><td class="column-1">Parameters</td><td class="column-2">interval: DateInterval enumeration value or string expression representing the time interval you want to use as the unit of difference between date1 and date2. The interval argument can have one of the settings listed here.<br/> date1, date2: Date expressions. Two dates you want to use in the calculation.<br/> firstdayofweek: Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the day of the week. If not specified, Sunday is assumed.<br/> firstweekofyear: Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs.</td></tr><tr class="row-37 odd"><td class="column-1">Remarks</td><td class="column-2">If Date1 represents a later date and time than Date2, DATEDIFF returns a negative number.<br/> If Interval is set to DateInterval.Year, DateInterval.Quarter, or DateInterval.Month the return value is the number of date and time boundaries crossed between Date1 and Date2.<br/> Note When comparing December 31 to January 1 of the following year, DATEDIFF returns 1 for DateInterval.Year, DateInterval.Quarter, or DateInterval.Month, even though only one day has elapsed.</td></tr><tr class="row-38 even"><td class="column-1">Example</td><td class="column-2">The following expressions are equivalent:<br/> DateDiff(dtYear, #2005-12-31#, #1995-12-31#) DateDiff(“yyyy”, #2005-12-31#, #1995-12-31#) DateDiff(0, #2005-12-31#, #1995-12-31#)In this example, DateDiff returns -10.</td></tr><tr class="row-39 odd"><td class="column-1"><strong>DATEPART(interval, DateTime date [, firstdayofweek [,firstweekofyear]])</strong></td><td class="column-2"></td></tr><tr class="row-40 even"><td class="column-1">Return Type</td><td class="column-2">System.Int32</td></tr><tr class="row-41 odd"><td class="column-1">Description</td><td class="column-2">Returns an Integer value containing the specified component of a given Date value.</td></tr><tr class="row-42 even"><td class="column-1">Parameters</td><td class="column-2">interval: DateInterval enumeration value or string expression representing the part of the date/time value you want to return. The interval argument can have one of the settings listed here.<br/> date: Date expression you want to evaluate.<br/> firstdayofweek: Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the day of the week. If not specified, Sunday is assumed.<br/> firstweekofyear: Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs.</td></tr><tr class="row-43 odd"><td class="column-1">Example</td><td class="column-2">The following expressions are equivalent:<br/> DatePart(dtQuarter, #2005-12-31#) DatePart(“q”, #2005-12-31#) DatePart(1, #2005-12-31#)In this example, DatePart returns 4.</td></tr><tr class="row-44 even"><td class="column-1"><strong>DATE(int year, int month, int day [, int hour, int minute, int second])</strong></td><td class="column-2"></td></tr><tr class="row-45 odd"><td class="column-1">Return Type</td><td class="column-2">DateTime</td></tr><tr class="row-46 even"><td class="column-1">Description</td><td class="column-2">A Date value representing a specified year, month, day, hour, minute, and second.</td></tr><tr class="row-47 odd"><td class="column-1">Parameters</td><td class="column-2">year: The year (1 through 9999).<br/> month: The month (1 through 12).<br/> day: The day (1 through the number of days in month).<br/> hour: Optional. The hours (0 through 23).<br/> minute: Optional. The minutes (0 through 59).<br/> second: Optional. The seconds (0 through 59).</td></tr><tr class="row-48 even"><td class="column-1">Return Value</td><td class="column-2">A Date value representing a specified year, month, day, hour, minute, and second.</td></tr><tr class="row-49 odd"><td class="column-1"><strong>MIN(DateTime date1, DateTime date2, …)<br/> MIN(DateTime[ ] date)</strong></td><td class="column-2"></td></tr><tr class="row-50 even"><td class="column-1">Return Type</td><td class="column-2">DateTime</td></tr><tr class="row-51 odd"><td class="column-1">Description</td><td class="column-2">Returns the smallest date in a set of date values.</td></tr><tr class="row-52 even"><td class="column-1"><strong>MAX(DateTime date1, DateTime date2, …)<br/> MAX(DateTime[ ] date)</strong></td><td class="column-2"></td></tr><tr class="row-53 odd"><td class="column-1">Return Type</td><td class="column-2">DateTime</td></tr><tr class="row-54 even"><td class="column-1">Description</td><td class="column-2">Returns the largest date in a set of date values.</td></tr><tr class="row-55 odd"><td class="column-1"><strong>FORMAT(DateTime, string style)</strong></td><td class="column-2"></td></tr><tr class="row-56 even"><td class="column-1">Return Type</td><td class="column-2">string</td></tr><tr class="row-57 odd"><td class="column-1">Description</td><td class="column-2">Returns a string expression formatted according to instructions contained in a format string expression.<br/> For information on how to create the style argument, see the appropriate topic at MSDN:<br/> Predefined Date Formats<br/> User-Defined Date Formats</td></tr></tbody></table>
 
 ## Operators (Input Types)
 
 ### Arithmetic Operators
 
-| Operator | Num | Date | Str | Bool | Description |
-| --- | --- | --- | --- | --- | --- |
-| plus(+) | yes |  | yes |  | Positive sign or arithmetic addition |
-| – | yes |  |  |  | Negative sign or arithmetic subtraction |
-| * | yes |  |  |  | Multiplication |
-| / | yes |  |  |  | Division |
-| % | yes |  |  |  | Remainder (modulus) obtained by dividing one numeric expression into another |
-| ^ | yes |  |  |  | Power |
+<table id="tablepress-28" class="tablepress tablepress-id-28 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Operator</strong></td><td class="column-2"><strong>Num</strong></td><td class="column-3"><strong>Date</strong></td><td class="column-4"><strong>Str</strong></td><td class="column-5"><strong>Bool</strong></td><td class="column-6">Description</td></tr><tr class="row-2 even"><td class="column-1">plus(+)</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4">yes</td><td class="column-5"></td><td class="column-6">Positive sign or arithmetic addition</td></tr><tr class="row-3 odd"><td class="column-1">–</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Negative sign or arithmetic subtraction</td></tr><tr class="row-4 even"><td class="column-1">*</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Multiplication</td></tr><tr class="row-5 odd"><td class="column-1">/</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Division</td></tr><tr class="row-6 even"><td class="column-1">%</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Remainder (modulus) obtained by dividing one numeric expression into another</td></tr><tr class="row-7 odd"><td class="column-1">^</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Power</td></tr></tbody></table>
 
-### Comparison Operators
+## Comparison Operators
 
-| `<`  | yes | yes | yes |     | Less than           |
-| `>`  | yes | yes | yes |     | Greater than        |
-| `<=` | yes | yes | yes | yes | Less than or equal  |
-| `>=` | yes | yes | yes | yes | Greater than or equal |
-| equals (`==` or `=`) | yes | yes | yes | yes | Equality   |
-| `!=` or `<>` | yes | yes | yes | yes | Inequality |
+<table id="tablepress-30" class="tablepress tablepress-id-30 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Operator</strong></td><td class="column-2"><strong>Num</strong></td><td class="column-3"><strong>Date</strong></td><td class="column-4"><strong>Str</strong></td><td class="column-5"><strong>Bool</strong></td><td class="column-6"><strong>Description</strong></td></tr><tr class="row-2 even"><td class="column-1">&lt;</td><td class="column-2">yes</td><td class="column-3">yes</td><td class="column-4">yes</td><td class="column-5"></td><td class="column-6">Less than</td></tr><tr class="row-3 odd"><td class="column-1">&gt;</td><td class="column-2">yes</td><td class="column-3">yes</td><td class="column-4">yes</td><td class="column-5"></td><td class="column-6">Greater than</td></tr><tr class="row-4 even"><td class="column-1">&lt;=</td><td class="column-2">yes</td><td class="column-3">yes</td><td class="column-4">yes</td><td class="column-5"></td><td class="column-6">Less than or equal</td></tr><tr class="row-5 odd"><td class="column-1">&gt;=</td><td class="column-2">yes</td><td class="column-3">yes</td><td class="column-4">yes</td><td class="column-5"></td><td class="column-6">Greater than or equal</td></tr><tr class="row-6 even"><td class="column-1">equals (== or =)</td><td class="column-2">yes</td><td class="column-3">yes</td><td class="column-4">yes</td><td class="column-5">yes</td><td class="column-6">Equality</td></tr><tr class="row-7 odd"><td class="column-1">!= or &lt;&gt;</td><td class="column-2">yes</td><td class="column-3">yes</td><td class="column-4">yes</td><td class="column-5">yes</td><td class="column-6">Inequality</td></tr></tbody></table>
 
-### Logical Operators
+## Logical Operators
 
-| Operator | Num | Date | Str | Bool | Description |
-| --- | --- | --- | --- | --- | --- |
-| AND && |  |  |  | yes | Logical AND |
-| OR || |  |  |  | yes | Logical OR |
-| NOT ! |  |  |  | yes | Logical Negation |
+<table id="tablepress-31" class="tablepress tablepress-id-31 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Operator</strong></td><td class="column-2"><strong>Num</strong></td><td class="column-3"><strong>Date</strong></td><td class="column-4"><strong>Str</strong></td><td class="column-5"><strong>Bool</strong></td><td class="column-6"><strong>Description</strong></td></tr><tr class="row-2 even"><td class="column-1">AND<br/> &amp;&amp;</td><td class="column-2"></td><td class="column-3"></td><td class="column-4"></td><td class="column-5">yes</td><td class="column-6">Logical AND</td></tr><tr class="row-3 odd"><td class="column-1">OR<b/> ||</td><td class="column-2"></td><td class="column-3"></td><td class="column-4"></td><td class="column-5">yes</td><td class="column-6">Logical OR</td></tr><tr class="row-4 even"><td class="column-1">NOT<br/> !</td><td class="column-2"></td><td class="column-3"></td><td class="column-4"></td><td class="column-5">yes</td><td class="column-6">Logical Negation</td></tr></tbody></table>
 
-### Bitwise Operators
+## Bitwise Operators
 
-| Operator | Num | Date | Str | Bool | Description |
-| --- | --- | --- | --- | --- | --- |
-| & | yes |  |  |  | Bitwise AND operator. |
-| | | yes |  |  |  | Bitwise OR operator. |
-| !& | yes |  |  |  | Bitwise exclusive-OR operator. |
-| ~ | yes |  |  |  | Bitwise complement operator. |
+<table id="tablepress-32" class="tablepress tablepress-id-32 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Operator</strong></td><td class="column-2"><strong>Num</strong></td><td class="column-3"><strong>Date</strong></td><td class="column-4"><strong>Str</strong></td><td class="column-5"><strong>Bool</strong></td><td class="column-6"><strong>Description</strong></td></tr><tr class="row-2 even"><td class="column-1">&amp;</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Bitwise AND operator.</td></tr><tr class="row-3 odd"><td class="column-1">|</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Bitwise OR operator.</td></tr><tr class="row-4 even"><td class="column-1">!&amp;</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Bitwise exclusive-OR operator.</td></tr><tr class="row-5 odd"><td class="column-1">~</td><td class="column-2">yes</td><td class="column-3"></td><td class="column-4"></td><td class="column-5"></td><td class="column-6">Bitwise complement operator.</td></tr></tbody></table>
 
 ## Constants
 
-| Constant | Value |
-| --- | --- |
-| PI | 3.141592654 |
-| E | 2.718281828 |
-| TRUE | 1 |
-| FALSE | 0 |
+<table id="tablepress-33" class="tablepress tablepress-id-33 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Constant</strong></td><td class="column-2"><strong>Value</strong></td></tr><tr class="row-2 even"><td class="column-1">PI</td><td class="column-2">3.141592654</td></tr><tr class="row-3 odd"><td class="column-1">E</td><td class="column-2">2.718281828</td></tr><tr class="row-4 even"><td class="column-1">TRUE</td><td class="column-2">1</td></tr><tr class="row-5 odd"><td class="column-1">FALSE</td><td class="column-2">0</td></tr></tbody></table>
 
-### Date Interval
+## Date Interval
 
-| Constant | Numeric Value | String Expression |
-| --- | --- | --- |
-| dtYear | 0 | yyyy |
-| dtQuarter | 1 | q |
-| dtMonth | 2 | m |
-| dtDayOfYear | 3 | y |
-| dtDay | 4 | d |
-| dtWeekOfYear | 5 | ww |
-| dtWeekday | 6 | w |
-| dtHour | 7 | h |
-| dtMinute | 8 | n |
-| dtSecond | 9 | s |
+<table id="tablepress-34" class="tablepress tablepress-id-34 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Constant</strong></td><td class="column-2"><strong>Numeric Value</strong></td><td class="column-3"><strong>String Expression</strong></td></tr><tr class="row-2 even"><td class="column-1">dtYear</td><td class="column-2">0</td><td class="column-3">yyyy</td></tr><tr class="row-3 odd"><td class="column-1">dtQuarter</td><td class="column-2">1</td><td class="column-3">q</td></tr><tr class="row-4 even"><td class="column-1">dtMonth</td><td class="column-2">2</td><td class="column-3">m</td></tr><tr class="row-5 odd"><td class="column-1">dtDayOfYear</td><td class="column-2">3</td><td class="column-3">y</td></tr><tr class="row-6 even"><td class="column-1">dtDay</td><td class="column-2">4</td><td class="column-3">d</td></tr><tr class="row-7 odd"><td class="column-1">dtWeekOfYear</td><td class="column-2">5</td><td class="column-3">ww</td></tr><tr class="row-8 even"><td class="column-1">dtWeekday</td><td class="column-2">6</td><td class="column-3">w</td></tr><tr class="row-9 odd"><td class="column-1">dtHour</td><td class="column-2">7</td><td class="column-3">h</td></tr><tr class="row-10 even"><td class="column-1">dtMinute</td><td class="column-2">8</td><td class="column-3">n</td></tr><tr class="row-11 odd"><td class="column-1">dtSecond</td><td class="column-2">9</td><td class="column-3">s</td></tr></tbody></table>
 
-### FirstDayOfWeek
+## FirstDayOfWeek
 
-| Constant | Numeric Value |
-| --- | --- |
-| dtSystem | 0 |
-| dtSunday | 1 |
-| dtMonday | 2 |
-| dtTuesday | 3 |
-| dtWednesday | 4 |
-| dtThursday | 5 |
-| dtFriday | 6 |
-| dtSaturday | 7 |
+<table id="tablepress-35" class="tablepress tablepress-id-35 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Constant</strong></td><td class="column-2"><strong>Numeric Value</strong></td></tr><tr class="row-2 even"><td class="column-1">dtSystem</td><td class="column-2">0</td></tr><tr class="row-3 odd"><td class="column-1">dtSunday</td><td class="column-2">1</td></tr><tr class="row-4 even"><td class="column-1">dtMonday</td><td class="column-2">2</td></tr><tr class="row-5 odd"><td class="column-1">dtTuesday</td><td class="column-2">3</td></tr><tr class="row-6 even"><td class="column-1">dtWednesday</td><td class="column-2">4</td></tr><tr class="row-7 odd"><td class="column-1">dtThursday</td><td class="column-2">5</td></tr><tr class="row-8 even"><td class="column-1">dtFriday</td><td class="column-2">6</td></tr><tr class="row-9 odd"><td class="column-1">dtSaturday</td><td class="column-2">7</td></tr></tbody></table>
 
-### FirstWeekOfYear
+## FirstWeekOfYear
 
-| Constant | Numeric Value |
-| --- | --- |
-| dtSystem | 0 |
-| dtJan1 | 1 |
-| dtFirstFourDays | 2 |
-| dtFirstFullWeek | 3 |
-
+<table id="tablepress-36" class="tablepress tablepress-id-36 tablepress-responsive"><tbody class="row-hover"><tr class="row-1 odd"><td class="column-1"><strong>Constant</strong></td><td class="column-2"><strong>Numeric Value</strong></td></tr><tr class="row-2 even"><td class="column-1">dtSystem</td><td class="column-2">0</td></tr><tr class="row-3 odd"><td class="column-1">dtJan1</td><td class="column-2">1</td></tr><tr class="row-4 even"><td class="column-1">dtFirstFourDays</td><td class="column-2">2</td></tr><tr class="row-5 odd"><td class="column-1">dtFirstFullWeek</td><td class="column-2">3</td></tr></tbody></table>
