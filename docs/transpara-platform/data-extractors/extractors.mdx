@@ -1,0 +1,111 @@
+---
+title: Extractors
+slug: 
+description: Reference of supported extractors.
+tags: ['Extractors']
+---
+
+Extractors connect the Transpara Platform to your existing operational and historical data sources. They continuously read data from any data source, including but not limited to historians, control systems, and industrial databases, then stream it into tStore, the platform’s built-in real-time data engine that serves as both a historian and a high-performance time-series database. Each extractor is a lightweight service designed to access data where it already lives, without migration or disruption to your source systems.
+
+  
+
+## Overview
+
+While Interfaces are designed for live, direct connections (read-only access to data sources), Extractors are used when:
+
+*   The data source does not provide a modern or performant API  
+      
+    
+*   You need continuous, automated data collection  
+      
+    
+*   Historical data must be backfilled into tStore (especially where the source does not have historical data)  
+      
+    
+*   Data must be buffered, cleaned, or aggregated before it’s stored  
+      
+    
+
+Each Extractor runs as a Windows service designed to automate one or more stages of data movement into Transpara. Depending on the Extractor and configuration, it may:
+
+*   Connect to an industrial system or historian (e.g., PI, OPC)  
+      
+    
+*   Collect live data streams, historical data, or both  
+      
+    
+*   Stream that data securely into tStore for storage and analytics  
+      
+    
+*   Monitor and recover automatically to maintain continuous operation  
+      
+    
+
+Not all Extractors perform every function in every deployment. Some specialize in real-time collection, others in historical backfill or hybrid operation. Together, they extend the reach of Transpara’s Virtual Data Lake concept, bringing even legacy or proprietary systems into the flow of real-time analytics.
+
+  
+
+## How Extractors Fit in the Architecture
+
+Extractors sit between your source systems and Transpara’s core analytics engine. They act as the bridge that moves or streams data into the platform, converting industrial signals and historian records into the high-speed format used by tStore.
+
+The green line in the diagram below shows how Extractors fit within the Transpara architecture and how data flows through the platform:
+
+<Image 
+  src="media/transpara-platform/extractors-diagram.png" 
+  alt="Diagram of the technical architecture"
+/>
+
+(Interactions between tStore and tCalc are optional.)
+
+Each Extractor streams data into tStore, Transpara’s high-speed time-series database and analytics cache. From there, calculations, KPIs, and models can be created and visualized in near real-time.
+
+  
+
+## Common Extractor Features
+
+All Transpara Extractors share a consistent design built for industrial scale, reliability, and ease of management. Each one runs as a service, making installation, startup, and recovery simple through standard service commands.
+
+They include automatic recovery mechanisms that restart the service in case of failure or disconnection, along with configurable buffering to control data flow using time- or count-based triggers. Data is processed using parallel and batch operations to handle large volumes efficiently, and a built-in web interface allows administrators to monitor performance and update configurations without editing files directly.
+
+Every Extractor is tightly coupled with tStore, using built-in batching, retries, and caching to deliver high-speed, fault-tolerant writes. Robust logging and diagnostics ensure transparency, with automatic log rotation and detailed trace options to simplify troubleshooting and auditing.
+
+  
+
+## Deployment and Configuration
+
+Extractors are distributed as lightweight services designed for straightforward installation, configuration, and long-term reliability. While many Extractors run cross-platform, a subset depends on Windows due to underlying protocol or framework requirements.
+
+Most PI-based Extractors run independently of the operating system. OPC UA Extractors are also cross-platform because they rely on modern, API-based communication. However, Extractors that depend on legacy Windows components or .NET Framework elements must remain on Windows. These currently include OPC HDA, OPC DA, PI SDK, and PI RDA. Additional Windows-based modules may be introduced in the future as needed.
+
+Windows-based Extractors run as .NET Framework services and include a simple configuration file (App.config) along with an optional browser-based settings interface (/settings-ui) for runtime adjustments. They can be installed, started, or removed using familiar service commands such as install, start, and uninstall. When running as a Windows service, they must use the NetworkService account (or an equivalent user) with permission to write to the installation folder for logs, buffering, and configuration updates.
+
+Cross-platform Extractors follow the same operational principles—lightweight deployment, simple configuration, built-in recovery, buffering, batching, and robust logging—while taking advantage of modern runtimes that allow them to run on Linux or Windows without modification.
+
+Across all operating systems, Extractors include automatic recovery, configurable buffering, parallel data handling, and high-speed, fault-tolerant communication with tStore, minimizing the need for manual intervention once deployed.
+
+## When to Use Extractors vs Interfaces
+
+Both Interfaces and Extractors connect Transpara to external data systems, but they serve slightly different purposes depending on the type of data and how it needs to be accessed.
+
+Interfaces are ideal when data can be read directly and live from its source, no duplication, no migration. They act as read-only connectors that make external systems part of the Virtual Data Lake in real time.
+
+Extractors, on the other hand, are used when you want data to be collected or cached—for example, when dealing with legacy protocols, large historians, for performance of analytics purposes, or for systems without modern APIs. They continuously gather and push data into tStore, providing full control over scheduling, buffering, and backfill. Extractors are also the better choice when performing complex or computationally intensive calculations, especially when these calculations span multiple data sources or require consistent, high-speed access to stored time-series data.
+
+In short, Interfaces let you see live data without moving it, while Extractors let you first move or record it in tStore when that’s required.
+
+The comparison below summarizes when each option makes the most sense:
+
+  
+
+| Scenario | Use Interface | Use Extractor |
+| --- | --- | --- |
+| Need to read live data without moving it | ✔️ |  |
+| Need to stream large historical datasets | ✔️ | ✔️ |
+| Source supports modern APIs | ✔️ | ✔️ |
+| Source does not store historical data (OPC DA, etc.) |  | ✔️ |
+| Source stores historical data (Historians, OPC-HDA, RDBMS, etc.) | ✔️ | ✔️ |
+| Want automatic, continuous data flow into tStore |  | ✔️ |
+| If you are doing complex calculations, especially when using multiple data sources |  | ✔️ |
+
+<Callout title="If you do not see the Extractor you need, contact us" type="success"> Transpara routinely works with customers on new protocols, legacy systems, and unique architectures. Whether through a new extractor, an interface, or a hybrid approach, we will find a way to make your data work seamlessly within the platform. </Callout>

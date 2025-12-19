@@ -1,0 +1,300 @@
+---
+title: PI-RDA Extractor
+slug: 
+description: PI-RDA Extractor
+tags: ['Extractors']
+---
+
+The PI-RDA Extractor is Transpara’s modern connector for AVEVA PI and Asset Framework (AF) systems. It uses PI Remote Data Access (RDA) and AF SDK to collect both real-time and historical data, then streams it directly to tStore for high-performance analytics and visualization.
+
+Built for scalability, the PI-RDA Extractor supports parallel processing and subscription-based updates, offering a faster and more flexible alternative to legacy PI-SDK integrations.
+
+  
+
+## Key Capabilities
+
+The PI-RDA Extractor runs as a Windows service built on .NET Framework for simple installation and service control. It supports both PI and AF data sources, letting you extract data from PI tags and AF attributes in the same deployment.
+
+It can perform live subscriptions for real-time updates or historical backfills across configurable time ranges. Advanced features such as parallel processing and automatic recovery ensure continuous, high-speed data transfer even in large, distributed environments.
+
+Configuration and monitoring are handled through a built-in web interface available at http://localhost:9300/settings-ui/.
+
+  
+
+## Installation and Requirements
+
+The PI-RDA Extractor installs as a Windows service and typically runs under the NetworkService account.
+
+Supported Platforms
+
+*   Windows Server 2016 or later  
+      
+    
+*   Windows 10 or later  
+      
+    
+
+Dependencies
+
+*   Most recent version .NET Framework  
+      
+      
+    
+*   AVEVA AF SDK 4.0 or later  
+      
+    
+*   Network access to PI and/or AF servers  
+      
+    
+*   Network access to the tStore endpoint  
+      
+    
+
+Installation Steps
+
+1.  Copy the Extractor files to the target directory  
+    (default: C:\\Program Files\\Transpara\\Extractors\\PI-RDA Extractor\\)  
+      
+    
+2.  From an Administrator command prompt, run:  
+      
+    
+
+extractor-pirda install \-servicename "Transpara PI-RDA Data Extractor" \-displayname "Transpara PI-RDA Data Extractor"
+
+  
+
+The Extractor supports both Windows authentication and username/password authentication for connecting to PI and AF servers.
+
+  
+
+## Configuration
+
+Configuration settings are stored in the App.config file and can be managed through the web interface at http://localhost:9300/settings-ui/.
+
+Main Configuration Areas
+
+*   PI and AF Connection – Define server names, authentication credentials, and target AF databases.  
+      
+    
+*   Subscription and Backfill – Enable live data streaming or define start/end times for historical reads.  
+      
+    
+*   Tag and Attribute Handling – Apply tag filters, exclusion patterns, and attribute lookups across AF hierarchies.  
+      
+    
+*   tStore Settings – Configure endpoint URLs, batching intervals, and caching durations for token reuse.  
+      
+    
+*   Parallelism and Performance – Set maximum concurrent threads and chunk sizes for optimized throughput.  
+      
+    
+*   Logging – Enable specific activity logs (startup, subscription, backfill, data initialization) for detailed monitoring.  
+      
+    
+
+Most configuration changes take effect immediately; others may require a service restart.
+
+Note: This configuration walkthrough represents one common approach. Extractors are flexible, and depending on your environment, data strategy, or deployment model, there are multiple valid ways to structure and tune configuration settings.
+
+## Core Configuration Settings
+
+Extractor Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| id | Unique identifier for this extractor instance | Auto-generated GUID |
+| pi_server | Name or IP address of the PI server | localhost |
+| pi_username | PI server username | - |
+| pi_password | PI server password (Base64 encoded) | - |
+| af_server_name | Name or IP address of the AF server | localhost |
+| af_database_name | Name of the AF database | - |
+| af_username | AF server username | - |
+| af_password | AF server password (Base64 encoded) | - |
+| dataset_name | Name of the dataset in tStore | FISHPIRDA |
+| max_degree_of_parallelism | Maximum parallel processing threads | 4 |
+| historical_data_chunk_size | Size of historical data chunks for processing | 5000 |
+
+* * *
+
+Subscription Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| subscription_enabled | Enable live data subscription | True |
+| subscription_list_refresh_interval_minutes | Interval for refreshing subscription list | 1440 |
+
+* * *
+
+Startup Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| startup_initialize_new_data_enabled | Enable initialization of new data on startup | True |
+| startup_recovery_enabled | Enable startup recovery backfill | True |
+| startup_recovery_max_prior_minutes | Minutes of data to backfill on startup | 10 |
+
+* * *
+
+Tag and Attribute Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| tag_filter_enabled | Enable tag filtering | True |
+| tag_filter | Tag filter pattern (supports wildcards) | * |
+| tag_exclusion_filter | Tag exclusion patterns (semicolon-separated) | , |
+| tag_list_enabled | Enable tag list processing | False |
+| attribute_list_enabled | Enable AF attribute processing | False |
+| attribute_list_auto_tstore_lookup_enabled | Enable automatic tStore lookup for attributes | True |
+| attribute_list_auto_tstore_lookup_pattern | Pattern for tStore lookup generation | attribute={ATTRIBUTE},site={1},area={2},unit={3} |
+
+* * *
+
+Backfill Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| backfill_enabled | Enable historical data backfill | True |
+| backfill_start | Start time for backfill (ISO 8601 format) | 2025-01-01T00:00:00.0000000+00:00 |
+| backfill_end | End time for backfill (ISO 8601 format) | 2025-10-02T00:00:00.0000000+00:00 |
+| backfill_report_loop_count | Number of loops before reporting backfill progress | 10 |
+
+* * *
+
+tStore Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| tstore_endpoint | tStore API endpoint URL | http://borg-ci.transpara.com:10001 |
+| tstore_username | tStore username | tStoreDev@transpara.com |
+| tstore_password | tStore password (Base64 encoded) | tStoreDev!22 |
+| tstore_http_timeout_seconds | HTTP timeout for tStore requests | 150 |
+| tstore_cache_token_minutes | Token cache duration in minutes | 600 |
+| tstore_max_cache_token_minutes | Maximum token cache duration | 4800 |
+| tstore_max_batch_interval_seconds | Maximum interval between batch uploads | 10 |
+| tstore_max_batch_count | Maximum records per batch | 50000 |
+| tstore_overwrite_data | Allow overwriting existing data | False |
+
+* * *
+
+API Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| api_base_uri | Base URL for the extractor’s web API | http://localhost:9300/ |
+
+* * *
+
+Logging Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| log_only | Log data without sending to tStore | False |
+| log_startup_recovery | Enable startup recovery logging | True |
+| log_data_initialization | Enable data initialization logging | True |
+| log_backfill | Enable backfill operation logging | True |
+| log_json_sent | Log JSON data being sent to tStore | False |
+| log_duplicate_timestamps | Log duplicate timestamp warnings | False |
+
+* * *
+
+Debug Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| debug_tag_watch | Comma-separated list of tags to debug | cdt166;cdt170 |
+
+  
+
+## Operation and Data Flow
+
+Once running, the PI-RDA Extractor connects to the specified PI and AF servers and begins retrieving data according to your needs:
+
+*   Live Subscription: Streams updates from active PI points or AF attributes as they change.  
+      
+    
+*   Backfill: Reads and uploads historical data from defined time ranges, using chunk-based processing for scale.  
+      
+      
+    
+
+Collected data is batched and streamed to tStore, where it is immediately available for calculations, KPIs, and visualization.
+
+The Extractor’s parallel processing engine ensures consistent throughput even with large data sets, while automatic recovery prevents gaps during restarts or network disruptions.
+
+  
+
+## Use Cases and Best Practices
+
+The PI-RDA Extractor is ideal for enterprises that want to unify PI and AF data under Transpara’s real-time analytics platform — whether on-premises, in the cloud, or across hybrid deployments.
+
+Example scenarios
+
+*   Modernizing PI connectivity using RDA for high-speed, secure data transfer  
+      
+    
+*   Aggregating PI and AF data into a single analytics view  
+      
+    
+*   Feeding both live and historical data into tStore for modeling or predictive analytics  
+      
+    
+*   Integrating with cloud analytics tools while retaining local PI infrastructure  
+      
+    
+
+Best Practices  
+  
+
+*   Adjust parallelism based on server load and data volume.  
+      
+    
+*   Combine AF attributes and PI tags to provide full operational context for analytics and KPIs.  
+      
+    
+
+## Troubleshooting and Logs
+
+These are the default configurations, but they can be adjusted based on your environment and operational preferences.
+
+Logs are stored in:  
+%ProgramData%\\Transpara\\Extractors\\PI-RDA Extractor\\Logs\\
+
+Each log file rotates automatically at 10 MB, retaining up to 10 archived versions.
+
+Common Issues
+
+*   Service not starting – Verify .NET Framework, PI-RDA, and AF SDK are installed.  
+      
+    
+*   Authentication errors – Check credentials or Windows account permissions for both PI and AF servers.  
+      
+    
+*   Slow throughput – Increase max\_degree\_of\_parallelism or reduce chunk size.  
+      
+      
+    
+
+### Need help or have questions?
+
+If you need assistance installing, configuring, or troubleshooting this Extractor—or want guidance on how it fits into your broader Transpara deployment—we’re here to help.
+
+Email: support@transpara.com  
+Phone: +1-925-218-6983  
+Website: www.transpara.com/support
+
+For enterprise customers, our team of real-time operations experts can also assist with integration, optimization, and performance tuning.
+
+If something isn’t working as expected, reach out. We’d rather help you get it running right than leave you guessing.
+
+## Next Steps
+
+Once PI and AF data are flowing into tStore, you can immediately begin building models, KPIs, and visualizations in tStudio and tView.
+
+For legacy AVEVA environments or Trust-based systems, see:
+
+*   [PI-SDK Extractor](https://chatgpt.com/g/g-p-68e406024090819197c3f8dbbfe0f21e-transpara-robert-mimic/extractors/pi-sdk) for older PI deployments  
+      
+    
+*   [tStore Overview](https://chatgpt.com/g/architecture/tstore) for data storage and analytics processing
+

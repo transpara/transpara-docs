@@ -1,0 +1,322 @@
+---
+title: PI-SDK Extractor
+slug: 
+description: PI-SDK Extractor
+tags: ['Extractors']
+---
+
+The PI-SDK Extractor connects Transpara to AVEVA PI systems that use the PI Software Development Kit (PI-SDK) for data access. It reads both real-time (snapshot) and historical (archive) PI data, streams it into tStore, and makes it available for visualization, modeling, and analysis within the Transpara Platform.
+
+This Extractor is designed for older PI systems that aren’t using the PI-RDA technology. It provides an efficient way to bring years of operational data into Transpara without replacing existing infrastructure.
+
+  
+
+## Key Capabilities
+
+The PI-SDK Extractor runs as a Windows service built on .NET Framework for straightforward service control. It supports both live polling and historical backfill, allowing you to synchronize PI data continuously or migrate archives into tStore in batches.
+
+It can be configured to read PI tags through filters or a tag list file (tags.dat) and uses multi-threaded polling to process large datasets efficiently. Automatic recovery and buffering prevent data loss in the event of temporary network or server interruptions.
+
+A web configuration interface at http://localhost:9200/settings-ui/ provides full visibility into connection status, tag management, and upload performance.
+
+  
+
+## Installation and Requirements
+
+The PI-SDK Extractor installs as a Windows service and typically runs under the NetworkService account.
+
+Supported Platforms
+
+*   Windows Server 2016 or later  
+      
+    
+*   Windows 10 or later  
+      
+    
+
+Dependencies
+
+*   Most recent version .NET Framework  
+      
+    
+*   AVEVA PI-SDK 1.4.0 or later  
+      
+    
+*   Network access to the PI Server  
+      
+    
+*   Network access to the target tStore endpoint  
+      
+    
+*   PI Trust configuration (for service authentication)  
+      
+    
+
+Installation Steps
+
+1.  Copy all Extractor files to the target directory  
+    (default: C:\\Program Files\\Transpara\\Extractors\\PI-SDK Extractor\\)  
+      
+    
+2.  From an Administrator command prompt, run:  
+      
+    
+
+TransparaExtractorPISDK install \-servicename "Transpara PI-SDK Data Extractor" \-displayname "Transpara PI-SDK Data Extractor"
+
+  
+
+The Extractor requires that the host machine be trusted by the PI Server.
+
+## Configuration
+
+All Extractor parameters are defined in the App.config file and can be adjusted through the web interface at http://localhost:9200/settings-ui/.
+
+Configuration Areas
+
+*   PI Server Connection – Server name, Trust configuration, and connection mode.  
+      
+    
+*   Tag Discovery – Enable tag filters or static tag lists (tags.dat) for selecting data points.  
+      
+    
+*   Polling and Backfill – Set polling intervals for snapshot and archive reads; define backfill time ranges.  
+      
+    
+*   tStore Settings – Configure endpoint URL, batching, and timeout values.  
+      
+    
+*   Buffering and Memory – Manage record thresholds, flush timing, and resource limits.  
+      
+    
+*   Logging – Adjust verbosity and specify watched tags for debugging.  
+      
+    
+
+The web interface validates configuration changes automatically, and most take effect immediately. A service restart may be required for connection-related updates.
+
+Note: This configuration walkthrough represents one common approach. Extractors are flexible, and depending on your environment, data strategy, or deployment model, there are multiple valid ways to structure and tune configuration settings.
+
+## Core Configuration Settings
+
+Extractor Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| id | Unique identifier for this extractor instance | - |
+| enabled | Enable or disable the extractor service | True |
+| pi_server_name | Name or IP address of the PI server | - |
+| pi_security_type | PI security type (currently only Trusts supported) | 0 |
+| tag_filter_enabled | Enable use of tag filters to generate list of data to be extracted | True |
+| tag_list_enabled | Enable use of tag list (tags.dat) to generate list of data to be extracted | True |
+| tag_filter | Comma-separated list of tag filter patterns (e.g., TANK*, PUMP, VALVE_*) | - |
+| tag_exclusion_filter | Filter string used to match PI tag names and exclude them from extraction | - |
+| dataset_name | Name of the dataset in tStore | - |
+| max_memory_allocation_mb | Maximum memory usage before restart | 2048 |
+| max_tag_count_per_poller | Maximum tags per polling thread (additional threads start as needed) | 5000 |
+
+* * *
+
+Startup Recovery Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| startup_recovery_enabled | Enable startup recovery backfill | True |
+| startup_recovery_backfill_minutes | Minutes of data to backfill on startup | 10 |
+
+* * *
+
+Polling Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| data_polling_enabled | Enable live data polling | True |
+| snapshot_polling_interval_seconds | Interval for snapshot data polling | 10 |
+| archive_polling_interval_seconds | Interval for archive data polling | 30 |
+
+* * *
+
+Backfill Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| backfill_enabled | Enable historical data backfill | True |
+| backfill_start | Start time for backfill (ISO 8601 format) | - |
+| backfill_end | End time for backfill (ISO 8601 format) | - |
+| backfill_chunk_duration_minutes | Duration of each backfill chunk | 3600 |
+| backfill_polling_interval_seconds | Interval between backfill operations | 15 |
+
+* * *
+
+tStore Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| tstore_endpoint | tStore API endpoint URL | - |
+| tstore_max_batch_count | Maximum records per batch | 50000 |
+| tstore_http_timeout_seconds | HTTP timeout for tStore requests | 150 |
+| tstore_overwrite_data | Allow overwriting existing data | False |
+| tstore_max_concurrent_tasks | Maximum concurrent upload tasks | 3 |
+
+* * *
+
+Buffer Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| data_buffer_count_threshold | Records threshold to trigger buffer flush | 100000 |
+| data_buffer_time_threshold_seconds | Time threshold to trigger buffer flush | 15 |
+| data_buffer_max_count | Maximum records in buffer | 5000000 |
+| data_buffer_sliding_window_percentage | Sliding window percentage for buffer management | 10 |
+
+* * *
+
+API Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| api_base_url | Base URL for the extractor’s web API | http://localhost:9200/ |
+
+* * *
+
+Logging Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| log_only | Log data without sending to tStore | False |
+| log_backfill | Enable backfill operation logging | True |
+| log_snapshot_polling | Enable snapshot polling logging | True |
+| log_archive_polling | Enable archive polling logging | True |
+| log_tstore_send_events | Enable tStore send event logging | False |
+| log_tstore_worker_events | Enable tStore worker event logging | False |
+| log_json_sent | Log JSON data being sent to tStore | False |
+| log_folder_name | Name of the log folder | PI-SDK Extractor |
+
+* * *
+
+Debug Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| debug_item_watch | Comma-separated list of tags to debug | - |
+
+* * *
+
+Tag Configuration  
+The extractor supports multiple methods for defining which PI tags to monitor, providing flexibility for different deployment scenarios.
+
+Tag Sources  
+The extractor can obtain tags from two sources:
+
+1.  Tag List File (tags.dat): A file containing a list of specific PI tags.  
+      
+    
+2.  Tag Filters: Dynamic filtering using PI-SDK search patterns.  
+      
+    
+
+Tag List File (tags.dat)  
+The file tags.dat contains the list of PI tags to be monitored.  
+Each tag should be on a separate line, for example:
+
+cdt159
+
+cdt160
+
+cdt161
+
+cdt162
+
+cdt163
+
+Note:  
+The service account must have write permissions to this file to allow runtime updates.
+
+## Operation and Data Flow
+
+Once running, the PI-SDK Extractor connects to the configured PI Server using Trust-based authentication and begins polling for live data or reading archived values based on configuration.
+
+Data is collected, processed into batches, and sent to tStore using efficient HTTP-based uploads. Real-time and historical streams can run concurrently or independently, depending on system load and analysis needs.
+
+If a connection is lost or the system restarts, the Extractor automatically resumes operation and performs a startup recovery backfill to ensure no data gaps occur.
+
+## Use Cases and Best Practices
+
+The PI-SDK Extractor is designed for organizations that depend on existing PI systems but want to extend those investments into modern, real-time analytics without replacing infrastructure.
+
+Example scenarios
+
+*   Integrating a Trust-based PI Server into Transpara for centralized monitoring  
+      
+    
+*   Pulling archived data into tStore for performance or quality benchmarking  
+      
+    
+*   Creating hybrid dashboards that combine legacy PI data with new IoT or historian feeds  
+      
+    
+
+Best Practices
+
+*   Use tag filters for dynamic data discovery when managing large tag sets.  
+      
+    
+*   Enable backfill mode to populate tStore with archived history before enabling live polling.  
+      
+    
+*   Keep polling intervals balanced to avoid overloading the PI Server (e.g., snapshot every 10s, archive every 30s).  
+      
+    
+*   Monitor buffer thresholds and memory allocation from the web interface to maintain throughput.  
+      
+    
+
+  
+
+## Troubleshooting and Logs
+
+These are the default configurations, but they can be adjusted based on your environment and operational preferences.
+
+Logs are stored in:  
+%ProgramData%\\Transpara\\Extractors\\PI-SDK Extractor\\Logs\\
+
+Each log file rotates automatically at 50 MB with up to 10 archived versions retained.
+
+Common Issues
+
+*   Service not starting – Verify that the .NET Framework and PI-SDK 1.4.0 or later are installed.  
+      
+    
+*   Connection denied – Confirm PI Trust settings and network permissions between the Extractor and PI Server.  
+      
+    
+*   Slow polling or missing tags – Adjust tag filters or reduce polling intervals.  
+      
+    
+*   No data in tStore – Validate tStore endpoint URL and ensure the Extractor has network access.  
+      
+    
+
+### Need help or have questions?
+
+If you need assistance installing, configuring, or troubleshooting this Extractor—or want guidance on how it fits into your broader Transpara deployment—we’re here to help.
+
+Email: support@transpara.com  
+Phone: +1-925-218-6983  
+Website: www.transpara.com/support
+
+For enterprise customers, our team of real-time operations experts can also assist with integration, optimization, and performance tuning.
+
+If something isn’t working as expected, reach out. We’d rather help you get it running right than leave you guessing.
+
+## Next Steps
+
+Once PI data is streaming into tStore, you can start building KPIs, calculations, and models in tStudio, and visualize live and historical performance in tView.
+
+For modern PI environments or AF-based architectures, see:
+
+*   [PI-RDA Extractor](https://chatgpt.com/g/g-p-68e406024090819197c3f8dbbfe0f21e-transpara-robert-mimic/extractors/pi-rda) for multi-source and authenticated access  
+      
+    
+*   [tStore Overview](https://chatgpt.com/g/architecture/tstore) for data flow and analytics cache design
+

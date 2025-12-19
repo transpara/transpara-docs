@@ -1,0 +1,54 @@
+---
+title: Working With Extractors
+slug: 
+description: Reference of how to work with extractors.
+tags: ['Extractors']
+---
+
+Extractors are lightweight services that move operational and historical data from external systems into tStore, Transpara’s high-speed time-series database/historian and analytics cache. They are ideal when you need to collect, backfill, cache, or stream data continuously from industrial historians, control systems, or sources that do not store historical data.
+
+Unlike Interfaces, which connect directly to live data sources without data migration, Extractors read and replicate data into tStore. 
+
+## How Extractors Work
+
+Each Extractor runs as an independent service (for Windows-specific sources, a Windows service built on .NET Framework). When configured, the service connects to the specified data source, collects live or historical data, and streams it into tStore using secure, batched uploads.
+
+Key capabilities shared across all Extractors include:
+
+*   Automatic recovery in case of connection loss or restart  
+      
+    
+*   Configurable buffering and memory management for performance stability  
+      
+    
+*   Multi-threaded processing for large-scale data movement  
+      
+    
+*   Built-in web interface (/settings-ui) for configuration and monitoring  
+      
+    
+
+You can install, start, and manage Extractors using standard commands or through the included web-based configuration panel.
+
+  
+
+## Before You Begin
+
+Before installing or configuring an Extractor:
+
+1.  Confirm network access to both the source system (e.g., OPC server, databases or PI server) and tStore.  
+      
+    
+2.  Verify that the host system meets all prerequisites (.NET Framework for  Windows, SDKs, and permissions).  
+      
+    
+3.  Ensure the service account  (NetworkService for Windows-specific extractors) has Full Control permissions on the installation directory.  
+      
+    
+4.  Check that firewall and DCOM (if Windows-based) settings (where applicable) allow communication with the data source.  
+      
+    
+
+Each Extractor page provides detailed setup and configuration instructions tailored to its protocol.
+
+<Callout title="If you do not see the Extractor you need, contact us" type="success"> Transpara routinely works with customers on new protocols, legacy systems, and unique architectures. Whether through a new extractor, an interface, or a hybrid approach, we will find a way to make your data work seamlessly within the platform. </Callout>

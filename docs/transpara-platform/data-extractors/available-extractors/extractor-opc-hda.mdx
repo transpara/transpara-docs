@@ -1,0 +1,306 @@
+---
+title: OPC-HDA Extractor
+slug: 
+description: OPC-HDA Extractor
+tags: ['Extractors']
+---
+
+The OPC-HDA Extractor is designed for environments where operational data must be read from historical archives instead of live control systems. It connects to OPC Historical Data Access (HDA) servers, retrieves time-series data, and streams it to tStore for analysis, visualization, and long-term performance tracking.
+
+This Extractor is ideal for backfilling existing historian data into Transpara or synchronizing archived datasets with real-time metrics for a unified operational view. It can operate in scheduled, continuous, or on-demand mode, depending on your data strategy and system configuration.
+
+  
+
+## Key Capabilities
+
+The OPC-HDA Extractor runs as a Windows service built on .NET Framework for simple installation and control. It supports both historical extraction and real-time polling, giving you flexibility to capture data over time while maintaining awareness of current conditions.
+
+It includes chunk-based processing for handling large datasets efficiently, startup recovery to automatically fill recent data gaps, and memory-aware buffering to maintain stability during high-volume operations. A built-in web interface allows configuration at http://localhost:9200/settings-ui/.
+
+  
+
+## Installation and Requirements
+
+The OPC-HDA Extractor installs as a Windows service and typically runs under the NetworkService account.
+
+Supported Platforms
+
+*   Windows Server 2016 or later  
+      
+    
+*   Windows 10 or later  
+      
+    
+
+Dependencies
+
+*   Most recent version .NET Framework  
+      
+      
+    
+*   Network access to the OPC-HDA server  
+      
+    
+*   Network access to the target tStore endpoint  
+      
+    
+
+Installation Steps
+
+1.  Copy the compiled application files to the installation directory  
+    (default: C:\\Program Files (x86)\\Transpara\\Extractors\\OPC-HDA Extractor\\)  
+      
+    
+2.  From an Administrator command prompt, run:  
+      
+    
+
+TransparaExtractorOPCHDA install \-servicename "Transpara OPC-HDA Data Extractor" \-displayname "Transpara OPC-HDA Data Extractor"
+
+3.  To manage the service, use:  
+      
+    
+
+TransparaExtractorOPCHDA status
+
+TransparaExtractorOPCHDA restart
+
+If connecting to a remote server, ensure DCOM configuration and firewall rules allow HDA communication (TCP 135 and dynamic ports 1024–65535).
+
+  
+
+## Configuration
+
+All configuration settings are managed through the App.config file or the built-in web interface at http://localhost:9200/settings-ui/.  
+The Extractor allows fine control over data retrieval, backfill scheduling, and performance tuning.
+
+Main configuration areas include:
+
+*   OPC Connection – Server host, program ID, and data access mode.  
+      
+    
+*   Backfill Settings – Start/end times, chunk duration, and polling intervals for historical reads.  
+      
+    
+*   tStore Configuration – Target endpoint, batching, and concurrency options.  
+      
+    
+*   Buffer and Memory Settings – Flush thresholds and maximum record counts.  
+      
+    
+*   Logging – Adjustable verbosity, debug item lists, and log rotation controls.
+    
+*   Start up recovery settings – Ensures you don’t miss data on a restart or reboot of the extractor.  
+      
+    
+
+Changes can be made through the web interface or directly in the configuration file. Most updates apply immediately; others may require a service restart.
+
+Note: This configuration walkthrough represents one common approach. Extractors are flexible, and depending on your environment, data strategy, or deployment model, there are multiple valid ways to structure and tune configuration settings.
+
+## Core Configuration Settings
+
+Extractor Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| id | Unique identifier for this extractor instance | - |
+| enabled | Enable or disable the extractor service | True |
+| opc_server_host | Hostname or IP address of the OPC-HDA server | - |
+| opc_server_prog_id | Program ID of the OPC-HDA server | - |
+| dataset_name | Name of the dataset in tStore | - |
+| max_memory_allocation_mb | Maximum memory usage before restart | 512 |
+| opc_max_value_return_count_per_item | Maximum values to return per item per read | 5000 |
+
+* * *
+
+OPC-HDA Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| opc_polling_enabled | Enable real-time polling mode | False |
+| opc_polling_interval_seconds | Polling rate for real-time data collection | 30 |
+| opc_processing_batch_size | Batch size for processing OPC data | 10000 |
+
+* * *
+
+Backfill Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| backfill_enabled | Enable historical data backfill | False |
+| backfill_start | Start time for backfill (ISO 8601 format) | - |
+| backfill_end | End time for backfill (ISO 8601 format) | - |
+| backfill_chunk_duration_minutes | Duration of each backfill chunk | 4320 |
+| backfill_polling_interval_seconds | Interval between backfill operations | 15 |
+
+* * *
+
+Startup Recovery Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| startup_recovery_enabled | Enable startup recovery backfill | False |
+| startup_recovery_backfill_seconds | Duration of startup recovery backfill | 900 |
+
+* * *
+
+tStore Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| tstore_endpoint | tStore API endpoint URL | - |
+| tstore_max_batch_count | Maximum records per batch | 50000 |
+| tstore_http_timeout_seconds | HTTP timeout for tStore requests | 150 |
+| tstore_overwrite_data | Allow overwriting existing data | False |
+| tstore_max_concurrent_tasks | Maximum concurrent upload tasks | 3 |
+
+* * *
+
+Buffer Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| data_buffer_count_threshold | Records threshold to trigger buffer flush | 1000000 |
+| data_buffer_time_threshold_seconds | Time threshold to trigger buffer flush | 15 |
+| data_buffer_max_count | Maximum records in buffer | 5000000 |
+| data_buffer_sliding_window_percentage | Sliding window percentage for buffer management | 10 |
+
+* * *
+
+API Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| api_base_url | Base URL for the extractor’s web API | http://localhost:9200/ |
+
+* * *
+
+Logging Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| log_only | Log data without sending to tStore | False |
+| log_opc_read_events | Enable OPC read event logging | True |
+| log_tstore_send_events | Enable tStore send event logging | False |
+| log_tstore_worker_events | Enable tStore worker event logging | False |
+| log_json_sent | Log JSON data being sent to tStore | False |
+| log_folder_name | Name of the log folder | OPC-HDA Extractor |
+
+* * *
+
+Debug Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| debug_item_watch | Comma-separated list of OPC items to debug | - |
+
+* * *
+
+Tag Configuration
+
+The file items.dat contains the list of OPC-HDA items to be monitored.  
+Each item should appear on a separate line, for example:
+
+Aliased.Test00001
+
+Aliased.Test00002
+
+Aliased.Test00003
+
+Note:  
+The service account must have write permissions to this file to allow runtime updates.
+
+## Operation and Data Flow
+
+Once running, the OPC-HDA Extractor connects to the designated HDA server and begins pulling historical or near real-time data, depending on configuration.
+
+Data is read in time-based chunks, processed locally, and streamed to tStore in batches. This approach ensures that even multi-gigabyte archives can be migrated efficiently without overloading network or system resources.
+
+When running, the OPC-HDA Extractor can perform historical backfill and real-time polling independently or in parallel. Backfill operations retrieve archived data in chunks, while polling mode continuously checks for new records as they appear on the server. These modes do not depend on each other; you can enable either one or both based on your data strategy and how closely you want tStore to stay aligned with the source.
+
+If a failure occurs (network, memory, or server timeout), the service automatically resumes from the last known timestamp without manual intervention.
+
+  
+
+## Use Cases and Best Practices
+
+The OPC-HDA Extractor is built for scenarios where data completeness and reliability matter most — such as building historical baselines, validating models, or training predictive analytics.
+
+Example scenarios
+
+*   Importing archived data from a legacy historian into tStore for analysis  
+      
+    
+*   Combining past production and maintenance records to identify performance trends  
+      
+    
+*   Reconstructing long-term asset histories to support AI/ML model training  
+      
+    
+
+Best Practices
+
+*   If you want to pull historical data use backfill mode for initial data migration.  
+      
+    
+*   Verify DCOM settings and user permissions before remote connections.  
+      
+    
+*   Use chunk durations that balance memory efficiency and throughput (e.g., 1–3 days of data per batch).  
+      
+    
+
+  
+
+## Troubleshooting and Logs
+
+These are the default configurations, but they can be adjusted based on your environment and operational preferences.
+
+Logs are stored in:  
+%ProgramData%\\Transpara\\Extractors\\OPC-HDA Extractor\\Logs\\
+
+Each log file rotates automatically at 50 MB, with up to 10 archived versions retained.
+
+Common Issues
+
+*   Service not starting – Confirm .NET Framework  and the Integration Objects toolkit are installed.  
+      
+    
+*   Connection timeout – Check DCOM configuration, remote permissions, and firewall access.  
+      
+    
+*   Partial backfill – Verify that the time range is valid and the server has historical data available.  
+      
+    
+*   Memory usage spikes – Adjust buffer thresholds or reduce backfill chunk duration.  
+      
+    
+
+If needed, the service can be restarted manually or remotely via the web API.
+
+### Need help or have questions?
+
+If you need assistance installing, configuring, or troubleshooting this Extractor—or want guidance on how it fits into your broader Transpara deployment—we’re here to help.
+
+Email: support@transpara.com  
+Phone: +1-925-218-6983  
+Website: www.transpara.com/support
+
+For enterprise customers, our team of real-time operations experts can also assist with integration, optimization, and performance tuning.
+
+If something isn’t working as expected, reach out. We’d rather help you get it running right than leave you guessing.
+
+  
+
+## Next Steps
+
+After loading historical data into tStore, you can begin correlating it with real-time metrics or combining it with other data sources using tCalc and tModel.
+
+For continuous monitoring or real-time streaming, see:
+
+*   [OPC-DA Extractor](https://chatgpt.com/g/g-p-68e406024090819197c3f8dbbfe0f21e-transpara-robert-mimic/extractors/opc-da) for live data collection  
+      
+    
+*   [tStore Overview](https://chatgpt.com/g/architecture/tstore) to learn how stored data is analyzed and visualized
+

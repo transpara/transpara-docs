@@ -1,0 +1,294 @@
+---
+title: OPC-DA Extractor
+slug: 
+description: OPC-DA Extractor
+tags: ['Extractors']
+---
+
+The OPC-DA Extractor connects Transpara to live industrial systems that communicate via OPC Data Access (DA). It continuously reads real-time process values from DCS, PLC, and SCADA networks and streams them into tStore for analytics, modeling, and visualization.
+
+This Extractor is designed for on-premises Windows environments and uses the Integration Objects OPC .NET Client Toolkit to ensure compatibility with a wide range of legacy automation systems. It supports both subscription-based (asynchronous) and polling-based (synchronous) modes, allowing you to tailor data collection to network performance and system requirements.
+
+## Key Capabilities
+
+The OPC-DA Extractor runs as a Windows service built on .NET Framework, enabling quick installation and service control. It can stream thousands of data points per second while maintaining reliable performance through buffering, batching, and automatic recovery mechanisms.
+
+It supports real-time streaming, connection monitoring, and memory-based recovery. All configuration and diagnostics can be accessed through a built-in web interface available at http://localhost:9200/settings-ui/.
+
+  
+
+## Installation and Requirements
+
+The Extractor is installed as a Windows service and typically runs under the NetworkService account.
+
+Supported Platforms
+
+*   Windows Server 2016 or later  
+      
+    
+*   Windows 10 or later  
+      
+    
+
+Dependencies
+
+*   Most recent version .NET Framework
+    
+
+  
+  
+  
+
+*   Network access to the OPC-DA server  
+      
+    
+*   Network access to the target tStore endpoint  
+      
+    
+
+Installation Steps
+
+1.  Copy the compiled application files to the target directory  
+    (default: C:\\Program Files (x86)\\Transpara\\Extractors\\OPC-DA Extractor\\)  
+      
+    
+2.  Open a command prompt with Administrator rights and run:  
+      
+    
+
+TransparaExtractorOPCDA install \-servicename "Transpara OPC-DA Data Extractor" \-displayname "Transpara OPC-DA Data Extractor"
+
+TransparaExtractorOPCDA start
+
+3.  Verify service status or stop/start as needed using:  
+      
+    
+
+TransparaExtractorOPCDA status
+
+TransparaExtractorOPCDA restart
+
+For remote OPC servers, ensure DCOM permissions and firewall ports (TCP 135, dynamic range 1024–65535) are properly configured.
+
+  
+
+## Configuration
+
+All Extractor settings are managed through the App.config file or via the web interface at http://localhost:9200/settings-ui/.
+
+You can define how data is collected, buffered, and sent to tStore through the following main configuration areas:
+
+*   OPC Connection – Host, server name, and connection mode (subscription or polling).  
+      
+    
+*   tStore Settings – Endpoint URL, batch size, and concurrency settings.  
+      
+    
+*   Memory and Buffering – Maximum buffer count, flush intervals, and automatic restart thresholds.  
+      
+    
+*   Logging and Debugging – Adjustable verbosity levels and optional tag watch lists.  
+      
+    
+
+Changes made in the web interface are validated automatically and stored to the configuration file. Some updates may require restarting the service to take effect.
+
+Note: This configuration walkthrough represents one common approach. Extractors are flexible, and depending on your environment, data strategy, or deployment model, there are multiple valid ways to structure and tune configuration settings.
+
+## Core Configuration Settings
+
+Extractor Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| id | Unique identifier for this extractor instance | - |
+| enabled | Enable or disable the extractor service | True |
+| opc_server_host | Hostname or IP address of the OPC-DA server | - |
+| opc_server_prog_id | Program ID of the OPC-DA server | - |
+| dataset_name | Name of the dataset in tStore | - |
+| max_memory_allocation_mb | Maximum memory usage before restart | 512 |
+| opc_read_mode | Data collection mode: 0 = Subscription (async), 1 = Polling (sync) | 0 |
+
+* * *
+
+OPC-DA Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| opc_requested_update_rate_seconds | Requested update rate for OPC subscriptions | 10 |
+| opc_processing_batch_size | Batch size for processing OPC data | 100000 |
+| opc_data_polling_rate_seconds | Polling rate for synchronous data collection | 10 |
+| max_items_per_group | Maximum OPC items per group | 500 |
+
+* * *
+
+tStore Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| tstore_endpoint | tStore API endpoint URL | - |
+| tstore_max_batch_count | Maximum records per batch | 50000 |
+| tstore_http_timeout_seconds | HTTP timeout for tStore requests | 150 |
+| tstore_overwrite_data | Allow overwriting existing data | False |
+| tstore_max_concurrent_tasks | Maximum concurrent upload tasks | 3 |
+
+* * *
+
+Buffer Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| data_buffer_count_threshold | Records threshold to trigger buffer flush | 100000 |
+| data_buffer_time_threshold_seconds | Time threshold to trigger buffer flush | 15 |
+| data_buffer_max_count | Maximum records in buffer | 5000000 |
+| data_buffer_sliding_window_percentage | Sliding window percentage for buffer management | 10 |
+
+* * *
+
+API Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| api_base_url | Base URL for the extractor’s web API | http://localhost:9200/ |
+
+* * *
+
+Logging Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| log_only | Log data without sending to tStore | True |
+| log_opc_read_events | Enable OPC read event logging | True |
+| log_tstore_send_events | Enable tStore send event logging | False |
+| log_tstore_worker_events | Enable tStore worker event logging | False |
+| log_json_sent | Log JSON data being sent to tStore | False |
+| log_folder_name | Name of the log folder | OPC-DA Extractor |
+
+* * *
+
+Debug Configuration
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| debug_item_watch | Comma-separated list of OPC items to debug | - |
+
+* * *
+
+Tag Configuration
+
+The items.dat file contains the list of OPC-DA items to be monitored.  
+Each item should be on a separate line, for example:
+
+Aliased.Test00001
+
+Aliased.Test00002
+
+Aliased.Test00003
+
+Note: The service account must have write permissions to this file to allow runtime updates.
+
+  
+
+## Operation and Data Flow
+
+Once installed and configured, the OPC-DA Extractor runs continuously as a background service.
+
+It connects to the specified OPC-DA server, subscribes or polls for real-time data, and packages those values into batches that are streamed to tStore over HTTP. Data is buffered in memory and flushed according to configurable time or count thresholds to ensure optimal performance and network efficiency.
+
+If a connection failure or memory limit is reached, the Extractor automatically recovers and resumes operation without user intervention.
+
+All operational activity — including OPC reads, tStore uploads, and system health — can be monitored from the web interface.
+
+  
+
+## Use Cases and Best Practices
+
+The OPC-DA Extractor is typically used to integrate legacy control systems into modern analytics workflows without modifying existing automation infrastructure.
+
+The OPC-DA Extractor reads live values only. Because OPC-DA does not provide historical backfill, in polling mode you will capture one snapshot per polling interval (the latest value at the time of each poll).
+
+Example scenarios
+
+*   Streaming live PLC or DCS data for real-time KPI visualization  
+      
+    
+*   Feeding process data into tStore for OEE, efficiency, or quality dashboards  
+      
+    
+*   Creating a unified data lake that combines legacy OPC systems with modern IoT and historian data  
+      
+    
+
+Best Practices
+
+*   Use subscription mode for low-latency, real-time updates.  
+      
+    
+*   Use polling mode when the OPC server does not have subscription capacity.  
+      
+    
+*   Always confirm DCOM permissions and firewall access for remote connections.
+    
+
+*   Note: always confirm COM or DCOM.  
+      
+    
+
+*   On initial setup, monitor buffer and memory thresholds regularly in the web interface.  
+      
+    
+
+  
+
+## Troubleshooting and Logs
+
+These are the default configurations, but they can be adjusted based on your environment and operational preferences.
+
+Logs are stored in:  
+%ProgramData%\\Transpara\\Extractors\\OPC-DA Extractor\\Logs\\
+
+Each log file is automatically rotated at 50 MB with up to 10 retained versions.
+
+Common Issues
+
+*   Service fails to start – Verify .NET Framework is installed and the Integration Objects toolkit is available.  
+      
+    
+*   Connection errors – Check DCOM settings and ensure the OPC-DA server is accessible.  
+      
+    
+*   No data in tStore – Confirm endpoint URL and credentials in configuration.  
+      
+    
+*   Access denied errors – Ensure NetworkService (or chosen service account) has Full Control on the installation folder.  
+      
+    
+
+If troubleshooting locally, you can trigger manual cleanup or restart from the web API or Windows Services console.
+
+### Need help or have questions?
+
+If you need assistance installing, configuring, or troubleshooting this Extractor—or want guidance on how it fits into your broader Transpara deployment—we’re here to help.
+
+Email: support@transpara.com  
+Phone: +1-925-218-6983  
+Website: www.transpara.com/support
+
+For enterprise customers, our team of real-time operations experts can also assist with integration, optimization, and performance tuning.
+
+If something isn’t working as expected, reach out. We’d rather help you get it running right than leave you guessing.
+
+  
+
+## Next Steps
+
+Once the OPC-DA Extractor is running and streaming data into tStore, you can use tStudio to define KPIs and data models, and tView to visualize live operational performance across your sites.
+
+For more advanced use cases, see:
+
+*   [OPC-HDA Extractor](https://chatgpt.com/g/g-p-68e406024090819197c3f8dbbfe0f21e-transpara-robert-mimic/extractors/opc-hda) for historical data  
+      
+    
+*   [tStore Overview](https://chatgpt.com/g/architecture/tstore) for information on data storage and analytics caching
+
+
