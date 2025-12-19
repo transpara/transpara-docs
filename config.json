@@ -258,6 +258,22 @@
                 "transpara-platform/core-modules/tview-page"
               ]
             },
+            {
+              "groupName": "Extractors",
+              "page": "transpara-platform/data-extractors/extractors",
+              "subpages": [
+                "transpara-platform/data-extractors/working-with-extractors",
+                {"groupName": "Available Extractors",
+                 "page":  "transpara-platform/data-extractors/available-extractors/available-extractors",
+                 "subpages": [
+                  "transpara-platform/data-extractors/available-extractors/extractor-opc-da",
+                  "transpara-platform/data-extractors/available-extractors/extractor-opc-hda",
+                  "transpara-platform/data-extractors/available-extractors/extractor-pi-sdk",
+                  "transpara-platform/data-extractors/available-extractors/extractor-pi-rda"
+                 ]
+                }
+              ]
+            },
             "transpara-platform/deployment",
             "transpara-platform/system-requirements"
           ]
