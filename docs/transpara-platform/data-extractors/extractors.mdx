@@ -5,6 +5,8 @@ description: Reference of supported extractors.
 tags: ['Extractors']
 ---
 
+<Callout title="Have questions, or don't see a specific data source?" type="success"> Transpara supports thousands of data sources so we can't list them all, so please reach out to us and we can discuss your specific data sources, interfaces, extractors, remote context services (RCS) or other integrations. </Callout>
+
 Extractors connect the Transpara Platform to your existing operational and historical data sources. They continuously read data from any data source, including but not limited to historians, control systems, and industrial databases, then stream it into tStore, the platform’s built-in real-time data engine that serves as both a historian and a high-performance time-series database. Each extractor is a lightweight service designed to access data where it already lives, without migration or disruption to your source systems.
 
   
@@ -107,5 +109,3 @@ The comparison below summarizes when each option makes the most sense:
 | Source stores historical data (Historians, OPC-HDA, RDBMS, etc.) | ✔️ | ✔️ |
 | Want automatic, continuous data flow into tStore |  | ✔️ |
 | If you are doing complex calculations, especially when using multiple data sources |  | ✔️ |
-
-<Callout title="If you do not see the Extractor you need, contact us" type="success"> Transpara routinely works with customers on new protocols, legacy systems, and unique architectures. Whether through a new extractor, an interface, or a hybrid approach, we will find a way to make your data work seamlessly within the platform. </Callout>
