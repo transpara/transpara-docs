@@ -10,20 +10,26 @@ tags: ['Extractors']
 Transpara provides a family of officially supported Extractors for connecting to the most common industrial and historian systems.  
 Each Extractor is purpose-built for its respective protocol but follows the same configuration and operational model.
 
+Transpara also supports extractor-based integrations with Telegraf and Prometheus, which provide access to over a thousand additional data sources. This includes ingesting metrics collected via Telegraf plugins and metrics exposed through Prometheus exporters and endpoints. Some Telegraf and Prometheus integrations will be listed on this page as the catalog expands, but the list is not intended to cover every available plugin or exporter. 
+
+If you use a specific Telegraf plugin or Prometheus exporter that is not listed here, you can still request it. For a full list of data sources, please, check:
+- [Prometheus](https://prometheus.io/docs/instrumenting/exporters/)
+- [Telegraf](https://docs.influxdata.com/telegraf/v1/plugins/)
+
 ## Extractors
 
 The Transpara Platform offers a number of extractors to connect to different data sources. Below you will find all of them:
 
 
 <CardList cols={4}>
- <Card 
+<Card 
     title="OPC-DA" 
-    icon="/media/transpara-platform/OPC_Logo.png"
+    icon="/media/transpara-platform/opc-logo.png"
 />
 
 <Card 
     title="OPC-HDA" 
-    icon="/media/transpara-platform/OPC_Logo.png"
+    icon="/media/transpara-platform/opc-logo.png"
 />
 
 <Card 
@@ -35,6 +41,5 @@ The Transpara Platform offers a number of extractors to connect to different dat
     title="PI-RDA" 
     icon="/media/setup-and-administration/icons/aveva.png"
 />
-
 </CardList>
 
