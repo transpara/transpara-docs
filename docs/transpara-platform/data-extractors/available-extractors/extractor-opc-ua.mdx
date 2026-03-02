@@ -51,7 +51,7 @@ Configuration is organized into these primary areas:
 
 * **OPC UA Connection:** Endpoint URL and timeout settings for the OPC UA server.
 
-* **Security and Identity:** OPC UA message security mode (`None`, `Sign`, `SignAndEncrypt`), security policy selection, and authentication method (Anonymous, Username, or Certificate).
+* **Security and Identity:** OPC UA message security mode (`None`, `Sign`, `SignAndEncrypt`), security policy selection, and authentication method (`Anonymous`, `Username`, or `Certificate`).
 
 * **Monitoring and Subscription:** Sampling intervals, publishing intervals, and queue sizes.
 
@@ -67,31 +67,31 @@ To help you set up and manage your OPC-UA Extractor effectively, the following s
 
 Note that all configurations must be saved to the **tsystem-db** before they can be verified using the built-in connectivity tests.
 
-### General & Logic
+### General
 
-* **OPERATION\_MODE:** Defines if the service is active. Options: `STOP`, `RUN`. (Default: `STOP`)  
-* **LOG\_ONLY:** Boolean flag. If true, data is logged to the terminal but not sent to tStore. (Default: `true`)  
-* **SOURCE\_TZ:** Source timezone name (IANA), used for timestamp handling. (Default: `UTC`)  
-* **LOG\_LEVEL:** Logging verbosity (e.g., TDEBUG, INFO).
+* **Operation mode** (`operation_mode`): Defines if the service is active. Options: `STOP`, `RUN`. (Default: `STOP`)
+* **Log only** (`log_only`): If `true`, values are written to logs only (no writes to tStore). Default: `true`.
+* **Source timezone** (`source_tz`): IANA timezone name used for timestamp handling. Default: `UTC`.
+* **Log level** (`log_level`): Logging verbosity (for example `INFO`, `DEBUG`).
 
-### tStore Output (Required for RUN \+ LOG\_ONLY: False)
+### tStore Output (required for `RUN` + `log_only=false`)
 
-* **TSTORE\_API\_URL:** Base URL for the tstore-interface API.  
-* **TSTORE\_FLUSH\_INTERVAL\_SECONDS:** How often to flush queued data (seconds).  
-* **DATASET\_NAME:** Metric/dataset name used when writing to tStore. (Default: `OPCUA_EXTRACTOR`)
+* **tStore interface URL** (`tstore_api_url`): Base URL for the tstore-interface API.
+* **Flush interval (seconds)** (`tstore_flush_interval_seconds`): How often queued data is flushed.
+* **Dataset name** (`dataset_name`): Dataset name used when writing to tStore. Default: `OPCUA_EXTRACTOR`.
 
 ### OPC UA Connection
 
-* **opcua\_endpoint\_url:** The target URL (e.g., `opc.tcp://10.0.0.10:4840`).  
-* **security\_mode:** None, Sign, or SignAndEncrypt.  
-* **security\_policy:** e.g., Basic256Sha256, Aes128Sha256RsaOaep.  
-* **auth\_method:** Anonymous, UserName, or Certificate.
+* **Endpoint URL** (`opcua_endpoint_url`): OPC UA server URL (example: `opc.tcp://10.0.0.10:4840`).
+* **Security mode** (`security_mode`): `None`, `Sign`, or `SignAndEncrypt`.
+* **Security policy** (`security_policy`): Example values: `Basic256Sha256`, `Aes128Sha256RsaOaep`.
+* **Authentication method** (`auth_method`): `Anonymous`, `UserName`, or `Certificate`.
 
 ### Monitoring and Subscription
 
-* **sampling\_interval:** Default sampling frequency in milliseconds. (Default: `200`)  
-* **publishing\_interval:** Subscription publishing interval in milliseconds. (Default: `250`)  
-* **timestamp\_source:** Which timestamp to use: `gather` (client time), `server`, or `source`.
+* **Sampling interval (ms)** (`sampling_interval`): Default sampling frequency. Default: `200`.
+* **Publishing interval (ms)** (`publishing_interval`): Subscription publishing interval. Default: `250`.
+* **Timestamp source** (`timestamp_source`): `gather` (client time), `server`, or `source`.
 
 ## Monitored Items Configuration
 
@@ -105,33 +105,25 @@ You must provide a list of nodes to monitor. Each monitored item defines **what 
 
 **Note:** Avoid commas in label values if your backend serializes labels as `key=value,key2=value2`.
 
-List of monitored items (in YAML format):
-
-```
+List of monitored items is provided as a YAML array in the `monitored_items` configuration parameter. Here’s an example with various nodes and label configurations:
+```yaml
 monitored_items:
-- node_id: "ns=16;s=Scalar_Simulation_Float"
-tstore_labels:
-location: "here"
-source: "opcua_server"
-sampling_interval: 1000
-- node_id: "ns=3;s=test,1234,hello"
-- node_id: "ns=3;i=1001"
-- node_id: "ns=3;i=1002"
-- node_id: "ns=3;i=1003"
-- node_id: "ns=3;i=1004"
-- node_id: "ns=3;i=1005"
-- node_id: "ns=3;i=1006"
-- node_id: "ns=3;i=1007"
+  - node_id: "ns=16;s=Scalar_Simulation_Float"
+    tstore_labels:
+      location: "here"
+      source: "opcua_server"
+    sampling_interval: 1000
+
+  - node_id: "ns=3;s=test,1234,hello"
+
+  - node_id: "ns=3;i=1001"
+  - node_id: "ns=3;i=1002"
+  - node_id: "ns=3;i=1003"
+  - node_id: "ns=3;i=1004"
+  - node_id: "ns=3;i=1005"
+  - node_id: "ns=3;i=1006"
+  - node_id: "ns=3;i=1007"
 ```
-
-## Operation and Data Flow
-
-Once registered and deployed, the OPC-UA Extractor runs continuously as a containerized service. The extractor’s behavior is governed by two primary settings: **Operation Mode** and the **Log Only** flag.
-
-* **STOP Mode:** The extractor pod is running and the HTTP API is online for health checks and configuration testing, but the service is **not** connected to the OPC UA source and is not collecting data.  
-* **RUN Mode:** The extractor is active and performing its primary function.  
-  * **If LOG\_ONLY is True:** The extractor connects and subscribes to nodes, but prints received values to the terminal/logs only. This is used to validate connectivity and node data without writing to the database.  
-  * **If LOG\_ONLY is False:** The extractor connects, subscribes, and sends all data to **tstore-db** via the **tstore-interface** API.
 
 ## Use cases and best practices
 

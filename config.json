@@ -268,6 +268,7 @@
                  "subpages": [
                   "transpara-platform/data-extractors/available-extractors/extractor-opc-da",
                   "transpara-platform/data-extractors/available-extractors/extractor-opc-hda",
+                  "transpara-platform/data-extractors/available-extractors/extractor-opc-ua",
                   "transpara-platform/data-extractors/available-extractors/extractor-pi-sdk",
                   "transpara-platform/data-extractors/available-extractors/extractor-pi-rda"
                  ]
