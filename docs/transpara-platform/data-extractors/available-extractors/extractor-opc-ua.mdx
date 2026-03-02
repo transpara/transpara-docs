@@ -1,0 +1,181 @@
+---
+title: OPC-UA
+slug: /extractors/available-extractors/extractor-opc-ua
+description: OPC-UA Extractor
+tags: ['Extractors']
+---
+
+The OPC-UA Extractor connects Transpara to modern industrial systems that expose data through OPC Unified Architecture (UA). It subscribes to a configured list of OPC UA NodeIds and processes incoming real-time values for downstream analytics, modeling, and visualization.
+
+The Extractor is configured through Transpara tStudio and supports multiple operation modes: 
+
+* Sending subscribed values to tStore  
+* Logging values only  
+* Configuration-only mode where the API stays online but data collection is stopped
+
+## Key Capabilities
+
+The OPC-UA Extractor maintains a persistent OPC UA client connection, creates subscriptions, and monitors NodeIds using configurable sampling and publishing intervals. It supports secure connections (security mode and policy), multiple authentication methods (Anonymous, Username, Certificate), and resilient retry and reconnection behavior.
+
+It also exposes a lightweight HTTP API for health and liveness checks to confirm the service is running and whether it is connected and subscribing as expected.
+
+## Operation and Data Flow
+
+Once registered and deployed, the OPC-UA Extractor runs continuously as a containerized service. The extractor’s behavior is governed by two primary settings: **Operation Mode** and the **Log Only** flag.
+
+* **STOP Mode:** The extractor pod is running and the HTTP API is online for health checks and configuration testing, but the service is **not** connected to the OPC UA source and is not collecting data.  
+* **RUN Mode:** The extractor is active and performing its primary function.  
+  * **If LOG\_ONLY is True:** The extractor connects and subscribes to nodes, but prints received values to the terminal/logs only. This is used to validate connectivity and node data without writing to the database.  
+  * **If LOG\_ONLY is False:** The extractor connects, subscribes, and sends all data to **tstore-db** via the **tstore-interface** API.
+
+## Installation and Deployment
+
+The OPC-UA Extractor is managed through the Transpara tSystem infrastructure.
+
+1. **Registration:** The extractor is first registered in **tsystem-db** by creating a new instance in **tStudio** (which sends a POST request to **tsystem-api**).  
+2. **Deployment:** Selecting "Deploy" in tStudio triggers **tsystem-api** to use the Kubernetes SDK to automatically create the necessary pods and resources in the cluster.  
+3. **Configuration:** All settings are saved to **tsystem-db**. Note that configuration must be saved before testing can be performed.  
+4. **Testing:** Testing is initiated from tStudio. **tsystem-api** retrieves the saved configuration and calls the extractor’s test endpoints to verify two specific connections:  
+   * Connection to the **tstore-interface**.  
+   * Connection to the external **OPC UA Server**.
+
+## Configuration
+
+All extractor settings are managed through tStudio. When settings are saved, they are stored in tsystem-db, and the extractor uses these stored values during validation tests and deployment.
+
+Configuration is organized into these primary areas:
+
+* **Operation Mode and Data Flow:** Controls whether extraction is running (`RUN`) or paused (`STOP`), and whether datapoints are written to tStore or logged to the terminal only (`LOG_ONLY`).
+
+* **tStore Output:** Connection details for the tstore-interface, including flush intervals, batching behavior, and dataset naming.
+
+* **OPC UA Connection:** Endpoint URL and timeout settings for the OPC UA server.
+
+* **Security and Identity:** OPC UA message security mode (`None`, `Sign`, `SignAndEncrypt`), security policy selection, and authentication method (Anonymous, Username, or Certificate).
+
+* **Monitoring and Subscription:** Sampling intervals, publishing intervals, and queue sizes.
+
+* **Timestamp Handling:** Selection of `gather`, `server`, or `source` time.
+
+* **Logging:** Verbosity levels for troubleshooting.
+
+**Note:** Configuration must be saved before connectivity and data-flow tests can run. Some changes may require a redeploy (triggered via tStudio) to apply updated runtime configuration to the running container.
+
+## Core Configuration Settings
+
+To help you set up and manage your OPC-UA Extractor effectively, the following section outlines the primary parameters available in tStudio. These settings are categorized by their functional role, ranging from global operational states to specific security and monitoring protocols, ensuring that your data flow is secure, synchronized, and optimized for real-time performance.
+
+Note that all configurations must be saved to the **tsystem-db** before they can be verified using the built-in connectivity tests.
+
+### General & Logic
+
+* **OPERATION\_MODE:** Defines if the service is active. Options: `STOP`, `RUN`. (Default: `STOP`)  
+* **LOG\_ONLY:** Boolean flag. If true, data is logged to the terminal but not sent to tStore. (Default: `true`)  
+* **SOURCE\_TZ:** Source timezone name (IANA), used for timestamp handling. (Default: `UTC`)  
+* **LOG\_LEVEL:** Logging verbosity (e.g., TDEBUG, INFO).
+
+### tStore Output (Required for RUN \+ LOG\_ONLY: False)
+
+* **TSTORE\_API\_URL:** Base URL for the tstore-interface API.  
+* **TSTORE\_FLUSH\_INTERVAL\_SECONDS:** How often to flush queued data (seconds).  
+* **DATASET\_NAME:** Metric/dataset name used when writing to tStore. (Default: `OPCUA_EXTRACTOR`)
+
+### OPC UA Connection
+
+* **opcua\_endpoint\_url:** The target URL (e.g., `opc.tcp://10.0.0.10:4840`).  
+* **security\_mode:** None, Sign, or SignAndEncrypt.  
+* **security\_policy:** e.g., Basic256Sha256, Aes128Sha256RsaOaep.  
+* **auth\_method:** Anonymous, UserName, or Certificate.
+
+### Monitoring and Subscription
+
+* **sampling\_interval:** Default sampling frequency in milliseconds. (Default: `200`)  
+* **publishing\_interval:** Subscription publishing interval in milliseconds. (Default: `250`)  
+* **timestamp\_source:** Which timestamp to use: `gather` (client time), `server`, or `source`.
+
+## Monitored Items Configuration
+
+You must provide a list of nodes to monitor. Each monitored item defines **what to subscribe to** and (optionally) **how the datapoint is tagged and sampled**.
+
+| Setting | Description | Default |
+| ----- | ----- | ----- |
+| `node_id` | **Required.** OPC UA NodeId string to subscribe to (for example `ns=3;i=1001` or `ns=2;s=Machine.Speed`). | (required) |
+| `tstore_labels` | **Optional.** Extra key/value labels attached to the outgoing datapoint. | `null` |
+| `sampling_interval` | **Optional.** Per-node sampling interval override in milliseconds (ms). | `null` |
+
+**Note:** Avoid commas in label values if your backend serializes labels as `key=value,key2=value2`.
+
+List of monitored items (in YAML format):
+
+```
+monitored_items:
+- node_id: "ns=16;s=Scalar_Simulation_Float"
+tstore_labels:
+location: "here"
+source: "opcua_server"
+sampling_interval: 1000
+- node_id: "ns=3;s=test,1234,hello"
+- node_id: "ns=3;i=1001"
+- node_id: "ns=3;i=1002"
+- node_id: "ns=3;i=1003"
+- node_id: "ns=3;i=1004"
+- node_id: "ns=3;i=1005"
+- node_id: "ns=3;i=1006"
+- node_id: "ns=3;i=1007"
+```
+
+## Operation and Data Flow
+
+Once registered and deployed, the OPC-UA Extractor runs continuously as a containerized service. The extractor’s behavior is governed by two primary settings: **Operation Mode** and the **Log Only** flag.
+
+* **STOP Mode:** The extractor pod is running and the HTTP API is online for health checks and configuration testing, but the service is **not** connected to the OPC UA source and is not collecting data.  
+* **RUN Mode:** The extractor is active and performing its primary function.  
+  * **If LOG\_ONLY is True:** The extractor connects and subscribes to nodes, but prints received values to the terminal/logs only. This is used to validate connectivity and node data without writing to the database.  
+  * **If LOG\_ONLY is False:** The extractor connects, subscribes, and sends all data to **tstore-db** via the **tstore-interface** API.
+
+## Use cases and best practices
+
+The OPC-UA Extractor is typically used to stream real-time signals from modern PLC, DCS, SCADA, edge gateways, and OPC UA aggregation layers into Transpara without changing existing control infrastructure.
+
+Because the extractor is subscription-based, you receive updates as the server publishes them (subject to sampling and publishing intervals). The effective event rate depends on server behavior, node update characteristics, and your configured monitoring parameters.
+
+### Example scenarios
+
+* Streaming live machine and process values (temperatures, pressures, speeds, states) into tStore for real-time KPI visualization  
+* Standardizing connectivity across multiple vendors via a common OPC UA interface  
+* Validating new OPC UA integrations by running `OPERATION_MODE=RUN` with `LOG_ONLY=true` before writing to tStore  
+* Pausing extraction with `OPERATION_MODE=STOP` during rollout, maintenance windows, or staged commissioning while keeping the API available for tests
+
+### Best practices
+
+* Start with `OPERATION_MODE=RUN` and `LOG_ONLY=true` to confirm endpoint reachability, security policy/mode compatibility, NodeId correctness, and observed update rates before enabling writes.  
+* Tune sampling\_interval, publishing\_interval, and queue\_size based on network conditions and expected update rates.  
+* Use per-node sampling overrides sparingly and only for signals that truly need higher frequency.  
+* Prefer SignAndEncrypt with an appropriate security policy for production environments when supported by the OPC UA server.  
+* Avoid enabling LOG\_ENQUEUING in steady-state production unless you are actively troubleshooting, as it can generate very large logs.
+
+## Troubleshooting and Logs
+
+These are the default configurations, but they can be adjusted based on your environment and operational preferences.
+
+### Common issues
+
+* Cannot connect to endpoint: verify opcua\_endpoint\_url is reachable from the extractor network and that the server is listening on the expected port.  
+* Security handshake fails: confirm security\_mode and security\_policy match what the OPC UA server supports, and validate certificate trust requirements.  
+* Authentication rejected: confirm auth\_method and credentials/certificates are correct, and that the user has permission to read the requested nodes.  
+* No updates received: verify NodeIds, server publish behavior, and sampling/publishing intervals; confirm the nodes actually change at runtime.  
+* Data not appearing in tStore: confirm `OPERATION_MODE=RUN`, `LOG_ONLY=false`, validate TSTORE\_API\_URL, and check flush/batch settings.
+
+If troubleshooting locally, use the health/liveness endpoints to confirm the service is running.
+
+### Need help or have questions?
+
+If you need assistance installing, configuring, or troubleshooting this Extractor—or want guidance on how it fits into your broader Transpara deployment—we’re here to help.
+
+Email: support@transpara.com    
+Phone: \+1-925-218-6983    
+Website: www.transpara.com/support
+
+For enterprise customers, our team of real-time operations experts can also assist with integration, optimization, and performance tuning.
+
+If something isn’t working as expected, reach out. We’d rather help you get it running right than leave you guessing.
