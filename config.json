@@ -32,14 +32,20 @@
   },
   "navbar": [
     {
-      "label": "Guides",
-      "sidebarRef": "guides"
+      "label": "Visual KPI",
+      "icon": "Gauge",
+      "sidebarRef": "visual-kpi"
+    },
+    {
+      "label": "Transpara Platform",
+      "icon": "Layout",
+      "sidebarRef": "transpara-platform"
     }
   ],
   "externalLinks": [],
   "sidebars": [
     {
-      "sidebarRef": "guides",
+      "sidebarRef": "visual-kpi",
       "categories": [
         {
           "categoryName": "Getting Started",
@@ -243,43 +249,6 @@
           ]
         },
         {
-          "categoryName": "Transpara Platform",
-          "pages": [
-            "transpara-platform/overview",
-            "transpara-platform/architecture",
-            {
-              "groupName": "Core Modules",
-              "page": "transpara-platform/core-modules/core-modules-page",
-              "subpages": [
-                "transpara-platform/core-modules/tstore-page",
-                "transpara-platform/core-modules/tcalc-page",
-                "transpara-platform/core-modules/tmodel-page",
-                "transpara-platform/core-modules/tstudio-page",
-                "transpara-platform/core-modules/tview-page"
-              ]
-            },
-            {
-              "groupName": "Extractors",
-              "page": "transpara-platform/data-extractors/extractors",
-              "subpages": [
-                "transpara-platform/data-extractors/working-with-extractors",
-                {"groupName": "Available Extractors",
-                 "page":  "transpara-platform/data-extractors/available-extractors/available-extractors",
-                 "subpages": [
-                  "transpara-platform/data-extractors/available-extractors/extractor-opc-da",
-                  "transpara-platform/data-extractors/available-extractors/extractor-opc-hda",
-                  "transpara-platform/data-extractors/available-extractors/extractor-opc-ua",
-                  "transpara-platform/data-extractors/available-extractors/extractor-pi-sdk",
-                  "transpara-platform/data-extractors/available-extractors/extractor-pi-rda"
-                 ]
-                }
-              ]
-            },
-            "transpara-platform/deployment",
-            "transpara-platform/system-requirements"
-          ]
-        },
-        {
           "categoryName": "Reference Guides",
           "pages": [
             {
@@ -385,6 +354,69 @@
           "pages": [
             "supporting-pages/faqs",
             "supporting-pages/glossary"
+          ]
+        }
+      ]
+    },
+    {
+      "sidebarRef": "transpara-platform",
+      "categories": [
+        {
+          "categoryName": "Getting Started",
+          "pages": [
+            "transpara-platform/overview",
+            "transpara-platform/architecture",
+            "transpara-platform/core-modules/core-modules-page",
+            "transpara-platform/core-modules/tmodel-page"
+          ]
+        },
+        {
+          "categoryName": "Setup",
+          "pages": [
+            "transpara-platform/system-requirements",
+            "transpara-platform/deployment",
+            {
+              "groupName": "Extractors",
+              "page": "transpara-platform/data-extractors/extractors",
+              "subpages": [
+                "transpara-platform/data-extractors/working-with-extractors",
+                {
+                  "groupName": "Available Extractors",
+                  "page": "transpara-platform/data-extractors/available-extractors/available-extractors",
+                  "subpages": [
+                    "transpara-platform/data-extractors/available-extractors/extractor-opc-da",
+                    "transpara-platform/data-extractors/available-extractors/extractor-opc-hda",
+                    "transpara-platform/data-extractors/available-extractors/extractor-opc-ua",
+                    "transpara-platform/data-extractors/available-extractors/extractor-pi-sdk",
+                    "transpara-platform/data-extractors/available-extractors/extractor-pi-rda"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "categoryName": "tStudio",
+          "pages": [
+            "transpara-platform/core-modules/tstudio-page"
+          ]
+        },
+        {
+          "categoryName": "tView",
+          "pages": [
+            "transpara-platform/core-modules/tview-page"
+          ]
+        },
+        {
+          "categoryName": "tStore",
+          "pages": [
+            "transpara-platform/core-modules/tstore-page"
+          ]
+        },
+        {
+          "categoryName": "tCalc",
+          "pages": [
+            "transpara-platform/core-modules/tcalc-page"
           ]
         }
       ]
