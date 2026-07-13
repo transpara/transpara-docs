@@ -1,0 +1,91 @@
+---
+title: Industrial AI for Real-Time Operations
+description: What "Industrial AI for Real-Time Operations" means at Transpara, why the combination is rare, and why most industrial AI products don't deliver on it.
+slug: /transpara-platform/getting-started/industrial-ai-for-real-time-operations
+tags: ['documentation']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+Industrial AI for Real-Time Operations is what Transpara is all about. The phrase is precise. Every word in it matters, because every word rules out a category of product that does something else.
+
+* **Industrial.** Built for the operations that run a real plant, mine, refinery, grid, network, or treatment facility. Not horizontal AI dressed up with an industrial logo.
+* **AI.** Not a chat window pasted onto a dashboard or legacy application. AI baked deeply into a modern platform designed for it, that watches your operation continuously, finds problems, traces causes, and proposes actions, grounded in your live data.
+* **Real-Time.** Watching what is happening now, what led up to it, and what is on the horizon, not just summarizing what happened last week in a report. A living, breathing system built on streaming data and event-driven analytics, not on overnight batch jobs.
+* **Operations.** The actual work of running an asset-intensive business. KPIs, alerts, root cause, financial impact, safety, compliance, maintenance, downtime avoidance and optimization. Not slide decks for the next quarterly review.
+
+This page explains what we mean by each of those words, why the combination is rare, and why most "industrial AI" products do not deliver on it.
+
+## Beyond Chat
+
+Most products that claim to do industrial AI ship something like this: take a normal operations dashboard, add a chat window in the corner, route the question to a large language model, and hope the model's general knowledge is enough.
+
+It is not enough. That model does not know your operation and does not take advantage of your knowledge and intellectual property. It does not know which KPI feeds into which calculation. It does not know that your "Compressor C-201" has been derated since last month's outage, or that your overnight grade change makes the standard limit irrelevant until 6 a.m. So the chat window hallucinates. It invents KPI names. It misreads trends. It fabricates dependency chains. After three or four bad answers, operators stop trusting it.
+
+Transpara was designed from the start to be a different kind of AI product. AI in Transpara is not a feature on a dashboard. It is a continuous service that runs alongside your operation, with deep access to a structured operational model, calling domain-aware tools that prevent the things chat-bolted-on products get wrong.
+
+The user experience is the result, not the architecture. The architecture is what makes the user experience honest.
+
+## Why Industrial AI Is Hard
+
+Most companies that attempt industrial AI struggle for the same three reasons.
+
+* **Fragmented industrial data sources.** Operational data lives in dozens of systems running at different speeds: historians, SCADA, OPC, MQTT, IoT, relational databases, ERP, cloud services, lab systems. AI that only sees one of them misses the story. AI that tries to unify them through a year-long migration project loses to a competitor that ships in three months and costs a fortune. Besides, AI moves too fast for that.
+* **Lack of operational context.** Raw numbers are not enough. A temperature of 450°C means nothing without context. A KPI that is currently "High High" and trending toward "High High High" means something specific. Without an operational model that knows the asset, the limits, the calculation chain, and the relationships, AI cannot reliably interpret what it sees.
+* **Analytics disconnected from real-time systems.** Most analytics platforms are batch by design and made for static reports. They explain what happened. Operations needs to know what is happening and what is about to happen. By the time a traditional analytics tool produces an answer, the shift is over and the decision has already been made by someone reading a screen.
+
+Solving any one of these is hard. Solving all three at once, in a single platform, is the prerequisite for industrial AI that actually works.
+
+## How Transpara Solves It
+
+Transpara's design started with these three problems and worked backward to the technology choices. Every architectural decision in the platform points at one or more of them.
+
+* **Real-time data, in place where possible.** Transpara's Virtual Data Lake (VDL) concept, a key part of the Industrial Data Fabric, lets Transpara aggregate data from across your operation without forcing migration. Some sources Transpara reads in place. Others get persisted to tStore, the high-scale time-series database, when retention or performance demand it. The point is to make every source usable now, not once it is centralized (which usually never succeeds).
+* **An operational model, not just a database.** tGraph is the embedded graph database. It holds the asset hierarchy, KPIs, calculations, limits, attributes, comments, annotations, and AI findings, with explicit relationships between all of them. This is the operational context AI needs. Walking five levels of calculation dependencies to find the input that broke takes milliseconds in a graph and is effectively impossible in a relational schema. It also gets smarter the more you use it. Industrial AI without a knowledge graph is just a chat window with a search bar attached.
+* **Event-driven analytics, built for streaming.** tCalc handles calculations as events flow through the system, from simple math in the UI to Python and integrations with data science tools for anything more advanced. You can even use AI and natural language to generate and test calculations.
+* **A structured tool layer for AI.** The MCP Server exposes a fixed set of domain-aware tools that AI clients call to read data and metadata, score performance, walk the calculation graph, build dashboards, and trace root cause. The tool validates inputs against the real model, runs the right operation, and returns a structured result. KPI names are checked. Dashboards that reference nonexistent data are rejected. Relationships are considered. Every answer traces back to real values and real timestamps. The AI can reason about what it sees without making things up.
+* **Operational memory.** Every alert, KPI change, comment, and AI finding becomes part of the knowledge graph. Comments capture what your team noticed and decided. AI findings record what the agents saw and what humans did about them. Over time, the graph becomes a record of how your operation actually runs, the kind of knowledge that used to live with the thirty-year veterans. This memory makes the next round of AI agents smarter.
+* **Customer-controlled deployment, including the AI.** Transpara is not SaaS. The platform runs in your environment: on-premise or in your own cloud (or hybrid). Your AI models also run where you want them. For high-security and fully air-gapped configurations, you can run local models through Ollama that never touch the internet. You can also use your favorite/approved frontier models like Anthropic, OpenAI, Google, or others. You can even use different models for different tasks. The choice is yours. Bring your own model (BYOM).
+
+## Seeking and Surfacing
+
+The clearest way to describe how users leverage AI in Transpara is to split it into two modes.
+
+**Seeking** is when a person asks Transpara a question. This assumes the user is active and wants to know something. It could be broad and vague, like "How are my operations going today?" or more specific, such as "What's wrong with the copper division?" or "Build me an investigation dashboard for unit three." The user is in control. The AI is a fast analyst on demand. This is very powerful, but it gets even better with the "surfacing concept."
+
+**Surfacing** is when the system starts watching itself and bringing issues and opportunities to the surface without the user prompting it. This is the agentic future, where a series of specialist agents run around the clock, scanning the model and thousands of KPIs at a time (or more), finding problems no one is looking at, and surfacing those issues to the right people proactively: the activity feed in tView, the home screen, an email, a Teams message. The AI watches what humans can't, be it high volumes of things or relationships that aren't obvious, and it works even while the organization sleeps.
+
+Both modes use the same tools, the same graph, and the same grounded data. The difference is who started the conversation.
+
+Seeking is powerful. It is the part of AI everyone notices first. Asking a system a question in plain language and getting a real answer in seconds is a genuinely new capability and very powerful.
+
+Surfacing is what separates operational intelligence from a chatbot. Plant managers cannot watch every KPI. An operation with 100,000 KPIs is impossible for a human to scan continuously, and even then they could not see all of the possible relationships and root causes. The agents watch everything, all the time, and tell users what matters before they even thought to ask. That is the part of AI that changes how an operation runs.
+
+Transpara does both. Most products do one or neither.
+
+## Industrial AI That Works Today
+
+The phrase "Industrial AI for Real-Time Operations" only matters if the product actually delivers it:
+
+* AI for onboarding, model creation or editing, and creation of calculations and KPIs.
+* Operational rating and ranking across sites, assets, and divisions.
+* Contribution-based root cause analysis (which child KPI is dragging the rollup down) and structural root cause analysis (which input in the calculation chain actually broke).
+* Regression detection against prior periods, shifts, batches, and seasonal baselines.
+* Proactive attention scanning across thousands of KPIs.
+* AI-generated dashboards and investigation reports rendered inline.
+* Autonomous monitoring with specialist agents that run continuously.
+* Integration with SOPs and other unstructured data, so the system can leverage your decades of operational knowledge and procedures.
+
+## What This Looks Like in Practice
+
+If your operation has the right ingredients (real-time data sources, an operational model, and a clear decision-making structure), the experience of using Transpara looks roughly like this:
+
+A specialist AI agent notices overnight that one of your sites is trending toward a major KPI breach. The synthesis layer combines that finding, which might be just a symptom of something else, with related signals across the knowledge graph or buried in calculations, estimates the financial impact, and surfaces an alert in the activity feed with a briefing. Everyone has access to it before the morning meeting. The director reads it, asks AI a follow-up question to dig deeper, and walks into the 8 a.m. with a root cause and recommendation already drafted. The problem is avoided before it ever had a chance to cause negative impacts.
+
+That is what Industrial AI for Real-Time Operations means in practice. Not "we have a chat window." Not "we built a dashboard with AI assistance." A system that watches, explains, and acts, grounded in your live operational data, around the clock.
+
+## What's next?
+
+Learn more about the system's [Architecture](/transpara-platform/getting-started/architecture) or explore the [Core Modules](/transpara-platform/getting-started/core-modules).
