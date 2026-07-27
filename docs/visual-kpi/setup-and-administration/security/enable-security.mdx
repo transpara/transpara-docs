@@ -28,7 +28,7 @@ Use IIS Manager to decouple inheritance from the parent directory. You'll need t
 3. **WebService** (Designer)
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/decouple-1.png"
+  src="media/setup-and-administration/security/enable-security/decouple-1.png"
   alt="Components"
 />
 
@@ -36,7 +36,7 @@ At the parent level of each component:
 1. Right-click and select **Edit Permissions**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/decouple-2.png"
+  src="media/setup-and-administration/security/enable-security/decouple-2.png"
   alt="Properties Panel"
 />
 
@@ -44,13 +44,13 @@ At the parent level of each component:
 3. Click **Advanced**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/decouple-3.png"
+  src="media/setup-and-administration/security/enable-security/decouple-3.png"
 />
 
 4. In **Advanced Security Settings**, on the **Permissions** tab, click **Disable inheritance**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/decouple-4.png"
+  src="media/setup-and-administration/security/enable-security/decouple-4.png"
   alt="Advanced Security Settings"
 />
 
@@ -61,7 +61,7 @@ The UI may be different for other versions of Microsoft Windows Server.
 5. In the **Block Inheritance** panel, select **Convert inherited permission into explicit permissions on this object**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/decouple-5.png"
+  src="media/setup-and-administration/security/enable-security/decouple-5.png"
   alt="Block Inheritance"
 />
 
@@ -93,7 +93,7 @@ You can either allow open access to each server or set security, which requires 
 2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/iis-manager-1.png"
+  src="media/setup-and-administration/security/enable-security/iis-manager-1.png"
   alt="IIS Manager"
 />
 
@@ -101,7 +101,7 @@ You can either allow open access to each server or set security, which requires 
 4. Enable **Windows Authentication**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/iis-manager-2.png"
+  src="media/setup-and-administration/security/enable-security/iis-manager-2.png"
   alt="Authentication"
 />
 
@@ -110,7 +110,7 @@ You can either allow open access to each server or set security, which requires 
 2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/iis-manager-1.png"
+  src="media/setup-and-administration/security/enable-security/iis-manager-1.png"
   alt="IIS Manager"
 />
 
@@ -118,7 +118,7 @@ You can either allow open access to each server or set security, which requires 
 4. Enable **Windows Authentication**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/iis-manager-3.png"
+  src="media/setup-and-administration/security/enable-security/iis-manager-3.png"
 />
 
 ## Step 3: Determine who gets access to websites
@@ -130,14 +130,14 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 2. Click **Tools** and select **Computer Management**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-1.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-1.png"
   alt="Computer Management"
 />
 
 3. Under **Local Users and Groups**, you can have a separate folder for **Users** and **Groups**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-2.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-2.png"
   alt="Local Users and Groups"
 />
 
@@ -149,7 +149,7 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 2. Click **New Group**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-3.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-3.png"
   alt="New Group"
 />
 
@@ -157,14 +157,14 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 4. Click **Add** to add members to the Group.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-4.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-4.png"
   alt="Add Members"
 />
 
 5. Start typing a name and click **Check Name** to find and add users.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-5.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-5.png"
   alt="Check Name"
 />
 
@@ -175,21 +175,21 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 1. In IIS Manager, right-click the top level for the website and select **Edit Permissions**.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-6.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-6.png"
   alt="Edit Permissions"
 />
 
 2. In the **Security** tab, click **Edit...** and then, in the **Permissions** panel, click **Add...** to add the new group.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-7.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-7.png"
   alt="Add Permissions"
 />
 
 3. In the **Permissions Entry** panel, click **Locations** and select the server where the group is located.
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-8.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-8.png"
   alt="Locations"
 />
 
@@ -200,7 +200,7 @@ Visual KPI Server Manager allows you to create local groups and users, making it
     - Read
 
 <Image 
-  src="media/visual-kpi/setup-and-administration/security/enable-security/security-groups-9.png"
+  src="media/setup-and-administration/security/enable-security/security-groups-9.png"
   alt="Set the Permissions"
 />
 

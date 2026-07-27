@@ -109,7 +109,7 @@ Profile Groups
 This is also exemplified in the image below:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-1.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-1.png"
 />
 
 ### Parent ID
@@ -119,7 +119,7 @@ The second approach is to explicitly state the parent ID. To specify the Profile
 The image below showcases this approach:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-2.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-2.png"
 />
 
 ## Attribute mapping
@@ -162,13 +162,13 @@ Below you find all lists of keywords and Visual KPI mapping information for each
 In addition to Profile Group ID, Profile ID, and Dashboard ID, most widgets will also reference an AF Object ID. Getting these IDs is a simple task, but it requires enabling the option in the PI System Explorer. To do this, right-click in the bottom right corner of the PI System Explorer to display a menu that allows you to enable (or disable) the display of the Unique AF Object IDs (GUIDs).
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-3.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-3.png"
 />
 
 Once enabled, you can both view and copy the ID. The following example shows how the value for Profile Group ID was obtained. By selecting the attribute called AF Profile Group, the ID `559b8359-9b39-4e26-8977-4abf260d59cf` is displayed. This ID can then be pasted into the Profile Group ID attribute.
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-4.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-4.png"
 />
 
 <Callout type="info">
@@ -212,7 +212,7 @@ Typically, the Visual KPI AF RCS maps AF Elements to Visual KPI Groups. However,
 The example below uses this approach to isolate Visual KPI objects from the core AF Model. For instance, we have Group 01, Group 02, and Sub Group 01 elements in addition to a Configuration element. The Visual KPI AF RCS will create Visual KPI Groups for Group 01, Group 02, and Sub Group 01, but not for Configuration.
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-5.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-5.png"
 />
 
 ## Design First
@@ -222,13 +222,13 @@ When building a dashboard programmatically by defining AF Attributes, it is best
 For example, if you want a dashboard with a Group List, a Group Geo, and three Group Block widgets, it is a good practice to first create it in Visual KPI. 
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-6.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-6.png"
 />
 
 Then, use the **Customize Dashboard** display to inspect the widget properties. Here information such as Type (which will map directly to Widget Type) along with Row Start, Column Start, Height and Width can be seen:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af-7.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af-7.png"
 />
 
 ## Example of Use
@@ -238,7 +238,7 @@ Here you find an example of an AF database model to exemplify how the data will 
 By default, the Remote Context Server will create two Visual KPI groups out of the two AF elements  (Plant 1 and Unit 1) found in the image representation below:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_model.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_model.png"
   size="80%"
 />
 
@@ -253,7 +253,7 @@ These will be mapped as Visual KPI attributes.
 If you add specific child attributes to these AF attributes, they will then become KPIs in Visual KPI. The next image illustrates this concept:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_attributes.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_attributes.png"
   size="80%"
 />
 
@@ -268,7 +268,7 @@ As you build out your AF Model to include Visual KPI keywords you may find that 
 To keep your model as clean as possible, you can place all of these keyword attributes under the Child Elements attribute using the name "Visual KPI Properties." This can be seen exemplified in the image below:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_visual_kpi_properties.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_visual_kpi_properties.png"
   size="80%"
 />
 
@@ -281,7 +281,7 @@ The Child Elements attribute can also be used to mark an element or attribute th
 In the following example image, we've added a Level attribute to Unit 1 and set the Visual KPI Properties attribute to **False**, which indicates RCS should ignore this attribute and not create it as a Visual KPI value.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_ignore.jpg"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_ignore.jpg"
   size="80%"
 />
 
@@ -296,7 +296,7 @@ Visual KPI Remote Context Server has a setting called **Require Visual KPI Prope
 If this value is set to True and the Visual KPI Properties attribute isn't found on either an AF Element or an AF Attribute, then that AF Element or AF Attribute will be ignored. This functionality toggles the logic requiring the Visual KPI Properties attribute to act as an "Opt In" rather than the default "Opt Out."
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_Opt_In_Property.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_Opt_In_Property.png"
   size="80%"
 />
 
@@ -319,7 +319,7 @@ You can model them in two different approaches:
 The image below shows both options:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_Info_Child_Attributes.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_Info_Child_Attributes.png"
   size="80%"
 />
 
@@ -330,7 +330,7 @@ If you nest these properties, the "Info" portion of the nested keywords isn't ne
 When modeling Visual KPI Trends, it can be useful to group AF attributes. Each Trend Pen has many properties. The image below shows the difference between flat and nested approaches.
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_Attribute_Flat_and_Nested_Approches.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_Attribute_Flat_and_Nested_Approches.png"
   size="80%"
 />
 
@@ -341,7 +341,7 @@ You can create up to 20 custom attributes in Visual KPI to help you group your o
 Custom attributes such as Plant, Unit, Region, Country, Operation Type, Department, Product Line, etc. can be created to help keep your model clean and easy to read. These custom attributes can be placed under an 'Attributes' attribute. The image below demonstrates this:
 
 <Image
-  src="/media/visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases/af_Custom_Attributes.png"
+  src="/media/setup-and-administration/automation/rcs-with-af-databases/af_Custom_Attributes.png"
   size="80%"
 />
 

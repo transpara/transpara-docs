@@ -51,7 +51,7 @@ This tutorial has a single-box deployment, therefore you need to grant `db_owner
 In this step you need to configure Visual KPI Designer to work with SQL RCS. Once Visual KPI Designer is installed, you can add a new connection via the **Instance Connection** dialog.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-1.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-1.png"
 />
 
 With everything installed and connected, you will need to create attributes and disable the stale age default setting. These processes are described below.
@@ -79,7 +79,7 @@ For this tutorial, you will use Visual KPI Designer to add custom attributes. Yo
 The image below exemplifies how this should look like in Visual KPI Designer:
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-2.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-2.png"
 />
 
 ### Disable the stale age default setting
@@ -117,21 +117,21 @@ First, you need to create a database to hold this data. Follow the steps below:
 2. Right-click on the Databases folder and select New Database.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-3.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-3.png"
   size = "80%"
 />
 
 3. Give the database a name. For example: **MiningData**.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-4.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-4.png"
   size = "80%"
 />
 
 4. Just like in Visual KPI database (MiningDemo), you need to allow Visual KPI access to the database. As described in Step 1, give Network Service or Boxname$ access to the database.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-5.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-5.png"
   size = "80%"
 />
 
@@ -213,7 +213,7 @@ You can validate if you are receiving data through the interface. To check the c
 3. Click the more icon (…) after the Get Current Value Query string at the far right side. The following window will open:
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-6.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-6.png"
 />
 
 4. Click on the **Test** button.
@@ -278,25 +278,25 @@ Right-click on the **SQL RCS** in the Server Manager and select **Start**.
 After being initiated, the RCS will execute the queries and create, update, or delete data as instructed by the queries. Once the execution is complete, and a cache cycle has been run to gather the actual process data, you can view the results on the Groups tab of the Visual KPI site.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-7.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-7.png"
 />
 
 Since location data was also added, you will also be able to view Geo Maps.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-8.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-8.png"
 />
 
 Because you created and referenced the ODBC interface, you can also see historical data on trends. All of that from a few lines of SQL.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-9.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-9.png"
 />
 
 You can also see that everything that was created in Visual KPI Designer has been updated. Go ahead and pull up the Groups and KPIs. It should be similar to this:
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-10.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-10.png"
 />
 
 By default, the RCS updates constantly. As a result, any modifications you make in Visual KPI Designer will be lost when the SQL RCS runs next time. Keep in mind that the MiningData database is now the master, and we're simply following its lead.
@@ -330,7 +330,7 @@ When you ran the `demoscript2.sql` script, you were provided the following store
 Now, in the Visual KPI Server Manager, add these four queries/stored procedures to the RCS configuration and apply it, like presented in the image below:
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-11.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-11.png"
 />
 
 After the RCS and Cache Server finish running, you can see the following in your Visual KPI site:
@@ -338,12 +338,12 @@ After the RCS and Cache Server finish running, you can see the following in your
 <Tabs>
   <TabItem value="Trends" label="Trends" default>
     <Image
-      src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-12.png"
+      src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-12.png"
     />
   </TabItem>
   <TabItem value="Bar Charts" label="Bar Charts">
     <Image
-      src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-13.png"
+      src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-13.png"
     />
   </TabItem>
 </Tabs>
@@ -385,7 +385,7 @@ In Visual KPI Server Manager, follow the steps below to create profile groups, p
 The image below can be used as an example of this process:
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-14.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-14.png"
 />
 
 <Callout type="info" title="Default profiles">
@@ -404,5 +404,5 @@ Once you have entered each query and clicked on the Apply button, you can open y
 You can access other dashboards for each mine by using the dashboard pull-down menu.
 
 <Image
-  src="media/visual-kpi/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-15.png"
+  src="media/setup-and-administration/automation/sql-tutorial/sql-remote-context-server-15.png"
 />
