@@ -22,3 +22,31 @@
   --ifm-heading-font-family: Raleway;
   --font-main: "Open Sans";
 }
+
+/* Legacy TablePress HTML tables (e.g. Functions and Formulas reference) */
+.tablepress {
+  width: 100%;
+  table-layout: auto;
+}
+
+.tablepress td {
+  vertical-align: top;
+  /* never split a word in the middle */
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+/* Label column ("Return Type", "Description", operators, constants):
+   shrink to its own content instead of being squeezed by column 2 */
+.tablepress td.column-1:not([colspan]) {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 1.5rem;
+}
+
+/* Rows holding the function signature span both columns */
+.tablepress td.column-1[colspan] {
+  width: auto;
+  white-space: normal;
+}
