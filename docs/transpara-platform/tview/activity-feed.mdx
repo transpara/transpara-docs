@@ -1,0 +1,93 @@
+---
+title: Activity Feed
+description: How the tView activity feed works, what appears in it, how to filter it, and how to work with AI-surfaced findings.
+slug: /transpara-platform/tview/activity-feed
+tags: ['tview']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+The activity feed is how [tView](/transpara-platform/tview/) keeps you aware of your operations and information without requiring you to constantly look around and check everything manually. It is the news feed of the application, and it lives on the home page and in the right-hand pane on every page. It shows what is new, what has changed, what your team said about it, and what the AI found while nobody was watching.
+
+## What appears in the feed
+
+The feed mixes several kinds of activity into one scannable stream:
+
+- **KPI status changes** on the items you follow, so a KPI moving into a worse status shows up without you having to be on its page.
+- **Comments from your team**, including replies in threads you are part of.
+- **Mentions**, when a teammate pulls you or others into a discussion.
+- **Alerts** relevant to you.
+- **AI findings** from the Operational Intelligence Service, covering things nobody asked about.
+- **New or changed objects** in the system, so you can tell when new KPIs, groups, charts or public dashboards have been created or materially changed.
+
+Everything in the feed is tied to a real object in the model and the time it took place, and is linked right to it. A comment belongs to a KPI, a chart, a group, or a page. Nothing floats free without context.
+
+## Contextual and global activity
+
+The feed is organized by where you are in the application and can be filtered for custom views.
+
+**Contextual activity** shows what is relevant to the page you are on. Open a group such as Hydroelectric Generation and related activity sits at the top. This is the scope you spend most of your time in, because it answers "what is going on with the thing I am looking at right now." Below that is additional activity related to the parent group of that object, and then all other activity.
+
+**Global activity** shows other activity across the whole system, regardless of where you have navigated. This is the "finger on the pulse" view: favorites, mentions, alerts, and findings that affect your day and keep you up to date.
+
+The dedicated Home page extends the global view into a daily starting point, while the right-hand feed follows you everywhere and answers what is happening. The Home page is somewhere you go on purpose, at the start of a shift or a day. It is your operational news feed.
+
+## Filtering the feed
+
+Filter the feed to narrow a busy stream down to what you need:
+
+1. Open the activity pane on any page using the icon in the upper right of the header.
+2. Search by **activity type** to isolate one kind of event. For example, AI findings only or comments only.
+3. Filter by **time** to bound the feed to a shift, a day, or an incident window.
+4. Search by **person** using `@[user]` to follow what a specific colleague has been working on or commenting about.
+5. Filter by **attribute** to narrow to a slice of the operation using your own custom attributes.
+
+Filters combine. Isolating AI findings from the last twelve hours on a single production line is a normal thing to do during a shift handover.
+
+## Working with AI-surfaced findings
+
+AI findings appear in the feed alongside human activity. They come from the agents in the Agentic Monitoring service, which scans the model continuously with small subagents, followed by a master agent that filters and posts insights considered significant and relevant.
+
+A finding is not an alert. It is closer to a short analyst note, and it may contain:
+
+- **A narrative** explaining what the agent found, in plain language.
+- **Evidence**, including the KPIs involved and the values and timestamps behind the conclusion.
+- **A confidence score**, so you can weigh a strong signal differently from a tentative one.
+- **Suggested actions**, informed by your own standard operating procedures where those have been made available to the platform.
+- **Root cause**, where the agent was able to trace one through the calculation graph.
+
+Findings post where they belong. A briefing about a whole site appears on that site, and a finding about a single KPI appears on that KPI. You encounter findings in the course of normal navigation rather than having to visit a separate AI area.
+
+For significant findings, the service can suggest and create a full investigative dashboard with the executive summary, evidence, charts, root cause, and the estimated financial or operational impact.
+
+## Continuing the conversation
+
+A finding is the start of a conversation, not the end of one. You can reply to any finding the same way you would reply to a colleague's comment.
+
+Useful things to do with a finding:
+
+- **Ask it to explain itself.** The agent will retrace its reasoning and show the evidence it used. If a conclusion looks wrong, this is the fastest way to find out why it was reached.
+- **Ask a follow-up question.** Dig into a specific KPI, widen the time window, or ask what else is affected.
+- **Request a deeper analysis.** Ask the service to go further on a finding it raised.
+- **Tell it that it is wrong.** Flagging a bad finding is genuinely useful. The service uses that feedback, and a false positive you correct today makes the next run better.
+- **Bring in a colleague.** Mention a teammate on a finding to pull them into the thread, exactly as you would on any other comment.
+
+Your replies persist with the finding and become part of the operational record (you can always edit or delete your own comments). Six months later, the finding and the discussion about what your team did about it sit together, next to the data that drove both.
+
+## The feed and notifications are different things
+
+These two get confused, and the distinction is worth being clear about.
+
+**Notifications interrupt you.** They arrive through other channels, such as email, in the app or a collaboration tool like Microsoft Teams, and they exist for things that need a person to act now.
+
+**The feed does not interrupt you.** It is a continuous, scannable pulse that you read when you choose to.
+
+Not everything deserves an alert, but everything important deserves visibility. The feed is where the second category lives.
+
+## What's next?
+
+- [Working with AI](/transpara-platform/tview/working-with-ai) for asking your own questions rather than reading what the AI surfaced.
+- [tView overview](/transpara-platform/tview/) for how the feed fits into the rest of the application.
+- [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations) for the concepts behind surfacing and seeking.

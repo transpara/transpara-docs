@@ -365,7 +365,11 @@
           "categoryName": "Getting Started",
           "pages": [
             "transpara-platform/getting-started/overview",
+            "transpara-platform/getting-started/real-time-operational-intelligence",
             "transpara-platform/getting-started/industrial-ai-for-real-time-operations",
+            "transpara-platform/getting-started/the-transpara-approach",
+            "transpara-platform/getting-started/how-the-platform-works",
+            "transpara-platform/getting-started/how-to-use-the-documentation",
             "transpara-platform/getting-started/architecture",
             "transpara-platform/getting-started/core-modules",
             "transpara-platform/getting-started/tmodel"
@@ -405,7 +409,9 @@
         {
           "categoryName": "tView",
           "pages": [
-            "transpara-platform/tview/overview"
+            "transpara-platform/tview/overview",
+            "transpara-platform/tview/activity-feed",
+            "transpara-platform/tview/working-with-ai"
           ]
         },
         {

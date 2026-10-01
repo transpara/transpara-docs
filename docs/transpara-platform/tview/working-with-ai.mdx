@@ -1,0 +1,122 @@
+---
+title: Working with AI
+description: How to ask tView about your operations, what kinds of questions work well, and how to turn AI answers into dashboards you keep.
+slug: /transpara-platform/tview/working-with-ai
+tags: ['tview', 'ai']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+AI reaches you in [tView](/transpara-platform/tview/) two ways. Sometimes it proactively surfaces insights you did not specifically ask about ([Agentic Monitoring](/transpara-platform/getting-started/industrial-ai-for-real-time-operations#seeking-and-surfacing), where the system is monitoring itself for you), which arrives in the [activity feed](/transpara-platform/tview/activity-feed) and the home page. Other times you seek out information by asking questions and having a conversation, which is the focus of this page.
+
+Ask about your operations as a whole, a particular visualization, or an individual metric in plain language and the answer comes back grounded in live data from your own model in combination with the knowledge graph, with KPIs, charts and tables rendered alongside the explanation. There is no query language to learn and no prompt format to memorize.
+
+## What you can ask
+
+The AI is useful across a wide range of questions. These categories cover most of what people actually ask.
+
+**Status and assessment.** Ask how things are going and get an assessment rather than a number dump.
+
+- How did the plant perform overnight? Anything I should be worried about?
+- What needs my attention this morning?
+- Is anything about to go wrong?
+- What is the most important issue I should tackle at the moment?
+- Did our fix to Unit 01 yesterday work, or is it still having issues?
+
+**Ranking and comparison.** Ask which parts of the operation are doing well or badly relative to each other.
+
+- Which sites are underperforming right now?
+- Rank the mills by availability this week.
+- How does Plant 2 compare to Plant 4 on energy intensity?
+
+**Diagnosis.** Ask why something is wrong, not just that it is.
+
+- What is wrong with the copper division?
+- Why did overall equipment effectiveness drop on line 3 overnight?
+- What is dragging the site rollup down?
+- What caused pump 7 to go down last night?
+
+**Change over time.** Ask what moved and when.
+
+- Which KPIs regressed since yesterday?
+- Compare last week to the same week last year for the milling KPIs.
+- What changed during the night shift?
+
+**Building things.** Ask for a visualization or a dashboard and get one.
+
+- Build me an investigation dashboard for unit three's unexpected shutdown.
+- Chart the last 48 hours of feed rate against throughput.
+- Show me a Pareto of downtime causes this month.
+
+## How answers come back
+
+Answers are not walls of text. Alongside the explanation you get the visual evidence: trends, ranked tables, summary cards, and complete dashboards, rendered where you are reading.
+
+Two things about answers are worth knowing.
+
+**Diagnosis works two ways.** When you ask why a specific KPI went into a bad state, the AI can answer by traversing the graph, identifying which child KPI is dragging the parent down or which upstream event was the actual cause, and it can walk the calculation chain to find the input that actually broke. The latter kind is the one that saves real time, because it points at a cause rather than a symptom, and it looks beyond a single metric at the system and its relationships.
+
+**Answers carry their evidence.** Findings reference specific KPIs, values, and timestamps from your model. If an assessment looks surprising, the underlying numbers are right there to check.
+
+## Turning an answer into something you keep
+
+A generated visualization does not have to be disposable. When the AI produces a chart or a dashboard that is worth keeping, you can promote it into the system by favoriting it and/or adding it to a dashboard (new or existing), where it behaves like anything else an author built: it updates live, it can be shared by link, and activity on it flows into the feed.
+
+This is a fast path to a dashboard. Rather than assembling widgets, describe the investigation you want, look at what comes back, refine it in conversation, and save the version that works.
+
+## Asking better questions
+
+The AI handles vague questions, but specific ones get better answers. A few habits help.
+
+**Name the scope.** "What is wrong with the copper division" beats "what is wrong." The AI can search broadly, but telling it where to look produces a sharper answer faster.
+
+**Say when.** Add a time frame when you have one in mind. "Overnight," "this week," and "since the grade change" all narrow the analysis usefully.
+
+**Follow up rather than restart.** If the first answer is close but not right, ask a follow-up. The conversation keeps its context, so "now break that down by shift" works and is faster than rewriting the original question.
+
+**Ask for the reasoning.** If you want to understand an assessment rather than just receive it, ask the AI to explain how it got there. It will show the KPIs and values behind the conclusion.
+
+## What the AI knows and what it does not
+
+The AI is grounded in your operational model and your data. Knowing the boundaries of that will save you some confusion.
+
+It knows the things in your model: the asset hierarchy, the relationships, every KPI with its limits and targets and current status, the calculation chain connecting them, historical values, and your custom attributes. It also knows the operational record your team has built up, including comments and annotations, and it can draw on your standard operating procedures where those have been made available to the platform, which is what lets it suggest corrective actions that match how your organization actually works.
+
+It knows your data, even if you are not storing it directly in Transpara [tStore](/transpara-platform/tstore/). The Transpara Data Gateway makes all connected data sources look like they are local to the system (and identical to tStore), even when they are not. This means you are truly asking questions to the entire virtual data lake and all of its connected systems.
+
+It also benefits from core Transpara knowledge and best practices from serving hundreds of world-class customers for over 20 years. This part is baked into the AI features and is constantly improving with every upgrade.
+
+It does not know things that are not in the model or are not connected. A data source nobody integrated is invisible to it. An asset that exists in the plant but not in the hierarchy does not exist as far as the AI is concerned. Tribal knowledge that never got written down anywhere is not available to it either, although this is exactly what the commenting and collaboration habit slowly fixes.
+
+It also cannot invent. The AI reaches your data through a fixed set of tools that check what it asks for against the real model. A question about a KPI that does not exist returns nothing rather than a plausible-sounding fabrication. This is a deliberate design choice, and it is the reason answers can be trusted in an operational setting.
+
+## When an answer looks wrong
+
+It happens. Work through it in this order.
+
+1. **Ask the AI to explain its reasoning.** Most surprising answers turn out to be correct reasoning over data you had not looked at, and the explanation reveals which.
+2. **Check the evidence it cited.** Open the KPIs it referenced and look at the values and timestamps yourself.
+3. **Investigate the asset model and metadata rather than the AI.** If the reasoning is sound but the conclusion is wrong, the usual cause is a KPI mapped to the wrong tag, a limit that does not reflect the current operating mode, or a stale data source. The AI is reasoning correctly over bad inputs.
+4. **Say so.** Give feedback. On surfaced findings this feedback trains the system. Either way it is worth reporting, because a wrong answer usually points at something worth fixing.
+
+If answers are consistently wrong across many questions, that could also be a configuration problem rather than a modeling one. Raise it with your administrator, who can check the AI configuration and can also report it to Transpara support.
+
+## Reviewing what the AI surfaced
+
+Asking questions is only half of it. The Agentic Monitoring service also raises findings on its own, continuously, across KPIs users aren't even watching. Those arrive in the activity feed, where you can read them, ask them to explain themselves, and reply.
+
+See [Activity Feed](/transpara-platform/tview/activity-feed) for working with surfaced findings.
+
+## Which model is answering
+
+Transpara does not lock you to one AI model provider. Your administrator chooses which model powers which capability, and the options include commercial frontier models (Anthropic, OpenAI, Google and others, including no-data-sharing variants), models hosted in your own cloud account, and models running entirely on your own hardware (Ollama and other local models, heavily dependent on hardware capabilities). In high-security environments the AI can run fully air-gapped, with nothing leaving your network.
+
+As a user you do not need to think about this, beyond knowing that response speed and depth vary by model. If AI responses seem unusually slow or weak, mention it to your administrator rather than assuming it is normal.
+
+## What's next?
+
+- [Activity Feed](/transpara-platform/tview/activity-feed) for findings the AI raised on its own.
+- [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations) for the concepts behind seeking and surfacing.
+- [tView overview](/transpara-platform/tview/) for how AI fits into the rest of the application.

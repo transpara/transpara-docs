@@ -1,60 +1,152 @@
-﻿---
-title: What tView is
-description: Learn how tView enables real-time KPI visualization and collaboration across devices in the Transpara Platform.
+---
+title: tView overview
+description: An introduction to tView, the Transpara application where operational data becomes visible, and the mental model behind how it works.
 slug: /transpara-platform/tview/
+tags: ['tview']
 ---
 
 <Callout title="Transpara Platform is under development" type="success">
 Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
 </Callout>
 
-tView is the Transpara Platform's real-time visualization and collaboration interface. It displays KPIs, metrics, alerts, and dashboards tailored for decision-makers, engineers, and field operators, on any device.
+tView is the application your teams live in. It is where everything in the Transpara platform comes to life for users. It brings KPIs, trends, alerts, dashboards, AI and operational context together so people can see current conditions, spot deviations early, identify root causes, collaborate and act with confidence.
 
-Designed for speed and clarity, tView lets users monitor performance, detect anomalies, and collaborate across teams without technical training. It's fully mobile-optimized and updates live via the platform's event-driven architecture.
+Most operational tools assume users know what they want and will go looking for it. tView does that well, but also adds a more important concept: the ability for the system to watch itself and automatically surface issues and opportunities, greatly improving the overall effectiveness and eventual ROI of the system. Continuous awareness without constant checking.
 
+## What is Transpara tView?
 
-## What it does
+Industrial operations run on speed, critical decisions and limited attention spans. Situations change fast, mistakes are expensive, and clarity matters more than complexity. tView is built for that reality.
 
-tView transforms calculated and modeled data into intuitive visualizations. It provides:
-- Real-time dashboards that reflect the current state of operations.
-- Alerts and notifications for threshold breaches or anomalies.
-- Interactive charts and tables for exploring trends and comparisons.
-- A collaborative interface where users can annotate, share, and discuss data.
+Reach for tView when you need to:
 
-It's where insights become actions, supporting rapid decision-making on the shop floor, in the control room, or in the field.
+- Give operators, supervisors, reliability engineers, and leadership a single real-time view of KPIs, trends, and status across all your data sources.
+- Catch deviations early, while there is still time to do something about them.
+- Move from "what is wrong" to "why" without reading raw data, hunting through tag lists, creating spreadsheets, or stitching together three other tools.
+- Collaborate with team members and capture knowledge alongside your data.
+- Standardize how performance gets communicated across lines, plants, and sites.
+- Support the operational rhythm: core metrics and leading indicators, shift handover, rapid troubleshooting.
+- Deliver information consistently in the formats that work in the field and the control room, from a phone to a giant video wall.
 
+## How tView is laid out
 
-## How it works
+tView has four permanent regions. They stay where they are no matter what you are doing.
 
-tView receives its data through two core platform components:
+- **Top/Header.** The header of every page, which includes time range selection, search, filtering, commenting, sharing and chat, which all apply across the entire application.
+- **Left pane.** Home, Dashboards, Explorer, and My Stuff. Your view of the entire hierarchy/model and your ability to quickly get to your most common items (dashboards, KPIs, charts, chats, etc).
+- **Center/Body.** This is the main body of the page, containing whatever you are focused on right now: a dashboard, a KPI list, a chart, a feed.
+- **Right pane.** This is the place to view the activity feed, comments, details of any object, and chat. It can represent what you select in the body of the page (like the details of a KPI), or something global like the overall activity feed of the app.
 
-- **tDataGateway**: Serves as the unified API layer, delivering structured data from tCalc, tStore, and tModel.
-- **tEventBroker**: Sends real-time updates via MQTT, ensuring dashboards stay synchronized with live system events.
+The consistency is the point. You can move up and down the hierarchy, forward and backward in time, drill in and zoom out, and the core layout does not rearrange itself around you or add confusion. Nobody has to be trained on a custom display, because there are no custom displays to learn other than customized or personalized dashboards (which still fit within the system consistently). You never lose context, and you never feel like you left the system to go somewhere else.
 
-Dashboards are configured in tStudio and automatically reflect the models, templates, and KPIs defined in the platform. Users can personalize views, subscribe to alerts, and access the interface securely from desktop or mobile devices.
+## What ties it all together
 
+Two core ideas underpin the majority of how tView works, how it is a "system," and why it requires so little training to understand and operate: the Model, and the KPI.
 
-## Main features
+- **Model.** This is how your information and/or assets are organized, named and decorated for use in Transpara. Often known as an asset model, hierarchy or metadata, it is where your parent-child relationships live (e.g. pump 1 belongs to unit 1, which belongs to plant 1, etc), but also much more. Every group/level in the hierarchy can have an unlimited number of KPIs, charts, dashboards, attributes and more associated with it, and they can represent almost anything (region, department, plant, asset, use case, line, etc). The model is created and edited using [tStudio](/transpara-platform/tstudio/).
+- **KPI.** While there are many definitions available, ours is quite simple. A KPI to Transpara is any metric you care enough to track, that also has some form of expected behavior (such as high or low, good or bad, normal or abnormal). This is in contrast to metrics that do not have expected behavior (which are most often considered attributes in the system). As a quick example, if you are monitoring a wind turbine, the wind speed would probably be a KPI (it can be too high or too low), while the wind direction is most likely an attribute (it isn't good or bad, it just is what it is).
 
-| Feature                           | Description                                                                 |
-|-----------------------------------|-----------------------------------------------------------------------------|
-| **Real-time dashboards**          | Automatically updated via tEventBroker for live status tracking.           |
-| **Mobile-friendly interface**     | Designed for any screen size, with full functionality on tablets and phones.|
-| **Collaboration tools**           | Share dashboards, add notes, and discuss insights across teams.            |
-| **Alerting and subscriptions**    | Receive push notifications, SMS, or email based on KPI thresholds.         |
-| **KPI visualizations**            | Use color-coded statuses, gauges, charts, and tables to interpret data.    |
-| **Context-aware views**           | Automatically reflects your asset hierarchy and user access level.         |
-| **Integration ready**             | Data can be exported to Excel, Power BI, Grafana, and other tools.         |
+**Every source looks the same.** Another core concept of Transpara as a whole is how it works across all of your data sources and makes them all look the same to the software. A tank level from a historian, the speed of a haul truck from a fleet system, the outside temperature from a weather service, and the price of copper from a market feed are all presented in tView the same way. It makes no difference whether the value is stored in [tStore](/transpara-platform/tstore/) or read in place from where it already lives, whether the source sits inside your network or outside it, or whether it updates multiple times a second or once a day. Users never have to know where a number came from in order to understand it.
 
+**Every KPI is defined with the same pattern.** A KPI is a value with at least one limit, giving it status and context at all times. Good, highs and lows mean the same thing everywhere, regardless of whether it is a price, a temperature, or a speed. A status carries the same color and the same icon everywhere. If good is green, good is green across the whole application, on every screen, for every asset or KPI, and from any source. Change that color once and it changes everywhere, because status belongs to the system rather than to whoever built a particular screen. The rest of the vocabulary works the same way. Out of range means the value has passed its minimum or maximum. Not in service means not in service. Users learn the language and colors once and they hold throughout.
 
-## Example use cases
+Defining KPIs is not mandatory. You can bring data into Transpara without limits or status. Almost nobody does, because nearly all of the value described below comes from this context and its consistency.
 
-- View current energy usage across multiple plants from a mobile device.
-- Receive alerts when equipment performance drops below standard.
-- Track KPIs like OEE, downtime, or output in real time.
-- Share insights across field teams and supervisors for faster responses.
+### What the consistency buys you
 
+**Visualizations build themselves.** Because every KPI carries limits, status, and context in the same shape, tView generates trends, rollups, status views, and maps automatically. Nobody needs to handcraft a chart manually, and adding an asset does not mean building a new screen or new visualizations for it. Simply having a hierarchy and KPIs means most of the visualizations are already running, so it is just a matter of choosing based on preference.
+
+**The system stays maintainable.** A limit or a calculation is defined once, static, dynamic or calculated, in one place (tStudio). Every view and alert that uses it inherits the change automatically.
+
+**Training mostly disappears.** A user who learns that red is high and green is good (or whatever colors you choose) can read any screen in the system, including screens for parts of the operation they know nothing about. They do not need to know which source the data came from, what the unit of measure is, or what a good value would be for this particular asset. Somebody who understood the process decided that already, and the KPI carries the answer.
+
+The bar worth aiming at is this: someone who knows nothing about the process should be able to look at a screen and immediately point at the problem(s). If a five-year-old can see one red item among many green ones and say that looks wrong, the design is working.
+
+### The alternative
+
+Most operations run several visualization tools side by side: a historian's own display tool for process data, an HMI, a vendor application for mobile fleet, a business intelligence tool for monthly reporting, and a stack of spreadsheets underneath all of it.
+
+Each was built by different people to different conventions. The terminology differs between them. The units differ. Worst of all, the colors differ (or don't exist), because each vendor and each screen author chose their own. Good might be green in one tool and purple in the next (or even two screens inside the same application). Some screens show a number in blue that conveys nothing at all about whether the number is acceptable.
+
+The result is that reading a screen requires knowing which tool you are looking at, and interpreting it requires being an expert in that part of the process. tView is built to remove both requirements.
+
+## The mental model
+
+Six ideas explain almost everything about how tView behaves. Learn these and the rest of the application follows.
+
+**Explorer is the model/hierarchy, which gives everything structure.** In the left pane, the Explorer answers what exists and how it is organized, so the hierarchy is a live operational map rather than a set of hand-built pages. In the main body of the page, the Explorer also shows the live status and performance across the system and in whatever area you are viewing. You can navigate in either space.
+
+**Time is a second navigation element.** Every screen, chart, KPI, trend, dashboard, etc. can be navigated in time, with either a point in time or in most cases a time range. Because most everything in Transpara is dynamic, users can scroll back and forward in time easily, pick default time ranges (e.g. 1 hr, 8 hrs, 1 day, 1 week, etc. — default ranges can be edited in tStudio), relative ranges (`*-1d` to `*`, where `*` is "now"), or even manually entered timestamps.
+
+**Everything is interactive.** This isn't static reporting. Every visualization can be drilled into, shifted in time, combined with other metrics and more. Unless paused or using static time ranges, the application is also alive and updating in near real-time. The user should learn to click to go deeper, and the breadcrumbs always let you know where you are, how you got there, and how to get back.
+
+**Activity tells you what is happening.** The activity feed appears in two places: the home page, and in the right pane on any page. It shows comments from your team, state changes on the KPIs and groups you care about, alerts worth your attention, AI insights and recommendations, and signals about what is getting attention across the organization. This is the fastest way to answer "what's new" and "what's happening." Think of this as your operations news feed or social network.
+
+**Dashboards give you personalization and focus.** A dashboard is a personalized view of anything in the system, built for a person, a role, a use case, a department, a site, or an asset. Dashboards are not isolated documents or standalone displays. They are custom views of items in the system itself, customized and laid out on the screen in the best way for each particular use. Changes and comments on dashboard items show up in the feed like everything else.
+
+**Search and filtering let you investigate.** When you do want to go looking, filtering reduces a very large KPI environment down to what matters now, and search finds things as you type across any number of terms. Neither makes you leave the page or lose context. Save the result and you have a reusable lens you can jump back to.
+
+**Comments enable collaboration and capture the resulting knowledge.** Commenting is not limited to trends. Comment on a KPI, a chart, a group, a dashboard or any other page, reply in a thread, and mention teammates to pull them in. Comments are time-aware, object-aware, and persistent, and they are captured in the knowledge graph where AI and other features can leverage them. The history of decisions and their rationale ends up sitting next to the data that drove it, and none of your expertise or intellectual property gets lost.
+
+**Personalized alerts interrupt only when and where you want them to.** Alerts are a key benefit of having KPIs with limits and status, especially with leading indicators and predictive analytics. They are a way for the system to raise its own hand and reach out through channels like email, in the app, and through integrations (e.g. Teams, Slack) when something needs attention. They also show up in the activity feed along with all other updates.
+
+One more idea ties these together. Favorites are more than just bookmarks. When you favorite a KPI, dashboard, group or chart, you are also telling the system what is important to you, and how to value it in areas like search, your activity feed and eventually with AI insights.
+
+## Surfacing and seeking in tView
+
+tView is where both core modes of user behavior come to light.
+
+**Surfacing** arrives in the [activity feed](/transpara-platform/tview/activity-feed) and in the form of notifications. This can come from simple alerts tied to leading indicator KPIs, or agents in Transpara's Agentic Monitoring service can be scanning thousands of KPIs (and more) continuously and surface findings depending on the situation or context: a site-level briefing dashboard, an AI insight in the activity feed or home page, or a notification. AI findings appear alongside human comments and alerts, with the same interaction model; you can reply to a finding, ask it to explain itself, request a deeper look, or give it feedback.
+
+**Seeking** happens when you know what you want or what you want to ask. This can be simple searches and navigation, to full conversations with AI to find root cause and next steps. Beyond just navigating the tView application, users can ask the system about operations in plain language and the answer comes back grounded in their live data, with text, charts and dashboards rendered inline. Anything the AI generates can be promoted to a real dashboard, chart or other visualization just by asking.
+
+For the concepts behind both, see [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations). For using them day to day, see [Working with AI](/transpara-platform/tview/working-with-ai).
+
+## What you can do in tView
+
+The sub-pages in this section cover each area in depth. In brief:
+
+- **Navigate the hierarchy** through a persistent Explorer pane with expand and collapse, independent of what you are viewing.
+- **Read KPI status at a glance** through status, color, and limits, then drill down into contributing signals and trends.
+- **Create new visualizations ad-hoc.** Multi-select KPIs and other objects to create new charts, add even more via search, and more. Compare and contrast anything in the system in just a few clicks. Add them to a dashboard/report or favorite them to keep them persisted.
+- **View details.** Every object in the system (KPIs, groups, charts, etc.) has a details icon which shows everything about the object, including data sources, calculations and more.
+- **Control time globally** with default time ranges, the ability to scroll any page back and forward in time, custom ranges, relative ranges, calendar selection, time zones, and a live toggle that pauses live updates while you investigate.
+- **Filter and group** from anywhere, on status, group, or your own custom attributes.
+- **Search** live as you type, across multiple terms, with a full results view that keeps you in context. You can also use search to quickly add new metrics to current visualizations or dashboards.
+- **Save searches** as an entire constrained state of the application, so "Plant 1 Safety KPIs" and "Executive view" are one click apart.
+- **Build dashboards** with visual editing, so you see what you are changing as you resize and configure widgets. You can create dashboards from scratch, use AI, copy other dashboards, or even start from existing objects in the Explorer.
+- **Investigate in advanced trends** with slider, box zoom, snap and other features, users can drill into any segment of a longer window, multi-pen and multi-scale support, and undo and redo as you work. Trending is the deepest analysis surface in tView, and the [Visualizations](#visualizations) section covers the rest of what it can do.
+- **Create your own alerts** with real operational conditions, including duration (time-in-state) logic like staying in High High High for thirty minutes, and choose how you get notified (in-app, email, Teams, etc.) and if you want reminders to keep bugging you until it is fixed.
+- **Share anything** as a link, with access still governed by permissions rather than by screenshots, PDFs or other content that could land in the wrong hands. Link-based sharing also lets the recipient keep exploring, drilling in, or navigating in time.
+- **View performance of large numbers of KPIs through automatic roll-ups** so you can see performance problems immediately, even if they are deep in the hierarchy, and know where to drill in. You can roll up by percentage or count, so even a large group cannot hide a significant number of bad KPIs behind a small percentage.
+- **Keep a personal workspace** in Favorites, with favorited KPIs, groups, charts, and entire pages.
+
+## Visualizations
+
+tView generates live, interactive visualizations automatically from the model: KPI lists with sparklines and status summaries, bullet charts, single and multi-pen trends, status history trends and maps, SPC and control charts, Pareto charts, histograms, box plots, XY scatter plots, group and KPI maps, geomaps with drill-down, and Gantt-based batch dashboards.
+
+They are built for real-time use, mobile ergonomics, light and dark themes, and high-density monitoring. Users can also create ad-hoc charts on any device and add them to a dashboard without starting from a blank canvas.
+
+## Built for any role and on any device
+
+tView serves operations, field staff, management, IT and executives from the same system, and adapts automatically to phones, tablets, large displays, control room stations, and rugged field devices. It runs in any modern browser with nothing to install and no data stored locally on the device.
+
+Most users get value immediately from KPI-centric views and dashboards without the need for training. Power users can go deeper with advanced search, filtering, ad-hoc visualizations, analysis and self-service dashboards, building the views they need without waiting on a specialist.
+
+## How tView differs from a BI dashboard
+
+Traditional BI tools behave like documents. Each dashboard is its own small world, and consistency depends entirely on whoever built it. tView behaves like a system. KPIs, status, limits, and context are shared building blocks, so teams stop arriving at meetings with three different definitions of "good."
+
+Three consequences worth knowing about:
+
+**Definitions live in one place.** In BI, metrics and thresholds get redefined per dashboard or even per chart. Colors, status icons, and even metric names can all be different for the same data. In tView, KPIs live in the central hierarchy with unified naming and consistency, so when an author updates a name, limit or a calculation in tStudio, every dashboard and alert inherits the change.
+
+**Live data does not break it.** BI tools tend to struggle when time ranges change or data updates frequently. tView is built for high-frequency operational signals, so you can work live, pause updates when you need to study something, and move through history without the experience falling apart.
+
+**Home is activity-first.** Rather than relying on static dashboard groupings, tView surfaces what matters now: recent comments, KPIs getting attention, and alerts relevant to you.
 
 ## What's next?
 
-Learn about how [Deployment](/transpara-platform/setup/deployment/) works in this new system, offering unparalleled flexibility and speed for your operational intelligence, or return to the [Core Modules](/transpara-platform/getting-started/core-modules/) overview.
+- [Activity Feed](/transpara-platform/tview/activity-feed) for the feed in detail, including AI-surfaced items.
+- [Working with AI](/transpara-platform/tview/working-with-ai) for asking questions and acting on surfaced findings.
+- [tModel](/transpara-platform/getting-started/tmodel) for the model and hierarchy that tView reads from.
+- [tStudio](/transpara-platform/tstudio/) for where KPIs, limits, and calculations are authored.
