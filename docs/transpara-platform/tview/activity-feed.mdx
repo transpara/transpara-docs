@@ -19,7 +19,7 @@ The feed mixes several kinds of activity into one scannable stream:
 - **Comments from your team**, including replies in threads you are part of.
 - **Mentions**, when a teammate pulls you or others into a discussion.
 - **Alerts** relevant to you.
-- **AI findings** from the Operational Intelligence Service, covering things nobody asked about.
+- **AI findings** from the [Agentic Monitoring Service](/transpara-platform/ai/agentic-monitoring-service), covering things nobody asked about.
 - **New or changed objects** in the system, so you can tell when new KPIs, groups, charts or public dashboards have been created or materially changed.
 
 Everything in the feed is tied to a real object in the model and the time it took place, and is linked right to it. A comment belongs to a KPI, a chart, a group, or a page. Nothing floats free without context.
@@ -48,7 +48,7 @@ Filters combine. Isolating AI findings from the last twelve hours on a single pr
 
 ## Working with AI-surfaced findings
 
-AI findings appear in the feed alongside human activity. They come from the agents in the Agentic Monitoring service, which scans the model continuously with small subagents, followed by a master agent that filters and posts insights considered significant and relevant.
+AI findings appear in the feed alongside human activity. They come from the agents in the Agentic Monitoring Service, which scans the model continuously with small subagents, followed by a master agent that filters and posts insights considered significant and relevant.
 
 A finding is not an alert. It is closer to a short analyst note, and it may contain:
 
@@ -61,6 +61,8 @@ A finding is not an alert. It is closer to a short analyst note, and it may cont
 Findings post where they belong. A briefing about a whole site appears on that site, and a finding about a single KPI appears on that KPI. You encounter findings in the course of normal navigation rather than having to visit a separate AI area.
 
 For significant findings, the service can suggest and create a full investigative dashboard with the executive summary, evidence, charts, root cause, and the estimated financial or operational impact.
+
+To learn how the agents decide what to surface and how findings get scored, see [Agentic Monitoring Service](/transpara-platform/ai/agentic-monitoring-service).
 
 ## Continuing the conversation
 

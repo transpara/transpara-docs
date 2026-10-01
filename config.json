@@ -415,6 +415,12 @@
           ]
         },
         {
+          "categoryName": "AI",
+          "pages": [
+            "transpara-platform/ai/agentic-monitoring-service"
+          ]
+        },
+        {
           "categoryName": "tStore",
           "pages": [
             "transpara-platform/tstore/overview"

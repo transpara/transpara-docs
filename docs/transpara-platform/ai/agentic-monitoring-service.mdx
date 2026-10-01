@@ -1,0 +1,128 @@
+---
+title: Agentic Monitoring Service
+description: How Transpara's agentic service monitors operations continuously, traces root cause through the graph, and surfaces findings nobody asked for.
+slug: /transpara-platform/ai/agentic-monitoring-service
+tags: ['ai']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+The Transpara Agentic Monitoring Service is one of the most powerful and unique parts of the Transpara industrial AI set of capabilities. This is the part of Transpara that works while nobody is watching. This is where the system watches itself, no matter how big it is, and surfaces issues and opportunities proactively to users. It runs continuously (or scheduled) against your model, looks for things that matter, works out why they are happening and what caused them, and highlights them to the right people at the right time.
+
+This is the "surfacing" part of Transpara's [industrial AI story](/transpara-platform/getting-started/industrial-ai-for-real-time-operations#seeking-and-surfacing). Seeking answers the questions you know to ask. Agentic Monitoring answers the ones you didn't even know to ask.
+
+The case for it is often just simple arithmetic. A large operation can sometimes include hundreds of thousands of KPIs and other metrics (several of our customers are approaching a million or more). No human can look at this many metrics in any reliable way. Even if they could, there is no way for them to also examine all of the relationships between them, and especially how they all work together as a system. In practice, people watch a few dozen or maybe hundreds of the metrics they are used to on a handful of dashboards and hope the important thing is among them. Agents can watch all of it, and the cost of watching one more KPI is close to nothing.
+
+## Why this goes beyond KPI alerting
+
+Alerting tells you when a KPI crosses a threshold. That is useful and Transpara does it well, but it is only one part of the story. Once something is in alarm, what matters is what it means, what caused it, what else it affects, and what it is costing. Answering that has traditionally been a person's job, and it takes hours.
+
+An alert says a KPI has changed to a status someone determined to be alertable. A finding from the Agentic Monitoring Service says the KPI dropped thirty-four percent because an input in its calculation chain failed, that three other downstream KPIs are affected, that the estimated cost is a specific number per day until it gets fixed, and that the last time this pattern appeared the cause was a maintenance backlog.
+
+The difference is context, causality, and quantification, arriving without anyone "looking around" or knowing to ask the question.
+
+## Proactive, agentic surfacing of insights
+
+The service runs with two tiers of agents. Specialist sub-agents find things by doing very small tasks at scale. A synthesis layer, or advisor agent, rationalizes the work of the sub-agents to determine what gets surfaced to users.
+
+### Specialist sub-agents
+
+Each sub-agent watches for one kind of operational signal across its scope, runs continuously or on a schedule, and updates its findings as conditions change. These are tiny tasks, making it easy for these agents to look across a large model and huge number of metrics, because they are only looking for one small thing. The service ships with an ever-growing set of sub-agents covering the patterns that matter most, and you can also generate your own sub-agents that are custom to your use cases. Here are some examples of generic sub-agents:
+
+- **Alarm proximity** finds KPIs approaching their limits and predicts when they will breach.
+- **Drift** detects KPIs moving away from their normal operating range.
+- **Regression** compares the current window against prior periods and flags the most significant deteriorations.
+- **Slope** identifies KPIs trending toward alarm at their current rate of change.
+- **Data staleness** surfaces KPIs that have stopped updating, which usually means a sensor or connection problem rather than a process one.
+
+Every agent produces ranked findings carrying a confidence score, a description of what was found and where, and the significance of the deviation.
+
+Depending on your use cases, you might generate other more specific sub-agents like "watch for blade pitch issues on my wind turbines" or "look for drift in my refinery analyzers" and anything else you can describe. You can easily generate and modify these sub-agents using natural language right in the Agentic Monitoring Service configuration.
+
+### The synthesis layer (advisor, or primary agent)
+
+Specialist agents produce a lot of findings, and many of them may not matter in isolation. There will be duplicate findings, false positives, issues that aren't worthy of raising, and so on. The synthesis layer's job is to comb through everything the sub-agents have produced, evaluate it, and decide what is worth a person's attention.
+
+It does three things the specialist agents cannot:
+
+**It prioritizes.** Out of hundreds of findings, it surfaces the few that need attention now. Surfacing without prioritization is a firehose, and a firehose gets muted within a week.
+
+**It connects the dots.** It relates findings to each other across the knowledge graph and traces relationships and causes, so a degraded rollup KPI arrives explained by the upstream input that actually moved rather than as five separate alarms.
+
+**It quantifies.** It estimates financial and/or time impacts using targets, commodity prices, and historical comparables, which is what turns a technical finding into a business decision in context.
+
+The output is a briefing rather than a list. As an illustration of the shape:
+
+<Callout title="Example finding" type="info">
+Overnight, mining fleet availability at the Kalgoorlie site dropped from 85% to 13%. The cause is upstream: underground fleet availability collapsed. Estimated revenue impact is $1.3M per week at the current gold price. Three other KPIs are cascading from this. The pattern last occurred in March, when the root cause was a maintenance backlog. Recommended action: inspect the underground fleet maintenance backlog.
+</Callout>
+
+A competent analyst could assemble that in a few hours, assuming they knew there was an issue and knew what to ask of the system. The Agentic Monitoring Service was watching and asking in the background the whole time.
+
+## Root-cause traversal across the graph
+
+Root cause in Transpara includes traversal, not just correlation. The service walks relationships in the knowledge graph that are actually modeled rather than inferring connections only from statistics or hierarchy. It also sees beyond just the metrics by taking into account all attributes, relationships, history and even user comments and conversations.
+
+### When calculation dependencies exist
+
+This is the strong case. Every Group or calculated KPI in tGraph has explicit edges to the KPIs feeding into it and the KPIs it feeds. Every object knows what it is made of and where it comes from. When a KPI or group rollup degrades, the service can walk those edges backward until it reaches the input that moved or caused the issue.
+
+The result is specific and checkable. The service names a real input, at a real timestamp, and shows the chain it followed to get there. Nothing is inferred and nothing is invented, which means an engineer can verify the conclusion in the time it takes to open the KPI.
+
+This is why the graph database (industrial knowledge graph) matters way beyond being an implementation detail. Asking for every upstream input across five levels of calculation dependency is a native operation in a graph and runs in milliseconds. The same question against a relational schema requires joins that are slow, expensive, manually created, and fragile enough that, in practice, most products do not attempt it.
+
+### When they do not
+
+Plenty of operational relationships are real without being expressed as a calculation. A pump and the tank it feeds are related. Two mills on the same line share upstream conditions. A compressor and the ambient temperature are related for reasons nobody wrote into a formula.
+
+The service still has structure to work with in these cases, because tGraph holds more than calculation edges. Position in the hierarchy says what sits near what and what belongs to what. Attributes say which assets are of the same type, on the same line, or in the same operating mode. Peer comparison shows whether one asset is deviating while its siblings are not, which separates an asset problem from a process problem. Timing shows what moved first.
+
+These signals support a weaker claim than a calculation chain does, and the service treats them that way. A conclusion of this kind arrives with lower confidence and is framed as a likely relationship rather than a traced one. When a finding is uncertain, the right response is usually to ask it what it based the conclusion on, which is covered below.
+
+The practical implication for modeling: the more of your operational logic that lives in calculations and attributes rather than in people's heads, the more precisely the service can explain what it finds.
+
+## Activity feed and home page surfacing
+
+Findings go where the relevant people already are, and the form depends on the situation.
+
+- **The activity feed.** Findings appear in the feed alongside comments, mentions, and alerts, which also flow through the feed rather than sitting apart from it. The feed appears both on the home page and in the right pane of any page, so a finding reaches you whether you are starting your day or already looking at something.
+- **In place.** A finding about a KPI appears on that KPI. A briefing about a site appears on that site. You meet findings in the course of normal navigation rather than visiting an AI area to collect them.
+- **As a briefing dashboard.** For significant findings the service can generate full dashboards and reports and push them to users: summary, evidence charts, the root cause, and the estimated impact laid out together and still interactive and live.
+- **As an alert on a KPI.** When a finding warrants immediate attention, it can raise an alert on the KPI in question.
+
+For the reader's side of this, see [Activity Feed](/transpara-platform/tview/activity-feed).
+
+## Continuing the conversation once surfaced
+
+A finding is an opening, not a verdict. Every finding supports replies, in the same way a colleague's comment does, and the conversation keeps the context of what was surfaced.
+
+What people do with a finding:
+
+- **Ask it to explain.** The service retraces its reasoning and shows the evidence behind the conclusion. When a finding looks wrong, this is the fastest route to understanding whether the reasoning or the underlying data is at fault.
+- **Ask for a follow-up.** Widen the window, narrow to one asset, ask what else is affected. You are Seeking now, but inside a context Surfacing established, so you do not have to restate anything.
+- **Ask for more depth.** Request a fuller analysis of something the service raised briefly.
+- **Push back.** Say it is wrong, or that it is not worth surfacing.
+- **Bring someone in.** Mention a colleague to pull them into the thread.
+
+This is the loop the whole design points at. Surfacing sets the agenda and Seeking works it, without a handoff between two different tools.
+
+## Feedback loop and graph learning
+
+The service improves from being used, in two ways that operate on different timescales.
+
+**Immediate correction.** When someone flags a finding as wrong or useless, that judgment is recorded against the finding. A false positive you correct today informs how similar conditions are treated tomorrow. This matters more for Surfacing than it would for Seeking, because an unsolicited finding is held to a higher standard than an answer to a question, and a service that keeps raising things nobody cares about gets ignored.
+
+**Knowledge capture.** Findings, replies, comments, and annotations are all written back into tGraph. Over time the graph accumulates a record of what your team noticed, what they decided, and why. This is the knowledge that has traditionally lived with long-tenured staff and left when they did. Once it is in the graph it is available to everyone, and to the agents on their next run.
+
+## Configuration
+
+Administrators control the service from [tStudio](/transpara-platform/tstudio/): which agents run against which parts of the model, how often, at what thresholds, and where findings are delivered. New agents can be added as you identify patterns worth watching.
+
+## What's next?
+
+- [Activity Feed](/transpara-platform/tview/activity-feed) for working with findings as a user.
+- [Working with AI](/transpara-platform/tview/working-with-ai) for the Seeking side of the loop.
+- [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations#seeking-and-surfacing) for the mental model this service sits inside.
+- [tStudio overview](/transpara-platform/tstudio/) for where the service is configured.

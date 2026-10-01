@@ -1,63 +1,125 @@
-﻿---
-title: tStudio overview and UI tour
-description: Learn how tStudio enables configuration, modeling, and system management in the Transpara Platform.
+---
+title: tStudio overview
+description: An introduction to tStudio, the Transpara Platform's web-based environment for configuration, modeling, calculations, and administration.
 slug: /transpara-platform/tstudio/
+tags: ['tstudio']
 ---
 
 <Callout title="Transpara Platform is under development" type="success">
 Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
 </Callout>
 
-tStudio is the web-based configuration environment for the Transpara Platform. It serves as the central workspace where users define models, create calculation templates, configure deployments, and monitor system health.
+tStudio is the Transpara Platform's modern, web-based configuration, modeling, and administration environment. It is where teams define and manage the building blocks of real-time operational intelligence, including the operational model, reusable templates, calculation definitions, and the settings that keep deployments consistent across assets, plants, and sites.
 
-Built for administrators, authors, and advanced users, tStudio simplifies the management of complex analytics systems through visual tools, AI-assisted setup, and real-time feedback.
+What makes tStudio unique is its clear separation of context and logic from the underlying data sources. Instead of embedding tag names, source-system quirks, and one-off fixes inside dashboards or calculations, tStudio lets you define a unified namespace of operational objects with consistent naming, descriptions, units, relationships, and data mappings. That means you can normalize differences across historians, SCADA systems, and sites without forcing changes in the source systems, and you can evolve the model over time without rebuilding everything downstream.
 
+This approach turns configuration into a scalable, governed system rather than a collection of ad hoc edits spread across legacy tools. tStudio is also the connective tissue across the platform. It is where operational context is structured, logic is defined, and governance is applied, so downstream experiences in [tView](/transpara-platform/tview/) and analytics in [tCalc](/transpara-platform/tcalc/) behave consistently and remain efficient to maintain over time. As the environment grows, tStudio helps ensure the platform scales with it, without configuration sprawl or "every site is different" drift.
 
-## What it does
+In practice, this means:
 
-tStudio allows you to:
-- Build and maintain your semantic model (tModel) using intuitive visual editors.
-- Create and version templates for real-time calculations in tCalc.
-- Configure dashboards, KPIs, and views shown in tView.
-- Manage user roles, authentication, and deployment-specific settings.
-- Monitor the health of system components, including data interfaces and calculation engines.
+- Modern, browser-based workspace for configuration, modeling, and administration.
+- Centralized management of operational models, templates, calculations, and deployment settings.
+- Scalable governance to standardize definitions across assets, plants, and sites.
+- Designed for onboarding and operating complex industrial environments over time.
+- Connects platform building blocks so tView and tCalc deliver consistent outcomes as you scale.
 
-All configuration is performed directly in the browser, no coding required.
+## What tStudio does
 
+tStudio is the control center for configuring and maintaining an operational intelligence system at enterprise scale. It allows you to:
+
+- Build and maintain your semantic model ([tModel](/transpara-platform/getting-started/tmodel)) using a visual, graph-based editor, with support for multi-hierarchy UNS, relationships, attributes, templates, and automated configuration via RCS.
+- Define, test, and version advanced calculations using tCalc, including Python, event-driven logic, external AI/ML calls, and templates.
+- Design and manage KPI structures, targets, limits, and metadata that will appear in tView.
+- Configure dashboards, analysis views, and template-based patterns that promote consistency across sites.
+- Manage all data source connections, both Interfaces (read in place) and [Extractors](/transpara-platform/setup/data-extractors/extractors) (ingest into tStore).
+- Control deployments, security, authentication, and user roles.
+- Monitor the live health of the platform: interfaces, workers, pods, storage, alerts, and API activity.
+- Support AI-assisted authoring, modeling, and recommendations as these features roll out.
+
+Everything is no-code and built around operational clarity, not developer workflows.
+
+## Why it matters
+
+tStudio is the primary workspace for configuring and managing Transpara's operational intelligence at scale. It gives engineering and operations teams a structured way to build, govern, and maintain models, calculations, and reusable content so real-time KPIs and dashboards can be delivered consistently across assets, plants, and sites.
+
+Reach for tStudio when you need to:
+
+- Configure and maintain core platform objects (models, attributes, calculations, and related metadata) in one managed environment.
+- Build reusable templates and standards so content can be deployed across many similar assets without duplicating work.
+- Manage changes safely with governance controls, including review, versioning, and controlled rollout of updates.
+- Accelerate project delivery by using structured workflows instead of ad hoc edits across multiple tools.
+- Support multi-team collaboration between operations, process engineering, and IT while keeping ownership and responsibilities clear.
+- Reduce long-term maintenance by centralizing configuration and minimizing "tribal knowledge" dependencies.
+- Ensure consistency in how KPIs, calculations, and asset context are defined across the organization.
+- Enable faster troubleshooting and continuous improvement by keeping logic, definitions, and dependencies visible and traceable.
 
 ## How it works
 
-tStudio interacts with all core modules in the platform:
+tStudio communicates directly with all major components of the Transpara Platform.
 
-- **tModel integration**: Design asset hierarchies, link nodes, and apply templates via a drag-and-drop interface.
-- **tCalc management**: Define calculation templates, assign them to modeled objects, and test execution in real time.
-- **Deployment awareness**: tStudio adapts to your environment, showing site-specific views and controlling local configurations.
-- **Role-based access**: Features and permissions are customized based on the user’s role (Admin, Author, Viewer).
+### tModel (asset modeling and UNS)
 
-Through its AI-powered design assistant, tStudio can also suggest model structures, detect configuration gaps, and recommend best practices.
+- Graph-based metadata layer that stores relationships, attributes, templates, roles, and events.
+- tStudio provides a drag-and-drop, visual editor to define the Unified Namespace (UNS), including multiple hierarchies when needed.
+- Supports automated configuration via RCS for ingesting AF models, inmation structures, VMware metadata, and other external sources.
 
+### tCalc (calculations, analytics, event logic)
+
+- Create and manage templates for real-time calculations: simple, complex, event windows, and AI/ML.
+- Test execution in-browser with immediate feedback.
+- Version calculations safely and track dependencies across the model.
+
+### tStore (time-series and analytics cache)
+
+- Configure extractors, retention policies, indexing, caching behavior, high-frequency ingestion, and health monitoring.
+- Determine which data is read in place, cached, or stored permanently, supporting the Virtual Data Lake model.
+
+### Interfaces and extractors
+
+- Manage connections to historians, PLCs, DCS, IoT sensors, SQL databases, APIs, MQTT brokers, IT monitoring tools, and more.
+- Configure polling, backfill, ingestion windows, performance tuning, and connectivity health.
+- tStudio surfaces status, warnings, and stale-data indicators.
+
+### tView (dashboards, KPIs, analytics)
+
+- Define KPIs, charts, templates, collections, metadata, and relationships that tView will use to auto-generate visualizations.
+- Set defaults for visualization behavior, colors, thresholds, grouping rules, and derived analytics.
+
+### Deployment and security
+
+- Configure multi-site, multi-region deployments.
+- Manage authentication, SSO/AD/LDAP integration, SSL/TLS, VPN preferences, domain settings, and role-based access.
+- View cluster health, including Kubernetes pods, containers, workers, interfaces, and relays.
 
 ## Main features
 
-| Feature                          | Description                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| **Web-based interface**          | Access and configure the platform from any browser, no installation needed.  |
-| **Modeling workspace**           | Visual editor for creating and maintaining the semantic model.             |
-| **Template creation**            | Define and manage tCalc logic templates with version control.              |
-| **AI-assisted design**           | Get recommendations for modeling, calculations, and KPI structure.         |
-| **System health monitoring**     | View component status and alerts across deployments.                       |
-| **Deployment-specific config**   | Control settings unique to each environment (on-premise, cloud, hybrid).   |
-| **Role-based access control**    | Limit or expand access depending on user responsibilities.                 |
-
+| Feature | Description |
+|---------|-------------|
+| **Web-based, no installations** | Runs in any browser, on any device, with no client software required. |
+| **Visual graph modeling** | Build and maintain the UNS, asset hierarchies, relationships, and templates. |
+| **Template-driven configuration** | Standardize KPIs, calculations, dashboards, and attributes across sites. |
+| **Advanced calculation management** | Define real-time and event-based logic with Python and AI/ML support. |
+| **Data source administration** | Manage Interfaces and Extractors, connection health, and ingestion settings. |
+| **System health monitoring** | Real-time visibility into interfaces, containers, tCalc workers, alerts, and performance. |
+| **Role-based access control** | Assign rights for Admins, Authors, and Viewers at fine-grained levels. |
+| **AI-assisted modeling** (in development) | Suggest model structures, detect missing relationships, and recommend improvements. |
+| **Deployment management** | Adapt to on-prem, cloud, or hybrid environments with full control over data residency. |
 
 ## Example use cases
 
-- Create a semantic model for a multi-site energy monitoring system.
-- Assign OEE and energy cost templates to each production unit.
-- Define access roles for admins and plant operators.
-- Monitor data interface status and correct configuration issues.
+Common real-world scenarios where tStudio is used daily:
 
+- Build a multi-site Unified Namespace (UNS) for a utility, refinery, mine, or manufacturing enterprise.
+- Import an existing PI AF or inmation model via RCS and apply templates across thousands of assets.
+- Configure a combined-cycle plant's KPI templates: OEE, heat rate, equipment performance, and reliability indicators.
+- Define event windows for batch, shift, or maintenance intervals and build associated KPIs.
+- Manage OPC, MQTT, SQL, historian interfaces and extractors in a hybrid cloud deployment.
+- Monitor container health, data freshness, calculation load, and overall platform performance.
+- Rapidly deploy a new site or production line using templates and metadata inheritance.
 
 ## What's next?
 
-Learn how dashboards are used and shared with [tView](/transpara-platform/tview/overview/), or return to the [Core Modules](/transpara-platform/getting-started/core-modules/) overview.
+- [tView overview](/transpara-platform/tview/) for how the model and KPIs defined here reach end users.
+- [tModel](/transpara-platform/getting-started/tmodel) for the semantic modeling layer tStudio edits.
+- [Deployment](/transpara-platform/setup/deployment) for the environments tStudio configures.
+- [Core Modules](/transpara-platform/getting-started/core-modules) for how tStudio fits alongside the rest of the platform.
