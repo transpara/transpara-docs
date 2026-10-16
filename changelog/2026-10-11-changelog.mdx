@@ -1,0 +1,65 @@
+---
+title: Release Notes for Build 5.103.4.725
+---
+
+This release adds attribute-based layer filtering to the Geo Map and significantly improves the connection handling, polling, and diagnostics of the AVEVA PI Interface Proxy. Several fixes improve proxy reliability, caching, and error reporting.
+
+{/* truncate */}
+
+## New Features
+
+- **Geo Map - Layer Filters:**  
+  Geo map layers can be filtered by attribute values from the Layers panel. Filters support AND conditions, run on the ESRI ArcGIS server, and update the legend to show only matching feature classes.
+
+- **Geo Map - Filter Operators:**  
+  Added ESRI ArcGIS Map Viewer filter operators, including text operators, blank values, and numeric ranges. Attribute values can be selected from lists that show counts and coded-value names.
+
+- **Geo Map - Filters in Links:**  
+  Layer filters are preserved in page links and carried into dashboards opened from the map.
+
+- **AVEVA PI Interface Proxy - Connection Handling:**  
+  Improved connection handling with pooled PI connections, individual read timeouts, and a dedicated data pipe connection, so slow or failed reads no longer block other operations.
+
+- **AVEVA PI Interface Proxy - Follow Backfilled Values:**  
+  Added Follow Backfilled Values (disabled by default) to detect backfilled updates or deletions that affect the current PI snapshot.
+
+- **AVEVA PI Interface Proxy - Background Polling:**  
+  Added background polling for unavailable points and failed subscriptions, with automatic restoration to data pipe subscriptions when they become available.
+
+- **AVEVA PI Interface Proxy - Diagnostics Endpoint:**  
+  Added the `getproxymetrics` endpoint for subscription and polling diagnostics.
+
+- **Server Manager - AVEVA PI Interface Proxy Settings:**  
+  Added AVEVA PI Interface Proxy settings for polling interval, connection pool size, request timeout, cache expiration, advanced connection options, and polling diagnostics.
+
+- **AVEVA PI RDA Interface - Interface Proxy Timeout:**  
+  Added a configurable Interface Proxy Timeout (default 600 seconds) to support large data requests, with improved timeout logging and error messages.
+
+## Fixes
+
+- **AVEVA PI Interface Proxy / Server Manager:**  
+  Reduced the data pipe collection interval from 30 seconds to 1 second to prevent event queue overflows and dropped updates. Upgrades now correct the old default while preserving custom settings.
+
+- **AVEVA PI Interface Proxy:**  
+  HTTP error responses now return appropriate status codes (400, 503, 504, 500) instead of HTTP 200 with an empty response.
+
+- **AVEVA PI Interface Proxy:**  
+  Improved value caching to expire unused entries, remove obsolete subscriptions, prevent stale values from recreated points, and eliminate empty values during cache expiration.
+
+- **AVEVA PI Interface Proxy:**  
+  Improved connection recovery and service reliability, including safe reconnection, automatic restart on persistent failures, Windows service recovery, exception logging, and startup port validation.
+
+- **AVEVA PI Interface Proxy:**  
+  Eliminated repeated temporary AF known-server entries. PI-only servers now maintain a single persistent TransparaPIProxy entry.
+
+- **AVEVA PI Interface Proxy:**  
+  Improved startup configuration logging to distinguish informational notices from invalid configuration warnings.
+
+- **Virtual Dashboards:**  
+  Fixed missing background colors on AF event-frame generic and dashboard link blocks without an assigned color.
+
+- **Geo Map:**  
+  Improved layer filter error handling, attribute value list retries, numeric input validation, and editing stability. Removed unnecessary "(no features)" labels and fixed Layers panel resizing.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.

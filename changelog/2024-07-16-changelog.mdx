@@ -1,0 +1,29 @@
+---
+title: Release Notes for Build 5.100.52.648
+---
+
+This release adds aggregate and omit syntax for AVEVA PI and AF lookups, aggregate-based bar and Pareto charts, and finer cache controls for the AVEVA AF Interface Proxy.
+
+{/* truncate */}
+
+## New Features
+
+- **Aggregate Syntax for AVEVA PI and AF Lookups:**  
+  Lookups now support aggregates, for example `sinusoid|avg|7d`. Available aggregates are `avg`, `sum`, `count`, `min`, `max`, `range`, and `stddev`.
+
+- **Omit Syntax for AVEVA PI and AF Lookups:**  
+  Lookups can now exclude specific values, or values above or below a threshold. For example, `sinusoid|omit|min=50,max=100` only shows values between 50 and 100. Use `val` to omit specific values, for example `val=[234,241,250]`. You can combine `min`, `max`, and `val`.
+
+- **Aggregate-Based Bar and Pareto Charts:**  
+  Added support for aggregate-based bar charts and Pareto charts.
+
+- **AVEVA AF Interface Proxy - Cache Expiration Controls:**  
+  Added finer-grained controls over cache expiration for subscription-based and non-subscription-based values.
+
+## Fixes
+
+- **Website:**  
+  Implemented minor UI and workflow enhancements for KPI-based charts.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.

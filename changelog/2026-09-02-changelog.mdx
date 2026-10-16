@@ -1,0 +1,59 @@
+---
+title: Release Notes for Build 5.102.40.715
+---
+
+This release improves how the AVEVA AF Interface and AVEVA AF Interface Proxy handle long-running and high-volume reads, with new timeout and concurrency settings exposed in Server Manager.
+
+{/* truncate */}
+
+## New Features
+
+- **AVEVA AF Interface - Interface Proxy Timeout:**  
+  Added a configurable Interface Proxy Timeout setting for long-running proxy requests, with a default of 600 seconds.
+
+- **AVEVA AF Interface Proxy - Read Hang Timeout:**  
+  Added a separate Read Hang Timeout setting so healthy long-running bulk reads are not treated as hung requests.
+
+- **AVEVA AF Interface Proxy - Request Timeout Default:**  
+  Increased the default Request Timeout from 300 to 600 seconds.
+
+- **AVEVA AF Interface Proxy - Slow-Read Logging:**  
+  Slow-read logging now includes the number of distinct AVEVA PI Data Archives accessed by each batch.
+
+- **AVEVA AF Interface Proxy - Max Concurrent Reads:**  
+  Added an optional Max Concurrent Reads setting for sites where PI Data Archive read concurrency needs to be limited.
+
+- **Server Manager - Interface Proxy Timeout:**  
+  Added Interface Proxy Timeout configuration under the AVEVA AF Interface proxy settings.
+
+- **Server Manager - AVEVA AF Interface Proxy Settings:**  
+  Added Request Timeout, Read Hang Timeout, Subscription Batch Size, and Max Concurrent Reads settings for the AVEVA AF Interface Proxy.
+
+## Fixes
+
+- **AVEVA AF Interface:**  
+  Proxy timeouts now clearly report the configured timeout value and cancellation status.
+
+- **AVEVA AF Interface:**  
+  Verify Connection now reports proxy timeout errors correctly instead of failing with a null reference.
+
+- **AVEVA AF Interface:**  
+  Proxy communications now use a shared HTTP client for more reliable connection and timeout handling.
+
+- **AVEVA AF Interface Proxy:**  
+  Long-running reads can now complete and populate the cache even after the original request times out.
+
+- **AVEVA AF Interface Proxy:**  
+  Multiple requests for the same values now share an active read instead of starting duplicate reads.
+
+- **AVEVA AF Interface Proxy:**  
+  Improved subscription processing at scale by batching and pacing data pipe signups, polling, and resynchronization activity.
+
+- **AVEVA AF Interface Proxy:**  
+  Attributes that cannot be served by the AVEVA PI data pipe, including time-range and summary calculations, are now polled instead of being re-read from AF on every refresh.
+
+- **Server Manager:**  
+  The AVEVA AF Proxy Observable Events Collection Interval now defaults to 1 second to match the proxy default.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.

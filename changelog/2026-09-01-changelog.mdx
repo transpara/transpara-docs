@@ -1,0 +1,89 @@
+---
+title: Release Notes for Build 5.102.37.712
+---
+
+This release significantly improves the scalability and reliability of tModel RCS and the AVEVA AF Proxy. tModel RCS gains page-by-page processing, compressed responses, and reworked logging, while the AVEVA AF Proxy gains a warm connection pool and faster large current-value reads. Several data and stability issues have also been fixed.
+
+{/* truncate */}
+
+## New Features
+
+- **tModel RCS - Page-by-Page Processing:**  
+  Models are now processed page by page, so very large models no longer run out of memory.
+
+- **tModel RCS - Gzip Compression:**  
+  Get-by-property responses are now Gzip-compressed, producing payloads roughly 11x smaller against tgraph-api 1.61 and later. A `GzipResponses` setting is available as an escape hatch.
+
+- **tModel RCS - tStore Interface Routing:**  
+  tStore-backed attributes are routed to a separate Visual KPI tStore interface, detected automatically from tgraph.
+
+- **tModel RCS - Custom Attributes for Charts:**  
+  Custom attributes are now written for pie, bar, Pareto, box plot, and trend objects.
+
+- **tModel RCS - Logging Rework:**  
+  Full-level logging now shows per-page and per-type summaries instead of per-object SDK noise, plus one line per HTTP request with method, URL, status, round-trip time, and response size.
+
+- **tModel RCS - Retries and Token Caching:**  
+  Dropped requests are retried with backoff, and bearer tokens are cached instead of re-authenticating each time. Batches that still fail now fail the cache run instead of saving an incomplete data set as successful.
+
+- **Server Manager - tModel RCS Settings:**  
+  tModel RCS settings now include Get By Property Batch Size, Parallel Requests, separate tModel and tStore interface pickers, and Always Use tModel Interface.
+
+- **AVEVA AF Proxy - Warm Connection Pool:**  
+  Reads now use a warm connection pool, so concurrent requests no longer share a single AF SDK connection. This resolves random service deaths and race condition errors under load.
+
+- **AVEVA AF Proxy - Connection Pool Size:**  
+  Added the `af_connection_pool_size` setting, with a default of 8. Set it to 0 to revert to the previous single-connection behavior.
+
+- **AVEVA AF Proxy - Request and Result Caps Removed:**  
+  The proxy now serves whatever the client requests, including Visual KPI current-value requests with 2500 lookups.
+
+- **AVEVA AF Proxy - Large Current-Value Loads:**  
+  Large current-value loads are no longer abandoned mid-flight. Bulk SDK time budgets now scale with item count.
+
+- **AVEVA AF Proxy - Point Type Preloading:**  
+  AVEVA PI point types are bulk-preloaded once per batch instead of requiring one round-trip per point, significantly improving performance for large current-value requests.
+
+- **AVEVA AF Proxy - x64 Service:**  
+  The service now runs as x64.
+
+- **AVEVA AF Proxy - Per-Phase Timing:**  
+  When `log_data_retrieval` is enabled, the proxy logs per-phase timing for resolve, bulk read, point-type preload, and conversion.
+
+## Fixes
+
+- **tModel RCS:**  
+  Fixed attributes resolved through an interface or formula displaying the raw lookup instead of the resolved value, which caused object names to appear as tags or expressions such as `PLANT.PUMP1.NAME`.
+
+- **tModel RCS:**  
+  Fixed chart pens and slices that share a display name all receiving the same value in Path mode.
+
+- **tModel RCS:**  
+  Fixed Boolean tModel flags failing to save due to a tinyint conversion error.
+
+- **tModel RCS:**  
+  Fixed chart colors from tModel rendering black until hovered.
+
+- **tModel RCS:**  
+  Fixed the box plot upper control limit incorrectly duplicating the lower control limit.
+
+- **tModel RCS:**  
+  Fixed data errors during large cache runs re-inserting already committed objects and causing a primary key violation that hid the original error. Only the failing batch is now retried or bisected, and the offending object is logged and skipped.
+
+- **AVEVA AF Proxy:**  
+  Fixed requests that arrived while a connection was being established receiving an immediate 503 instead of waiting for the connection, particularly at service startup and after reconnects.
+
+- **AVEVA AF Proxy:**  
+  Fixed AVEVA PI Data Archive timeout settings not taking effect on already-connected servers and generating unnecessary warnings.
+
+- **AVEVA AF Proxy:**  
+  Fixed transient stalls recycling the process instead of clearing normally. Retired connection pipes are now disposed correctly.
+
+- **AVEVA AF Proxy:**  
+  Request validation failures now correctly return HTTP 400.
+
+- **AVEVA AF Proxy:**  
+  Defaulted and adjusted configuration values are now logged as warnings or informational messages instead of errors.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.

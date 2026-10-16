@@ -1,0 +1,79 @@
+---
+title: Release Notes for Build 5.103.1.722
+---
+
+This release adds ESRI ArcGIS Feature Server layers to the KPI geo map, including secured layers, along with new Designer and Server Manager settings. It also adds Follow Backfilled Values to the AVEVA AF Interface Proxy and improves tModel RCS and AspenTech inmation Interface behavior.
+
+**Note:** This release includes a schema change. Upgrade your Visual KPI Designer(s).
+
+{/* truncate */}
+
+## New Features
+
+- **Geo Map - ESRI ArcGIS Layers:**  
+  ESRI ArcGIS Feature Server layers can now be drawn on the KPI geo map, with a Layers control to toggle each layer and set its opacity.
+
+- **Geo Map - Layer Groups:**  
+  A layer URL that points at a Feature Server root is drawn as a group of layers, with one child row per service layer. The group's checkbox and opacity apply to all its children, and the children's state rolls back up to the group row.
+
+- **Geo Map - Feature Popups:**  
+  Clicking the map opens a popup, laid out like the ESRI ArcGIS Online default popup, that pages through every feature under the click. The feature being shown is outlined on the map: a clicked point is highlighted in the shape of its own marker, and a line in its own dash pattern.
+
+- **Geo Map - Secured ESRI ArcGIS Layers:**  
+  For secured layers, the layer's username and password are used server-side to fetch and cache an ArcGIS token, so neither the credentials nor the token ever reach the browser.
+
+- **Designer - Layers Sheet:**  
+  Added a Layers sheet under Advanced to define ESRI ArcGIS layers, and a Geo Layer(s) column on the Group sheet to assign one or more layers to a group.
+
+- **Designer - Secured Layer Credentials:**  
+  Username and write-only Password columns on the Layers sheet mark a layer as secured. The password is encrypted on save and never read back.
+
+- **Server Manager - tModel Group Picker:**  
+  Added a group picker for the tModel RCS root group and the tModel interface start group.
+
+- **Server Manager - Follow Backfilled Values:**  
+  Added the "Follow Backfilled Values" setting for the AVEVA AF Interface Proxy.
+
+- **Server Manager - AVEVA AF Proxy Connection Pool Size:**  
+  The AVEVA AF Proxy connection pool size is now a settings field (default 8; 0 uses a temporary connection per request) instead of a manual edit of the proxy config file.
+
+- **Server Manager - Install Paths:**  
+  Windows services now show their install path, and the "…" button opens the folder in Windows Explorer. The same applies to the interface and instance paths.
+
+- **AVEVA AF Interface Proxy - Follow Backfilled Values:**  
+  When "Follow Backfilled Values" is enabled (off by default), a subscription event older than the cached value, or a delete, makes the proxy re-read that attribute's current value. A backfill that rewrites or deletes the PI snapshot with an earlier timestamp is then picked up instead of being ignored until the cache entry expires.
+
+- **Transpara tModel RCS - Status Override:**  
+  A KPI with a populated Transpara tModel Status Override always binds its status to the Transpara tModel status, regardless of the Overwrite Status setting.
+
+- **Transpara tModel RCS - tGraph Lookups:**  
+  Lookups that resolve inside Transpara tGraph are also served through the Transpara tStore interface.
+
+- **AspenTech inmation Interface - Aggregation Interval:**  
+  Lookups accept an aggregation interval, which current value, historical value, trends, and historical ranges honor.
+
+## Fixes
+
+- **Server Manager:**  
+  Fixed the default tGraph Base URL for the tModel RCS and the tModel interface.
+
+- **Geo Map:**  
+  Polygon and line layers are loaded per tile for the current zoom level, and failed feature queries are retried, so large layers draw progressively instead of timing out.
+
+- **Geo Map:**  
+  The map's auto-fit now covers only the KPIs. Drawing or toggling a layer no longer moves or widens the viewport.
+
+- **Geo Map:**  
+  Layer URLs are now validated, so only Feature Server layers and service roots are accepted. A layer that fails to load keeps its controls and reports the error instead of disappearing.
+
+- **Transpara tModel RCS:**  
+  A KPI whose tModel has no status lookup still binds its status to the Status Override.
+
+- **AVEVA AF Interface Proxy:**  
+  Attributes with a broken AVEVA PI Point reference (point not found or referenced attribute missing) are now polled in the background and promoted back to the data pipe once they resolve, instead of being evicted and re-read cold on every Visual KPI refresh.
+
+- **AVEVA AF Interface Proxy:**  
+  Startup configuration notices are now logged at the right level. Valid but inconsistent settings are logged as Information, naming the exact key and value to set, and defaulted invalid values are logged as warnings, rather than appearing as errors on every start.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.

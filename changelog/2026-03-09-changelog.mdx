@@ -1,0 +1,41 @@
+---
+title: Release Notes for Build 5.102.8.683
+---
+
+This release upgrades the Python Interface, simplifies Python setup in Server Manager, and expands chart support in tModel RCS. Several fixes improve chart formatting, the tStore Interface, and InfluxDB query accuracy.
+
+{/* truncate */}
+
+## New Features
+
+- **Python Interface:**  
+  Upgraded pythonnet to 3.0.5, with support for Python 3.8 through 3.13.
+
+- **Server Manager - Python Detection:**  
+  Server Manager now auto-detects Python installations and lists them in a dropdown, replacing manual path entry.
+
+- **Server Manager - Pip Installs:**  
+  Pip installs now use the correct Python executable.
+
+- **tModel RCS - Expanded Chart Support:**  
+  Expanded chart support to include Bar Chart, Box Plot, Pareto Chart, Pie Chart, Trend, KPI, Metric, and Table.
+
+## Fixes
+
+- **Website:**  
+  Fixed label size issues on bar and Pareto charts.
+
+- **Website:**  
+  Fixed numeric formatting on min and max values for gauge charts.
+
+- **tStore Interface:**  
+  Re-enabled the tStore interface option in the tModel RCS configuration.
+
+- **tStore Interface:**  
+  Fixed an issue where expired authentication tokens could cause silent request failures.
+
+- **InfluxDB Interface:**  
+  Prevented the database from filling in missing data points with previous values, improving query accuracy.
+
+**Compatibility:**  
+Tested with inmation version v1.94.3.21651.
