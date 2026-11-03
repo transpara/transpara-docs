@@ -1,0 +1,554 @@
+{
+  "$schema": "https://preview.writedocs.io/schema.json",
+  "name": "Transpara Documentation",
+  "description": "Get one single view of operations across all of your data sources without moving anything or enduring a huge project. Visual KPI supports thousands of industrial, business and external data sources and delivers stunning visualizations, KPIs, dashboards, analytics, and alerts.",
+  "domain": "docs.transpara.com",
+  "styles": {
+    "appearance": {
+      "default": "light",
+      "strict": true
+    },
+    "colors": {
+      "primary": "#669900"
+    },
+    "logo": "/media/logo.png",
+    "favicon": "/media/favicon.ico",
+    "navbar": {
+      "light": "#ffffff",
+      "dark": "#000621"
+    },
+    "background": {
+      "images": {
+        "light": "/media/circles-background.png"
+      }
+    },
+    "fonts": {
+      "family": "Open Sans",
+      "heading": {
+        "family": "Raleway",
+        "weight": 700
+      }
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "icon": "house",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "tab": "Visual KPI",
+        "icon": "gauge",
+        "pages": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "visual-kpi/getting-started/what-is-visual-kpi",
+              "visual-kpi/getting-started/the-visual-kpi-approach",
+              "visual-kpi/getting-started/how-visual-kpi-works",
+              "visual-kpi/getting-started/how-to-use-the-documentation",
+              {
+                "group": "Core Concepts",
+                "page": "visual-kpi/getting-started/core-concepts/core-concepts",
+                "pages": [
+                  "visual-kpi/getting-started/core-concepts/kpi",
+                  "visual-kpi/getting-started/core-concepts/hierarchy",
+                  "visual-kpi/getting-started/core-concepts/design",
+                  "visual-kpi/getting-started/core-concepts/data-sources",
+                  "visual-kpi/getting-started/core-concepts/interfaces",
+                  "visual-kpi/getting-started/core-concepts/access-level"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Setup and Administration",
+            "pages": [
+              "visual-kpi/setup-and-administration/overview",
+              {
+                "group": "Installation",
+                "page": "visual-kpi/setup-and-administration/installation/instalation",
+                "pages": [
+                  "visual-kpi/setup-and-administration/installation/prepare-your-system",
+                  "visual-kpi/setup-and-administration/installation/install-a-vm-with-hyper-v",
+                  "visual-kpi/setup-and-administration/installation/install-visual-kpi-server-manager",
+                  "visual-kpi/setup-and-administration/installation/visual-kpi-website-and-virtual-directory-structure",
+                  "visual-kpi/setup-and-administration/installation/system-upgrade"
+                ]
+              },
+              {
+                "group": "Interfaces",
+                "page": "visual-kpi/setup-and-administration/interfaces/interfaces",
+                "pages": [
+                  "visual-kpi/setup-and-administration/interfaces/core-concepts",
+                  "visual-kpi/setup-and-administration/interfaces/configuring-interfaces",
+                  "visual-kpi/setup-and-administration/interfaces/available-interfaces",
+                  "visual-kpi/setup-and-administration/interfaces/data-sources",
+                  {
+                    "group": "Working with Interfaces",
+                    "page": "visual-kpi/setup-and-administration/interfaces/working-with-interfaces/working-with-interfaces",
+                    "pages": [
+                      "visual-kpi/setup-and-administration/interfaces/working-with-interfaces/odbc",
+                      "visual-kpi/setup-and-administration/interfaces/working-with-interfaces/json",
+                      "visual-kpi/setup-and-administration/interfaces/working-with-interfaces/python",
+                      "visual-kpi/setup-and-administration/interfaces/working-with-interfaces/tstore",
+                      "visual-kpi/setup-and-administration/interfaces/working-with-interfaces/parameterizing-interfaces"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Automation",
+                "page": "visual-kpi/setup-and-administration/automation/automation",
+                "pages": [
+                  "visual-kpi/setup-and-administration/automation/rcs",
+                  {
+                    "group": "RCS Configuration",
+                    "page": "visual-kpi/setup-and-administration/automation/configuration/rcs-configuration",
+                    "pages": [
+                      "visual-kpi/setup-and-administration/automation/configuration/rcs-with-af-databases",
+                      "visual-kpi/setup-and-administration/automation/configuration/rcs-with-sql-databases",
+                      "visual-kpi/setup-and-administration/automation/configuration/sql-tutorial"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Security",
+                "page": "visual-kpi/setup-and-administration/security/security",
+                "pages": [
+                  "visual-kpi/setup-and-administration/security/security-inheritance",
+                  "visual-kpi/setup-and-administration/security/enable-security"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Visual KPI Designer",
+            "pages": [
+              "visual-kpi/visual-kpi-designer/overview",
+              {
+                "group": "Installation and Setup",
+                "page": "visual-kpi/visual-kpi-designer/installation-and-setup/overview",
+                "pages": [
+                  "visual-kpi/visual-kpi-designer/installation-and-setup/installation",
+                  "visual-kpi/visual-kpi-designer/installation-and-setup/connecting",
+                  "visual-kpi/visual-kpi-designer/installation-and-setup/basic-setup"
+                ]
+              },
+              "visual-kpi/visual-kpi-designer/ui-tour",
+              {
+                "group": "Settings",
+                "page": "visual-kpi/visual-kpi-designer/settings/overview",
+                "pages": [
+                  "visual-kpi/visual-kpi-designer/settings/profiles-dashboards",
+                  "visual-kpi/visual-kpi-designer/settings/ranges-dates",
+                  "visual-kpi/visual-kpi-designer/settings/contacts-alerts",
+                  "visual-kpi/visual-kpi-designer/settings/features-config",
+                  "visual-kpi/visual-kpi-designer/settings/advanced"
+                ]
+              },
+              {
+                "group": "Authoring",
+                "page": "visual-kpi/visual-kpi-designer/authoring/overview",
+                "pages": [
+                  {
+                    "group": "Groups",
+                    "page": "visual-kpi/visual-kpi-designer/authoring/groups/groups",
+                    "pages": [
+                      "visual-kpi/visual-kpi-designer/authoring/groups/query-builder",
+                      "visual-kpi/visual-kpi-designer/authoring/groups/group-maps"
+                    ]
+                  },
+                  {
+                    "group": "KPIs",
+                    "page": "visual-kpi/visual-kpi-designer/authoring/kpis/kpis",
+                    "pages": [
+                      "visual-kpi/visual-kpi-designer/authoring/kpis/kpis-sources",
+                      "visual-kpi/visual-kpi-designer/authoring/kpis/spc-kpis",
+                      "visual-kpi/visual-kpi-designer/authoring/kpis/kpis-trends"
+                    ]
+                  },
+                  {
+                    "group": "Charts",
+                    "page": "visual-kpi/visual-kpi-designer/authoring/charts/charts",
+                    "pages": [
+                      "visual-kpi/visual-kpi-designer/authoring/charts/bar-chart",
+                      "visual-kpi/visual-kpi-designer/authoring/charts/gantt-chart",
+                      "visual-kpi/visual-kpi-designer/authoring/charts/pareto-chart",
+                      "visual-kpi/visual-kpi-designer/authoring/charts/pie-chart",
+                      "visual-kpi/visual-kpi-designer/authoring/charts/xy-plots",
+                      "visual-kpi/visual-kpi-designer/authoring/charts/box-plots",
+                      "visual-kpi/visual-kpi-designer/authoring/charts/query-based-chart"
+                    ]
+                  },
+                  "visual-kpi/visual-kpi-designer/authoring/tables",
+                  "visual-kpi/visual-kpi-designer/authoring/trends"
+                ]
+              },
+              "visual-kpi/visual-kpi-designer/best-practices",
+              "visual-kpi/visual-kpi-designer/additional-features"
+            ]
+          },
+          {
+            "group": "Visual KPI End User",
+            "pages": [
+              "visual-kpi/end-user/overview",
+              {
+                "group": "Core Concepts",
+                "page": "visual-kpi/end-user/core-concepts/core-concepts",
+                "pages": [
+                  "visual-kpi/end-user/core-concepts/kpi",
+                  "visual-kpi/end-user/core-concepts/browser",
+                  "visual-kpi/end-user/core-concepts/responsive",
+                  "visual-kpi/end-user/core-concepts/real-time",
+                  "visual-kpi/end-user/core-concepts/interactive"
+                ]
+              },
+              {
+                "group": "Basic Navigation",
+                "page": "visual-kpi/end-user/basic-navigation/basic-navigation",
+                "pages": [
+                  "visual-kpi/end-user/basic-navigation/profiles",
+                  "visual-kpi/end-user/basic-navigation/dashboards",
+                  "visual-kpi/end-user/basic-navigation/groups",
+                  "visual-kpi/end-user/basic-navigation/visualization",
+                  "visual-kpi/end-user/basic-navigation/search",
+                  "visual-kpi/end-user/basic-navigation/analytics",
+                  "visual-kpi/end-user/basic-navigation/alerts",
+                  "visual-kpi/end-user/basic-navigation/dark-light-theme",
+                  "visual-kpi/end-user/basic-navigation/time"
+                ]
+              },
+              {
+                "group": "Features",
+                "page": "visual-kpi/end-user/features/features",
+                "pages": [
+                  "visual-kpi/end-user/features/profiles",
+                  "visual-kpi/end-user/features/dashboards",
+                  "visual-kpi/end-user/features/groups",
+                  {
+                    "group": "Visualizations",
+                    "page": "visual-kpi/end-user/features/visualizations/visualizations",
+                    "pages": [
+                      "visual-kpi/end-user/features/visualizations/kpis",
+                      "visual-kpi/end-user/features/visualizations/charts",
+                      "visual-kpi/end-user/features/visualizations/trends",
+                      "visual-kpi/end-user/features/visualizations/embedded-content"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              {
+                "group": "Setup and Administration",
+                "page": "visual-kpi/reference/setup-and-administration/index",
+                "pages": [
+                  {
+                    "group": "AF RCS Dashboard",
+                    "pages": [
+                      "visual-kpi/reference/setup-and-administration/af-rcs-dashboard/object-types",
+                      "visual-kpi/reference/setup-and-administration/af-rcs-dashboard/widgets",
+                      "visual-kpi/reference/setup-and-administration/af-rcs-dashboard/bookmarks"
+                    ]
+                  },
+                  {
+                    "group": "AF Database Keywords",
+                    "pages": [
+                      "visual-kpi/reference/setup-and-administration/af-database-keywords/kpi",
+                      "visual-kpi/reference/setup-and-administration/af-database-keywords/trend",
+                      "visual-kpi/reference/setup-and-administration/af-database-keywords/table",
+                      "visual-kpi/reference/setup-and-administration/af-database-keywords/group",
+                      "visual-kpi/reference/setup-and-administration/af-database-keywords/value"
+                    ]
+                  },
+                  {
+                    "group": "SQL Database Keywords",
+                    "pages": [
+                      "visual-kpi/reference/setup-and-administration/sql-database-keywords/kpi",
+                      "visual-kpi/reference/setup-and-administration/sql-database-keywords/table",
+                      "visual-kpi/reference/setup-and-administration/sql-database-keywords/group",
+                      "visual-kpi/reference/setup-and-administration/sql-database-keywords/charts"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Visual KPI Designer",
+                "page": "visual-kpi/reference/visual-kpi-designer/visual-kpi-designer-references",
+                "pages": [
+                  {
+                    "group": "Data Limits",
+                    "pages": [
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/attributes",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/default-range",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/groups",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/interfaces",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/kpis",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/links",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/trend-ranges",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/trends",
+                      "visual-kpi/reference/visual-kpi-designer/data-limits/website-configuration"
+                    ]
+                  },
+                  {
+                    "group": "Attributes & Keywords",
+                    "pages": [
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/bar-charts",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/embedded-content",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/gantt-charts",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/groups",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/kpis",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/managed-trends",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/pareto-charts",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/pie-charts",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/tables",
+                      "visual-kpi/reference/visual-kpi-designer/attributes-and-keywords/xy-plots"
+                    ]
+                  },
+                  {
+                    "group": "Site Settings",
+                    "pages": [
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/alerts",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/chart-color-configuration",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/chart-dates",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/chart-ranges",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/contacts",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/dashboards",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/default-ranges",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/event-ranges",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/features-configuration",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/kpi-status-configuration",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/profile-groups",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/profiles",
+                      "visual-kpi/reference/visual-kpi-designer/site-settings/visual-kpi-website"
+                    ]
+                  },
+                  {
+                    "group": "Advanced Site Settings",
+                    "pages": [
+                      "visual-kpi/reference/visual-kpi-designer/advanced-site-settings/attributes",
+                      "visual-kpi/reference/visual-kpi-designer/advanced-site-settings/interfaces",
+                      "visual-kpi/reference/visual-kpi-designer/advanced-site-settings/nav-bar-links",
+                      "visual-kpi/reference/visual-kpi-designer/advanced-site-settings/site-rollups"
+                    ]
+                  }
+                ]
+              },
+              "visual-kpi/reference/functions"
+            ]
+          },
+          {
+            "group": "Supporting Pages",
+            "pages": [
+              "supporting-pages/faqs",
+              "supporting-pages/glossary"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Transpara Platform",
+        "icon": "layout",
+        "pages": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "transpara-platform/getting-started/overview",
+              "transpara-platform/getting-started/industrial-ai-for-real-time-operations",
+              "transpara-platform/getting-started/architecture",
+              "transpara-platform/getting-started/core-modules",
+              "transpara-platform/getting-started/tmodel"
+            ]
+          },
+          {
+            "group": "Setup",
+            "pages": [
+              "transpara-platform/setup/system-requirements",
+              "transpara-platform/setup/deployment",
+              {
+                "group": "Extractors",
+                "page": "transpara-platform/setup/data-extractors/extractors",
+                "pages": [
+                  "transpara-platform/setup/data-extractors/working-with-extractors",
+                  {
+                    "group": "Available Extractors",
+                    "page": "transpara-platform/setup/data-extractors/available-extractors/available-extractors",
+                    "pages": [
+                      "transpara-platform/setup/data-extractors/available-extractors/extractor-opc-da",
+                      "transpara-platform/setup/data-extractors/available-extractors/extractor-opc-hda",
+                      "transpara-platform/setup/data-extractors/available-extractors/extractor-opc-ua",
+                      "transpara-platform/setup/data-extractors/available-extractors/extractor-pi-sdk",
+                      "transpara-platform/setup/data-extractors/available-extractors/extractor-pi-rda"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "tStudio",
+            "pages": [
+              "transpara-platform/tstudio/overview"
+            ]
+          },
+          {
+            "group": "tView",
+            "pages": [
+              "transpara-platform/tview/overview",
+              "transpara-platform/tview/activity-feed",
+              "transpara-platform/tview/working-with-ai"
+            ]
+          },
+          {
+            "group": "AI",
+            "pages": [
+              "transpara-platform/ai/agentic-monitoring-service"
+            ]
+          },
+          {
+            "group": "tStore",
+            "pages": [
+              "transpara-platform/tstore/overview"
+            ]
+          },
+          {
+            "group": "tCalc",
+            "pages": [
+              "transpara-platform/tcalc/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "history",
+        "pages": [
+          "changelog"
+        ]
+      }
+    ]
+  },
+  "redirects": [
+    {
+      "source": "/changelog/2026/10/11/changelog",
+      "destination": "/changelog/#october-11-2026"
+    },
+    {
+      "source": "/changelog/2026/09/18/changelog",
+      "destination": "/changelog/#september-18-2026"
+    },
+    {
+      "source": "/changelog/2026/09/02/changelog",
+      "destination": "/changelog/#september-2-2026"
+    },
+    {
+      "source": "/changelog/2026/09/01/changelog",
+      "destination": "/changelog/#september-1-2026"
+    },
+    {
+      "source": "/changelog/2026/08/03/changelog",
+      "destination": "/changelog/#august-3-2026"
+    },
+    {
+      "source": "/changelog/2026/07/23/changelog",
+      "destination": "/changelog/#july-23-2026"
+    },
+    {
+      "source": "/changelog/2026/07/02/changelog",
+      "destination": "/changelog/#july-2-2026"
+    },
+    {
+      "source": "/changelog/2026/06/22/changelog",
+      "destination": "/changelog/#june-22-2026"
+    },
+    {
+      "source": "/changelog/2026/06/04/changelog",
+      "destination": "/changelog/#june-4-2026"
+    },
+    {
+      "source": "/changelog/2026/05/21/changelog",
+      "destination": "/changelog/#may-21-2026"
+    },
+    {
+      "source": "/changelog/2026/04/12/changelog",
+      "destination": "/changelog/#april-12-2026"
+    },
+    {
+      "source": "/changelog/2026/03/09/changelog",
+      "destination": "/changelog/#march-9-2026"
+    },
+    {
+      "source": "/changelog/2025/04/12/changelog",
+      "destination": "/changelog/#april-12-2025"
+    },
+    {
+      "source": "/changelog/2025/03/10/changelog",
+      "destination": "/changelog/#march-10-2025"
+    },
+    {
+      "source": "/changelog/2025/01/22/changelog",
+      "destination": "/changelog/#january-22-2025"
+    },
+    {
+      "source": "/changelog/2025/01/21/changelog",
+      "destination": "/changelog/#january-21-2025"
+    },
+    {
+      "source": "/changelog/2025/01/19/changelog",
+      "destination": "/changelog/#january-19-2025"
+    },
+    {
+      "source": "/changelog/2024/12/27/changelog",
+      "destination": "/changelog/#december-27-2024"
+    },
+    {
+      "source": "/changelog/2024/12/11/changelog",
+      "destination": "/changelog/#december-11-2024"
+    },
+    {
+      "source": "/changelog/2024/09/18/changelog",
+      "destination": "/changelog/#september-18-2024"
+    },
+    {
+      "source": "/changelog/2024/08/19/changelog",
+      "destination": "/changelog/#august-19-2024"
+    },
+    {
+      "source": "/changelog/2024/08/14/changelog",
+      "destination": "/changelog/#august-14-2024"
+    },
+    {
+      "source": "/changelog/2024/08/03/changelog",
+      "destination": "/changelog/#august-3-2024"
+    },
+    {
+      "source": "/changelog/2024/07/16/changelog",
+      "destination": "/changelog/#july-16-2024"
+    },
+    {
+      "source": "/changelog/2024/07/10/changelog",
+      "destination": "/changelog/#july-10-2024"
+    },
+    {
+      "source": "/changelog/2024/06/18/changelog",
+      "destination": "/changelog/#june-18-2024"
+    },
+    {
+      "source": "/changelog/2024/06/11/changelog",
+      "destination": "/changelog/#june-11-2024"
+    }
+  ],
+  "integrations": {
+    "askAi": {
+      "id": "O8PMwjUFBgUo8miMVgJh/Hd6uxyjkPmDNgtFh9hnF"
+    }
+  }
+}
