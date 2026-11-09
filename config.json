@@ -413,6 +413,7 @@
         {
           "categoryName": "AI",
           "pages": [
+            "transpara-platform/ai/seeking-vs-surfacing",
             "transpara-platform/ai/agentic-monitoring-service"
           ]
         },
