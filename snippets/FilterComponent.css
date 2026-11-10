@@ -1,0 +1,52 @@
+/* The glossary (snippets/FilterComponent.jsx). Colors come from the theme,
+   so it works in light and dark mode. */
+
+.filterComponent .inputs {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filterComponent input,
+.filterComponent select {
+  padding: 8px;
+  border: 1px solid var(--wd-border);
+  border-radius: 4px;
+  background: var(--wd-background);
+  color: var(--wd-text);
+  font: inherit;
+}
+
+.filterComponent input {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.filterComponent select {
+  width: 150px;
+}
+
+.filterComponent label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filterComponent .vocabulary-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--wd-surface);
+  border-radius: 4px;
+}
+
+.filterComponent .vocabulary-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.filterComponent .vocabulary-card p {
+  margin: 0;
+}
