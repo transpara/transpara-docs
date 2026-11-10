@@ -1,0 +1,73 @@
+/* Loaded on every page. (Fonts are set in writedocs.json, styles.fonts.) */
+
+/* The circles background (styles.background.images in writedocs.json)
+   sits at the left, as it always has. */
+html body {
+  background-position: left;
+}
+
+/* The article column stays on the page color, over the background; the
+   sidebar and the "On this page" column show it. */
+.wd-main-col {
+  background-color: var(--wd-background);
+}
+
+/* Except on the homepage, which sits on the background. */
+.wd-main-col:has(.tp-home) {
+  background-color: transparent;
+}
+
+/* SvgFont (snippets/SvgFont.mdx): an icon inline with the text, in the
+   text's color. */
+.svg-font-icon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
+
+.svg-font-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* PngFont (snippets/PngFont.mdx): a toolbar icon inline with the text. */
+img.png-font {
+  display: inline;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  vertical-align: middle;
+}
+
+/* Legacy TablePress HTML tables (e.g. Functions and Formulas reference) */
+.tablepress {
+  width: 100%;
+  table-layout: auto;
+}
+
+.tablepress td {
+  vertical-align: top;
+  /* never split a word in the middle */
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+/* Label column ("Return Type", "Description", operators, constants):
+   shrink to its own content instead of being squeezed by column 2 */
+.tablepress td.column-1:not([colspan]) {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 1.5rem;
+}
+
+/* Rows holding the function signature span both columns */
+.tablepress td.column-1[colspan] {
+  width: auto;
+  white-space: normal;
+}

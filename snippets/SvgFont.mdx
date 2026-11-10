@@ -1,0 +1,32 @@
+{/*
+  An icon from Visual KPI's icon font (data/selection.json), by its number,
+  inline with the text. `rotate` turns it 90 degrees.
+
+    import SvgFont from '/snippets/SvgFont.mdx';
+
+    Use it as SvgFont, with icon set to the icon's number, e.g. icon="188".
+
+  Drawn when the site is built - nothing is loaded in the reader's browser.
+  Styles: the .svg-font rules in theme.css.
+*/}
+
+import selection from '../data/selection.json';
+
+export const SvgIcon = ({ icon, rotate }) => {
+  const data = selection.icons[parseInt(icon, 10)];
+  if (!data) return null;
+  const style = rotate ? 'transform: rotate(90deg)' : undefined;
+  // One icon in the set is stored as SVG markup instead of paths.
+  if (typeof data.icon === 'string') {
+    return <span className="svg-font"><span className="svg-font-icon" style={style} set:html={data.icon} /></span>;
+  }
+  return (
+    <span className="svg-font">
+      <svg className="svg-font-icon" viewBox="0 0 1024 1024" style={style} role="img" aria-label={data.properties.name}>
+        <path d={data.icon.paths.join(' ')} />
+      </svg>
+    </span>
+  );
+};
+
+<SvgIcon icon={props.icon} rotate={props.rotate} />

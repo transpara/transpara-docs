@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "npx @writedocs/generator dev",
+    "build": "npx @writedocs/generator build",
+    "validate": "npx @writedocs/generator validate"
+  },
+  "dependencies": {
+    "@writedocs/generator": "0.14.0"
+  }
+}

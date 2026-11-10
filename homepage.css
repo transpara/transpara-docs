@@ -1,0 +1,134 @@
+/* The homepage (index.mdx). Every .css file in the project loads on every
+   page, so each rule here is scoped to the homepage's own classes. */
+
+/* The banner spans the whole window, past the page's content width. 100vw
+   includes the scrollbar, so the page clips what's past its edge - on the
+   layout, not the root: on <html>, `clip` acts as `hidden`, which can still
+   scroll sideways. */
+.wd-page:has(.tp-home-banner) {
+  overflow-x: clip;
+}
+
+.tp-home-banner {
+  display: block;
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 2.5rem 1rem;
+  background-image: url("/media/homepage/banner-transpara.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Darkens the banner on hover. */
+.tp-home-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.tp-home-banner:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tp-home-banner span {
+  position: relative;
+  display: inline-block;
+  font-family: var(--wd-font-family-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.tp-home-banner:hover span {
+  transform: scale(1.02);
+}
+
+.tp-home {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.tp-home-hero {
+  display: flex;
+  gap: 15%;
+  padding: 4rem 0;
+}
+
+/* "Visual KPI Docs" stays on one line on a wide screen. */
+.tp-home-hero-title {
+  flex-shrink: 0;
+}
+
+.tp-home-hero h1 {
+  margin: 0 0 20px;
+  color: var(--wd-heading);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -2px;
+}
+
+.tp-home-hero-title p {
+  margin: 0 0 40px 12px;
+  max-width: 462px;
+  color: var(--wd-heading);
+  font-size: 23.762px;
+  font-weight: 600;
+  line-height: 29.7px;
+  letter-spacing: -0.594px;
+}
+
+.tp-home-hero-text p {
+  max-width: 562px;
+  margin: 10px 0 32px;
+  color: var(--wd-text);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tp-home-button {
+  display: inline-block;
+  padding: 11px 25px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: var(--wd-primary);
+  color: var(--wd-on-primary) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.5s ease;
+}
+
+.tp-home-button:hover {
+  background: transparent;
+  color: var(--wd-primary) !important;
+  border-color: var(--wd-primary);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 996px) {
+  .tp-home-hero-title {
+    flex-shrink: 1;
+  }
+
+  .tp-home-hero {
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem 0;
+  }
+
+  .tp-home-hero h1 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .tp-home-banner span {
+    font-size: 1.5rem;
+  }
+}
