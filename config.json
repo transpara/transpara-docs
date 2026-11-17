@@ -407,6 +407,8 @@
           "pages": [
             "transpara-platform/tview/overview",
             "transpara-platform/tview/activity-feed",
+            "transpara-platform/tview/collaboration",
+            "transpara-platform/tview/favorites",
             "transpara-platform/tview/working-with-ai"
           ]
         },

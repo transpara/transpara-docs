@@ -1,0 +1,141 @@
+---
+title: Collaboration
+description: How commenting, mentions, and sharing work in tView, and how discussion becomes part of the operational record.
+slug: /transpara-platform/tview/collaboration
+tags: ['tview']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+You can comment and collaborate with other users from almost anywhere in [tView](/transpara-platform/tview/). Every comment is attached to the KPI, chart, group, or dashboard it concerns, and tied to the moment or period it refers to.
+
+This matters because the alternative is familiar: the data lives in one system and the conversation about it lives in email, chat, Excel spreadsheets, and meeting notes. Six months later the values are still available and the reasoning (your intellectual property) is gone. This gets even worse when subject matter experts retire or change roles and their knowledge leaves with them.
+
+Transpara captures your SMEs' conversations, notes, decisions, and rationale in the application and in the knowledge graph (tModel), so people can see them in context and AI can use them later.
+
+## Commenting
+
+### What you can comment on
+
+You can comment on almost anything:
+
+- A KPI
+- A trend
+- A chart or visualization
+- A group anywhere in the hierarchy
+- An entire page, including dashboards
+
+### What a comment attaches to
+
+A comment attaches to the object of the page you are on:
+
+- **On a group page,** the comment is attached to the group (if there are many groups, a page-level comment is attached to the parent group).
+- **On a dashboard,** the comment attaches to the entire dashboard.
+- **On a KPI or its trend,** the comment attaches to the KPI.
+
+Where a page shows several KPIs, such as a group page or a dashboard, a comment you add there still attaches to the page's object (the parent group or dashboard), not to any one KPI. To comment on a single KPI or other object from that page, select **Add comment** from the three-dot menu next to the object or from the **Details** pane. You can also open the KPI and comment there directly.
+
+{/* TODO: add screenshot showing the options */}
+
+Comment on the object the discussion is actually about. A comment about a single measurement belongs on that KPI. A comment about a shift's performance across many metrics belongs on the group or page that represents it.
+
+### Add a comment
+
+You can start a comment from several places: the **Comment** control on the page, the three-dot menu next to an object, the object's **Details** pane, or **+ Comment** at the top of the **Activity** pane. They all open the same comment box. Here is one way to try it on a dashboard:
+
+1. Open a dashboard.
+2. Select **Comment** in the page header.
+3. Check the line above the comment box. It names the object you are commenting on, for example **Commenting on Dashboard · Central Region Overview**.
+4. Type your comment.
+5. Optional: Select **More options** to set the time the comment refers to. See [Time context](#time-context).
+6. Optional: Type **@** to mention a colleague and pick them from the list. See [Mentions](#mentions).
+7. Select **Post**.
+
+### Reply to a comment
+
+Comments support replies, so a discussion stays together as a thread instead of fragmenting into separate remarks on the same object.
+
+To reply, find the comment in the **Activity** pane and select **Reply**.
+
+### Edit or delete a comment
+
+You can edit or delete your own comments. Administrators can edit or delete any comment.
+
+{/* TODO: say where users find the edit and delete controls. */}
+
+## Object and time context
+
+Every comment carries two kinds of context.
+
+### Object context
+
+Each comment attaches to a specific object in the model and travels with that object. Anyone who opens the KPI later sees the discussion about it.
+
+### Time context
+
+Each comment also refers to a moment or a period. By default, a comment refers to the time you post it. You can instead attach it to:
+
+- **A point in time,** such as the moment a value hit its lowest point overnight.
+- **A range,** such as the last 24 hours.
+
+You can set the time on any comment, from any page, with **More options** in the comment box. The time does not need to match what you are viewing. On a group page showing the last seven days, for example, you can attach a comment to a few days last month, or to a six-month period last year when a problem persisted.
+
+On a trend, you can also attach a comment to the entire range on screen, to a range you select on the trend (drag to select it), or to a point in time you select on the trend.
+
+A note written during an upset stays associated with that period. The trend highlights the comment whenever its time falls within the range you are viewing. When you move the trend outside that time, the comment still exists but does not appear on the trend.
+
+In the **Activity** pane, select **Open trend** on a comment to open the trend it refers to, centered on the comment's point in time.
+
+Together, object and time context mean you rarely have to explain what you are referring to. The comment already establishes the object and the moment.
+
+## Mentions
+
+Mention a colleague in a comment to bring them into the thread. The mention reaches them in their activity feed, whether or not they follow the object you commented on.
+
+Use mentions to pull the right person into something they would not otherwise see. Mentions also carry a discussion across team boundaries, because the person you mention does not need the object in their own favorites.
+
+### Mention someone
+
+1. In the comment box, type **@**. A people picker opens.
+2. Select the person you want to mention.
+
+The people picker lists users in the system. To appear in it, a person needs a user account, which an administrator creates in [tStudio](/transpara-platform/tstudio/overview).
+
+See [Activity Feed](/transpara-platform/tview/activity-feed) for how mentions arrive.
+
+## Comments from AI
+
+Monitoring agents in the optional [Agentic Monitoring Service](/transpara-platform/ai/agentic-monitoring-service) post their findings as comments on the KPI or group each finding concerns. These comments come from an AI user, shown here as **Transpara AI**. The name in your system may differ. You can reply to a finding the same way you reply to a colleague, and you can mention a colleague to bring them into the thread.
+
+## Comments as operational record
+
+tView stores all comments in tModel, the same model that holds your hierarchy and KPIs. This has two consequences worth understanding.
+
+The first is durability. A comment becomes part of the operational record, not a message in a feed that scrolls away. The reasoning behind a decision sits next to the data that prompted it, available to whoever opens that KPI next, including people who join years later.
+
+The second is that AI can use it. AI capabilities read from the same model, so what your team records about an asset becomes context when the platform explains something or recommends an action. Knowledge that would otherwise live only in experienced people's heads becomes something the system can draw on.
+
+This is the practical argument for commenting as a habit, not only during incidents. Each comment adds to what the platform knows about how your operation actually behaves.
+
+See [Agentic Monitoring Service](/transpara-platform/ai/agentic-monitoring-service) for how the operational record informs AI findings.
+
+## Sharing
+
+You can share objects or entire pages in tView as links. Sharing a link has the advantage of not sharing data directly, which is better for security and keeps things interactive. The link points at the object itself, so the recipient sees the same object everyone else sees, not a fixed snapshot from the moment you sent it.
+
+{/* TODO: add how a user gets the link to share. */}
+
+Permissions still control access. A link does not give the recipient access to anything they could not already see:
+
+- A recipient who is not signed in must sign in first.
+- A recipient without a user account cannot open the link.
+- A recipient whose account lacks permission to view the object sees a page saying they do not have access.
+
+## What's next?
+
+- [Activity Feed](/transpara-platform/tview/activity-feed) for where comments, mentions, and replies appear.
+- [Favorites](/transpara-platform/tview/favorites) for keeping the objects you discuss one click away.
+- [Working with AI](/transpara-platform/tview/working-with-ai) for asking the platform questions, including about things your team has recorded.
+- Alerts and Notifications for alerts that tell you when something needs attention.

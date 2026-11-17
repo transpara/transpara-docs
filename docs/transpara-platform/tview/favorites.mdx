@@ -1,0 +1,129 @@
+---
+title: Favorites
+description: What favoriting does in tView, and how favorites determine what appears in your activity feed.
+slug: /transpara-platform/tview/favorites
+tags: ['tview']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+Favoriting an item marks it with a gold star and adds it to the **Favorites** list in the left pane, alongside **Home**, **Dashboards**, and **Explorer**. The things you care about stay one click away wherever you navigate in [tView](/transpara-platform/tview/), and your favorites belong to your user account.
+
+Favorites also tell tView what you care about. Activity on the items you favorite appears in your [activity feed](/transpara-platform/tview/activity-feed), alongside your mentions, alerts, and AI findings.
+
+## What you can favorite
+
+You can favorite more than KPIs:
+
+- **KPIs.** Individual measurements you are responsible for or currently watching.
+- **Groups.** Any element in the hierarchy, from a single unit to a whole site.
+- **Charts.** Trends and other visualizations you return to.
+- **Dashboards and other pages.** Complete views, so a full working context is one click away.
+
+## How a favorite works
+
+A favorite is a link to an object, much like a bookmark in your browser. It always opens the object as it is now.
+
+Favorite a group, and the favorite opens that group with whatever it contains today. If someone adds groups or KPIs to it tomorrow, the favorite shows them. Favoriting a group does not add the KPIs beneath it to your favorites one by one. Only the group itself becomes a favorite.
+
+## Add a favorite
+
+You can add a favorite from most places an object appears: from the item's toolbar, from its **Details** pane, or by selecting several items in a list and adding them together. Here is one way to try it:
+
+1. Open the item.
+2. Select the **⋯** menu at the right end of the toolbar.
+3. Select **Add to favorites**.
+
+The item appears under **Favorites** in the left pane and on the **Favorites & Notify Me** page. A star icon marks the item as a favorite wherever it appears in tView, for example in the list when you view its parent group.
+
+## Open a favorite
+
+1. In the left pane, expand **Favorites**.
+2. Select an item to open it.
+
+## Manage your favorites
+
+Select the settings icon next to **Favorites** in the left pane to open the **Favorites & Notify Me** page. The **Favorites** tab lists everything you have favorited, with the total in the tab name, for example **Favorites (7)**.
+
+Each row shows:
+
+- **Label.** The name the item shows in your favorites. You can change it.
+- **Name.** The object's name in the model. Renaming a favorite does not change it.
+- **Category.** **Favorite** for items you have favorited.
+- **Type.** The kind of object, for example **Dashboard**.
+- **Added.** The date and time you favorited the item.
+- **Details.** A short description of the object.
+
+### Rename a favorite
+
+Renaming changes only the label in your favorites. The favorite still opens the same object, and the object keeps its name everywhere else in tView. If you re-label a group called **Keystone Asset Health** as **My assets**, your favorites show **My assets**, and the group page still shows **Keystone Asset Health**.
+
+1. On the **Favorites** tab, select the **⋮** menu at the end of the row.
+2. Select **Rename**, or press **F2**.
+3. Enter the new label.
+
+You can also select the label directly to rename it.
+
+### Organize favorites into folders
+
+1. On the **Favorites** tab, select **New folder** and name the folder.
+2. To move an item into a folder, select the **⋮** menu at the end of its row, select **Move to...**, and choose the folder.
+
+You can also drag an item into or out of a folder, and drag items to reorder them.
+
+When you delete a folder, tView asks whether to delete the favorites inside it or keep them. If you keep them, they move out of the folder and stay in your favorites.
+
+### Remove a favorite
+
+You can remove a favorite the same ways you add one, or from the **Favorites** tab.
+
+**From the item.** Open the item, select the **⋯** menu at the right end of the toolbar, and select **Remove from favorites**. The menu shows this option in place of **Add to favorites** once an item is a favorite.
+
+**From the Favorites tab.** Do one of the following:
+
+- Select the **⋮** menu at the end of the row, then select **Remove from Favorites**, or press **Del**.
+- Select the delete icon at the end of the row.
+
+Use the **Favorites** tab when you want to clean up several favorites at once.
+
+Removing a favorite takes the item off your list only. The object itself stays in the model.
+
+## Favorites are personal
+
+Favoriting changes only your own **Favorites** list and activity feed. It has no effect on what anyone else sees, and it does not change the underlying model. You can favorite anything you have access to.
+
+## Favorites and the activity feed
+
+The activity feed organizes activity by where you are in tView. Activity on the page you are viewing appears first, then activity on its parent group, then everything else. Favorites shape the global part of the feed: when you favorite a KPI or a group, its status changes, comments, and alerts appear there along with your mentions and AI findings.
+
+See [Activity Feed](/transpara-platform/tview/activity-feed) for reading and filtering the feed itself.
+
+## Favorites and Notify Me
+
+The **Favorites & Notify Me** page also has a **Notify Me** tab. Favorites and **Notify Me** do different jobs. Favorites keep items in view and shape your feed when you choose to look. **Notify Me** tells tView to alert you when something happens, so it reaches you without you looking.
+
+You set up **Notify Me** on the item itself, not on the **Notify Me** tab, and the item does not need to be a favorite.
+
+The **Notify Me** tab lists the notifications you have already set up, so you can review and change them in one place. If notifications start to get noisy, remove the ones you no longer need from this tab instead of finding each item again.
+
+See Notifications for setting up notifications.
+
+## Choose what to favorite
+
+Favorites work best when you choose them deliberately. Two patterns are worth distinguishing.
+
+**Durable favorites** are the parts of the operation you are accountable for: your area, your assets, the KPIs people ask you about. Keep these favorited indefinitely. They form the baseline of your feed and your daily quick-access bookmarks.
+
+**Temporary favorites** support something you are working on now, such as an investigation into a specific unit or a KPI you are watching through a commissioning period. Remove them when the work finishes to keep the baseline clean. Folders help keep the two sets apart.
+
+Favorite a whole group instead of its KPIs one at a time where you can. It takes one action, always reflects what the group contains, and keeps your **Favorites** list readable.
+
+## What's next?
+
+- [Activity Feed](/transpara-platform/tview/activity-feed) for what arrives once you have favorited things.
+- [Collaboration](/transpara-platform/tview/collaboration) for commenting on and discussing the objects you favorite.
+- Alerts and Notifications for alerts that interrupt you when something needs immediate attention.
+- Search for saved searches, which store a constrained state of the application.
+- Personalization for other personal settings in tView.
