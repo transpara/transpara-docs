@@ -5,15 +5,16 @@
   overflow: hidden;
 }
 
+/* Icons follow the surrounding text color so they work in light and dark themes */
 .icon {
   display: inline-block;
-  color: #444444;
+  color: inherit;
   width: 1.2em;
   height: 1em;
   fill: currentColor;
 }
 
 .path1 {
-  fill: black !important;
-  color: black;
+  fill: currentColor !important;
+  color: inherit;
 }

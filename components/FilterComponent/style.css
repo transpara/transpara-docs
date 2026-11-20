@@ -7,8 +7,11 @@
 /* Input styles */
 .filterComponent input {
   padding: 8px;
-  border: 1px solid #ddd7e9;
+  border: 1px solid var(--tp-field-edge, #6d6f6f);
   border-radius: 4px;
+  background: var(--tp-field, #ffffff);
+  color: var(--tp-text, #14181a);
+  font-family: inherit;
   width: 200px;
   margin-right: 10px;
 }
@@ -21,17 +24,20 @@
 
 .filterComponent select {
   padding: 8px;
-  border: 1px solid #ddd7e9;
+  border: 1px solid var(--tp-field-edge, #6d6f6f);
   border-radius: 4px;
+  background: var(--tp-field, #ffffff);
+  color: var(--tp-text, #14181a);
+  font-family: inherit;
   width: 150px;
 }
 
 /* Vocabulary card styles */
 .filterComponent .vocabulary-card {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 4px;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  background-color: var(--tp-raised, #ffffff);
+  border-radius: 8px;
 }
 
 .filterComponent .vocabulary-card h4 {

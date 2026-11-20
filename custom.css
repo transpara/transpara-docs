@@ -1,29 +1,821 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* ==========================================================================
+   Transpara Docs theme
+   Follows the Transpara brand (transpara/marketing brand/decisions) and the
+   website rules of transpara/design-system (apps/website.md):
+   Paper and Ink grounds, Instrument Sans, ink links with a Green 69 underline,
+   4px control corners and 8px container corners, no shadows on cards.
+   Loaded by WriteDocs after its own CSS (as src/css/_custom.css).
+   ========================================================================== */
+
+/* 1. Fonts ---------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=DM+Sans:wght@600&display=swap");
+
+/* 2. Brand tokens --------------------------------------------------------- */
+:root {
+  /* Brand palette (marketing templates/print-and-social/brand.css) */
+  --tp-paper: #f7f6f3;
+  --tp-white: #ffffff;
+  --tp-mist: #ededea;
+  --tp-line: #dededc;
+  --tp-border: #cacbc9;
+  --tp-g400: #9d9f9e;
+  --tp-muted: #6d6f6f;
+  --tp-g600: #454849;
+  --tp-g800: #2b2e30;
+  --tp-ink: #14181a;
+  --tp-lime: #84cc16;
+  --tp-g69: #70b102;
+  --tp-logo-white: #f4f7f4;
+  --tp-warning: #ef9f27;
+  --tp-alarm: #e24b4a;
+  --tp-ontarget: #5ba300;
+
+  /* Roles, light theme */
+  --tp-ground: var(--tp-paper);
+  --tp-raised: var(--tp-white);
+  --tp-quiet: var(--tp-mist);
+  --tp-hairline: var(--tp-line);
+  --tp-hairline-raised: var(--tp-line);
+  --tp-outline: var(--tp-border);
+  --tp-field: var(--tp-white);
+  --tp-field-edge: var(--tp-muted);
+  --tp-text: var(--tp-ink);
+  --tp-text-2: var(--tp-g600);
+  --tp-accent: var(--tp-g69);
+  --tp-focus: var(--tp-ink);
+  --tp-strong: var(--tp-ink);
+  --tp-strong-hover: var(--tp-g800);
+  --tp-on-strong: var(--tp-white);
+  --tp-band: var(--tp-ink);
+  --tp-code-bg: var(--tp-ink);
+  --tp-code-edge: rgba(255, 255, 255, 0.08);
+  --tp-warning-bg: #fcefd9;
+  --tp-danger-bg: #fbe5e4;
+
+  --tp-font: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --tp-font-module: "DM Sans", "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --tp-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+
+  /* Rounded status icons (marketing brand/decisions/2026-10-29-status-icons-rounded.md) */
+  --tp-icon-info: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.5'/%3E%3Cpath d='M12 11v5' stroke-width='1.8'/%3E%3Cpath d='M12 7.9h.01' stroke-width='1.8'/%3E%3C/svg%3E");
+  --tp-icon-ok: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.5'/%3E%3Cpath d='M8.3 12.2l2.5 2.5 4.9-5'/%3E%3C/svg%3E");
+  --tp-icon-warning: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.79 5.27Q12 3.2 13.21 5.27L20.59 17.93Q21.8 20 19.4 20H4.6Q2.2 20 3.41 17.93Z'/%3E%3Cpath d='M12 10v3.8' stroke-width='1.8'/%3E%3Cpath d='M12 16.9h.01' stroke-width='1.8'/%3E%3C/svg%3E");
+  --tp-icon-alarm: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.5'/%3E%3Cpath d='M9.3 9.3l5.4 5.4M14.7 9.3l-5.4 5.4'/%3E%3C/svg%3E");
+}
+
+/* Roles, dark theme: Ink is the one dark (brand book) */
+html[data-theme="dark"] {
+  --tp-ground: var(--tp-ink);
+  --tp-raised: var(--tp-g800);
+  --tp-quiet: #22272a;
+  --tp-hairline: var(--tp-g800);
+  --tp-hairline-raised: #3a3e40;
+  --tp-outline: var(--tp-g600);
+  --tp-field: #1c2022;
+  --tp-field-edge: var(--tp-g600);
+  --tp-text: var(--tp-paper);
+  --tp-text-2: var(--tp-g400);
+  --tp-accent: var(--tp-lime);
+  --tp-focus: var(--tp-lime);
+  --tp-strong: var(--tp-lime);
+  --tp-strong-hover: #95d630;
+  --tp-on-strong: var(--tp-ink);
+  --tp-band: var(--tp-g800);
+  --tp-code-bg: var(--tp-g800);
+  --tp-code-edge: rgba(255, 255, 255, 0.06);
+  --tp-warning-bg: rgba(239, 159, 39, 0.16);
+  --tp-danger-bg: rgba(226, 75, 74, 0.18);
+}
+
+/* 3. Map the tokens onto Infima and WriteDocs variables ------------------- */
+:root,
+html[data-theme="dark"] {
+  /* Infima */
+  --ifm-background-color: var(--tp-ground) !important;
+  --ifm-background-surface-color: var(--tp-ground);
+  --ifm-font-color-base: var(--tp-text);
+  --ifm-heading-color: var(--tp-text);
+  --ifm-color-content: var(--tp-text);
+  --ifm-color-content-secondary: var(--tp-text-2);
+  --ifm-color-primary: var(--tp-text);
+  --ifm-color-primary-dark: var(--tp-text);
+  --ifm-color-primary-darker: var(--tp-text);
+  --ifm-color-primary-darkest: var(--tp-text);
+  --ifm-color-primary-light: var(--tp-text-2);
+  --ifm-color-primary-lighter: var(--tp-text-2);
+  --ifm-color-primary-lightest: var(--tp-text-2);
+  --ifm-link-color: var(--tp-text);
+  --ifm-link-hover-color: var(--tp-text);
+  --ifm-font-family-base: var(--tp-font);
+  --ifm-heading-font-family: var(--tp-font);
+  --ifm-font-family-monospace: var(--tp-mono);
+  --ifm-line-height-base: 1.55;
+  --ifm-heading-font-weight: 600;
+  --ifm-global-radius: 4px;
+  --ifm-card-border-radius: 8px;
+  --ifm-alert-border-radius: 8px;
+  --ifm-code-border-radius: 4px;
+  --ifm-pre-border-radius: 8px;
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-toc-border-color: var(--tp-hairline);
+  --ifm-hr-background-color: var(--tp-hairline);
+  --ifm-table-border-color: var(--tp-hairline-raised);
+  --ifm-table-stripe-background: transparent;
+  --ifm-table-head-background: var(--tp-quiet);
+  --ifm-code-background: var(--tp-quiet);
+  --ifm-navbar-background-color: var(--tp-ground);
+  --ifm-navbar-shadow: none;
+  --ifm-menu-color: var(--tp-text-2);
+  --ifm-menu-color-active: var(--tp-text);
+  --ifm-menu-color-background-active: var(--tp-quiet);
+  --ifm-menu-color-background-hover: var(--tp-quiet);
+  --ifm-hover-overlay: var(--tp-quiet);
+  --ifm-dropdown-background-color: var(--tp-raised);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+
+  /* WriteDocs: base */
+  --font-main: var(--tp-font);
+  --font-main-color: var(--tp-text);
+  --primary-color: var(--tp-text);
+  --primary-color-light: var(--tp-text-2);
+  --primary-color-dark: var(--tp-text);
+  --link-color: var(--tp-text);
+  --transparent-main-color: var(--tp-quiet);
+  --transparent-second-color: var(--tp-quiet);
+  --brighter-main-color: var(--tp-quiet);
+  --main-border-color: var(--tp-hairline);
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-big: 8px;
+  --box-shadow1: none;
+  --box-shadow2: none;
+  --box-shadow3: none;
+  --black-500: var(--tp-text-2);
+  --bg-defined-text-color: var(--tp-on-strong);
+  --background-image: none;
+  --code-bg-color: var(--tp-quiet);
+  --code-text-color: var(--tp-text);
+
+  /* WriteDocs: navbar */
+  --navbar-color: var(--tp-ground);
+  --navbar-background-color: var(--tp-ground);
+  --navbar-font-color: var(--tp-text);
+  --navbar-border-color: var(--tp-hairline);
+  --navbar-logo-height: 28px;
+  --navbar-link-color: var(--tp-text-2);
+  --navbar-link-hover: transparent;
+  --navbar-link-hover-shadow: none;
+  --navbar-link-border-hover-color: transparent;
+  --navbar-link-active: transparent;
+  --navbar-item-border-color: var(--tp-text);
+  --navbar-item-background-color: transparent;
+  --navbar-item-font-color: var(--tp-text);
+  --navbar-active-text-color: var(--tp-text);
+  --navbar-dropdown-active-bg: var(--tp-quiet);
+  --navbar-dropdown-hover-bg: var(--tp-quiet);
+  --navbar-dropdown-hover-border-color: var(--tp-outline);
+  --searchbar-background-color: var(--tp-field);
+  --searchbar-border-color: var(--tp-field-edge);
+
+  /* WriteDocs: sidebar and TOC */
+  --sidebar-active-link-background-color: var(--tp-quiet);
+  --sidebar-active-link-border-color: var(--tp-text);
+  --sidebar-hover-link-background-color: var(--tp-quiet);
+  --sidebar-title-color: var(--tp-text-2);
+  --sidebar-active-title-color: var(--tp-text);
+  --sidebar-item-color: var(--tp-text-2);
+  --sidebar-left-border-color: var(--tp-hairline);
+  --toc-border-color: var(--tp-hairline);
+
+  /* WriteDocs: content components */
+  --table-header-background-color: var(--tp-quiet);
+  --table-header-text-color: var(--tp-text-2);
+  --table-body-background-color: var(--tp-raised);
+  --table-body-color: var(--tp-text);
+  --table-body-border-color: var(--tp-hairline-raised);
+  --accordion-background-color: var(--tp-raised);
+  --card-background-color: var(--tp-raised);
+  --components-background-black: var(--tp-raised);
+  --pagination-border-color: var(--tp-hairline);
+  --pagination-hover-color: var(--tp-text);
+  --pagination-hover-border-color: var(--tp-text);
+  --pagination-background-color: var(--tp-raised);
+  --main-pagination-color: var(--tp-text-2);
+  --footer-background-color: transparent;
+  --footer-text-color: var(--tp-text-2);
+
+  letter-spacing: normal;
+}
+
+/* 4. Base ----------------------------------------------------------------- */
+html,
+body {
+  background-color: var(--tp-ground);
+}
+
+body {
+  font-family: var(--tp-font);
+  font-stretch: 96%;
+  color: var(--tp-text);
+  letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 #__docusaurus {
-  background-image: url("../../static/media/circles-background.png");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: none;
 }
 
-.row .col:first-child:not(.footer__col),
-.docMainContainer_TBSr,
-.main-wrapper .container.margin-vert--lg .row .col.col--7 {
-  background-color: #fff;
+/* Reading text: Balanced web scale, body 17px */
+.markdown {
+  font-size: 17px;
+  line-height: 1.55;
+  --ifm-heading-font-weight: 600;
+  --ifm-h1-vertical-rhythm-bottom: 0.6;
+  --ifm-h2-vertical-rhythm-top: 1.6;
+  --ifm-h3-vertical-rhythm-top: 1.2;
 }
 
-.main-wrapper .container.margin-vert--lg .row .col.col--3 {
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5 {
+  font-family: var(--tp-font);
+  font-weight: 600;
+  color: var(--tp-text);
+}
+
+.markdown h1 {
+  --ifm-h1-font-size: clamp(2.125rem, 1.6rem + 1.6vw, 3rem) !important;
+  font-stretch: 88%;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.markdown h2 {
+  --ifm-h2-font-size: 1.75rem !important;
+  font-stretch: 88%;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.markdown h3 {
+  --ifm-h3-font-size: 1.375rem !important;
+  line-height: 1.25;
+}
+
+.markdown h4 {
+  --ifm-h4-font-size: 1.125rem !important;
+  line-height: 1.3;
+}
+
+/* Links: ink text with a 2px Green 69 underline; the underline turns ink on hover */
+.markdown a:not(.wd_icon_card):not(.hash-link):not(.button):not([class*="tag"]),
+.footer a {
+  color: var(--tp-text);
+  text-decoration: underline;
+  text-decoration-color: var(--tp-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.markdown a:not(.wd_icon_card):not(.hash-link):not(.button):not([class*="tag"]):hover,
+.footer a:hover {
+  color: var(--tp-text);
+  text-decoration-color: var(--tp-text);
+}
+
+.hash-link {
+  color: var(--tp-text-2);
+}
+
+/* Focus: solid 2px ring, 2px outside, keyboard only */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible,
+html .wd_icon_card:focus-visible {
+  outline: 2px solid var(--tp-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Lists: real lists, hanging indent, markers in the text color */
+.markdown ul,
+.markdown ol {
+  padding-left: 1.75em;
+}
+
+.markdown li + li {
+  margin-top: 0.4em;
+}
+
+.markdown ol > li::marker {
+  font-weight: 600;
+  color: var(--tp-text);
+}
+
+.markdown ul > li::marker {
+  color: var(--tp-text);
+}
+
+.markdown hr {
+  background-color: var(--tp-hairline);
+  height: 1px;
+}
+
+.markdown blockquote {
+  border-left: 0;
+  background: var(--tp-quiet);
+  border-radius: 8px;
+  color: var(--tp-text);
+  padding: 16px 20px;
+}
+
+/* Screenshots and figures: 4px corners */
+.markdown img {
+  border-radius: 4px;
+}
+
+/* Buttons: ink fill on light, lime fill with ink text on dark */
+.button--primary,
+.markdown .button.button--primary {
+  --ifm-button-background-color: var(--tp-strong);
+  --ifm-button-border-color: var(--tp-strong);
+  --ifm-button-color: var(--tp-on-strong);
+  color: var(--tp-on-strong);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.button--primary:hover {
+  --ifm-button-background-color: var(--tp-strong-hover);
+  --ifm-button-border-color: var(--tp-strong-hover);
+  color: var(--tp-on-strong);
+}
+
+.button--secondary,
+.button--outline {
+  --ifm-button-background-color: transparent;
+  --ifm-button-border-color: var(--tp-text);
+  --ifm-button-color: var(--tp-text);
+  border-width: 1px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* 5. Chrome --------------------------------------------------------------- */
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid var(--tp-hairline);
+}
+
+.navbar__logo img {
+  height: var(--navbar-logo-height);
+  width: auto;
+}
+
+.navbar__link,
+.navbar__item.navbar__link {
+  font-family: var(--tp-font);
+  font-weight: 500;
+}
+
+.navbar_second_line .navbar__item.navbar__link:not(.slack_btn),
+.navbar_second_line .navbar__link:not(.slack_btn) {
+  color: var(--tp-text-2);
+  border-radius: 0 !important;
+}
+
+.navbar_second_line .navbar__link:hover:not(.navbar__link--active):not(.slack_btn) {
+  color: var(--tp-text) !important;
+  border-bottom: 2px solid var(--tp-outline) !important;
+}
+
+.navbar_second_line .navbar__item.navbar__link.navbar__link--active:not(.home_btn),
+.navbar_second_line .highlight_home {
+  color: var(--tp-text) !important;
+  font-weight: 600;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Search field: white field, 1px Muted edge, 4px corners */
+[class^="navbarSearchContainer"] .navbar__search-input,
+.navbar__search-input {
+  border-radius: 4px;
+  background-color: var(--tp-field);
+  color: var(--tp-text);
+  font-family: var(--tp-font);
+}
+
+.navbar__search-input::placeholder {
+  color: var(--tp-text-2);
+}
+
+/* Sidebar: transparent on paper, category names as group labels */
+.theme-doc-sidebar-container,
+.menu {
+  background: transparent;
+}
+
+.wd_sidebar_title a {
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  font-stretch: 75%;
+  letter-spacing: 0.08em;
+  line-height: 20px !important;
+  color: var(--tp-text-2) !important;
+}
+
+.menu__link {
+  color: var(--tp-text-2);
+  font-family: var(--tp-font);
+  font-size: 14.5px;
+}
+
+.menu__link:hover {
+  color: var(--tp-text);
+}
+
+.menu__list-item-collapsible.menu__list-item-collapsible--active,
+.menu__link--active {
+  color: var(--tp-text) !important;
+  font-weight: 600;
+}
+
+/* TOC */
+.table-of-contents__link {
+  color: var(--tp-text-2);
+  font-size: 14px;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--tp-text);
+}
+
+.table-of-contents__link--active {
+  font-weight: 600;
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: var(--tp-text-2);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--tp-text) !important;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
   background-color: transparent;
+  color: var(--tp-text-2);
 }
 
-:root {
-  --ifm-heading-font-family: Raleway;
-  --font-main: "Open Sans";
+.footer::before {
+  background: var(--tp-hairline);
 }
 
-/* Legacy TablePress HTML tables (e.g. Functions and Formulas reference) */
+/* Pagination */
+.pagination-nav__link {
+  border: 1px solid var(--tp-hairline);
+  border-radius: 8px;
+  background: var(--tp-raised);
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--tp-text);
+}
+
+/* 6. Content components --------------------------------------------------- */
+
+/* Callouts: brand notice pattern. Tinted ground, round icon, ink text, no side stripe.
+   Green grounds are not allowed, so tip/success use the quiet fill with a green icon. */
+html .theme-admonition {
+  --callout-bg: var(--tp-quiet);
+  --callout-icon-color: var(--tp-text-2);
+  --callout-mask: var(--tp-icon-info);
+  --ifm-alert-background-color: var(--callout-bg);
+  --ifm-alert-foreground-color: var(--tp-text);
+  --ifm-link-color: var(--tp-text);
+  --ifm-code-background: rgba(127, 127, 127, 0.14);
+  background-color: var(--callout-bg) !important;
+  color: var(--tp-text);
+  border: 0 !important;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 16px 20px;
+  gap: 8px;
+}
+
+html .theme-admonition [class^="admonitionHeading"] {
+  color: var(--tp-text) !important;
+  font-family: var(--tp-font);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+html .theme-admonition.alert p,
+html .theme-admonition.alert ol,
+html .theme-admonition.alert ul,
+html .theme-admonition.alert li {
+  color: var(--tp-text);
+  font-family: var(--tp-font);
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+html .theme-admonition p:last-child {
+  margin-bottom: 0;
+}
+
+html .theme-admonition [class*="admonitionContent"] {
+  margin-left: 28px;
+}
+
+html .theme-admonition [class*="admonitionIcon"] {
+  display: inline-flex;
+  margin-right: 0;
+}
+
+html .theme-admonition [class*="admonitionIcon"] > svg,
+html .theme-admonition [class*="admonitionIcon"] > img {
+  display: none !important;
+}
+
+html .theme-admonition [class*="admonitionIcon"]::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  background-color: var(--callout-icon-color);
+  -webkit-mask: var(--callout-mask) center / contain no-repeat;
+  mask: var(--callout-mask) center / contain no-repeat;
+}
+
+html .no-title-admonition [class*="admonitionContent"] {
+  margin-left: 8px !important;
+}
+
+html .theme-admonition-tip {
+  --callout-icon-color: var(--tp-ontarget);
+  --callout-mask: var(--tp-icon-ok);
+}
+
+html .theme-admonition-warning {
+  --callout-bg: var(--tp-warning-bg);
+  --callout-icon-color: var(--tp-warning);
+  --callout-mask: var(--tp-icon-warning);
+}
+
+html .theme-admonition-danger {
+  --callout-bg: var(--tp-danger-bg);
+  --callout-icon-color: var(--tp-alarm);
+  --callout-mask: var(--tp-icon-alarm);
+}
+
+/* Transpara callout: an ink band with the t. mark */
+html .theme-admonition-transpara {
+  --tp-text: var(--tp-paper);
+  --tp-text-2: var(--tp-g400);
+  --tp-accent: var(--tp-lime);
+  --tp-focus: var(--tp-lime);
+  --callout-bg: var(--tp-band);
+  --ifm-code-background: rgba(255, 255, 255, 0.1);
+}
+
+html .theme-admonition-transpara [class*="admonitionIcon"]::before {
+  background: url("../../static/media/brand/transpara-mark-on-dark.svg") center / contain no-repeat;
+  -webkit-mask: none;
+  mask: none;
+}
+
+html .theme-admonition-transpara code {
+  color: var(--tp-paper);
+}
+
+/* Cards: white on paper, 8px corners, no shadow; a 1px ink edge on hover */
+html .wd_icon_card {
+  background: var(--tp-raised);
+  border: 1px solid transparent !important;
+  border-radius: 8px;
+  padding: 20px 24px;
+  gap: 8px;
+  box-shadow: none;
+  transition: border-color 0.15s ease;
+}
+
+html .wd_icon_card:hover {
+  border: 1px solid var(--tp-text) !important;
+  box-shadow: none;
+  transform: none;
+}
+
+html .wd_icon_card.card_no_link:hover {
+  border: 1px solid transparent !important;
+}
+
+html .wd_icon_card h3 {
+  font-family: var(--tp-font) !important;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--tp-text);
+}
+
+html .wd_icon_card:hover h3,
+html .wd_icon_card:hover svg {
+  color: var(--tp-text);
+  fill: currentColor;
+}
+
+html .wd_icon_card .card_content,
+html .wd_icon_card p {
+  color: var(--tp-text-2);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+html .wd_icon_card svg {
+  color: var(--tp-text);
+}
+
+html .wd_icon_card .icon_img {
+  border-radius: 4px;
+}
+
+html .wd_cards_container {
+  gap: 16px;
+}
+
+/* Tables: white on paper, a hairline between rows, no vertical lines */
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 0;
+  border-radius: 8px;
+  background: var(--tp-raised);
+}
+
+.markdown table tr {
+  background: transparent;
+  border: 0;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 0;
+  border-bottom: 1px solid var(--tp-hairline-raised);
+  padding: 12px 16px;
+}
+
+.markdown table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.markdown table thead th {
+  background: var(--tp-quiet);
+  color: var(--tp-text-2);
+  font-family: var(--tp-font);
+  font-size: 13px;
+  font-weight: 700;
+  font-stretch: 75%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 0;
+}
+
+.markdown table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.markdown table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.markdown table td {
+  color: var(--tp-text);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Code */
+p code,
+span code,
+li code,
+td code,
+.col--7 code,
+.markdown :not(pre) > code {
+  background-color: var(--tp-quiet);
+  color: var(--tp-text);
+  border: 0;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-family: var(--tp-mono);
+  font-size: 0.88em;
+}
+
+.theme-code-block {
+  --prism-background-color: var(--tp-code-bg) !important;
+  border-radius: 8px;
+  box-shadow: none !important;
+}
+
+.theme-code-block pre,
+.theme-code-block code {
+  font-family: var(--tp-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.theme-code-block [class*="codeBlockTitle"] {
+  border-bottom: 1px solid var(--tp-code-edge);
+  font-family: var(--tp-font);
+  font-size: 13px;
+}
+
+/* Accordions: one frame per container, surfaces before lines */
+html .accordion_group,
+html .accordion_container:not(.accordion_group > .accordion_container) {
+  border: 0;
+  border-radius: 8px;
+  background: var(--tp-raised);
+  overflow: hidden;
+}
+
+html .accordion_container {
+  border-bottom: 1px solid var(--tp-hairline-raised);
+}
+
+html .accordion_container:hover {
+  box-shadow: none;
+}
+
+html .accordion_container summary .accordion_call {
+  font-family: var(--tp-font);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tp-text);
+}
+
+html .accordion_container .control-icon {
+  fill: var(--tp-text-2);
+}
+
+/* Tabs: text tabs, a 2px ink underline on the active one */
+.tabs {
+  border-bottom: 1px solid var(--tp-hairline);
+}
+
+.tabs__item {
+  border-radius: 4px 4px 0 0;
+  color: var(--tp-text-2);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs__item:hover {
+  background-color: transparent;
+  color: var(--tp-text);
+  border-bottom-color: var(--tp-outline);
+}
+
+.tabs__item--active,
+.tabs__item--active:hover {
+  background-color: transparent;
+  color: var(--tp-text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--tp-text);
+}
+
+/* 7. Changelog ------------------------------------------------------------ */
+[class^="sidebarItemLink"] {
+  color: var(--tp-text-2);
+}
+
+[class^="sidebarItemLink"]:hover,
+[class*="sidebarItemLinkActive"] {
+  color: var(--tp-text);
+}
+
+/* 8. Legacy TablePress HTML tables (e.g. Functions and Formulas reference) */
 .tablepress {
   width: 100%;
   table-layout: auto;

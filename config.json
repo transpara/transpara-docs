@@ -2,25 +2,25 @@
   "websiteName": "Transpara Documentation",
   "description": "Transpara Visual KPI documentation: connect industrial, business, and external data sources to build KPIs, dashboards, analytics, and alerts in one view.",
   "images": {
-    "logo": "media/logo.png",
-    "favicon": "media/favicon.ico",
-    "darkLogo": ""
+    "logo": "media/brand/transpara-logo-on-light.svg",
+    "favicon": "media/brand/favicon.ico",
+    "darkLogo": "media/brand/transpara-logo-on-dark.svg"
   },
   "languages": [
     "en"
   ],
   "styles": {
-    "mainColor": "#669900",
-    "darkModeMainColor": "#F0F0FF",
-    "navbarColor": "#ffffff",
-    "navbarDarkModeColor": "#000621",
+    "mainColor": "#14181A",
+    "darkModeMainColor": "#84CC16",
+    "navbarColor": "#F7F6F3",
+    "navbarDarkModeColor": "#14181A",
     "pagination": false,
     "navbarMode": "tabbed",
     "logoSize": "medium"
   },
   "colorMode": {
     "default": "light",
-    "switchOff": true
+    "switchOff": false
   },
   "apiFiles": [],
   "homepage": "homepage.html",
@@ -131,7 +131,7 @@
           ]
         },
         {
-          "categoryName": "Visual KPI Designer ",
+          "categoryName": "Visual KPI Designer",
           "pages": [
             "visual-kpi/visual-kpi-designer/overview",
             {

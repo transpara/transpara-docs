@@ -4,572 +4,634 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Transpara Documentation</title>
   <style>
-    /* New Platform Banner Styles */
-    .platform-banner {
-      display: block;
-      background-image: url('/media/homepage/banner-transpara.png');
-      background-size: cover;
-      background-position: center;
-      padding: 2.5rem 0;
-      text-align: center;
+    /* Transpara Docs homepage
+       Brand: transpara/marketing brand/decisions (Paper and Ink, Steady spacing,
+       Balanced type, Crisp corners, rings from the dot).
+       Colors come from the --tp-* tokens defined in custom.css.
+       Everything is scoped under .tp-home because this CSS loads globally. */
+
+    .tp-home {
+      --tph-page: 1120px;
+      --tph-gutter: 24px;
+      --tph-section: 112px;
+      --tph-hero-top: 72px;
+      background: var(--tp-ground);
+      color: var(--tp-text);
+      font-family: var(--tp-font);
+      overflow-x: hidden;
+    }
+
+    .tp-home a {
+      color: inherit;
       text-decoration: none;
-      color: white;
-
-      /* Make banner full-width */
-      position: relative;
-      width: 100vw;
-      left: 50%;
-      margin-left: -50vw;
     }
 
-    /* Overlay to darken the background image for better text contrast */
-    .platform-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.0);
-      z-index: 1;
-      transition: background-color 0.3s ease;
-    }
-
-    .platform-banner:hover::before {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    .platform-banner h3 {
+    .tp-home h1,
+    .tp-home h2,
+    .tp-home h3,
+    .tp-home p {
       margin: 0;
-      font-size: 2rem;
-      font-weight: 600;
+    }
+
+    .tp-home .tph-wrap {
+      max-width: calc(var(--tph-page) + 2 * var(--tph-gutter));
+      margin: 0 auto;
+      padding: 0 var(--tph-gutter);
       position: relative;
-      z-index: 2;
-      transition: transform 0.3s ease;
+      z-index: 1;
     }
 
-    .platform-banner:hover h3 {
-      transform: scale(1.02);
-      /* Increase size on hover */
+    /* Light and dark artwork */
+    .tp-home .tph-dark {
+      display: none;
     }
 
-    @media (max-width: 768px) {
-      .platform-banner h3 {
-        font-size: 1.8rem;
-      }
+    html[data-theme="dark"] .tp-home .tph-light {
+      display: none;
     }
 
-
-    @media (max-width: 480px) {
-      .platform-banner h3 {
-        font-size: 1.5rem;
-      }
-
-      .platform-banner {
-        padding: 2rem 0;
-      }
+    html[data-theme="dark"] .tp-home .tph-dark {
+      display: block;
     }
 
-    @media (max-width: 1440px) and (min-width: 996px) {
-      main {
-        padding-left: 1.3rem;
-        padding-right: 1.3rem;
-      }
+    /* Group label: 14px, 700, capitals, 75% width, +8% tracking */
+    .tp-home .tph-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      font-stretch: 75%;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: var(--tp-text-2);
     }
 
-    @media (min-width: 1441px) {
-      main {
-        align-self: center;
-        max-width: var(--screen-width-max);
-        width: var(--screen-width-max);
-      }
+    .tp-home .tph-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--tp-accent);
+      flex: 0 0 8px;
     }
 
-    .heroBanner {
-      padding: 4rem 0;
-      text-align: left;
+    .tp-home .tph-period {
+      color: var(--tp-accent);
+    }
+
+    /* Hero */
+    .tp-home .tph-hero {
       position: relative;
       overflow: hidden;
+      padding: var(--tph-hero-top) 0 var(--tph-section);
     }
 
-    @media screen and (max-width: 996px) {
-      .heroBanner {
-        padding: 2rem;
-      }
+    .tp-home .tph-rings {
+      position: absolute;
+      right: -260px;
+      top: -150px;
+      width: 820px;
+      height: 820px;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
     }
 
-    .buttons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .header_container {
-      align-self: center;
-      color: #282a30;
-      display: flex;
-      justify-content: flex-start;
-      padding: 0;
-      gap: 15%;
-    }
-
-    .header_container h1 {
-      margin-bottom: 20px;
-      color: #282a30;
-      font-size: 80px;
-      font-style: normal;
-      font-weight: 700 !important;
-      line-height: 80px;
-      letter-spacing: -2px;
-    }
-
-    .header_container .first_column p {
-      margin: 0 0 40px 12px;
-      max-width: 462px;
-      color: #282a30;
-      font-size: 23.762px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 29.702px;
-      letter-spacing: -0.594px;
-    }
-
-    .header_container .second_column p {
-      color: #000000;
-      font-style: normal;
-      line-height: 100%;
-      max-width: 562px;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 24px;
-      margin: 10px 0 32px 0;
-    }
-
-    .headerBtn {
-      width: fit-content;
-      border: 1px solid transparent;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 11px 25px;
-      background-color: var(--primary-color);
-      transition: all 0.5s ease;
-    }
-
-    .headerBtn h4,
-    .sectionBtn h4 {
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .headerBtn:hover,
-    .sectionBtn:hover {
-      background: transparent;
-      text-decoration: none;
-      color: var(--primary-color);
-      border: 1px solid var(--primary-color);
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .cards_container {
-      color: black;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    .tp-home .tph-hero-inner {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      margin: 0 auto 50px;
-      gap: 15px;
+      gap: 24px;
+      justify-items: start;
     }
 
-    .secondary_cards_section {
-      margin-bottom: 5%;
+    .tp-home .tph-hero-title {
+      max-width: 760px;
+      font-size: 72px;
+      font-weight: 600;
+      font-stretch: 88%;
+      line-height: 1.03;
+      letter-spacing: -0.015em;
+      color: var(--tp-text);
     }
 
-    .card {
-      background: #fff;
-      border: 1px solid #d7d7d7;
-      border-radius: 6px;
-      color: black;
+    .tp-home .tph-lead {
+      max-width: 620px;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--tp-text-2);
+    }
+
+    .tp-home .tph-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    /* Buttons: Crisp, 4px corners, 15px/600 */
+    .tp-home .tph-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 56px;
+      padding: 0 24px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      transition: background-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .tp-home .tph-btn-primary {
+      background: var(--tp-strong);
+      color: var(--tp-on-strong);
+    }
+
+    .tp-home .tph-btn-primary:hover {
+      background: var(--tp-strong-hover);
+      color: var(--tp-on-strong);
+    }
+
+    .tp-home .tph-btn-secondary {
+      box-shadow: inset 0 0 0 1px var(--tp-text);
+      color: var(--tp-text);
+    }
+
+    .tp-home .tph-btn-secondary:hover {
+      box-shadow: inset 0 0 0 2px var(--tp-text);
+    }
+
+    .tp-home .tph-btn:focus-visible,
+    .tp-home .tph-card:focus-visible,
+    .tp-home .tph-band a:focus-visible {
+      outline: 2px solid var(--tp-focus);
+      outline-offset: 2px;
+    }
+
+    /* Sections */
+    .tp-home .tph-section {
+      padding: 0 0 var(--tph-section);
+    }
+
+    .tp-home .tph-section-head {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .tp-home .tph-section-title {
+      font-size: 36px;
+      font-weight: 600;
+      font-stretch: 88%;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--tp-text);
+    }
+
+    /* Cards: white on paper, 8px corners, no shadow, 1px ink edge on hover */
+    .tp-home .tph-card {
       display: flex;
       flex-direction: column;
-      flex-grow: 0;
-      flex-shrink: 0;
-      height: fit-content;
-      /* margin: 16px; */
-      transition: all 0.3s ease, border 0.1s ease;
-      width: 100%;
-      display: inline-flex;
-      height: 100%;
-      padding: 14px;
-      gap: 25px;
+      gap: 12px;
+      background: var(--tp-raised);
+      border-radius: 8px;
+      box-shadow: inset 0 0 0 1px transparent;
+      transition: box-shadow 0.15s ease;
     }
 
-    .card:hover {
-      color: black;
-      text-decoration: none;
-      border: 1px solid #9c0;
-      box-shadow: 0px 4px 25.6px 0px rgba(0, 0, 0, 0.05);
-      transform: translateY(-1px);
+    .tp-home .tph-card:hover {
+      box-shadow: inset 0 0 0 1px var(--tp-text);
     }
 
-    .card .card_image {
-      background-position: center;
-      background-size: cover;
-      border-radius: 6px;
-      height: 131px;
-      /* padding: 14px; */
+    .tp-home .tph-card p {
+      color: var(--tp-text-2);
     }
 
-    .cards_container .card .image1 {
-      background-image: url("../../static/media/homepage/card1.png");
+    /* Products */
+    .tp-home .tph-products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
 
-    .cards_container .card .image2 {
-      background-image: url("../../static/media/homepage/card2.png");
+    .tp-home .tph-product {
+      padding: 32px;
+      gap: 16px;
     }
 
-    .cards_container .card .image3 {
-      background-image: url("../../static/media/homepage/card3.png");
-    }
-
-    .cards_container .card .image4 {
-      background-image: url("../../static/media/homepage/card4.png");
-    }
-
-    .cards_container .card .image5 {
-      background-image: url("../../static/media/homepage/card5.png");
-    }
-
-    .cards_container .card .image6 {
-      background-image: url("../../static/media/homepage/card6.png");
-    }
-
-    /* .cards_container .card_text {
-  padding-top: 16px;
-} */
-
-    .cards_container .card_text h4 {
-      height: 24px;
-      margin: 0;
-      /* margin-top: 5px; */
-      color: #282a30;
-      font-size: 17.5px;
-      font-style: normal;
-      font-weight: 700 !important;
-      line-height: 30.702px;
-    }
-
-    .cards_container .card_text p {
-      margin: 8px 0 0 0;
+    .tp-home .tph-product-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       min-height: 40px;
-      height: fit-content;
-      color: #282a30;
+    }
+
+    .tp-home .tph-product-mark {
+      height: 34px;
+      width: auto;
+    }
+
+    .tp-home .tph-product-logo {
+      height: 36px;
+      width: auto;
+    }
+
+    .tp-home .tph-product-title {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .tp-home .tph-product p {
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .tp-home .tph-more {
+      margin-top: auto;
+      align-self: flex-start;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: var(--tp-accent);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .tp-home .tph-card:hover .tph-more {
+      text-decoration-color: var(--tp-text);
+    }
+
+    /* Modules */
+    .tp-home .tph-modules {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .tp-home .tph-module {
+      padding: 24px;
+    }
+
+    .tp-home .tph-module-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .tp-home .tph-module-name {
+      font-family: var(--tp-font-module);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--tp-text);
+    }
+
+    .tp-home .tph-t {
+      color: var(--tp-accent);
+    }
+
+    .tp-home .tph-module p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* Visual KPI quick links */
+    .tp-home .tph-links {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .tp-home .tph-link {
+      padding: 20px 24px;
+      gap: 6px;
+    }
+
+    .tp-home .tph-link-title {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--tp-text);
+    }
+
+    .tp-home .tph-link p {
       font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
+      line-height: 1.5;
     }
 
-    .cards_container .card a {
-      border-radius: 15px;
-      color: var(--transpara-primary-color1);
-      font-weight: 700;
-      margin-top: 8px;
-      padding: 3px 0;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      width: fit-content;
+    /* Ink band: full width, square corners */
+    .tp-home .tph-band {
+      --tp-text: var(--tp-paper);
+      --tp-text-2: var(--tp-border);
+      --tp-accent: var(--tp-lime);
+      --tp-focus: var(--tp-lime);
+      background: var(--tp-band);
+      color: var(--tp-paper);
+      padding: 72px 0;
     }
 
-    .cards_container .card:hover a {
-      text-decoration: underline !important;
-      color: var(--transpara-highlights-color2) !important;
+    .tp-home .tph-band-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(0, 1fr));
+      gap: 48px;
+      align-items: start;
     }
 
-    @media (min-width: 1690px) {
-      .cards_container {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      }
+    .tp-home .tph-band-title {
+      color: var(--tp-paper);
+      font-size: 36px;
+      font-weight: 600;
+      font-stretch: 88%;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
     }
 
-    @media (max-width: 1440px) {
-      .header_container {
-        margin-left: 151px;
-        margin-right: 151px;
-      }
-
-      .cards_container {
-        /* margin-left: 151px; */
-        margin-right: 21px;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      }
+    .tp-home .tph-band-item {
+      display: grid;
+      gap: 8px;
     }
 
-    @media (max-width: 1250px) {
-      .cards_container {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      }
+    .tp-home .tph-band-item a {
+      font-size: 17px;
+      font-weight: 600;
+      justify-self: start;
+      text-decoration: underline;
+      text-decoration-color: var(--tp-accent);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
     }
 
-    @media (max-width: 1285px) {
-      .header_container {
-        margin-left: 69px;
-        margin-right: 69px;
-      }
-
-      .cards_container {
-        margin-left: 21px;
-        margin-right: 21px;
-      }
+    .tp-home .tph-band-item a:hover {
+      text-decoration-color: var(--tp-paper);
     }
 
-    @media (max-width: 997px) {
-      .header_container {
-        margin: 0;
-        gap: 6%;
-      }
-
-      .hero {
-        padding-left: 69px !important;
-        padding-right: 69px !important;
-      }
+    .tp-home .tph-band-item p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--tp-text-2);
     }
 
-    @media (max-width: 970px) {
-      .cards_container {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      }
-    }
-
-    @media (max-width: 870px) {
-      .cards_container {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      }
-    }
-
-    @media screen and (max-width: 844px) {
-      .header_container .first_column p {
-        font-size: 20px !important;
+    /* Rings move below the text once they would sit behind it */
+    @media (max-width: 1199px) {
+      .tp-home .tph-rings {
+        right: -330px;
+        top: auto;
+        bottom: -470px;
+        width: 700px;
+        height: 700px;
       }
 
-      .header_container .second_column p {
-        font-size: 16px !important;
+      .tp-home .tph-hero {
+        padding-bottom: 240px;
+      }
+
+      .tp-home .tph-modules,
+      .tp-home .tph-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tp-home .tph-band-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .tp-home .tph-band-title {
+        grid-column: 1 / -1;
       }
     }
 
-    @media screen and (max-width: 822px) {
-      .header_container .first_column h1 {
-        font-size: 60px !important;
-        line-height: 70px;
+    @media (max-width: 899px) {
+      .tp-home .tph-products {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .tp-home .tph-hero-title {
+        font-size: 56px;
       }
     }
 
-    @media (max-width: 775px) {
-      .cards_container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Phone: below 600px */
+    @media (max-width: 599px) {
+      .tp-home {
+        --tph-section: 64px;
+        --tph-hero-top: 40px;
+        --tph-gutter: 16px;
+      }
+
+      .tp-home .tph-hero {
+        padding-bottom: 200px;
+      }
+
+      .tp-home .tph-hero-title {
+        font-size: 42px;
+      }
+
+      .tp-home .tph-lead {
+        font-size: 17px;
+      }
+
+      .tp-home .tph-section-title,
+      .tp-home .tph-band-title {
+        font-size: 28px;
+      }
+
+      .tp-home .tph-btn {
+        height: 48px;
+        width: 100%;
+      }
+
+      .tp-home .tph-actions {
+        width: 100%;
+      }
+
+      .tp-home .tph-product {
+        padding: 24px;
+      }
+
+      .tp-home .tph-modules,
+      .tp-home .tph-links,
+      .tp-home .tph-band-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .tp-home .tph-band {
+        padding: 48px 0;
       }
     }
 
-    @media screen and (max-width: 700px) {
-      .header_container {
-        gap: 5%;
-        flex-direction: column;
-      }
-
-      .header_container .first_column h1 {
-        /* font-size: 40px !important; */
-        margin-bottom: 10px;
-      }
-
-      .header_container .first_column p {
-        /* font-size: 16px !important; */
-        margin: 0;
-        margin-bottom: 10px;
-      }
-
-      .header_container .second_column p {
-        font-size: 12px !important;
-      }
-    }
-
-    @media screen and (max-width: 560px) {
-      .hero {
-        padding: 0 !important;
-      }
-
-      .header_container {
-        padding: 60px;
-      }
-    }
-
-    @media screen and (max-width: 520px) {
-      .header_container {
-        padding: 50px;
-      }
-
-      .cards_container {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-    }
-
-    @media screen and (max-width: 470px) {
-      .header_container {
-        padding: 30px;
-      }
-
-      .cards_container {
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-    }
-
-    @media screen and (max-width: 440px) {
-      .header_container .first_column h1 {
-        font-size: 40px !important;
-      }
-
-      .header_container .first_column p {
-        font-size: 16px !important;
-      }
-    }
-
-    @media screen and (max-width: 341px) {
-      .header_container .first_column h1 {
-        line-height: 50px;
-      }
-    }
-
-    @media screen and (max-width: 325px) {
-      .header_container .first_column h1 {
-        margin-top: 20px;
-        font-size: 30px !important;
-      }
-
-      .header_container .first_column p {
-        font-size: 14px !important;
-      }
-
-      .header_container .headerBtn {
-        padding: 10px 20px;
-      }
-
-      .header_container .headerBtn h4 {
-        font-size: 12px !important;
-      }
-
-      .cards_container {
-        margin: 10px;
-      }
-    }
-
-    @media screen and (max-width: 260px) {
-      .header_container .headerBtn {
-        padding: 8px 16px;
-      }
-
-      .header_container .headerBtn h4 {
-        font-size: 12px !important;
-      }
-    }
-
-    @media screen and (max-width: 250px) {
-      .header_container .headerBtn {
-        padding: 8px 2px;
-      }
-
-      .header_container .headerBtn h4 {
-        font-size: 12px !important;
+    @media (prefers-reduced-motion: reduce) {
+      .tp-home .tph-card,
+      .tp-home .tph-btn {
+        transition: none;
       }
     }
   </style>
 </head>
 
 <body>
-  <a href="/transpara-platform/getting-started/" class="platform-banner">
-    <h3>Explore the new Transpara Platform</h3>
-  </a>
-  <header class="heroBanner">
-    <div class="container header_container">
-      <div class="first_column">
-        <h1>Visual KPI Docs</h1>
-        <p>Everything in One Place, From Any Place</p>
+  <div className="tp-home">
+    <section className="tph-hero">
+      <img className="tph-rings tph-light" src="media/brand/rings-on-light.svg" alt="" aria-hidden="true" />
+      <img className="tph-rings tph-dark" src="media/brand/rings-on-dark.svg" alt="" aria-hidden="true" />
+      <div className="tph-wrap tph-hero-inner">
+        <p className="tph-label"><span className="tph-dot"></span>Documentation</p>
+        <h1 className="tph-hero-title">Transpara documentation<span className="tph-period">.</span></h1>
+        <p className="tph-lead">Guides and reference for the Transpara Platform and Visual KPI. Install it, connect your data, build KPIs and dashboards, and put them to work.</p>
+        <div className="tph-actions">
+          <a className="tph-btn tph-btn-primary" href="/transpara-platform/getting-started/">Get started</a>
+          <a className="tph-btn tph-btn-secondary" href="/visual-kpi/getting-started/what-is-visual-kpi">Visual KPI docs</a>
+        </div>
       </div>
-      <div class="second_column">
-        <p>
-          Get one single view of operations across all of your data sources without moving anything or enduring a huge
-          project. Visual KPI supports thousands of industrial, business and external data sources and delivers stunning
-          visualizations, KPIs, dashboards, analytics, and alerts.
-        </p>
-        <a class="headerBtn" href="/visual-kpi/getting-started/what-is-visual-kpi">
-          <h4>Get started</h4>
-        </a>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <div className="cards_container">
+    <section className="tph-section">
+      <div className="tph-wrap">
+        <div className="tph-section-head">
+          <p className="tph-label">Products</p>
+          <h2 className="tph-section-title">Start with your product</h2>
+        </div>
+        <div className="tph-products">
+          <a className="tph-card tph-product" href="/transpara-platform/getting-started/">
+            <div className="tph-product-head">
+              <img className="tph-product-mark tph-light" src="media/brand/transpara-mark-on-light.svg" alt="" />
+              <img className="tph-product-mark tph-dark" src="media/brand/transpara-mark-on-dark.svg" alt="" />
+              <h3 className="tph-product-title">Transpara Platform</h3>
+            </div>
+            <p>Real-time operations software with Industrial AI built in. Connect your systems, model your operations and see what's happening now.</p>
+            <span className="tph-more">Explore the platform</span>
+          </a>
+          <a className="tph-card tph-product" href="/visual-kpi/getting-started/what-is-visual-kpi">
+            <div className="tph-product-head">
+              <img className="tph-product-logo tph-light" src="media/brand/VisualKPI-on-light.svg" alt="Visual KPI" />
+              <img className="tph-product-logo tph-dark" src="media/brand/VisualKPI-on-dark.svg" alt="Visual KPI" />
+            </div>
+            <p>Connect industrial, business and external data to build KPIs, dashboards, analytics and alerts in one view.</p>
+            <span className="tph-more">Explore Visual KPI</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <a className="card" href="/visual-kpi/end-user/overview">
-      <div className="card_image image1">
+    <section className="tph-section">
+      <div className="tph-wrap">
+        <div className="tph-section-head">
+          <p className="tph-label">Transpara Platform</p>
+          <h2 className="tph-section-title">Go straight to a module</h2>
+        </div>
+        <div className="tph-modules">
+          <a className="tph-card tph-module" href="/transpara-platform/tview/">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-tview-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-tview-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name"><span className="tph-t">t</span>View</h3>
+            <p>See operations as they happen, with dashboards, the activity feed and collaboration.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/tstudio/">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-tstudio-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-tstudio-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name"><span className="tph-t">t</span>Studio</h3>
+            <p>Configure models, calculations and administration in one web environment.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/getting-started/tmodel">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-tmodel-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-tmodel-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name"><span className="tph-t">t</span>Model</h3>
+            <p>Structure KPIs, assets and metadata in one semantic model.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/tstore/">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-tstore-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-tstore-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name"><span className="tph-t">t</span>Store</h3>
+            <p>Store and serve time-series and historical data.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/tcalc/">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-tcalc-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-tcalc-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name"><span className="tph-t">t</span>Calc</h3>
+            <p>Run real-time, event-triggered calculations across the platform.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/ai/agentic-monitoring-service">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-ai-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-ai-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name">AI</h3>
+            <p>Let agentic monitoring surface what needs your attention.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/setup/data-extractors/extractors">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-extractors-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-extractors-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name">Extractors</h3>
+            <p>Bring in data from historians, SCADA and other sources.</p>
+          </a>
+          <a className="tph-card tph-module" href="/transpara-platform/setup/system-requirements">
+            <img className="tph-module-icon tph-light" src="media/brand/modules/transpara-module-tsystem-on-light-large.svg" alt="" />
+            <img className="tph-module-icon tph-dark" src="media/brand/modules/transpara-module-tsystem-on-dark-large.svg" alt="" />
+            <h3 className="tph-module-name">Setup</h3>
+            <p>Check system requirements and deploy the platform.</p>
+          </a>
+        </div>
       </div>
-      <div className="card_text">
-        <h4 className='cardTitle'>Using Visual KPI</h4>
-        <p>Explore all features and functionalities available on Visual KPI.</p>
-      </div>
-    </a>
+    </section>
 
-    <a className="card" href="/visual-kpi/visual-kpi-designer/overview">
-      <div className="card_image image3">
+    <section className="tph-section">
+      <div className="tph-wrap">
+        <div className="tph-section-head">
+          <p className="tph-label">Visual KPI</p>
+          <h2 className="tph-section-title">Everything for Visual KPI</h2>
+        </div>
+        <div className="tph-links">
+          <a className="tph-card tph-link" href="/visual-kpi/getting-started/what-is-visual-kpi">
+            <h3 className="tph-link-title">Getting started</h3>
+            <p>What Visual KPI is and how it works.</p>
+          </a>
+          <a className="tph-card tph-link" href="/visual-kpi/setup-and-administration/overview">
+            <h3 className="tph-link-title">Setup and administration</h3>
+            <p>Install, connect interfaces and secure your server.</p>
+          </a>
+          <a className="tph-card tph-link" href="/visual-kpi/visual-kpi-designer/overview">
+            <h3 className="tph-link-title">Visual KPI Designer</h3>
+            <p>Build KPIs, groups, charts and dashboards.</p>
+          </a>
+          <a className="tph-card tph-link" href="/visual-kpi/end-user/overview">
+            <h3 className="tph-link-title">End user guide</h3>
+            <p>Find your way around dashboards, alerts and analytics.</p>
+          </a>
+          <a className="tph-card tph-link" href="/visual-kpi/setup-and-administration/interfaces/available-interfaces">
+            <h3 className="tph-link-title">Interfaces</h3>
+            <p>Every data source Visual KPI connects to.</p>
+          </a>
+          <a className="tph-card tph-link" href="/visual-kpi/reference/references">
+            <h3 className="tph-link-title">Reference</h3>
+            <p>Keywords, settings and configuration details.</p>
+          </a>
+          <a className="tph-card tph-link" href="/visual-kpi/reference/functions">
+            <h3 className="tph-link-title">Functions and formulas</h3>
+            <p>Syntax and examples for every function.</p>
+          </a>
+          <a className="tph-card tph-link" href="/glossary">
+            <h3 className="tph-link-title">Glossary</h3>
+            <p>The terms used across the docs.</p>
+          </a>
+        </div>
       </div>
-      <div className="card_text">
-        <h4 className='cardTitle'>Design</h4>
-        <p>Create KPIs, charts, tables and define the hierarchy of your data.</p>
-      </div>
-    </a>
+    </section>
 
-    <a className="card" href="/visual-kpi/setup-and-administration/interfaces/interfaces">
-      <div className="card_image image2">
+    <section className="tph-band">
+      <div className="tph-wrap tph-band-grid">
+        <h2 className="tph-band-title">Help when you need it<span className="tph-period">.</span></h2>
+        <div className="tph-band-item">
+          <a href="/changelog">Release notes</a>
+          <p>What changed in each build, with new features and fixes.</p>
+        </div>
+        <div className="tph-band-item">
+          <a href="/faqs">FAQs</a>
+          <p>Answers on setup, integrations, cost and support.</p>
+        </div>
+        <div className="tph-band-item">
+          <a href="https://www.transpara.com/contact-us/">Contact support</a>
+          <p>Talk to the Transpara team about your installation.</p>
+        </div>
       </div>
-      <div className="card_text">
-        <h4 className='cardTitle'>Interfaces</h4>
-        <p>Use existing interfaces or create new ones to connect new data sources into your system.</p>
-      </div>
-    </a>
-
-    <a className="card" href="/visual-kpi/setup-and-administration/overview">
-      <div className="card_image image4">
-      </div>
-      <div className="card_text">
-        <h4 className='cardTitle'>Setup and Installation</h4>
-        <p>Prepare your system and install the Visual KPI software.</p>
-      </div>
-    </a>
-
-    <a className="card" target="_blank" href="https://www.transpara.com/training/">
-      <div className="card_image image5">
-      </div>
-      <div className="card_text">
-        <h4 className='cardTitle'>Tutorial</h4>
-        <p>Check our free and online courses.</p>
-      </div>
-    </a>
-
-    <a className="card" href="/faqs">
-      <div className="card_image image6">
-      </div>
-      <div className="card_text">
-        <h4 className='cardTitle'>FAQ</h4>
-        <p>Access Transpara Visual KPI to find answers for your questions.</p>
-      </div>
-    </a>
-
+    </section>
   </div>
 </body>
 
