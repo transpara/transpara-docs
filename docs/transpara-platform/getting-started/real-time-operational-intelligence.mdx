@@ -1,0 +1,102 @@
+---
+title: Real-Time Operational Intelligence
+description: What real-time operational intelligence means, why BI tools and historians do not deliver it, and the foundation Transpara is built on.
+slug: /transpara-platform/getting-started/real-time-operational-intelligence
+tags: ['documentation']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+Real-time operational intelligence is the foundation of Transpara. Each of the three words rules something out, and together they describe a kind of system that remains rare.
+
+This page covers that foundation. [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations) covers what it makes possible, which is where AI comes in.
+
+## What the Term Means
+
+Industry analysts use a broad definition. Gartner describes an operations intelligence platform as software that monitors current conditions, raises alerts, and supports interactive decisions by supplying data and analytics about what is happening now. Gartner also places these applications at the oversight level: they inform the work rather than directly controlling it.
+
+Most definitions rest on one contrast, which oversimplifies: operational intelligence looks at what is happening now, while business intelligence explains what already happened.
+
+Transpara goes further. In Transpara, real-time operational intelligence turns live operational data into KPIs with status, alerts, and explanations, so you know how operations are going right now and what to do next. It covers the past, the present, and the near future: what happened, what is happening, and what is about to happen. It combines live, interactive visualization with monitoring and alerting, and it runs deep analysis and calculations on data as it moves, not only on static extracts. And it serves everyone who runs the operation, not only operators, analysts and data specialists, but management, field staff, maintenance, safety and other roles that would benefit from having their fingers on the pulse.
+
+Three things take it beyond the general definition: every value arrives as a KPI with a verdict attached, one model that spans every data source, and AI agents that watch the whole operation and raise what matters. Like the broader definition, Transpara reads and advises. People decide and act.
+
+## Real-Time
+
+Most analytics tools, business intelligence platforms included, run on a simple loop: collect data, store it, then query and report on it later. That works for a quarterly review. It doesn't work for a plant that changes state every few seconds. Real-time means the system reflects what is happening now, along with the recent past that explains it and the near future it points to.
+
+Operations teams care about a specific window of time: what happened recently, what is happening right now, and what is about to happen. Call it the operating window. Business intelligence tools serve a different window, analyzing long stretches of past data to support long-term decisions. Transpara can show any time frame, but it is built for the operating window.
+
+Picture a coffee shop. An analyst studies two years of foot traffic to decide whether to open a new store on the corner. An operations manager wants to know how long the line is right now, whether it is getting better or worse, and whether one of the espresso machines is leaking and about to break down. Both questions matter, but they need different tools.
+
+The difference matters most in the moments that matter most: a shift handover, a developing upset, an asset drifting toward a limit. By the time a scheduled report catches any of those, it may be too late to act.
+
+Real-time doesn't always mean fast-moving data. Some values change hundreds of times per second, and others change once every few weeks or months. Either way, real-time means you find out the moment a value changes and needs your attention, not when it shows up on a report after it's too late to act. What counts is how quickly the system tells you about a change so you can act on it, not how often the data moves.
+
+## Operational
+
+Plenty of dashboards are informational: they show numbers and leave you to work out whether those numbers are good, bad, or worth acting on. An operational system serves the people running the operation, not only the people reviewing it afterward.
+
+In practice, an operational system is live, interactive, and predictive, and it tells you when to look:
+
+* **Live.** Values update as data arrives, so the screen in front of you matches the operation it describes.
+* **Interactive.** You drill into any view, move through time, and combine metrics without waiting for someone to build a report.
+* **Predictive.** Trends, forecasts, and agents that predict when a KPI will cross a limit show what is about to happen, not only what already did.
+* **Alerting.** Alerts reach you when a KPI enters a status that needs action, so you don't have to watch every screen to catch a problem.
+
+Underneath all four sit **KPIs** that carry status, color, context, and limits, so no value ever appears without a verdict, and a **hierarchy** that rolls up cleanly, so a plant manager and a corporate executive see the same underlying data at the altitude each one needs.
+
+## Intelligence
+
+Visualization shows you a chart. Intelligence tells you whether the chart says something you should care about, and gives you enough context to act.
+
+It starts with the KPI: status, color, and limits make every number arrive already interpreted. It continues through the knowledge graph, which holds the relationships between metrics, assets, the parent-child hierarchy, calculations, and KPIs. You define some of those relationships. The graph finds others on its own through shared attributes. For example, the graph relates two assets in different refineries that come from the same manufacturer, even though nobody defined that relationship. That lets you trace causes and patterns instead of guessing at them.
+
+Together, KPIs and the graph make the rest possible:
+
+* **Root cause.** Root cause runs through the model, so you can trace a problem to its source instead of starting a separate investigation from scratch. Where a calculation derives one KPI from others, the graph records each input, so Transpara can follow the chain back to the input that moved.
+* **Advanced calculations and analytics.** [tCalc](/transpara-platform/tcalc/) runs calculations as data changes, from simple arithmetic and functions to sophisticated Python and ML models, so derived KPIs, rollups, and analytics stay current instead of waiting for a batch run.
+* **Agentic monitoring.** AI agents watch the whole operation continuously, find KPIs that are approaching limits, drifting, or regressing, and raise what matters even when the users aren't looking and before anyone asks. See [Seeking vs. Surfacing](/transpara-platform/ai/seeking-vs-surfacing).
+* **Collaboration that becomes knowledge.** Comments attach to the KPI, group, or dashboard they concern and to the moment or time range they refer to. Transpara stores them in the same model as your KPIs, so what your experts notice and decide becomes part of the operational record that people and AI can draw on later. See [Collaboration](/transpara-platform/tview/collaboration).
+
+## Why Most Tools Fall Short
+
+Delivering on all three words at once is hard, and most products manage one or two.
+
+**The data is scattered.** Historians, SCADA, OPC, MQTT, IoT devices, relational databases, ERP, industry applications, and cloud services are in different locations, under the control of different groups, run at different speeds, store data differently, use their own naming, and rarely talk to each other natively. A tool that sees one source in isolation sees only a slice of the operation.
+
+**Historians capture values, not meaning.** Historians store time-series data well, but they aren't designed for the relationships, hierarchy, KPIs, comments and other context that make data interpretable. A number without context isn't intelligence, however much of it you keep. They also assume that all data you care about is in this one place, which is never perfectly true.
+
+**Business intelligence is retrospective by design.** It exists to explain what happened, on a schedule, after the fact. BI does that job well for analysts and static reports, and most Transpara customers keep using it alongside Transpara. But BI isn't operational intelligence, and no amount of dashboarding on top of a historian turns a batch system into a real-time one.
+
+**The usual fix takes years.** Consolidate everything into a central repository, cleanse and rationalize the data, then build something useful on top. Many of these projects run for years and never deliver value. Even when they succeed, they deliver answers to an organization that has moved on from the questions that justified the project.
+
+## What Transpara Does Differently
+
+**An industrial data fabric.** Transpara combines a virtual data lake with a unified namespace. The virtual data lake reads data live where it already lives and can optionally store it in [tStore](/transpara-platform/tstore/) when there is value in doing so: to keep history, to improve performance, or to support analytics and calculations. Put your data where it makes the most sense, whether that's the source system, Transpara, or hybrid. Don't move data just because a vendor, Transpara included, tells you to, and don't assume you have to move it to get value from it. The unified namespace, [tModel](/transpara-platform/getting-started/tmodel), gives everything one model with consistent names, relationships, limits, and calculations. You get one view of the whole operation without a forced migration on the critical path.
+
+**KPIs as the common language.** Transpara presents data as consistent KPIs with limits and status, so most users need little to no training. Because every KPI shares the same idea of good, highs, lows, and target, you can compare values that have nothing to do with each other, such as the speed of a truck, the availability of a wind turbine, and the outside temperature. The same consistency gives you a wide range of views without building a single chart by hand, for example:
+
+* **A single KPI**, as a trend with its limits and target, a KPI block, or a gauge.
+* **A set of KPIs**, as a list, a trend, a KPI map, a box plot, or a Pareto chart.
+* **A single group**, as a list with rollups, a KPI map, or a group map.
+* **A set of groups**, as a group map, or on a geo map when the groups carry latitude and longitude attributes. If the coordinates change, the markers move with them.
+
+That consistency makes Transpara a configured product rather than a set of tools you assemble into a custom application and then have to maintain yourself.
+
+**Relationships you can walk fast.** tGraph holds the relationships between assets, calculations, and KPIs, including the ones the graph finds on its own. Transpara can traverse those relationships quickly, even at high scale and through layers of calculations, which turns root cause into a near real-time operation rather than a research project. It is also the ultimate platform to create AI applications on.
+
+**Calculations that move with the data.** tCalc runs calculations when input data changes, on a schedule, or on other triggers, so results update when the data does.
+
+None of this is exotic in isolation. Having all of it in one platform, working together, is what makes the three words true at the same time.
+
+For how these pieces fit together, see [The Transpara Approach](/transpara-platform/getting-started/the-transpara-approach) and [How the Platform Works](/transpara-platform/getting-started/architecture).
+
+## Where to Go Next
+
+* [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations) for what this foundation makes possible.
+* [The Transpara Approach](/transpara-platform/getting-started/the-transpara-approach) for the KPI focus, the virtual data lake, and rapid updates.
+* [How the Platform Works](/transpara-platform/getting-started/architecture) for data flow and the modules at a glance.
+* Core Concepts for the vocabulary the rest of the documentation assumes.

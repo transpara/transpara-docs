@@ -1,0 +1,69 @@
+---
+title: The Transpara Approach
+description: "The three commitments underneath the platform: build around KPIs, read data where it lives, and get to value in days."
+slug: /transpara-platform/getting-started/the-transpara-approach
+tags: ['documentation']
+---
+
+<Callout title="Transpara Platform is under development" type="success">
+Welcome to the journey from Visual KPI to the all new Transpara real-time operational intelligence platform. The new platform is already being battle-tested with major customers (let us know if you want to take part), but is also still in development. The documentation will be updated over time as new features are released. Stay tuned for more updates!
+</Callout>
+
+[Real-Time Operational Intelligence](/transpara-platform/getting-started/real-time-operational-intelligence) describes the category Transpara operates in, and [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations) describes how AI extends it. Neither would hold up without a specific set of commitments underneath.
+
+Three in particular shape almost every decision in the platform: build around KPIs rather than dashboards, read data where it lives rather than migrating it, and get to value in days rather than years.
+
+## KPI Focus
+
+Transpara leads with the KPI rather than just generic charts. A KPI is a value with limits, status, and context attached, which means it answers how something is going before anyone has to read a number and interpret it. This includes color, status and the ability to alert. The more important half of this is consistency.
+
+A KPI is defined the same way everywhere, whatever it measures and wherever the data came from. A tank level, the speed of a haul truck, an ambient temperature, and the price of a commodity are all the same kind of object once they are in the system. High or low limits can apply to all of them, can carry the same color and the same icon, and it stays the same across every screen in the application.
+
+Change what good looks like and it changes everywhere at once, because status belongs to the system rather than to whoever assembled a particular view. Defining the answer once, at the point the KPI is created, is what the rest of the platform leans on.
+
+**Visualizations generate themselves.** Because every KPI carries limits, status, and context in the same shape, trends, rollups, status views, and maps are produced from the model rather than built one chart at a time by hand. Adding an asset does not mean building a new custom screen for it.
+
+**Rollups work without being designed.** KPIs roll up through the hierarchy, so an executive sees the operation at a glance and an engineer drills into the same underlying data, each at the altitude their job requires.
+
+**Alerts cannot drift out of sync.** An alert is defined against the same KPI the dashboard shows, so the two can never disagree about what counts as a problem.
+
+**The system stays maintainable.** A limit, a calculation, or a color is changed in one place and every view and alert that uses it inherits the change. This is a large part of why the platform does not need a team to keep it running.
+
+**AI has something to reason over.** A KPI with limits and status is a structured signal an agent can score, rank, compare, and monitor. A number on a chart is not. The KPI model is not a separate concern from the AI layer, it is the thing that makes the AI layer possible.
+
+For what this consistency means to the person actually using the application, see [tView](/transpara-platform/tview/).
+
+## Read Data Where It Lives
+
+Transpara does not require a migration project before it becomes useful. The Virtual Data Lake connects to the sources you already have and reads them in place: historians, SCADA, OPC, MQTT, IoT devices, relational databases, ERPs, and cloud services.
+
+Some sources stay exactly where they are and are queried live. Others are persisted to [tStore](/transpara-platform/tstore/), the platform's time-series database/historian, when retention, query performance, or cross-source calculations call for it. That decision is made source by source rather than imposed on the whole environment in advance, and it can change later without rework.
+
+Connecting to a dozen systems would otherwise produce a dozen different ways of looking at data, which is the situation most operations are already in. Because everything arrives as a KPI, defined the same way, the variety disappears at the point of use (part of the unified namespace concept). Users do not need to know which system a value came from, whether it is stored locally or read remotely, or whether it updates every second or once a shift.
+
+The result is one coherent view across what you already have, without copying data you have no reason to copy, and without waiting on a migration before anything is useful.
+
+## Rapid Updates, Deployed in Days
+
+Transpara is built so that the gap between needing something and having it is short.
+
+**No-code configuration.** Creating a KPI, adjusting a limit, building a dashboard, setting up an alert or changing a hierarchy does not require a developer or a release cycle. The people who understand the operation can make the change themselves, which is why most customers run Transpara globally without a full-time administrator.
+
+**AI Model generation.** The Model Builder turns a company name, a URL and other content you provide into a working hierarchy with KPIs, calculations, and dashboards in minutes, populated with simulated data so the model can be reviewed and argued about before a single real source is connected. Swap in real data when you are ready and the model is already running.
+
+## Why the Three Reinforce Each Other
+
+Each commitment is weaker without the other two, in specific ways.
+
+Reading data in place gets you access quickly, but access to scattered sources is not the same as understanding them. The KPI model is what turns a newly connected source into something interpretable on the day it is connected, rather than the start of a dashboard-building project.
+
+The model (and KPIs) makes data meaningful, but meaning that takes a development cycle to express is meaning delivered too late. No-code configuration is what keeps the distance between a business question and a working KPI short enough to matter.
+
+Fast configuration is only worth having if changes stay coherent. Because definitions live in one place and propagate, moving quickly does not accumulate the inconsistency that usually punishes teams for moving quickly.
+
+## Where to Go Next
+
+* [How the Platform Works](/transpara-platform/getting-started/architecture) for data flow and the modules at a glance.
+* Core Concepts for KPIs, models, hierarchy, templates, and attributes in detail.
+* [Industrial AI for Real-Time Operations](/transpara-platform/getting-started/industrial-ai-for-real-time-operations) for what this foundation makes possible.
+* [tView](/transpara-platform/tview/) for how all of this reaches the people using it.
