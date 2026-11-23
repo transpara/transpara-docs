@@ -51,6 +51,10 @@
   --tp-code-edge: rgba(255, 255, 255, 0.08);
   --tp-warning-bg: #fcefd9;
   --tp-danger-bg: #fbe5e4;
+  /* Callout icons: darker on light tints so the icon reaches 3:1 */
+  --tp-icon-warning-color: #b86e00;
+  --tp-icon-ok-color: #5d9202; /* Green 60 */
+  --tp-icon-alarm-color: var(--tp-alarm);
 
   --tp-font: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --tp-font-module: "DM Sans", "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
@@ -72,7 +76,8 @@ html[data-theme="dark"] {
   --tp-hairline-raised: #3a3e40;
   --tp-outline: var(--tp-g600);
   --tp-field: #1c2022;
-  --tp-field-edge: var(--tp-g600);
+  /* Muted keeps field edges at 3:1 or more on Ink (WCAG 1.4.11) */
+  --tp-field-edge: var(--tp-muted);
   --tp-text: var(--tp-paper);
   --tp-text-2: var(--tp-g400);
   --tp-accent: var(--tp-lime);
@@ -85,6 +90,9 @@ html[data-theme="dark"] {
   --tp-code-edge: rgba(255, 255, 255, 0.06);
   --tp-warning-bg: rgba(239, 159, 39, 0.16);
   --tp-danger-bg: rgba(226, 75, 74, 0.18);
+  --tp-icon-warning-color: var(--tp-warning);
+  --tp-icon-ok-color: var(--tp-ontarget);
+  --tp-icon-alarm-color: var(--tp-alarm);
 }
 
 /* 3. Map the tokens onto Infima and WriteDocs variables ------------------- */
@@ -159,6 +167,9 @@ html[data-theme="dark"] {
 
   /* WriteDocs: navbar */
   --navbar-color: var(--tp-ground);
+  /* Platform uses this for every .clean-btn hover (code copy, menu buttons) */
+  --navbar-color-light: var(--tp-quiet);
+  --navbar-color-dark: var(--tp-ground);
   --navbar-background-color: var(--tp-ground);
   --navbar-font-color: var(--tp-text);
   --navbar-border-color: var(--tp-hairline);
@@ -297,11 +308,16 @@ a:focus-visible,
 button:focus-visible,
 summary:focus-visible,
 input:focus-visible,
+select:focus-visible,
 [tabindex]:focus-visible,
 html .wd_icon_card:focus-visible {
   outline: 2px solid var(--tp-focus);
   outline-offset: 2px;
-  border-radius: 4px;
+}
+
+/* The accordion clips overflow, so draw its ring inside the summary */
+html .accordion_container > summary:focus-visible {
+  outline-offset: -2px;
 }
 
 /* Lists: real lists, hanging indent, markers in the text color */
@@ -311,7 +327,7 @@ html .wd_icon_card:focus-visible {
 }
 
 .markdown li + li {
-  margin-top: 0.4em;
+  margin-top: 10px;
 }
 
 .markdown ol > li::marker {
@@ -333,12 +349,23 @@ html .wd_icon_card:focus-visible {
   background: var(--tp-quiet);
   border-radius: 8px;
   color: var(--tp-text);
-  padding: 16px 20px;
+  padding: 16px 24px;
 }
 
-/* Screenshots and figures: 4px corners */
-.markdown img {
-  border-radius: 4px;
+/* Screenshots, figures and video: 4px corners, no shadow.
+   The platform Image and Video components set 10px and a shadow inline. */
+.markdown img,
+html .markdown .img_component {
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+html .video_component,
+html .video_component video,
+html .video_component iframe,
+html .video_container {
+  border-radius: 4px !important;
+  box-shadow: none !important;
 }
 
 /* Buttons: ink fill on light, lime fill with ink text on dark */
@@ -418,20 +445,38 @@ html .wd_icon_card:focus-visible {
   color: var(--tp-text-2);
 }
 
+/* Shortcut hint (ctrl K): readable keycaps */
+html [class*="searchHint"] {
+  color: var(--tp-text-2);
+  background: var(--tp-quiet);
+  border-color: var(--tp-outline);
+  box-shadow: none;
+  font-family: var(--tp-font);
+}
+
+/* The narrower search field has no room for the shortcut hint */
+@media (max-width: 1279px) {
+  [class*="searchHintContainer"] {
+    display: none !important;
+  }
+}
+
 /* Sidebar: transparent on paper, category names as group labels */
 .theme-doc-sidebar-container,
 .menu {
   background: transparent;
 }
 
+/* Category names are product names and links, so no capitals
+   (brand: capitals-and-link-underlines). text-transform: none also stops the
+   platform's "capitalize" from turning tView into TView. */
 .wd_sidebar_title a {
-  text-transform: uppercase !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  font-stretch: 75%;
-  letter-spacing: 0.08em;
+  text-transform: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: normal;
   line-height: 20px !important;
-  color: var(--tp-text-2) !important;
+  color: var(--tp-text) !important;
 }
 
 .menu__link {
@@ -465,6 +510,22 @@ html .wd_icon_card:focus-visible {
   font-weight: 600;
 }
 
+/* Between 997px and 1279px the TOC column is too narrow to read, so use the
+   collapsible "On this page" from the phone layout and give the text the room */
+@media (min-width: 997px) and (max-width: 1279px) {
+  html .row > .col.col--3:has(.theme-doc-toc-desktop) {
+    display: none;
+  }
+
+  html .row > [class*="docItemCol"] {
+    max-width: 100% !important;
+  }
+
+  html .theme-doc-toc-mobile {
+    display: block !important;
+  }
+}
+
 /* Breadcrumbs */
 .breadcrumbs__link {
   color: var(--tp-text-2);
@@ -485,6 +546,11 @@ html .wd_icon_card:focus-visible {
 
 .footer::before {
   background: var(--tp-hairline);
+}
+
+/* The platform sets 10px; 14px is the brand's small size */
+html .footer__copyright {
+  font-size: 14px !important;
 }
 
 /* Pagination */
@@ -515,7 +581,7 @@ html .theme-admonition {
   border: 0 !important;
   border-radius: 8px;
   box-shadow: none;
-  padding: 16px 20px;
+  padding: 16px 24px;
   gap: 8px;
 }
 
@@ -573,19 +639,19 @@ html .no-title-admonition [class*="admonitionContent"] {
 }
 
 html .theme-admonition-tip {
-  --callout-icon-color: var(--tp-ontarget);
+  --callout-icon-color: var(--tp-icon-ok-color);
   --callout-mask: var(--tp-icon-ok);
 }
 
 html .theme-admonition-warning {
   --callout-bg: var(--tp-warning-bg);
-  --callout-icon-color: var(--tp-warning);
+  --callout-icon-color: var(--tp-icon-warning-color);
   --callout-mask: var(--tp-icon-warning);
 }
 
 html .theme-admonition-danger {
   --callout-bg: var(--tp-danger-bg);
-  --callout-icon-color: var(--tp-alarm);
+  --callout-icon-color: var(--tp-icon-alarm-color);
   --callout-mask: var(--tp-icon-alarm);
 }
 
@@ -614,7 +680,7 @@ html .wd_icon_card {
   background: var(--tp-raised);
   border: 1px solid transparent !important;
   border-radius: 8px;
-  padding: 20px 24px;
+  padding: 24px;
   gap: 8px;
   box-shadow: none;
   transition: border-color 0.15s ease;
@@ -660,7 +726,7 @@ html .wd_icon_card .icon_img {
 }
 
 html .wd_cards_container {
-  gap: 16px;
+  gap: 24px;
 }
 
 /* Tables: white on paper, a hairline between rows, no vertical lines */
@@ -745,6 +811,16 @@ td code,
   line-height: 1.6;
 }
 
+/* Copy and wrap buttons: the platform's .clean-btn:hover paints them white */
+html .theme-code-block [class*="buttonGroup"] .clean-btn {
+  background: transparent;
+  border-radius: 4px;
+}
+
+html .theme-code-block [class*="buttonGroup"] .clean-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .theme-code-block [class*="codeBlockTitle"] {
   border-bottom: 1px solid var(--tp-code-edge);
   font-family: var(--tp-font);
@@ -806,6 +882,23 @@ html .accordion_container .control-icon {
 }
 
 /* 7. Changelog ------------------------------------------------------------ */
+
+/* Archive header: Infima paints .hero--primary with --ifm-color-primary,
+   which is mapped to the text color, so give it the ink band explicitly */
+.hero--primary {
+  --ifm-hero-background-color: var(--tp-band);
+  --ifm-hero-text-color: var(--tp-paper);
+  background-color: var(--tp-band);
+  color: var(--tp-paper);
+}
+
+.hero--primary .hero__title {
+  color: var(--tp-paper);
+  font-weight: 600;
+  font-stretch: 88%;
+  letter-spacing: -0.015em;
+}
+
 [class^="sidebarItemLink"] {
   color: var(--tp-text-2);
 }

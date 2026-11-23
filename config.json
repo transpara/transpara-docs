@@ -48,7 +48,7 @@
       "sidebarRef": "visual-kpi",
       "categories": [
         {
-          "categoryName": "Getting Started",
+          "categoryName": "Getting started",
           "pages": [
             "visual-kpi/getting-started/what-is-visual-kpi",
             "visual-kpi/getting-started/the-visual-kpi-approach",
@@ -69,7 +69,7 @@
           ]
         },
         {
-          "categoryName": "Setup and Administration",
+          "categoryName": "Setup and administration",
           "pages": [
             "visual-kpi/setup-and-administration/overview",
             {
@@ -198,7 +198,7 @@
           ]
         },
         {
-          "categoryName": "Visual KPI End User",
+          "categoryName": "Visual KPI end user",
           "pages": [
             "visual-kpi/end-user/overview",
             {
@@ -350,7 +350,7 @@
           ]
         },
         {
-          "categoryName": "Supporting Pages",
+          "categoryName": "Supporting pages",
           "pages": [
             "supporting-pages/faqs",
             "supporting-pages/glossary"
@@ -362,7 +362,7 @@
       "sidebarRef": "transpara-platform",
       "categories": [
         {
-          "categoryName": "Getting Started",
+          "categoryName": "Getting started",
           "pages": [
             "transpara-platform/getting-started/overview",
             "transpara-platform/getting-started/industrial-ai-for-real-time-operations",

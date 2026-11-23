@@ -1,7 +1,11 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useId } from "react";
 import "./style.css";
 
 const JsonToTable = ({ jsonData, tableHeight }) => {
+  // Unique per table, so labels still work on pages with many tables
+  const uid = useId();
+  const rowsId = `${uid}-rows`;
+  const filterId = `${uid}-filter`;
   const [filter, setFilter] = useState("");
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
@@ -170,10 +174,11 @@ const JsonToTable = ({ jsonData, tableHeight }) => {
   return (
     <>
       <div className="filters_container">
-        <label htmlFor="rowsToShow" className="filter_label">
+        <label htmlFor={rowsId} className="filter_label">
           Show
           <select
-            id="rowsToShow"
+            id={rowsId}
+            className="rows_to_show"
             value={rowsToShow}
             onChange={(e) => setRowsToShow(Number(e.target.value))}
           >
@@ -186,7 +191,7 @@ const JsonToTable = ({ jsonData, tableHeight }) => {
           Entries
         </label>
         <div className="search_container">
-          <label htmlFor="filterInput" className="filter_label">
+          <label htmlFor={filterId} className="filter_label">
             Search
           </label>
           <div className="search_input_container">
@@ -215,7 +220,8 @@ const JsonToTable = ({ jsonData, tableHeight }) => {
               </svg>
             </div>
             <input
-              id="filterInput"
+              id={filterId}
+              className="filter_input"
               type="text"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}

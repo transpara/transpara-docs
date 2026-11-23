@@ -1,8 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useId } from "react";
 import "./style.css";
 import { AccordionGroup } from "@site/src/components";
 
 const SearchWrapper = ({ children }) => {
+  // Unique per instance: the FAQ page has one search per category
+  const filterId = `${useId()}-filter`;
   const [filter, setFilter] = useState("");
 
   // Filtering logic
@@ -17,7 +19,7 @@ const SearchWrapper = ({ children }) => {
     <>
       <div className="filters_container">
         <div className="search_container faq_search_container">
-          <label htmlFor="filterInput" className="filter_label">
+          <label htmlFor={filterId} className="filter_label">
             Search
           </label>
           <div className="search_input_container faq_search_input_container">
@@ -46,7 +48,8 @@ const SearchWrapper = ({ children }) => {
               </svg>
             </div>
             <input
-              id="filterInput"
+              id={filterId}
+              className="filter_input"
               type="text"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}

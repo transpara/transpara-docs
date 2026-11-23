@@ -26,10 +26,11 @@ export default function FilterComponent({ dataList }) {
           value={filterValue}
           onChange={handleFilterChange}
           placeholder="Search vocabulary"
+          aria-label="Search vocabulary"
         />
         <div>
           <label htmlFor="selectLetter">Letter selector:</label>
-          <select value={selectValue} onChange={handleOptionChange}>
+          <select id="selectLetter" value={selectValue} onChange={handleOptionChange}>
             <option value="">All</option>
             {availableLetters
               .sort((a, b) => a.localeCompare(b))

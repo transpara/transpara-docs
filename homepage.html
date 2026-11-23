@@ -70,14 +70,7 @@
       color: var(--tp-text-2);
     }
 
-    .tp-home .tph-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--tp-accent);
-      flex: 0 0 8px;
-    }
-
+    /* One brand device per view: the rings in the hero, the full stop on the band */
     .tp-home .tph-period {
       color: var(--tp-accent);
     }
@@ -288,8 +281,13 @@
       color: var(--tp-text);
     }
 
+    /* The green t: Green 60 on light (ratified for the thin module-name t), lime on dark */
     .tp-home .tph-t {
-      color: var(--tp-accent);
+      color: #5d9202;
+    }
+
+    html[data-theme="dark"] .tp-home .tph-t {
+      color: var(--tp-lime);
     }
 
     .tp-home .tph-module p {
@@ -301,12 +299,12 @@
     .tp-home .tph-links {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
+      gap: 24px;
     }
 
     .tp-home .tph-link {
-      padding: 20px 24px;
-      gap: 6px;
+      padding: 24px;
+      gap: 8px;
     }
 
     .tp-home .tph-link-title {
@@ -416,11 +414,11 @@
       .tp-home {
         --tph-section: 64px;
         --tph-hero-top: 40px;
-        --tph-gutter: 16px;
       }
 
+      /* Keeps the outer ring below the buttons */
       .tp-home .tph-hero {
-        padding-bottom: 200px;
+        padding-bottom: 224px;
       }
 
       .tp-home .tph-hero-title {
@@ -475,8 +473,8 @@
       <img className="tph-rings tph-light" src="media/brand/rings-on-light.svg" alt="" aria-hidden="true" />
       <img className="tph-rings tph-dark" src="media/brand/rings-on-dark.svg" alt="" aria-hidden="true" />
       <div className="tph-wrap tph-hero-inner">
-        <p className="tph-label"><span className="tph-dot"></span>Documentation</p>
-        <h1 className="tph-hero-title">Transpara documentation<span className="tph-period">.</span></h1>
+        <p className="tph-label">Documentation</p>
+        <h1 className="tph-hero-title">Transpara documentation</h1>
         <p className="tph-lead">Guides and reference for the Transpara Platform and Visual KPI. Install it, connect your data, build KPIs and dashboards, and put them to work.</p>
         <div className="tph-actions">
           <a className="tph-btn tph-btn-primary" href="/transpara-platform/getting-started/">Get started</a>
@@ -516,8 +514,8 @@
     <section className="tph-section">
       <div className="tph-wrap">
         <div className="tph-section-head">
-          <p className="tph-label">Transpara Platform</p>
-          <h2 className="tph-section-title">Go straight to a module</h2>
+          <p className="tph-label">Modules</p>
+          <h2 className="tph-section-title">Go straight to a Transpara Platform module</h2>
         </div>
         <div className="tph-modules">
           <a className="tph-card tph-module" href="/transpara-platform/tview/">
@@ -575,7 +573,7 @@
     <section className="tph-section">
       <div className="tph-wrap">
         <div className="tph-section-head">
-          <p className="tph-label">Visual KPI</p>
+          <p className="tph-label">Guides</p>
           <h2 className="tph-section-title">Everything for Visual KPI</h2>
         </div>
         <div className="tph-links">
